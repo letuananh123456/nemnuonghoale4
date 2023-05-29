@@ -1,0 +1,206 @@
+/* margin */
+.mar-5 {
+  margin: 5px;
+}
+.mar-10 {
+  margin: 10px;
+}
+.mar-15 {
+  margin: 15px;
+}
+.mar-20 {
+  margin: 20px;
+}
+
+/* margin-top */
+.mar-top-5 {
+  margin-top: 5px;
+}
+.mar-top-10 {
+  margin-top: 10px;
+}
+.mar-top-15 {
+  margin-top: 15px;
+}
+.mar-top-20 {
+  margin-top: 20px;
+}
+
+/* margin-right */
+.mar-rig-5 {
+  margin-right: 5px;
+}
+.mar-rig-10 {
+  margin-right: 10px;
+}
+.mar-rig-15 {
+  margin-right: 15px;
+}
+.mar-rig-20 {
+  margin-right: 20px;
+}
+
+/* margin-bottom */
+.mar-bot-5 {
+  margin-bottom: 5px;
+}
+.mar-bot-10 {
+  margin-bottom: 10px;
+}
+.mar-bot-15 {
+  margin-bottom: 15px;
+}
+.mar-bot-20 {
+  margin-bottom: 20px;
+}
+
+/* margin-left */
+.mar-lef-5 {
+  margin-left: 5px;
+}
+.mar-lef-10 {
+  margin-left: 10px;
+}
+.mar-lef-15 {
+  margin-left: 15px;
+}
+.mar-lef-20 {
+  margin-left: 20px;
+}
+
+/* padding */
+.pad-5 {
+  padding: 5px;
+}
+.pad-10 {
+  padding: 10px;
+}
+.pad-15 {
+  padding: 15px;
+}
+.pad-20 {
+  padding: 20px;
+}
+
+/* padding-top */
+.pad-top-5 {
+    padding-top: 5px;
+}
+.pad-top-10 {
+    padding-top: 10px;
+}
+.pad-top-15 {
+    padding-top: 15px;
+}
+.pad-top-20 {
+    padding-top: 20px;
+}
+
+/* padding-right */
+.pad-rig-5 {
+  padding-right: 5px;
+}
+.pad-rig-10 {
+  padding-right: 10px;
+}
+.pad-rig-15 {
+  padding-right: 15px;
+}
+.pad-rig-20 {
+  padding-right: 20px;
+}
+
+/* padding-bottom */
+.pad-bot-5 {
+  padding-bottom: 5px;
+}
+.pad-bot-10 {
+  padding-bottom: 10px;
+}
+.pad-bot-15 {
+  padding-bottom: 15px;
+}
+.pad-bot-20 {
+  padding-bottom: 20px;
+}
+
+/* padding-left */
+.pad-lef-5 {
+  padding-left: 5px;
+}
+.pad-lef-10 {
+  padding-left: 10px;
+}
+.pad-lef-15 {
+  padding-left: 15px;
+}
+.pad-lef-20 {
+  padding-left: 20px;
+}
+
+/* width */
+.width-10 {
+  width: 10%;
+}
+.width-15 {
+  width: 15%;
+}
+.width-20 {
+  width: 20%;
+}
+.width-25 {
+  width: 25%;
+}
+.width-30 {
+  width: 30%;
+}
+.width-35 {
+  width: 35%;
+}
+.width-40 {
+  width: 40%;
+}
+.width-45 {
+  width: 45%;
+}
+.width-50 {
+  width: 50%;
+}
+.width-55 {
+  width: 55%;
+}
+.width-60 {
+  width: 60%;
+}
+.width-65 {
+  width: 65%;
+}
+.width-70 {
+  width: 70%;
+}
+.width-75 {
+  width: 75%;
+}
+.width-80 {
+  width: 80%;
+}
+.width-85 {
+  width: 85%;
+}
+.width-90 {
+  width: 90%;
+}
+.width-95 {
+  width: 95%;
+}
+.width-100 {
+  width: 100%;
+}
+
+/* float */
+.fl-right {
+  float: right;
+}
+.fl-left {
+  float: left;
+}

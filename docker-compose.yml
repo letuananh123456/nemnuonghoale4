@@ -1,0 +1,70 @@
+version: '3.6'
+
+services:
+  db:
+    restart: always
+    image: postgres:10
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: rootapp123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+  redis:
+    restart: always
+    image: "redis"
+    build: ./redis-config
+    # command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+  worker:
+    restart: always
+    build: .
+    command: celery worker --app insecom --loglevel info --logfile celery-worker.log
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
+  schedule:
+    restart: always
+    build: .
+    command: celery beat --app insecom --loglevel info --logfile celery-beat.log
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
+  web:
+    restart: always
+    build: .
+    command: bash -c "python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+  document:
+    image: swaggerapi/swagger-ui
+    volumes:
+      - .:/app
+    ports:
+      - "1234:8080"
+    environment:
+      SWAGGER_JSON: /app/docs/openapi.json
+  nginx:
+    restart: always
+    build: ./nginx-config
+    ports:
+      - 80:80
+      - 443:443
+  
+    links:
+      - web
+    depends_on:
+      - web
+volumes:
+  postgres_data:
+  redis_data:

@@ -1,0 +1,273 @@
+@media only screen and (min-device-width: 641px) and (max-device-width: 1900px) {
+.for-desktop-none,.inner-card-total,.main-tooltip-box-mob{display:none}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+.boxes-listing-1 li{font-size:12px}
+.boxes-listing-1 li span{font-size:13px}
+.boxes-listing-1 li:after{left:37%}
+.bg-blue-icon{font-size:17px;padding:0 11px}
+.bg-blue-label{font-size:11px;width:86px}
+.right-box-login .form-control{font-size:11px;height:40px}
+.right-box-login{font-size:11px}
+a.forgot-link{font-size:11px;margin-top:8px}
+.button-proceed{width:200px}
+.main-container-renewal{width:97%}
+ul.listing-proposers li{width:39.8%}
+ul.listing-experience li{width:31%}
+ul.listing-plan-deatails li{width:13.2%;min-height:52px}
+.name-insurer{position:inherit;right:-10px;top:-1px;width:100px}
+.right-box-login{margin:21px 13px 0 15px;width:96%}
+.form-renewal-box{margin:-13px auto 20px;min-height:auto;width:100%}
+.left-box-login h1{font-size:22px;margin:22px 0 14px}
+.left-box-login h1 span{font-size:14px}
+.left-box-login{height:auto;width:100%}
+body{background:#eeecf9!important}
+.proposal-flex-home .proposal-input-container span{width:100%;line-height:51px}
+.proposal-flex-home .proposal-input-container md-input-container .md-input{padding-left:39px;width:85%}
+.icons-home-dob{background:rgba(0,0,0,0) url(../images/spilt_bg.png) no-repeat 6px -21px}
+.boxes-listing-1{display:none}
+.icons{width:73px}
+.icons-home-dob{background:rgba(0,0,0,0) url(../images/spilt_bg.png) no-repeat 36px -21px}
+.send-otp-btn{padding:16px 21px}
+.inner-card-renewal h1{font-size:15px}
+.for-small-device{display:block!important}
+.for-large-device{display:none}
+.proposal-input-container span{width:100%}
+.mid-part-box{width:66%}
+ul.detail-info-box li:first-child{background:none}
+ul.detail-info-box li:last-child{background:none;padding-left:0}
+ul.detail-info-box li{width:100%}
+.logo-box{width:80px}
+.small-dev-3{height:52px}
+.no-medical{margin:-2px -3px 10px 0}
+.ques-box2{width:89%}
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.send-otp-btn{padding:14px 21px}
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 640px) {
+    .mob-logo1{ display: block; }
+    .mob-logo{ display: none; }
+.error-login-pan{line-height: 16px !important;}
+.desktop{display:none;}
+.suminsure_value{      display: inline-block;
+    float: left;
+    width: 51%;
+    font-weight: normal;
+}
+.offer_tax_right em{right: 6px;top: -4px;}
+.md-scroll-mask{ background: rgba(0, 0, 0, 0.84);}
+.md-dialog-container{background: rgba(0, 0, 0, 0.15);}
+.chk-btn-box{    padding: 10px 0px;}
+.checkout_arrow { position: absolute;  right: 20px; top: 18px;}
+.right-box-part{ border: 0px; padding: 0px; }
+.error-login5 { bottom: 0; left: 6px;bottom: -2px;}
+.coverd_for{line-height: 36px;}
+.pin{height: 38px !important;}
+.fa-weight{background-position: 1px -645px;}
+.fa-pincode{ background-position:0px -344px}
+.fa-state{background-position:1px -346px}
+ul.detail-info-box li:nth-child(3){ background: none; }
+.box-head-bar2 ul{ display: inherit; }
+.blk-box{ width: 100%; }
+.box-head-checkout2 ul{  display: inherit;
+    align-items: center;
+    justify-content: center;}
+  .box-agree .error-login2 {
+    top: 4px !important;
+    left: 21px;
+    font-size: 11px;
+}
+.btn-remove-cart {
+    background: #e4e4e4!important;}
+	.error-login2{    line-height: 26px;}
+	.error_term{line-height: 70px !important;}
+.width-full1{ width: 68% !important }
+.box-proposal-main h2 {font-size: 12px; font-weight: 400;margin: 0px 0px 10px 0px;padding: 0px 0px 0px 7px;border-bottom: 1px solid #f1f1f1;
+    line-height: 34px;}
+.box-head-bar33{ line-height: 17px; }
+li.width-full{width:80%!important}
+.box-head-bar22 ul li:first-child{ padding-left: 5px; }
+.box-proposal-main {margin: 0 0 0px 1%;}
+.right-question-area{margin-left:0!important;width:100%!important;margin-left:0;float:left; position: relative;}
+.box-proposal-main{padding:0 3%}
+ul.listing-questions-box li{padding: 10px 3%;}
+.error-login3{left:0}
+.no-medical22{width:30%;float:left}
+.no-medical22 md-checkbox{margin:8px 0}
+ul.listing-questions-box li{border:0;border-bottom:1px solid #f1f1f1}
+.proposal-flex-button12{width:122px}
+.pannel_mobile{width:99%!important}
+.first-column{width:70%!important;padding-left:10px!important}
+.box-content-chk md-checkbox{display:inline-block;width:10px;float:left;line-height:16px;margin:0}
+.image_left img{display:inline-block;width:75px;padding-left:5px}
+.row{width:100%}
+.mobile_left_1{float:left;max-width:100px}
+.mobile_right_1{float:left;max-width:65%}
+.middle_circle{margin-left:-25px}
+.mobile-bottom-bar{background:#0f699c;position:fixed;bottom:0;z-index:9;padding:3px 0;width:100%;background:#fa774d;left:0;box-shadow:0 -1px 2px #fa774d}
+.mobile-bottom-button{background:none;background:none;border:0;font-size:14px;float:right;color:#fff;font-weight:700;line-height:34px;padding:0;margin:0 10px 0 0}
+.years-tabs-new md-radio-button{padding:4px}
+.bdr-bot{padding:10px 0 0!important; border: 0px;}
+.years-tabs-new{margin:-8px 0 0}
+.desktop{display:none !important}
+.mobile{display:block}
+.right-box-login{margin:21px 13px 0 15px;width:90%}
+.bg-blue-icon{font-size:19px;padding:0 13px}
+.button-proceed{width:198px}
+.loading-renewal{font-size:26px!important}
+.number-top{font-size:15px}
+.number-top span{font-size:11px;text-align:center;display:inline}
+.navbar-form{border-top:0 solid transparent!important;box-shadow:none!important;float:none;padding:0;width:100%}
+.mobile-center{ margin-top: 0 !important; padding: 6px;}
+.dropdown-menu{top:321px!important}
+.font-lock-mob{font-size:31px!important}
+.main-container-renewal{width:94%;margin:0px auto 0px;overflow:hidden;}
+.right-box-part{width:100%}
+.left-box-part{width:100%;overflow:hidden}
+.proposal-flex{width:100%}
+.thanks-head h2{font-size:20px}
+.thanks-head span{font-size:12px}
+ul.listing-plan-deatails{margin:15px auto 5px 3%;width:97%}
+ul.listing-plan-deatails li{margin:0 0 2px;min-height:auto;padding:7px;width:92%}
+li.width-plan{width:92%!important}
+.name-insurer{left:141px}
+.blk{padding-left:45px}
+.download-pdf{left:132px;line-height:20px;position:inherit;top:4px;width:33%}
+.mobile-pdf{padding-left:0;padding-right:4px;display:inline-block}
+ul.listing-proposers li:first-child,ul.listing-proposers li:last-child{margin-left:2%;width:94%}
+ul.listing-proposers li{margin:0 0 3px 2%;width:94%}
+ul.listing-proposers i{font-size:18px;height:33px;line-height:32px;margin-left:6px;margin-right:10px;width:37px}
+ul.listing-experience li{font-size:11px;min-height:95px;width:29%}
+ul.listing-experience{margin:15px 1.5% 15px 4%}
+.inner-card-renewal{margin-bottom:10px}
+.mobile-pdf img{width:18px;height:18px}
+.inline{display:inline}
+.boxes-listing-1{display:none}
+.form-renewal-box{margin:-43px auto 20px;min-height:auto;width:100%}
+.left-box-login h1{font-size:22px;margin:22px 0 14px}
+.left-box-login h1 span{font-size:14px}
+.left-box-login{height:auto;width:100%}
+body{background:#eeecf9!important}
+.proposal-flex-home .proposal-input-container span{width:76px}
+.proposal-flex-home .proposal-input-container md-input-container .md-input{padding-left:39px;width:75%}
+.icons-home-dob{background:rgba(0,0,0,0) url(../images/spilt_bg.png) no-repeat 6px -21px}
+.privacy-policy a{display:block}
+.box-head-checkout img{width:76px!important}
+ul.listing-checkout li{font-size:11px}
+.sub-logo{margin-left:8px;    margin-left: 8px;
+    height: 35px;
+    display: inline-block;}
+.box-head-checkout ul li + li{width:100%!important}
+.box-head-checkout ul li + li + li{width:100%!important}
+.box-head-checkout2 ul li + li{width:100%!important}
+.box-head-checkout ul li:last-child{width:100%!important}
+.box-head-checkout2 ul li + li + li + li + li{width:100%!important;text-align:left}
+/*.align-rig{text-align:right!important}*/
+.chk-btn-box {margin: 0px auto !important}
+.checkout_btn{ text-align: center; float: none; padding-bottom: 60px; }
+.emi-section{display:block}
+.total-amount{padding:0 4px 0 0}
+.total-section{padding:2%!important;width:96%}
+.btn-savelater{margin-bottom:12px;margin-right:8px;margin-top:5px;min-width:132px;padding:0 10px;font-size:12px}
+.send-otp-btn{padding:15px 4px;font-size:12px;right:-2px;top:0}
+.mid-part-box{padding:0 8px;width: 97%;}
+.left-box-part{position:relative}
+.logo-first{left:7px;position:absolute;top:-4px}
+.logo-first img{width:84px!important}
+.mid-part-box h2{overflow-wrap:break-word;padding:0 0 5px 106px}
+ul.detail-info-box li:first-child{background:none}
+ul.detail-info-box li:last-child{background:none;padding-left:0}
+.main-tooltip-box{right:-68px}
+ul.duration-amount li{color:#2f9adb;float:left;font-size:9px;list-style-type:none;margin:0;padding:0;text-align:center;width:33.3%!important;float:left;min-width:34px!important}
+.for-mob-renewal{text-align:center;width:100%}
+.for-mob-renewal h1{font-size:15px;margin-bottom:10px}
+.btn-renewal{font-size:16px;min-width:98%}
+.box-head-checkout-device{display:none}
+.box-head-checkout2 ul li:first-child{width:100%}
+.blk-name{display:list-item;margin:4px 0 0 38%}
+.del-msg{position:inherit;right:-120px;top:-40px;width:55%}
+.device-text{display:inline-block;float:left;font-size:12px;float:left;width:34%;font-weight:400}
+.box-head-checkout2 ul li{margin-bottom:15px}
+.box-head-checkout2 ul{padding:4% 4% 0!important;width:92%; position: relative;}
+.box-head-checkout2{padding:0 4% 10px;width:92%}
+.device-box-new{width:108px}
+strong.device-box-new2{width:108px;float:left;font-weight:400}
+ul.detail-info-box li{width:100%}
+.emi-text{margin-right:2%}
+.error-msg i{display:block;font-size:29px;padding-right:0;padding-bottom:5px}
+.error-msg{font-size:14px}
+.price-color{display:inline;margin-left:70px}
+.none-device{display:none}
+.inner-card-renewal-loading span{margin-top:60%;padding: 0px 10px;}
+/*.inner-card-renewal-loading{padding:0px 12px}*/
+ul.detail-info-box{margin:15px 5px 2px 0}
+.mid-part-box h2{font-size:17px}
+.for-small-device{display:block!important}
+.image_left{display:inline-block}
+.for-large-device{display:none}
+.box-content-chk img{max-width:100px;}
+.box-head-bar22 ul li{width:40%}
+.box-proposal-main{margin:0 0 15px 0px;width:98%;background:#fff;border:0}
+.box-agree { width: auto; padding: 0px 14px;}
+.new-insurer-box{margin-top:28px;padding:10px}
+.for-mobile-none{display:none}
+.inline-content{font-size:12px}
+.edit-open-box md-input-container{padding:6px 0 0!important}
+.box-head-bar2 ul li{font-size:12px}
+.box-head-bar ul li:first-child,.box-head-bar2 ul li:first-child,.box-head-bar2 ul li,.box-head-bar2 ul li:last-child{width:inherit;margin-left:0}
+.box-head-bar2 ul li,.box-head-bar2 ul li:last-child{margin-bottom:10px;margin-left:0}
+.for-desktop-none{display:inline-block;margin-right:5px;float:left;width:80px;font-weight:400}
+.left-question-area strong{display:block}
+.no-medical{margin:-7px 6% 10px 0}
+.left-question-area{width:100%}
+.right-question-area{margin-left:7px;width:105px}
+.box-head-bar33{width:96%}
+.box-head-bar22 ul li:last-child{width:5%}
+.width-full-contact{width:80%!important}
+.right-box-part{margin-top:15px}
+md-dialog-content p{width:auto!important}
+.proposal-input-container em{padding-bottom:8px;height:auto}
+.file-icon-mob{padding-top:11px!important;padding-bottom:5px}
+.proposal-input-container-login{height:46px}
+.proposal-input-container-login em .fa{padding-top:6px!important}
+.proposal-input-container-login em .fa.policy-num{padding-top:9px!important}
+.state-mob-area{height:38px!important}
+.sp-left{padding-left:7px}
+.small-dev-1{width:82px!important}
+.small-dev-2{width:57%!important;float:left}
+.mob-logo{width:140px!important}
+.navbar-header{float:left;width:13%}
+.navbar-form{margin-top:0px;width:auto}
+ul.listing-panel li{width:99%}
+.open-show-select{margin:0}
+.mob-b{font-weight:700}
+.none-mo{display:none}
+.mob-blk{display:block}
+.inner-card-total{background:#fa774d;color:#fff;padding:9px 0 6px;width:100%;position:fixed;bottom:0}
+.emi-mob-box{background:#d9dbe7 url(../images/spilt_bg.png) no-repeat scroll -6px -748px;border-radius:5px;color:#7c7c84;float:left;font-size:12px;line-height:18px;margin-left:6px;padding:3px 3px 3px 25px;width:127px}
+.total-mob-box{float:right;font-size:12px;padding-right:5px;margin-top:6px}
+.main-tooltip-box-mob{position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;background:#fff;overflow:scroll;padding-bottom:60px;margin:0 auto}
+.blk-mo{display:block}
+.mob-header-emi-box h4{background:#eaedf4;font-size:12px;font-weight:700;text-align:left;padding:7px;color:#273C4D;margin:0}
+.mob-header-emi-box .tootltip_row:nth-child(2n),.mob-header-emi-box .tootltip_row:nth-child(2n+1){border-bottom:none}
+.mob-header-emi-box{border:1px solid #d8dce7;margin:10px auto 15px;width:95%}
+.mob-header-emi-box h4 .fa-angle-up,.mob-header-emi-box h4 .fa-angle-down{float:right;font-size:16px}
+.main-tooltip-box-mob .tooltip_wrapper{width:100%!important}
+.box-proposal-main22{width:99%}
+.child-question-box{width:auto}
+.ques-box2{width:85%}
+.small-bx1{width:95%!important}
+.small-dev-4 em{padding-bottom:6px}
+.inner-checkout-mob{border-radius:0;bottom:-6px;left:0;position:fixed;width:100%}
+.inner-checkout-mob2{margin-bottom:60px}
+}
+@media only screen and (max-width : 320px) {
+.del-msg{width:49%}
+.no-medical{margin:-7px 3% 10px 0}
+.right-question-area{margin-left:0;width:96px;margin-left:0;width:100%;float:left}
+}
+@media only screen and (min-device-width: 411px) and (max-device-width: 414px) {
+.del-msg{right:-136px;top:-35px}
+.no-medical{margin:-7px 19px 10px 0}
+}

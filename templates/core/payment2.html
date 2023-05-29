@@ -1,0 +1,1825 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html class="uk-notouch">
+
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>Thanh toán - Sàn Thương Mại Điện Tử Bảo Hiểm Bihama</title>
+	<link rel="stylesheet" href="{% static 'core/Font-Awesome/css/all.min.css' %}">
+	<!-- <link rel="shortcut icon" href="https://www..com/home-v3/favicon.ico"> -->
+	<link href="{% static 'Investment/css/style.css' %}" type="text/css" rel="stylesheet">
+	<link rel="icon" type="image/x-icon" href="{% static 'core/images/icon2.svg' %}" />
+	<link rel="stylesheet" href="{% static 'payment/gateway_1.css' %}">
+	<script src="{% static 'payment/jquery-3.2.1.min.js' %}" type="text/javascript"></script>
+	<!-- <script
+	src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
+	<script src="{% static 'payment/uikit.min.js' %}" type="text/javascript"></script>
+	<script src="{% static 'payment/datepicker.js' %}" type="text/javascript"></script>
+	<script src="{% static 'payment/common.js' %}" type="text/javascript"></script>
+	<script src="{% static 'payment/seamless_V2.js' %}" type="text/javascript"></script>
+	<script src="{% static 'payment/cardValidation.js' %}" type="text/javascript"></script>
+	<script src="{% static 'payment/crypto.js' %}" type="text/javascript"></script>
+</head>
+
+<body>
+	<div class="content-wrapper">
+		<header class="header" style="background-color: #fff;">
+			<a class="logo" href="/">
+				<img src="{% static 'images/logo.svg' %}" alt="bihama.com" width="80%">
+			</a>
+			<div class="phoneNwhatsapp">
+				<a style="color: rgb(64, 161, 164);" href="javascript:void(0)" class="tollFreeNo"><i
+						style="color: rgb(64, 161, 164);" class="fa fa-phone-square" aria-hidden="true"></i>Gặp chuyên
+					gia <span><i class="fa fa-sort-desc" aria-hidden="true"></i></span></a>
+				<div class="tollFreeNoBox" style="display: none;">
+					<span class="smallTxt">Gọi miễn phí</span>
+					<div class="tollFreeNoSales"><i class="fa fa-phone-square" aria-hidden="true"></i>1900-666888
+						<span>Chưa thanh toán</span></div>
+					<div class="tollFreeNoService"><i class="fa fa-phone-square" aria-hidden="true"></i>1900-666888
+						<span>Đã thanh toán </span></div>
+				</div>
+
+			</div>
+
+		</header>
+	</div>
+	<div id="loader" class="loader" style="display: none;"></div>
+	<div id="light" class="white_content">
+		Your current session is expired. If you want to extend the session ,
+		Please <a id="close" href="#">click here</a>
+	</div>
+	<div id="fade" class="black_overlay"></div>
+
+	<input type="hidden" name="orderNo" id="orderNo" value="ibOGkE0ggCcQXLU4ghvLNA==">
+	<input type="hidden" name="session_time" id="session_time" value="1575971160000">
+	<input type="hidden" name="current_time" id="current_time" value="1575970261738">
+	<input type="hidden" name="displayOrderNo" id="displayOrderNo" value="PB14703891">
+
+	<input type="hidden" name="displayMode" id="displayMode" value="0">
+	<input type="hidden" name="multiplier" id="multiplier" value="0">
+
+	<input type="hidden" name="emadatebankList" id="emadatebankList" value=",">
+
+	<input type="hidden" name="productId" id="productId" value="117">
+	<input type="hidden" name="defaultMode" id="defaultMode" value="DC">
+	<input type="hidden" name="srcSupplierId" id="srcSupplierId" value="29">
+
+	<input type="hidden" name="session_time" id="session_time" value="1575971160000">
+
+	<input type="hidden" name="isWaitingForUPIStatus" id="isWaitingForUPIStatus" value="false">
+
+	<input type="hidden" name="upi_session_time" id="upi_session_time">
+
+
+
+
+	<form class="form-field" action="" method="post" id="submitTest" autocomplete="off"></form>
+
+	<form class="form-field" action="" method="post" id="submitUpi" autocomplete="off" onsubmit="return false;">
+		<input type="hidden" name="payId" id="payId">
+	</form>
+
+	<div class="container gatewayWrapper clearfix">
+
+
+
+
+		<!-- Left Section -->
+		<section class="paymentOptions">
+			<h4>
+				<span class="backArrow hideBig"></span> Chọn Phương Thức Thanh Toán
+			</h4>
+			<p class="sessionTimer">
+				Giao dịch của bạn sẽ kết thúc trong <em id="demo">13m 56s </em>
+			</p>
+
+			<div class="card clearfix noBg paymentOptionsWrapper">
+				<!-- Tabs -->
+				<div class="paymentTabs" id="paymentOptions">
+					<!--p class="hideBig sectionHeadMobile">Payment options</p-->
+
+					<ul>
+
+
+
+
+
+
+
+
+
+
+						<li id="debit-card" class="y 
+									
+									active
+									">
+							<span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="24.001" height="24"
+									viewBox="0 0 24.001 24">
+									<g id="_001-credit-card" data-name="001-credit-card"
+										transform="translate(0 -0.011)">
+										<g id="Group_4741" data-name="Group 4741" transform="translate(0 0.011)">
+											<g id="Group_4740" data-name="Group 4740" transform="translate(0 0)">
+												<path id="Path_476" data-name="Path 476"
+													d="M23.364,8.247l-7.6-7.6a2.184,2.184,0,0,0-3.081,0L.636,12.694a2.183,2.183,0,0,0,0,3.081l.937.937h0l6.3,6.3H7a.5.5,0,0,0,0,1H17a.5.5,0,1,0,0-1H11.681L23.364,11.328A2.181,2.181,0,0,0,23.364,8.247Zm-.707,2.374L10.61,22.668a1.17,1.17,0,0,1-.832.343h0a1.17,1.17,0,0,1-.831-.343L2.634,16.359,14.2,4.79a.5.5,0,1,0-.707-.707L1.927,15.652l-.584-.584a1.184,1.184,0,0,1,0-1.667L13.39,1.354a1.184,1.184,0,0,1,1.667,0l2.7,2.7L6.193,15.628a.5.5,0,1,0,.707.707L18.469,4.766l4.188,4.188A1.18,1.18,0,0,1,22.657,10.621Z"
+													transform="translate(0 -0.011)"></path>
+												<path id="Path_477" data-name="Path 477"
+													d="M165.446,305.087a.5.5,0,0,0-.707,0l-3.935,3.935a.5.5,0,1,0,.707.707l3.935-3.935A.5.5,0,0,0,165.446,305.087Z"
+													transform="translate(-153.127 -290.646)"></path>
+												<path id="Path_478" data-name="Path 478"
+													d="M192.586,384.763l-1.614,1.614a.5.5,0,0,0,.707.707l1.614-1.614a.5.5,0,0,0-.707-.707Z"
+													transform="translate(-181.881 -366.587)"></path>
+												<path id="Path_479" data-name="Path 479"
+													d="M252.763,353.088l-.212.212a.5.5,0,1,0,.707.707l.212-.212a.5.5,0,0,0-.707-.707Z"
+													transform="translate(-240.572 -336.397)"></path>
+												<path id="Path_480" data-name="Path 480"
+													d="M346.585,160.815a.5.5,0,0,0-.707,0l-2.121,2.121a.5.5,0,0,0,0,.707l1.414,1.414a.5.5,0,0,0,.707,0L348,162.937a.5.5,0,0,0,0-.707ZM345.524,164l-.707-.707,1.414-1.414.707.707Z"
+													transform="translate(-327.503 -153.138)"></path>
+												<path id="Path_481" data-name="Path 481"
+													d="M310.173,55.539a.5.5,0,0,0,.354-.147l.212-.212a.5.5,0,1,0-.707-.707l-.212.212a.5.5,0,0,0,.354.853Z"
+													transform="translate(-295.156 -51.781)"></path>
+												<path id="Path_482" data-name="Path 482"
+													d="M99.925,355.079l-.212.212a.5.5,0,1,0,.707.707l.212-.212a.5.5,0,0,0-.707-.707Z"
+													transform="translate(-94.899 -338.295)"></path>
+											</g>
+										</g>
+									</g>
+								</svg>
+							</span> VISA, Master
+						</li>
+						<li id="credit-card" class="y 
+									">
+							<span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="16"
+									viewBox="0 0 24 16">
+									<g id="_002-credit-card-1" data-name="002-credit-card-1"
+										transform="translate(0 -85.333)">
+										<g id="Group_4743" data-name="Group 4743" transform="translate(0 85.333)">
+											<g id="Group_4742" data-name="Group 4742" transform="translate(0 0)">
+												<path id="Path_499" data-name="Path 499"
+													d="M21.5,85.333H2.5a2.5,2.5,0,0,0-2.5,2.5v11a2.5,2.5,0,0,0,2.5,2.5h19a2.5,2.5,0,0,0,2.5-2.5v-11A2.5,2.5,0,0,0,21.5,85.333Zm1.5,13.5a1.5,1.5,0,0,1-1.5,1.5H2.5a1.5,1.5,0,0,1-1.5-1.5v-11a1.5,1.5,0,0,1,1.5-1.5h19a1.5,1.5,0,0,1,1.5,1.5v11Z"
+													transform="translate(0 -85.333)"></path>
+											</g>
+										</g>
+										<g id="Group_4745" data-name="Group 4745" transform="translate(0 88.333)">
+											<g id="Group_4744" data-name="Group 4744" transform="translate(0 0)">
+												<path id="Path_500" data-name="Path 500"
+													d="M23.5,149.333H.5a.5.5,0,0,0-.5.5v3a.5.5,0,0,0,.5.5h23a.5.5,0,0,0,.5-.5v-3A.5.5,0,0,0,23.5,149.333Zm-.5,3H1v-2H23v2Z"
+													transform="translate(0 -149.333)"></path>
+											</g>
+										</g>
+										<g id="Group_4747" data-name="Group 4747" transform="translate(3 95.333)">
+											<g id="Group_4746" data-name="Group 4746">
+												<path id="Path_501" data-name="Path 501"
+													d="M70.5,298.667h-6a.5.5,0,1,0,0,1h6a.5.5,0,1,0,0-1Z"
+													transform="translate(-64 -298.667)"></path>
+											</g>
+										</g>
+										<g id="Group_4749" data-name="Group 4749" transform="translate(3 97.333)">
+											<g id="Group_4748" data-name="Group 4748">
+												<path id="Path_502" data-name="Path 502"
+													d="M70.5,341.333h-6a.5.5,0,0,0,0,1h6a.5.5,0,0,0,0-1Z"
+													transform="translate(-64 -341.333)"></path>
+											</g>
+										</g>
+										<g id="Group_4751" data-name="Group 4751" transform="translate(17 94.333)">
+											<g id="Group_4750" data-name="Group 4750" transform="translate(0 0)">
+												<path id="Path_503" data-name="Path 503"
+													d="M365.167,277.333h-1a1.5,1.5,0,0,0-1.5,1.5v1a1.5,1.5,0,0,0,1.5,1.5h1a1.5,1.5,0,0,0,1.5-1.5v-1A1.5,1.5,0,0,0,365.167,277.333Zm.5,2.5a.5.5,0,0,1-.5.5h-1a.5.5,0,0,1-.5-.5v-1a.5.5,0,0,1,.5-.5h1a.5.5,0,0,1,.5.5Z"
+													transform="translate(-362.667 -277.333)"></path>
+											</g>
+										</g>
+									</g>
+								</svg>
+							</span>Chuyển khoản</li>
+						<li id="netbanking" class="y 
+									">
+							<span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="23.521" height="24"
+									viewBox="0 0 23.521 24">
+									<g id="surface1" transform="translate(-0.089 -0.001)">
+										<path id="Path_488" data-name="Path 488"
+											d="M.53,6.631a.971.971,0,0,0-.015.144v.987a.979.979,0,0,0,.635.914v1.453a.913.913,0,0,0,.87.909v8.393a.913.913,0,0,0-.87.909v1.448a.99.99,0,0,0-.635.922v.966A.326.326,0,0,0,.841,24h22a.326.326,0,0,0,.326-.326v-.966a.99.99,0,0,0-.635-.922V20.33a.913.913,0,0,0-.87-.909V11.037a.913.913,0,0,0,.87-.909V8.675a.979.979,0,0,0,.635-.914V6.781a.95.95,0,0,0-.015-.144.325.325,0,0,0,.263-.594l-11.425-6a.326.326,0,0,0-.3,0l-11.424,6a.326.326,0,0,0,.267.594ZM1.8,9.24v-.5H5.565v.5Zm8.377,1.8v8.39a.913.913,0,0,0-.87.909v1.388h-3.1V20.339a.913.913,0,0,0-.87-.909V11.037a.913.913,0,0,0,.87-.909V8.738H9.306v1.388a.914.914,0,0,0,.87.911Zm-.217-1.8v-.5h3.763v.5Zm8.378,1.8v8.39a.914.914,0,0,0-.87.909v1.388h-3.1V20.339a.914.914,0,0,0-.87-.909V11.037a.913.913,0,0,0,.87-.909V8.738h3.093v1.388a.913.913,0,0,0,.87.911Zm-.217-1.8v-.5h3.762v.5Zm3.762,11.988v.5H18.118v-.5Zm-8.16,0v.5H9.958v-.5ZM10.5,10.391h-.283a.261.261,0,0,1-.261-.261V9.893h3.762v.237a.261.261,0,0,1-.261.261Zm2.351.652v8.382H10.828V11.043ZM10.5,20.078H13.46a.261.261,0,0,1,.261.261v.237H9.958v-.237a.261.261,0,0,1,.261-.261ZM5.561,21.228v.5H1.8v-.5ZM1.8,10.136V9.893H5.561v.237a.261.261,0,0,1-.261.261H2.053a.261.261,0,0,1-.254-.263Zm2.893.913v8.375H2.668V11.043ZM1.8,20.345a.261.261,0,0,1,.261-.261H5.3a.261.261,0,0,1,.261.261v.237H1.8Zm20.718,2.377v.639H1.163v-.639a.337.337,0,0,1,.337-.337H22.179a.337.337,0,0,1,.337.331Zm-.635-2.377v.237H18.118v-.237a.261.261,0,0,1,.261-.261h3.247a.261.261,0,0,1,.254.254Zm-2.893-.914V11.043h2.025v8.382Zm2.893-9.3a.261.261,0,0,1-.261.261H18.381a.261.261,0,0,1-.261-.261V9.893h3.762ZM11.84.691,21.554,5.8H2.125ZM1.163,6.781a.326.326,0,0,1,.326-.326h20.7a.326.326,0,0,1,.326.326v.987a.326.326,0,0,1-.326.326H1.489a.326.326,0,0,1-.326-.326Zm0,0"
+											transform="translate(0)"></path>
+									</g>
+								</svg>
+							</span> Tiền mặt
+						</li>
+						<li id="upi" class="y 
+									">
+							<span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="8.114"
+									viewBox="0 0 30 8.114">
+									<g id="HEmmoK" transform="translate(1440.469 -1982.177)">
+										<g id="Group_4735" data-name="Group 4735"
+											transform="translate(-1440.469 1982.177)">
+											<path id="Path_347" data-name="Path 347"
+												d="M-318.63,2213.278q.12-.427.24-.854.106-.378.21-.756a.353.353,0,0,0,.006-.044.175.175,0,0,0-.083-.006q-3.934,0-7.868,0c-.023,0-.07.031-.072-.03l.213-.776.208-.757a.1.1,0,0,1,.012-.021.437.437,0,0,1,.071,0h8.769a.267.267,0,0,1,.078,0,.674.674,0,0,1,.312.112.53.53,0,0,1,.213.536c-.052.316-.159.619-.242.927-.137.513-.283,1.025-.426,1.537q-.135.486-.272.972a1.063,1.063,0,0,1-.414.563,1,1,0,0,1-.5.2.243.243,0,0,1-.078,0h-7.161a.231.231,0,0,0-.084,0,2.6,2.6,0,0,0-.1.331q-.195.693-.385,1.388-.2.719-.4,1.439c-.014.05-.032.07-.086.07q-.739,0-1.478,0c-.056,0-.068-.007-.051-.066.084-.29.164-.582.244-.873s.159-.587.24-.881c.073-.267.148-.534.222-.8s.146-.534.221-.8.153-.541.229-.812c.054-.192.106-.384.159-.576.024-.021.054-.01.08-.01h7.882C-318.685,2213.3-318.651,2213.312-318.63,2213.278Z"
+												transform="translate(338.552 -2210.009)"></path>
+											<path id="Path_348" data-name="Path 348"
+												d="M-1129.645,2217.956c-.024,0-.048,0-.071,0h-8.17c-.024,0-.047,0-.071,0s-.073,0-.108-.01a.523.523,0,0,1-.471-.391.834.834,0,0,1,.029-.481c.085-.3.165-.6.249-.9s.172-.6.256-.9c.094-.338.183-.676.276-1.014.07-.254.144-.508.214-.762.082-.3.162-.59.244-.885.069-.249.136-.5.207-.746q.129-.448.249-.9c.072-.269.15-.537.226-.805.027-.1.056-.192.083-.288.084-.007.169,0,.253,0h1.294c.021,0,.048-.014.065.012a4.315,4.315,0,0,0-.122.418q-.194.687-.385,1.375-.21.757-.418,1.514-.241.871-.483,1.741-.191.688-.384,1.375c-.014.05-.019.073.049.073q3.148,0,6.3,0c.048,0,.069-.009.082-.06q.14-.533.289-1.064c.106-.382.219-.762.324-1.144.124-.447.242-.9.366-1.344.106-.382.218-.762.325-1.144.134-.481.264-.964.4-1.446.027-.1.057-.2.085-.3.014-.021.036-.011.053-.011h1.51c.017,0,.035,0,.05.007q-.155.554-.31,1.108-.27.972-.539,1.945c-.158.567-.319,1.134-.476,1.7-.147.528-.291,1.057-.437,1.586q-.161.585-.325,1.17a.771.771,0,0,1-.565.558.28.28,0,0,1-.058.005C-1129.59,2217.957-1129.619,2217.944-1129.645,2217.956Z"
+												transform="translate(1138.561 -2209.845)"></path>
+											<path id="Path_349" data-name="Path 349"
+												d="M506.059,2208.542c-.036.129-.073.259-.108.389q-.237.858-.473,1.717c-.15.541-.3,1.081-.453,1.623s-.3,1.108-.457,1.661q-.248.9-.5,1.8c-.077.279-.156.557-.232.836a.05.05,0,0,1-.059.043h-1.56c.022-.132.067-.256.1-.382.07-.268.145-.535.22-.8s.154-.541.228-.812.14-.523.212-.784c.062-.224.128-.448.19-.673.1-.344.187-.688.283-1.032.083-.3.169-.6.252-.9s.16-.587.24-.88c.074-.269.15-.538.225-.806s.145-.531.218-.8c.015-.054.036-.108.047-.163.007-.035.021-.046.056-.046h1.549A.1.1,0,0,1,506.059,2208.542Z"
+												transform="translate(-480.855 -2208.536)"></path>
+											<path id="Path_350" data-name="Path 350"
+												d="M730.278,2216.069a.215.215,0,0,0-.081.06l-.621.592-.987.933a2.379,2.379,0,0,1-.229.2l2.239-8.068c.039.072.073.134.105.2q.386.769.772,1.539c.011.022.012.058.049.061.118.234.231.471.353.7.251.481.487.969.732,1.453.045.09.044.089-.026.159-.2.207-.421.4-.631.6-.236.226-.475.45-.713.675s-.48.452-.718.679c-.071.067-.146.13-.21.2A.033.033,0,0,1,730.278,2216.069Z"
+												transform="translate(-704.049 -2209.767)"></path>
+											<path id="Path_351" data-name="Path 351"
+												d="M839.132,2216.61a5.108,5.108,0,0,1,.4-.394q.7-.669,1.408-1.333c.169-.159.336-.32.507-.478a.064.064,0,0,0,.015-.093q-.529-1.047-1.055-2.1a.2.2,0,0,1-.032-.1c.028-.091.057-.181.083-.273.054-.2.105-.392.159-.587q.122-.446.245-.891a.2.2,0,0,1,.023-.038c.022.042.042.079.061.116q.392.785.785,1.57.576,1.147,1.156,2.293a.071.071,0,0,1-.016.1q-.545.512-1.086,1.027l-.675.638-1.015.96-.68.643-.727.687c-.008.008-.012.033-.033.018s0-.024,0-.038c.086-.341.191-.677.277-1.019.057-.226.129-.449.193-.673A.21.21,0,0,0,839.132,2216.61Z"
+												transform="translate(-812.903 -2210.308)"></path>
+											<path id="Path_376" data-name="Path 376"
+												d="M-147.511,2209.459h-8.918c.021-.016.046-.009.069-.009h8.773C-147.561,2209.449-147.534,2209.44-147.511,2209.459Z"
+												transform="translate(169.218 -2209.435)"></path>
+											<path id="Path_377" data-name="Path 377"
+												d="M-218.4,2459.589a.02.02,0,0,1-.022.025h-6.332l-1.607,0a.19.19,0,0,0-.083.008c.02-.031.051-.017.077-.017h7.873A.164.164,0,0,0-218.4,2459.589Z"
+												transform="translate(238.326 -2456.32)"></path>
+											<path id="Path_378" data-name="Path 378"
+												d="M-189.892,2329.622c0,.013,0,.026.022.026h7.922c.026,0,.056-.012.079.011q-3.98,0-7.959,0C-189.848,2329.659-189.908,2329.7-189.892,2329.622Z"
+												transform="translate(202.248 -2328.045)"></path>
+											<path id="Path_379" data-name="Path 379"
+												d="M-135.865,2582.745a.157.157,0,0,1,.083-.008h7.239c-.018.017-.041.011-.062.011h-7.26Z"
+												transform="translate(148.922 -2577.863)"></path>
+											<path id="Path_380" data-name="Path 380"
+												d="M-978.832,2209.39a.154.154,0,0,0-.083-.01h-1.53c.021-.017.046-.01.069-.01h1.468C-978.882,2209.371-978.85,2209.356-978.832,2209.39Z"
+												transform="translate(982.504 -2209.357)"></path>
+											<path id="Path_381" data-name="Path 381"
+												d="M-361.826,2209.5c-.026,0-.052,0-.077,0h-1.453a.192.192,0,0,0-.083.008c.012-.027.037-.018.057-.018h1.5C-361.86,2209.487-361.839,2209.481-361.826,2209.5Z"
+												transform="translate(373.532 -2209.474)"></path>
+											<path id="Path_408" data-name="Path 408"
+												d="M-1100.482,2830.712a.3.3,0,0,1,.108.01C-1100.41,2830.719-1100.448,2830.734-1100.482,2830.712Z"
+												transform="translate(1100.978 -2822.61)"></path>
+											<path id="Path_411" data-name="Path 411"
+												d="M-453.841,2830.748a.186.186,0,0,1,.082-.009C-453.785,2830.758-453.814,2830.746-453.841,2830.748Z"
+												transform="translate(462.757 -2822.636)"></path>
+										</g>
+									</g>
+								</svg>
+
+							</span> Ví MoMo
+						</li>
+
+
+
+
+
+
+
+
+
+
+
+
+						<li id="wallet" class="y 
+									">
+							<span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="20.4" height="24"
+									viewBox="0 0 20.4 24">
+									<g id="Wallet" transform="translate(-11 -2)">
+										<path id="Path_489" data-name="Path 489"
+											d="M31,13.2h-.4V8a.4.4,0,0,0-.4-.4H25.4V4a2,2,0,0,0-2-2H13a2,2,0,0,0-2,2V24a2,2,0,0,0,2,2H23.4a2,2,0,0,0,2-2V20.4h4.8a.4.4,0,0,0,.4-.4V17.2H31a.4.4,0,0,0,.4-.4V13.6A.4.4,0,0,0,31,13.2ZM29.8,10h-12a.8.8,0,1,1,0-1.6h12Zm-14-7.2h4.8v.4a.4.4,0,0,1-.4.4h-4a.4.4,0,0,1-.4-.4ZM24.6,24a1.2,1.2,0,0,1-1.2,1.2H13A1.2,1.2,0,0,1,11.8,24V4A1.2,1.2,0,0,1,13,2.8h2v.4a1.2,1.2,0,0,0,1.2,1.2h4a1.2,1.2,0,0,0,1.2-1.2V2.8h2A1.2,1.2,0,0,1,24.6,4V7.6H17.8a1.6,1.6,0,0,0-1.6,1.6v9.2a2,2,0,0,0,2,2h6.4Zm5.2-4.4H18.2A1.2,1.2,0,0,1,17,18.4V10.578a1.584,1.584,0,0,0,.8.222h12v2.4h-2a1.2,1.2,0,0,0-1.2,1.2V16a1.2,1.2,0,0,0,1.2,1.2h2Zm.8-3.2H27.8a.4.4,0,0,1-.4-.4V14.4a.4.4,0,0,1,.4-.4h2.8Z">
+										</path>
+										<path id="Path_490" data-name="Path 490" d="M54,34h.8v.8H54Z"
+											transform="translate(-25.8 -19.2)"></path>
+										<path id="Path_491" data-name="Path 491"
+											d="M37.2,29.6H38a.4.4,0,0,1,.4.4h.8A1.2,1.2,0,0,0,38,28.8V28h-.8v.8a1.2,1.2,0,1,0,0,2.4H38a.4.4,0,1,1,0,.8h-.8a.4.4,0,0,1-.4-.4H36a1.2,1.2,0,0,0,1.2,1.2v.8H38v-.8a1.2,1.2,0,1,0,0-2.4h-.8a.4.4,0,1,1,0-.8Z"
+											transform="translate(-15 -15.6)"></path>
+									</g>
+								</svg>
+
+							</span>Viettel Pay
+						</li>
+
+
+
+
+
+
+
+
+
+
+						<li id="emi" class="y 
+									">
+							<span class="icon"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21.492"
+									viewBox="0 0 24 21.492">
+									<g id="_005-funds" data-name="005-funds" transform="translate(0 -23.098)">
+										<path id="Path_492" data-name="Path 492"
+											d="M18.349,32.132s0-.009,0-.013a.536.536,0,0,0-.013-.065h0a.54.54,0,0,0-.021-.06l-.007-.017c-.006-.014-.013-.028-.021-.042l-.01-.018-.005-.01c-.008-.013-.017-.025-.026-.037l0-.007a.527.527,0,0,0-.044-.049l-.009-.008a.548.548,0,0,0-.042-.036l-.011-.009a.55.55,0,0,0-.06-.039l-8-4.547,4.606-2.9L22.4,28.662,19.15,30.71a.543.543,0,1,0,.579.919L23.748,29.1a.543.543,0,0,0-.021-.932l-8.793-5a.543.543,0,0,0-.558.013L8.733,26.735l0,0L5.908,28.514l0,0L.256,32.073A.543.543,0,0,0,.277,33L9.07,38a.543.543,0,0,0,.558-.013l4.019-2.531a.543.543,0,0,0-.579-.919L9.324,36.9,1.6,32.509l4.606-2.9,8.235,4.681v6.2a.543.543,0,0,0,.832.459L18.1,39.17a.543.543,0,0,0,.254-.459V32.2s0-.006,0-.009S18.352,32.15,18.349,32.132Zm-2.82,7.374V33.974a.543.543,0,0,0-.275-.472l-8-4.55L9.032,27.83l7.722,4.389-.676.426a.543.543,0,1,0,.579.919l.611-.385v5.232Z"
+											transform="translate(-0.002 0)"></path>
+										<path id="Path_493" data-name="Path 493"
+											d="M352.248,155.225l-4.019,2.531a.543.543,0,1,0,.579.919l4.019-2.531a.543.543,0,0,0-.579-.919Z"
+											transform="translate(-329.08 -124.874)"></path>
+										<path id="Path_494" data-name="Path 494"
+											d="M13.066,229.409l-3.744,2.358L.811,226.93a.543.543,0,1,0-.537.944l8.793,5a.543.543,0,0,0,.558-.013l4.019-2.531a.543.543,0,0,0-.579-.919Z"
+											transform="translate(0 -192.697)"></path>
+										<path id="Path_495" data-name="Path 495"
+											d="M352.248,195.225l-4.019,2.531a.543.543,0,1,0,.579.919l4.019-2.531a.543.543,0,0,0-.579-.919Z"
+											transform="translate(-329.08 -162.702)"></path>
+										<path id="Path_496" data-name="Path 496"
+											d="M13.066,269.409l-3.744,2.358L.811,266.93a.543.543,0,0,0-.537.944l8.793,5a.543.543,0,0,0,.558-.013l4.019-2.531a.543.543,0,0,0-.579-.919Z"
+											transform="translate(0 -230.526)"></path>
+										<path id="Path_497" data-name="Path 497"
+											d="M352.248,235.225l-4.019,2.531a.543.543,0,1,0,.579.919l4.019-2.531a.543.543,0,0,0-.579-.919Z"
+											transform="translate(-329.08 -200.531)"></path>
+										<path id="Path_498" data-name="Path 498"
+											d="M13.066,309.409l-3.744,2.358L.811,306.93a.543.543,0,0,0-.537.944l8.793,5a.543.543,0,0,0,.558-.013l4.019-2.531a.543.543,0,0,0-.579-.919Z"
+											transform="translate(0 -268.354)"></path>
+									</g>
+								</svg>
+							</span> VN Pay
+						</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</ul>
+				</div>
+				<!-- Tabs -->
+				<form action="" method="POST">
+					{% csrf_token %}
+					<!-- Debit Card Form -->
+					<div class="formWrapper hideForm " id="debit-card-form">
+						<div class="sectionHead hideSmall">Nhập thông tin thẻ</div>
+						<div class="formField">
+							<label class="nbError fullWidth">
+								<p class="label">Danh sách ngân hàng</p>
+								<div class="field select">
+									<select id="otherbank">
+										<option value="-1">Lựa chọn ngân hàng</option>
+
+
+
+
+
+										<option value="1">Airtel Payments Bank</option>
+
+										<option value="3">Andhra Bank</option>
+
+										<option value="4">Axis Bank</option>
+
+										<option value="7">Bank of India</option>
+
+										<option value="8">Bank of Maharashtra</option>
+
+										<option value="67">Bharat Co-Op Bank</option>
+
+										<option value="9">Canara Bank</option>
+
+										<option value="10">Catholic Syrian Bank</option>
+
+										<option value="11">Central Bank of India</option>
+
+										<option value="12">City Union Bank</option>
+
+										<option value="13">Corporation Bank</option>
+
+										<option value="66">Cosmos Bank</option>
+
+										<option value="16">Dena Bank</option>
+
+										<option value="17">Deutsche Bank</option>
+
+										<option value="65">Development Credit Bank</option>
+
+										<option value="19">Dhanlaxmi Bank</option>
+
+										<option value="20">Federal Bank</option>
+
+										<option value="21">HDFC Bank</option>
+
+										<option value="22">ICICI Bank</option>
+
+										<option value="24">IDFC Bank</option>
+
+										<option value="25">Indian Bank</option>
+
+										<option value="26">Indian Overseas Bank</option>
+
+										<option value="27">Indusind Bank</option>
+
+										<option value="64">Industrial Development Bank of India</option>
+
+										<option value="28">Jammu and Kashmir Bank</option>
+
+										<option value="29">Janata Sahakari Bank (Pune)</option>
+
+										<option value="30">Karnataka Bank</option>
+
+										<option value="63">Karur Vysya - Corporate Netbanking</option>
+
+										<option value="31">Karur Vysya Bank</option>
+
+										<option value="32">Kotak Mahindra Bank</option>
+
+										<option value="33">Lakshmi Vilas Bank - Corporate Banking</option>
+
+										<option value="34">Lakshmi Vilas Bank - Retail Banking</option>
+
+										<option value="62">Nainital Bank</option>
+
+										<option value="36">Oriental Bank of Commerce</option>
+
+										<option value="37">Punjab &amp; Maharashtra Co-operative Bank</option>
+
+										<option value="38">Punjab &amp; Sind Bank</option>
+
+										<option value="39">Punjab National Bank - Corporate Banking</option>
+
+										<option value="40">Punjab National Bank - Retail Banking</option>
+
+										<option value="61">Saraswat bank</option>
+
+										<option value="43">Shamrao Vithal Co-operative Bank</option>
+
+										<option value="44">South Indian Bank</option>
+
+										<option value="48">State Bank of India</option>
+
+										<option value="52">Syndicate Bank</option>
+
+										<option value="53">Tamilnadu Mercantile Bank</option>
+
+										<option value="55">UCO Bank</option>
+
+										<option value="60">Union Bank - Corporate Netbanking</option>
+
+										<option value="56">Union Bank of India</option>
+
+										<option value="57">United Bank of India</option>
+
+										<option value="58">Vijaya Bank</option>
+
+										<option value="59">Yes Bank</option>
+
+
+
+
+
+
+
+
+
+
+
+									</select>
+								</div>
+								<p class="error-msg" id="nbError" style="display: none;">làm ơn chọn ngân hàng</p>
+							</label>
+						</div>
+						<div class="siAlert"></div>
+						<div class="formField">
+							<label class="dcCardNoErr">
+								<p class="label">Số thẻ</p>
+								<div class="field">
+									<input type="text" name="card-number" placeholder="XXXX - XXXX - XXXX - XXXX"
+										id="debitCardNo" onkeypress="return isNumberKey(event);" autocomplete="off">
+								</div>
+								<p class="error-msg" id="dcCardNoErr" style="display: none;">Làm ơn nhập số thẻ</p>
+							</label> <span><img src="./ Payment Page_files/cardtypes.svg" alt=""
+									width="130"></span>
+						</div>
+
+						<div class="formField">
+							<label class="dcCardNameErr">
+								<p class="label">Tên in trên thẻ</p>
+								<div class="field">
+									<input type="text" name="card-number" placeholder="Nhập tên in trên thẻ"
+										onkeypress="return isCharacterKey(event);" id="debitCardName"
+										autocomplete="off">
+								</div>
+								<p class="error-msg" id="dcCardNameErr" style="display: none;">Làm ơn nhập tên in trên
+									thẻ</p>
+							</label>
+						</div>
+
+						<div class="formField cardDetails">
+							<div class="dcExpiryErr labelWrap">
+								<p class="label">Ngày hết hạn</p>
+								<div class="field select">
+									<select id="debitMonth">
+										<option value="-1" name="Month" class="month">MM</option>
+										<option value="01">Jan(01)</option>
+										<option value="02">Feb(02)</option>
+										<option value="03">Mar(03)</option>
+										<option value="04">Apr(04)</option>
+										<option value="05">May(05)</option>
+										<option value="06">Jun(06)</option>
+										<option value="07">July(07)</option>
+										<option value="08">Aug(08)</option>
+										<option value="09">Sept(09)</option>
+										<option value="10">Oct(10)</option>
+										<option value="11">Nov(11)</option>
+										<option value="12">Dec(12)</option>
+									</select>
+								</div>
+
+								<div class="field select">
+									<select id="debitYear">
+										<option value="-1" name="Year" class="yr">YY</option>
+
+
+										<option value="2019">2019</option>
+
+										<option value="2020">2020</option>
+
+										<option value="2021">2021</option>
+
+										<option value="2022">2022</option>
+
+										<option value="2023">2023</option>
+
+										<option value="2024">2024</option>
+
+										<option value="2025">2025</option>
+
+										<option value="2026">2026</option>
+
+										<option value="2027">2027</option>
+
+										<option value="2028">2028</option>
+
+										<option value="2029">2029</option>
+
+										<option value="2030">2030</option>
+
+										<option value="2031">2031</option>
+
+										<option value="2032">2032</option>
+
+										<option value="2033">2033</option>
+
+										<option value="2034">2034</option>
+
+										<option value="2035">2035</option>
+
+										<option value="2036">2036</option>
+
+										<option value="2037">2037</option>
+
+										<option value="2038">2038</option>
+
+										<option value="2039">2039</option>
+
+										<option value="2040">2040</option>
+
+									</select>
+								</div>
+								<p class="error-msg" id="dcExpiryErr" style="display: none;">Làm ơn chọn ngày hết hạn
+								</p>
+							</div>
+
+							<label class="dcCVVErr cvv">
+								<p class="label">Số CVV</p>
+								<div class="field">
+									<input type="text" name="cvv" placeholder="xxx" id="debitCvv"
+										onkeypress="return isNumberKey(event);" maxlength="4">
+								</div>
+								<p class="error-msg" id="dcCVVErr" style="display: none;">Làm ơn điền số CVV</p>
+							</label> <span><img src="./ Payment Page_files/cvvIcon.svg" alt=""></span>
+						</div>
+
+						<div class="checkbox" style="display: none;">
+							<label> <input type="checkbox" id="saveCardDCCheckbox">
+								<span class="checked"></span> <em>I agree to setup my card
+									for Standing Instruction</em>
+							</label>
+						</div>
+						<div class="si_dc_remarks" style="display: none;">
+							<div class="disclaimer hideSmall">
+								<p>Note:</p>
+								<ol>
+
+									<li>Pay premium now &amp; opt for si instruction.</li>
+
+
+									<li>Visa and Master Debit cards of <strong></strong>
+										are currently supported for Standing Instructions
+									</li>
+								</ol>
+							</div>
+						</div>
+						<div class="nsi_dc_remarks" style="display: none;">
+							<div class="disclaimer hideSmall">
+								<p>Note:</p>
+								<ol>
+									<li>Standing Instruction shall not be setup on this card.</li>
+									<li>Pay 0 month premium now &amp; activate auto debit facility
+										later.</li>
+								</ol>
+							</div>
+						</div>
+
+						<div class="text-right mt-20-small">
+							<button type="submit" class="btn" id="debitpaynow"
+								style="background:rgb(242, 115, 54) !important;">
+								Thanh toán <a class="payDCTx amnt">6,330.00 VND</a><a class="payDCMult amnt"
+									style="display: none;">6,330.00</a>
+							</button>
+						</div>
+
+						<div class="disclaimer hideBig" id="si_dc_remarks" style="display: none;">
+							<p>Note:</p>
+							<ol>
+
+								<li>Pay premium now &amp; opt for si instruction.</li>
+
+
+								<li>Visa and Master Debit cards of <strong>
+										bank</strong> are currently supported for Standing Instructions
+								</li>
+							</ol>
+						</div>
+						<div class="disclaimer hideBig" id="nsi_dc_remarks" style="display: none;">
+							<p>Note:</p>
+							<ol>
+								<li>Standing Instruction shall not be setup on this card.</li>
+								<li>Pay 0 month premium now &amp; activate auto debit facility
+									later.</li>
+							</ol>
+						</div>
+
+					</div>
+
+					<!-- Debit Card Form -->
+				</form>
+				<!-- Credit Card Form -->
+				<div class="formWrapper hideForm 
+									hide
+									" id="credit-card-form">
+					<div class="sectionHead hideSmall">Vui lòng chuyển đến tài khoản của Bestlife theo thông tin sau:
+					</div>
+					<div class="siAlert"></div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Tên ngân hàng : </p>
+						<div class="details">
+
+							<p class="detailTxt">NGÂN HÀNG TMCP NGOẠI THƯƠNG VIỆT NAM</p>
+						</div>
+
+
+					</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Số tài khoản : 0000-066-888-888 </p>
+
+
+					</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Chi nhánh : Sở giao dịch</p>
+
+
+
+					</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Người thụ hưởng : </p>
+						<div class="details">
+
+							<p class="detailTxt">CÔNG TY CỔ PHẦN BESTLIFE VIỆT NAM</p>
+						</div>
+
+
+					</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Nội dung thanh toán : Mã giao dịch ( Ví dụ: PB14703891) </p>
+
+
+
+					</div>
+
+					<div class="checkbox" style="display: none;">
+						<label> <input type="checkbox" id="saveCardCCCheckbox">
+							<span class="checked"></span> <em>Standing Instruction shall
+								be setup on this card</em>
+						</label>
+					</div>
+					<div class="si_cc_remarks" style="display: none;">
+						<div class="disclaimer hideSmall">
+
+							<p>Note:</p>
+							<ol>
+
+								<li>Pay premium now &amp; opt for si instruction.</li>
+							</ol>
+
+
+						</div>
+					</div>
+					<div class="nsi_cc_remarks" style="display: none;">
+						<div class="disclaimer hideSmall">
+							<p>Note:</p>
+							<ol>
+								<li>Standing Instruction shall not be setup on this card.</li>
+								<li>Pay 0 month premium now &amp; activate auto debit facility
+									later.</li>
+							</ol>
+						</div>
+					</div>
+					<div class="text-right mt-20-small">
+						<button class="btn" id="creditpaynow" style="background: rgb(242, 115, 54);">
+							Thanh toán <a class="payCCTx amnt">6,330.00 VND</a><a class="payCCMult amnt"
+								style="display: none;">6,330.00</a>
+						</button>
+					</div>
+
+					<div class="disclaimer hideBig" id="si_cc_remarks" style="display: none;">
+
+						<p>Note:</p>
+						<ol>
+
+							<li>Pay premium now &amp; opt for si instruction.</li>
+						</ol>
+
+
+
+
+					</div>
+					<div class="disclaimer hideBig" id="nsi_cc_remarks" style="display: none;">
+						<p>Note:</p>
+						<ol>
+							<li>Standing Instruction shall not be setup on this card.</li>
+							<li>Pay 0 month premium now &amp; activate auto debit facility
+								later.</li>
+						</ol>
+					</div>
+
+				</div>
+				<!-- Credit Card Form -->
+
+				<!-- NetBanking Form -->
+				<div class="formWrapper hideForm banksList 
+									hide
+									" id="netbanking-form">
+					<div class="sectionHead hideSmall">Vui lòng xác nhận chính xác địa chỉ cá nhân</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Họ và Tên : Lê Văn A</p>
+
+					</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Số điện thoại : 0966668999</p>
+
+					</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Địa chỉ giao hàng : </p>
+						<div class="details">
+
+							<p class="detailTxt">Thôn 7 Đông La Hoài Đức Hà Nội</p>
+						</div>
+
+
+					</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Lưu ý: Sau khi nhận được yêu cầu thanh toán tiền mặt của Quý khách, chúng tôi
+							sẽ thực hiện xác nhận đơn đặt hàng trong vòng 24 giờ và sau đó đến thu phí và cấp đơn cho
+							Quý khách theo địa chỉ thông tin người nhận Quý khách đã đăng ký. Không phát sinh phí dịch
+							vụ khi thanh toán tiền mặt. </p>
+
+
+
+					</div>
+
+					<div class="disclaimer hideSmall" id="nbNote" style="display: none;">
+						<p>Note:</p>
+						<ol>
+
+							<li>Pay premium now &amp; activate auto debit
+								facility through E-Mandate/E-NACH.</li>
+
+
+							<li>E-Mandate/E-NACH shall be setup for this bank account.</li>
+						</ol>
+					</div>
+					<div class="disclaimer hideSmall" id="nnbNote" style="display: none;">
+						<p>Note:</p>
+						<ol>
+							<li>Pay 0 month premium now &amp; activate auto debit facility
+								later.</li>
+						</ol>
+					</div>
+					<div class="text-right">
+						<button class="btn" id="paynb">
+							Thanh toán <a class="payNBTx amnt">6,330.00 VND</a><a class="payNBMult amnt"
+								style="display: none;">6,330.00</a>
+						</button>
+					</div>
+
+					<div class="disclaimer hideBig" id="nbNoteMob" style="display: none;">
+						<p>Note:</p>
+						<ol>
+
+							<li>Pay premium now &amp; activate auto debit
+								facility through E-Mandate/E-NACH.</li>
+
+
+							<li>E-Mandate/E-NACH shall be setup for this bank account.</li>
+						</ol>
+					</div>
+					<div class="disclaimer hideBig" id="nnbNoteMob" style="display: none;">
+						<p>Note:</p>
+						<ol>
+							<li>Pay 0 month premium now &amp; activate auto debit facility
+								later.</li>
+						</ol>
+					</div>
+				</div>
+				<!-- NetBanking Form -->
+
+				<!-- UPI Form -->
+				<div class="formWrapper hideForm 
+									hide
+									" id="upi-form">
+					<div class="upi-wrapper">
+						<div class="upi-head clearfix">
+							<div class="left" style="padding-bottom: 5px;">
+								<img src="{% static 'payment/momo.png' %}" alt="" width="25">Hướng dẫn thanh toán qua Ví
+								điện tử MoMo
+							</div>
+
+						</div>
+
+						<div class="card cardContent proposerDetails hideSmall">
+							<p class="title">Bước 1: Nhấn vào ức Ví MoMo và ấn thanh toán</p>
+
+						</div>
+						<div class="card cardContent proposerDetails hideSmall">
+							<p class="title">Bước 2: Đăng nhập Ví MoMo trên điện thoại</p>
+
+						</div>
+						<div class="card cardContent proposerDetails hideSmall">
+							<p class="title">Bước 3: Quét QR đang hiển thị trên màn hình thanh toán</p>
+
+						</div>
+						<div class="card cardContent proposerDetails hideSmall">
+							<p class="title">Bước 4: Xác nhận thanh toán và hoàn tất dịch vụ</p>
+
+						</div>
+
+						<!-- PB sending request to bank -->
+						<div class="upiAuthRequestBlock" id="requestSenttickDisabled" style="display: none;">
+							<p>
+								 is sending request to your bank. <img
+									src="{% static 'payment/tick-disabled.svg' %}" alt="" width="16" class="v-m">
+								<span>Keep your
+									phone handy</span>
+							</p>
+							<div class="upiAuthImgBlock">
+								<img src="{% static 'payment/upi-auth-req.svg' %}" alt="" width="100%">
+							</div>
+						</div>
+						<div id="requestSentRetry" style="display: none;">
+							<div class="upiAuthRequestBlock">
+								<p>
+									Authorise payment request. <span>Go to transactions in
+										bank app to approve</span>
+								</p>
+								<div class="upiAuthImgBlock">
+									<img src="{% static 'payment/upi-failed.svg' %}" alt="" class="upi-status">
+									<p>
+										<span>Transaction failed</span>
+									</p>
+								</div>
+							</div>
+							<div class="text-right mt-30" id="upiRetry" style="display: none;">
+								<button class="btn">RETRY</button>
+							</div>
+						</div>
+						<div class="upiAuthRequestBlock" id="requestSenttickEnabled" style="display: none;">
+							<p>
+								 is sending request to your bank. <img
+									src="{% static 'payment/tick-enabled.svg' %}" alt="" width="16" class="v-m">
+								<span>Keep your
+									phone handy</span>
+							</p>
+							<div class="upiAuthImgBlock">
+								<img src="{% static 'payment/upi-auth-req.svg' %}" alt="" width="100%">
+							</div>
+
+
+							<!-- Authorise payment request. -->
+
+							<p>
+								Authorise payment request. <span>Go to transactions in
+									bank app to approve</span>
+							</p>
+							<div class="upiAuthImgBlock">
+								<img src="{% static 'payment/upi-success.svg' %}" alt="" class="upi-status">
+
+								<p class="sessionTimer">
+									Session will expire in <em id="upidemo"></em>
+								</p>
+
+							</div>
+						</div>
+
+
+						<div class="upiAuthRequestBlock" id="requestUpiSuccess" style="display: none;">
+							<p>
+								Authorise payment request. <span>Go to transactions in
+									bank app to approve</span>
+							</p>
+							<div class="upiAuthImgBlock">
+								<img src="{% static 'payment/upi-success.svg' %}" alt="" class="upi-status">
+								<p>
+									<span>Payment Successful <em>You have successfully
+											paid</em>
+									</span>
+								</p>
+							</div>
+						</div>
+
+						<!-- Authorise payment request. -->
+
+
+						<!-- PB sending request to bank -->
+
+
+						<!-- <div class="formField hideSmall qr">
+							<label>
+								<p class="label">Scan QR code to pay
+									<em>Scan QR code with your UPI app</em>
+								</p>
+							</label>
+							<div class="qrCodeBtn">
+								SHOW QR CODE
+							</div>
+						</div> -->
+
+						<!-- Pop up - QR Code -->
+
+						<!-- Pop up - QR Code -->
+
+						<!-- Pop up - How it works -->
+						<div class="popup hide" id="upiPopup">
+							<div class="popWindow">
+								<div class="close" id="closePopup">
+									<a href="javascript:void(0)"></a>
+								</div>
+								<p class="title">How UPI works?</p>
+
+								<ul class="qr-steps">
+									<li>Open UPI linked app on your phone or tap on the
+										notification received for the same in SMS</li>
+									<li>Check the collect request from  in pending
+										transactions in linked UPI app</li>
+									<li>Complete the payment by accepting the request and
+										entering UPI pin</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Pop up - How it works -->
+						<div class="nsi_remarks" style="display: none;">
+							<div class="disclaimer hideBig" id="upiNoteMob">
+								<p>Note:</p>
+								<ol>
+									<li>Pay 3 month premium now &amp; activate auto debit facility
+										later.</li>
+								</ol>
+							</div>
+							<div class="disclaimer hideSmall" id="upiNote">
+								<p>Note:</p>
+								<ol>
+									<li>Pay 0 month premium now &amp; activate auto debit facility
+										later.</li>
+								</ol>
+							</div>
+						</div>
+
+
+						<div class="text-right">
+							<button class="btn" id="payupi">
+								Thanh toán <a class="payTx amnt">6,330.00 VND</a><a class="payMult amnt"
+									style="display: none;">6,330.00</a>
+							</button>
+						</div>
+						<p class="text-center hideBig mt-30">
+							<a href="javascript:void(0)" class="howUPIWork">How it works?</a>
+						</p>
+					</div>
+				</div>
+				<!-- UPI Form -->
+
+				<!-- Wallet Form -->
+				<div class="formWrapper hideForm banksList hide" id="wallet-form">
+					<div class="upi-head clearfix">
+						<div class="left" style="padding: 5px;">
+							<img src="{% static 'payment/viettelpay.jpeg' %}" alt="" width="25">Hướng dẫn thanh toán qua
+							ViettelPay
+						</div>
+
+					</div>
+
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Bước 1: Nhấn vào phương thức Viettel Pay và ấn thanh toán</p>
+
+					</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Bước 2: Đăng nhập Viettel Pay trên điện thoại</p>
+
+					</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Bước 3: Quét QR đang hiển thị trên màn hình thanh toán</p>
+
+					</div>
+					<div class="card cardContent proposerDetails hideSmall">
+						<p class="title">Bước 4: Xác nhận thanh toán và hoàn tất dịch vụ</p>
+
+					</div>
+
+
+					<input type="hidden" id="otherPPI">
+
+					<div class="text-right mt-50 mt-20-mob">
+						<button class="btn" id="payPPI">
+							Thanh toán <a class="payTx amnt">6,330.00 VND</a><a class="payMult amnt"
+								style="display: none;">6,330.00</a>
+						</button>
+					</div>
+
+					<div class="disclaimer hideBig">
+						<p>Note:</p>
+						<ol>
+							<li>As per government regulations, wallets cannot be used for
+								transactions more than Rs. 20,000 per month</li>
+							<li class="nsi_remarks" style="display: none;">Pay 0 month premium now &amp; activate
+								auto debit facility later.</li>
+						</ol>
+					</div>
+				</div>
+				<!-- Wallet Form -->
+
+				<!-- EMI Form -->
+				<div class="formWrapper hideForm 
+									hide
+									" id="emi-form">
+					<div id="emiBankPage">
+						<div class="upi-head clearfix">
+							<div class="left" style="padding: 10px;">
+								<img src="{% static 'payment/vnpay.jpeg' %}" alt="" width="25"
+									style="margin-right: 15px;">Hướng dẫn thanh toán qua VNPay
+							</div>
+
+						</div>
+
+						<div class="card cardContent proposerDetails hideSmall">
+							<p class="title">Bước 1: Nhấn vào phương thức VNPay và ấn thanh toán</p>
+
+						</div>
+						<div class="card cardContent proposerDetails hideSmall">
+							<p class="title">Bước 2: Đăng nhập VNPay trên điện thoại</p>
+
+						</div>
+						<div class="card cardContent proposerDetails hideSmall">
+							<p class="title">Bước 3: Quét QR đang hiển thị trên màn hình thanh toán</p>
+
+						</div>
+						<div class="card cardContent proposerDetails hideSmall">
+							<p class="title">Bước 4: Xác nhận thanh toán và hoàn tất dịch vụ</p>
+
+						</div>
+
+						<div class="text-right mt-50 mt-20-mob">
+							<button class="btn" id="payPPI">
+								Thanh toán <a class="payTx amnt">6,330.00 VND</a><a class="payMult amnt"
+									style="display: none;">6,330.00</a>
+							</button>
+						</div>
+
+						<!-- <div>To avail EMI using <strong>Bajaj Finserv</strong>, Please click on Continue</div> -->
+
+						<table class="emiTable" cellpadding="0" cellspacing="0" style="display: none;">
+							<thead>
+								<tr>
+									<th>&nbsp;</th>
+									<th>Monthly <br>Tenure
+									</th>
+									<th>Interest <br>Rate
+									</th>
+									<th>Monthly <br>Installment
+									</th>
+									<th>Interest <br>Paid
+									</th>
+									<th>Amount <br>Payable
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+
+							</tbody>
+						</table>
+						<div class="text-right mt-30">
+							<button class="btn" id="emiContinue" style="display: none;">Continue</button>
+						</div>
+					</div>
+
+
+					<!-- EMI FORM 2nd step-->
+					<div class="show" id="emihideshow" style="display: none;">
+						<input type="hidden" id="emi_bank">
+						<div class="sectionHead" id="intrest_rate"></div>
+						<div class="formField">
+							<label class="emiCardNoErr">
+								<p class="label">Card Number</p>
+								<div class="field">
+									<input type="text" name="card-number" placeholder="XXXX - XXXX - XXXX - XXXX"
+										id="emiCardNo" onkeypress="return isNumberKey(event);" autocomplete="off">
+								</div>
+								<p class="error-msg" id="emiCardNoErr" style="display: none;">Please enter valid
+									card number</p>
+							</label> <span><img src="./ Payment Page_files/cardtypes.svg" alt=""
+									width="130"></span>
+						</div>
+
+						<div class="formField">
+							<label class="emiCardNameErr">
+								<p class="label">Name on Card</p>
+								<div class="field">
+									<input type="text" name="card-number" placeholder="Enter name given on card"
+										id="emiCardName" onkeypress="return isCharacterKey(event);" autocomplete="off">
+								</div>
+								<p class="error-msg" id="emiCardNameErr" style="display: none;">Please enter name</p>
+							</label>
+						</div>
+
+						<div class="formField cardDetails">
+							<div class="emiExpiryErr labelWrap">
+								<p class="label">Expiry Date</p>
+								<div class="field select">
+									<select id="emiMonth">
+										<option value="-1" name="Month" class="month">MM</option>
+										<option value="01">Jan(01)</option>
+										<option value="02">Feb(02)</option>
+										<option value="03">Mar(03)</option>
+										<option value="04">Apr(04)</option>
+										<option value="05">May(05)</option>
+										<option value="06">Jun(06)</option>
+										<option value="07">July(07)</option>
+										<option value="08">Aug(08)</option>
+										<option value="09">Sept(09)</option>
+										<option value="10">Oct(10)</option>
+										<option value="11">Nov(11)</option>
+										<option value="12">Dec(12)</option>
+									</select>
+								</div>
+
+
+
+								<div class="field select">
+									<select id="emiYear">
+										<option value="-1" name="Year" class="yr">YY</option>
+
+										<option value="2019">2019</option>
+
+										<option value="2020">2020</option>
+
+										<option value="2021">2021</option>
+
+										<option value="2022">2022</option>
+
+										<option value="2023">2023</option>
+
+										<option value="2024">2024</option>
+
+										<option value="2025">2025</option>
+
+										<option value="2026">2026</option>
+
+										<option value="2027">2027</option>
+
+										<option value="2028">2028</option>
+
+										<option value="2029">2029</option>
+
+										<option value="2030">2030</option>
+
+										<option value="2031">2031</option>
+
+										<option value="2032">2032</option>
+
+										<option value="2033">2033</option>
+
+										<option value="2034">2034</option>
+
+										<option value="2035">2035</option>
+
+										<option value="2036">2036</option>
+
+										<option value="2037">2037</option>
+
+										<option value="2038">2038</option>
+
+										<option value="2039">2039</option>
+
+										<option value="2040">2040</option>
+
+									</select>
+								</div>
+								<p class="error-msg" id="emiExpiryErr" style="display: none;">Please enter expiry
+									date</p>
+							</div>
+
+							<label class="emiCVVErr cvv">
+								<p class="label">CVV</p>
+								<div class="field">
+									<input type="password" name="cvv" placeholder="***"
+										onkeypress="return isNumberKey(event);" id="emiCvv" maxlength="4">
+								</div>
+								<p class="error-msg" id="emiCVVErr" style="display: none;">Please enter cvv</p>
+							</label> <span><img src="./ Payment Page_files/cvvIcon.svg" alt=""></span>
+						</div>
+						<div class="nsi_remarks" style="display: none;">
+							<div class="disclaimer hideBig" id="emiNoteMob">
+								<p>Note:</p>
+								<ol>
+									<li>Pay 0 month premium now &amp; activate auto debit facility
+										later.</li>
+								</ol>
+							</div>
+							<div class="disclaimer hideSmall" id="emiNote">
+								<p>Note:</p>
+								<ol>
+									<li>Pay 0 month premium now &amp; activate auto debit facility
+										later.</li>
+								</ol>
+							</div>
+						</div>
+						<div class="text-right hideBig mt-30">
+							<button class="emipaynow btn" id="emipaynow">
+								Thanh toán <a class="payTx amnt">6,330.00 VND</a><a class="payMult amnt"
+									style="display: none;">6,330.00
+								</a></button><a class="payMult amnt" style="display: none;">
+							</a></div><a class="payMult amnt" style="display: none;">
+						</a>
+						<div class="anotherPlanButton hideBig"><a class="payMult amnt" style="display: none;">
+							</a><a
+								href="https://payment..com/pay/payment/secure;jsessionid=92D1987A6A04595C71D72B4EB60CBE1C?orderNo=PB14703891#"
+								class="orderPlanemi">Choose Another Plan</a>
+						</div>
+					</div>
+
+					<!-- EMI FORM 2nd step -->
+					<div class="text-right hideSmall mt-30" id="emipaybtn" style="display: none;">
+						<div class="anotherPlanButton hideSmall">
+							<a class="orderPlanemi"
+								href="https://payment..com/pay/payment/secure;jsessionid=92D1987A6A04595C71D72B4EB60CBE1C?orderNo=PB14703891#">Choose
+								Another Plan</a>
+						</div>
+						<button class="emipaynow btn" id="emipaynow">
+							Thanh toán <a class="payTx amnt">6,330.00 VND</a><a class="payMult amnt"
+								style="display: none;">6,330.00</a>
+						</button>
+					</div>
+				</div>
+				<!-- EMI Form -->
+
+				<!-- No Cost EMI Form -->
+				<div class="formWrapper hideForm 
+									hide
+									" id="no-cost-emi-form">
+					<div class="sectionHead hideSmall">No Cost EMI</div>
+
+					<div class="formField">
+						<label class="ncemiBankErr ullWidth">
+							<!-- <p class="label">Select bank</p> -->
+							<div class="field select">
+								<select id="ncemibank">
+									<option value="-1">Select Bank...</option>
+
+
+
+									<option value="80">AMEX</option>
+
+									<option value="4">Axis Bank</option>
+
+									<option value="73">CITI Bank</option>
+
+									<option value="21">HDFC Bank</option>
+
+									<option value="76">HSBC</option>
+
+									<option value="22">ICICI Bank</option>
+
+									<option value="27">Indusind Bank</option>
+
+									<option value="32">Kotak Mahindra Bank</option>
+
+									<option value="41">RBL Bank</option>
+
+									<option value="45">Standard Chartered Bank</option>
+
+									<option value="48">State Bank of India</option>
+
+									<option value="59">Yes Bank</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+								</select>
+							</div>
+							<p class="error-msg" id="ncemiBankErr" style="display: none;">Select emi bank</p>
+						</label>
+					</div>
+
+					<!-- <div>To avail EMI using Bajaj Finserv, Please click on Continue</div> -->
+					<div>
+						<div class="formField">
+							<label class="ncemiCardNoErr">
+								<p class="label">Card Number</p>
+								<div class="field">
+									<input type="text" id="ncemiCardNo" name="card-number"
+										placeholder="XXXX - XXXX - XXXX - XXXX" onkeypress="return isNumberKey(event);"
+										autocomplete="off">
+								</div>
+								<p class="error-msg" id="ncemiCardNoErr" style="display: none;">Enter valid card
+									number</p>
+							</label> <span><img src="./ Payment Page_files/cardtypes.svg" alt=""
+									width="130"></span>
+						</div>
+
+						<div class="formField">
+							<label class="ncemiCardNameErr">
+								<p class="label">Name on Card</p>
+								<div class="field">
+									<input type="text" id="ncemiCardName" name="card-number"
+										placeholder="Enter name given on card"
+										onkeypress="return isCharacterKey(event);" autocomplete="off">
+								</div>
+								<p class="error-msg" id="ncemiCardNameErr" style="display: none;">Enter valid name</p>
+							</label>
+						</div>
+
+						<div class="formField cardDetails">
+							<div class="ncemiExpiryErr labelWrap">
+								<p class="label">Expiry Date</p>
+								<div class="field select">
+									<select id="ncemiMonth">
+										<option value="-1" name="Month" class="month">MM</option>
+										<option value="01">Jan(01)</option>
+										<option value="02">Feb(02)</option>
+										<option value="03">Mar(03)</option>
+										<option value="04">Apr(04)</option>
+										<option value="05">May(05)</option>
+										<option value="06">Jun(06)</option>
+										<option value="07">July(07)</option>
+										<option value="08">Aug(08)</option>
+										<option value="09">Sept(09)</option>
+										<option value="10">Oct(10)</option>
+										<option value="11">Nov(11)</option>
+										<option value="12">Dec(12)</option>
+									</select>
+								</div>
+
+								<div class="field select">
+									<select id="ncemiYear">
+										<option value="-1" name="Year" class="yr">YY</option>
+
+										<option value="2019">2019</option>
+
+										<option value="2020">2020</option>
+
+										<option value="2021">2021</option>
+
+										<option value="2022">2022</option>
+
+										<option value="2023">2023</option>
+
+										<option value="2024">2024</option>
+
+										<option value="2025">2025</option>
+
+										<option value="2026">2026</option>
+
+										<option value="2027">2027</option>
+
+										<option value="2028">2028</option>
+
+										<option value="2029">2029</option>
+
+										<option value="2030">2030</option>
+
+										<option value="2031">2031</option>
+
+										<option value="2032">2032</option>
+
+										<option value="2033">2033</option>
+
+										<option value="2034">2034</option>
+
+										<option value="2035">2035</option>
+
+										<option value="2036">2036</option>
+
+										<option value="2037">2037</option>
+
+										<option value="2038">2038</option>
+
+										<option value="2039">2039</option>
+
+										<option value="2040">2040</option>
+
+									</select>
+								</div>
+								<p class="error-msg" id="ncemiExpiryErr" style="display: none;">Please enter expiry
+									date</p>
+							</div>
+
+							<label class="ncemiCVVErr cvv">
+								<p class="label">CVV</p>
+								<div class="field">
+									<input type="password" name="cvv" placeholder="***"
+										onkeypress="return isNumberKey(event);" id="ncemiCvv" maxlength="4">
+								</div>
+								<p class="error-msg" id="ncemiCVVErr" style="display: none;">Please enter cvv</p>
+							</label> <span><img src="./ Payment Page_files/cvvIcon.svg" alt=""></span>
+						</div>
+
+
+						<div class="formField">
+							<label class="ncemiDurationErr">
+								<p class="label">Select EMI Duration</p>
+								<div class="field select fullWidth">
+									<select id="ncemimonth">
+										<option value="-1">Select Month ..</option>
+									</select>
+								</div>
+								<p class="error-msg" id="ncemiDurationErr" style="display: none;">Select duration</p>
+							</label>
+						</div>
+					</div>
+					<div class="text-right">
+						<button class="btn" id="ncemipaynow">
+							Thanh toán
+							6,330.00 VND
+						</button>
+					</div>
+
+				</div>
+				<!-- No Cost EMI Form -->
+
+
+
+			</div>
+		</section>
+
+		<!-- Left Section -->
+
+		<!-- Right Section -->
+		<section class="rightSection">
+			<!-- Propers Details -->
+			<div class="card cardContent proposerDetails hideSmall">
+				<p class="title">Thông tin cá nhân</p>
+				<div class="details">
+					<p class="icon">
+						<img src="{% static 'payment/emailIcon.svg' %}" alt="">
+					</p>
+					<p class="detailTxt">go@gmail.com</p>
+				</div>
+
+				<div class="details">
+					<p class="icon">
+						<img src="{% static 'payment/phoneIcon.svg' %}" alt="">
+					</p>
+					<p class="detailTxt">
+						91XXXXXX23
+						<!-- <span class="right"><a href="#">Share Details</a></span> -->
+					</p>
+				</div>
+			</div>
+			<!-- Propers Details -->
+			<!-- Cart -->
+			<div class="card cartWrapper">
+				<div class="cartHead">
+					<p class="left">Mã giao dịch</p>
+					<p class="right">PB14703891</p>
+				</div>
+				<div class="cardContent">
+					<div class="cartScroller">
+
+						<div class="insurerBlock">
+							<div class="insurerLogo">
+								<img src="{% static 'payment/MAGMA HDI.png' %}" alt="">
+							</div>
+							<div class="insurerDetails">
+								<p class="name">Prudential
+									<span>Bảo hiểm vật chất xe</span>
+								</p>
+							</div>
+							<div class="clear"></div>
+							<div class="policyDetail">
+								<p>
+									<span>Loại hợp đồng</span> Bảo hiểm ô tô
+
+								</p>
+								<p>
+									<span>Số hợp đồng</span> PB36PG002490546
+								</p>
+								<p>
+									<span>Số tiền</span>
+									6,330.00
+
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<!-- Total -->
+				<div class="totalRow">
+					<div class="left">
+						<p>
+							Số tiền thanh toán <span>(Bao gồm VAT)</span>
+						</p>
+					</div>
+					<div class="right">
+
+
+						<span class="payRightTx">6,330.00 VND</span><span class="payRightMult"
+							style="display: none;">6,330.00</span>
+					</div>
+				</div>
+				<!-- Total -->
+			</div>
+			<!-- Cart -->
+			<!-- Propers Details -->
+			<!-- Propers Details -->
+		</section>
+		<!-- Right Section -->
+		<input type="hidden" id="debitCvvLength" value="3"> <input type="hidden" id="creditCvvLength" value="3"> <input
+			type="hidden" id="emiCvvLength" value="3"> <input type="hidden" id="amountToBePaid" value="6330.00"> <input
+			type="hidden" id="displayMode" value="0"> <input type="hidden" id="pageContext" value="/pay"> <input
+			type="hidden" id="isSiSupported"> <input type="hidden" id="extend" value="0"> <input type="hidden"
+			id="siSipportedBankName" value=""> <input type="hidden" name="fGateway" id="fGateway" value="">
+
+		<!-- Pop up - How SI works -->
+		<div class="popup hide" id="siPopup">
+			<div class="popWindow">
+				<div class="close" id="siPopupClose"></div>
+				<p class="title">How SI works?</p>
+
+				<p class="siText">Upon execution of the monthly mode (SI)
+					mandate, Policy bazaar is authorized to deduct the monthly amount
+					of XXX. *I agree and confirm that I have neither revealed nor will
+					reveal any confidential information pertaining to my credit card
+					details, including credit card number and password, and the
+					password of my e-mail address to the telecaller at any stage,
+					before or after booking an order or availing any services, or
+					writing feedback or acting at any stage with reference to Products
+					or Services mentioned on the website or even otherwise.</p>
+
+				<p class="siText mt-30">Your subscription will be renewed
+					automatically every month by charging your credit card and will
+					remain in effect for the period you have been charged. You will be
+					notified of any rate increase, should one occur.</p>
+			</div>
+		</div>
+		<!-- Pop up - How SI works -->
+		<script>
+			// Set the date we're counting down to
+			var countDownDate = document.getElementById("session_time").value
+			console.log(document.getElementById("session_time").value + ',' + countDownDate);
+
+			var difference = document.getElementById("current_time").value - new Date().getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function () {
+
+				// Get todays date and time
+				//   var now = new Date(document.getElementById("current_time").value).getTime();
+				var now = new Date().getTime();
+
+				// Find the distance between now and the count down date
+				var distance = countDownDate - (now + difference);
+
+				// Time calculations for days, hours, minutes and seconds
+				// var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				// var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				// Output the result in an element with id="demo"
+				document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s ";
+
+				// If the count down is over, write some text 
+				if (distance < 0) {
+					clearInterval(x);
+					document.getElementById("demo").innerHTML = "EXPIRED";
+					document.getElementById('light').style.display = 'block'; document.getElementById('fade').style.display = 'block'
+					var countDown = new Date().getTime();
+					var y = setInterval(function () {
+						var now = new Date().getTime();
+
+						// Find the distance between now and the count down date
+						var gap = countDown + 10000 - now;
+						//document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'
+						if (document.getElementById("extend").value == "1") {
+							clearInterval(y);
+							//window.open(document.getElementById("pageContext").value+ "/payment/sessionOut?orderNo="+document.getElementById("displayOrderNo").value,'_self');
+							window.open("/pay/payment/secure?orderNo=" + document.getElementById("displayOrderNo").value + '&session=' + countDownDate, '_self');
+						}
+						if (gap < 0) {
+							clearInterval(y);
+							window.open("/pay/payment/sessionOut?orderNo=" + document.getElementById("displayOrderNo").value, '_self');
+						}
+
+					}, 1000);
+
+				}
+			}, 1000);
+
+
+			// -----------------------------------------------------------     for upi     -------------------------------------------------------------------------------------------------
+			var countDownDate = document.getElementById("session_time").value
+			console.log(document.getElementById("session_time").value + ',' + countDownDate);
+
+			var difference = document.getElementById("current_time").value - new Date().getTime();
+
+			// Update the count down every 1 second
+			var a = setInterval(function () {
+
+				var upiCountDownDate = document.getElementById("upi_session_time").value;
+
+				if (upiCountDownDate) {
+					// Get todays date and time
+					//   var now = new Date(document.getElementById("current_time").value).getTime();
+					var now = new Date().getTime();
+
+					// Find the distance between now and the count down date
+					var distance = countDownDate - (now + difference);
+
+					// Time calculations for days, hours, minutes and seconds
+					// var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					// var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+					// Output the result in an element with id="demo"
+					document.getElementById("upidemo").innerHTML = minutes + "m " + seconds + "s ";
+				}
+
+			}, 1000);
+
+			var z = setInterval(function () {
+
+				var isWaitingForUPIStatus = document.getElementById("isWaitingForUPIStatus").value;
+
+				if (isWaitingForUPIStatus == 'true' || isWaitingForUPIStatus == true || isWaitingForUPIStatus === true) {
+
+					executeForUPIStatus();
+
+				}
+
+			}, 5000);
+
+		</script>
+		<script language="Javascript">
+			function isNumberKey(evt) {
+				var charCode = (evt.which) ? evt.which : evt.keyCode
+				if (charCode > 31 && (charCode < 48 || charCode > 57))
+					return false;
+
+				return true;
+			}
+
+
+		</script>
+		<script type="text/javascript">
+			function isCharacterKey(evt) {
+				var charCode = (evt.which) ? evt.which : evt.keyCode
+				if (charCode == 32 || charCode == 8 || charCode == 127 || ((charCode >= 65 && charCode <= 90) || (charCode >= 97 && charCode <= 122)))
+					return true;
+
+				return false;
+			}
+		</script>
+
+		<script type="text/javascript">
+			function isNoSpecialKey(evt) {
+				var charCode = (evt.which) ? evt.which : evt.keyCode
+				if (charCode == 64 || ((charCode >= 65 && charCode <= 90) || (charCode > 31 && (charCode < 48 || charCode > 57))))
+					return true;
+
+				return false;
+			}
+		</script>
+		<script type="text/javascript">
+			var secret = '2f33e40ff3e54190';
+		</script>
+
+
+
+		<script type="text/javascript">
+
+			function executeForUPIStatus() {
+
+				var payId = document.getElementById('payId').value;
+
+				if (payId) {
+
+					payId = encodeURIComponent(payId);
+
+					$.ajax({
+						async: false,
+						url: "/pay/payment/hdfcUpi/status?requestPayId=" + payId,
+						type: "POST",
+						contentType: "application/json",
+						dataType: "json",
+						success: function (data, status) {
+
+							$.each(data, function (key, value) {
+
+								var isWaitingForUPIStatus = document.getElementById('isWaitingForUPIStatus').value;
+								if (isWaitingForUPIStatus == 'true' || isWaitingForUPIStatus == true || isWaitingForUPIStatus === true) {
+									if (data.status == 'TXN_SUCCESS') {
+
+										document.getElementById("isWaitingForUPIStatus").value = 'false';
+										document.getElementById('requestSenttickDisabled').style.display = "none";
+										document.getElementById('requestSenttickEnabled').style.display = "none";
+										document.getElementById('requestSentRetry').style.display = "none";
+										document.getElementById('upiRetry').style.display = "none";
+										document.getElementById('requestUpiSuccess').style.display = "";
+
+										document.getElementById('submitUpi').submit();
+									}
+									else if (data.status == 'TXN_FAILURE') {
+
+										// show retry option
+										document.getElementById("isWaitingForUPIStatus").value = 'false';
+										document.getElementById('requestSenttickDisabled').style.display = "none";
+										document.getElementById('requestSenttickEnabled').style.display = "none";
+										document.getElementById('requestSentRetry').style.display = "";
+										document.getElementById('upiRetry').style.display = "";
+
+
+									} else {
+										// do nothing and wait for another status query
+										// to
+										// execute
+										console.log(response);
+									}
+								}
+
+							});
+
+						},
+						error: function (data, status, error) {
+							console.log('error callback :: ' + data.text);
+
+						},
+					});
+				}
+			} // end of funtion
+
+		</script>
+		<script>
+			$(document).ready(function () {
+				$('.fixedNav a[href^="#"]').click(function () {
+					var target = $(this.hash);
+					if (target.length == 0) target = $('a[name="' + this.hash.substr(1) + '"]');
+					if (target.length == 0) target = $('html');
+					$('html, body').animate({ scrollTop: target.offset().top - 120 }, 600);
+					return false;
+				});
+
+				$(".tollFreeNoBox").hide();
+
+				$(".tollFreeNo").mouseover(function () {
+					$(".tollFreeNoBox").slideDown('slow');
+				});
+
+				$(".phoneNwhatsapp").mouseleave(function () {
+					$(".tollFreeNoBox").slideUp('slow');
+				});
+			});
+
+		</script>
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,448 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bảo hiểm sức khỏe</title>
+    <link rel="stylesheet" href="{% static 'core/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/Font-Awesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'hospitalcash/health-oder/css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/icon2.svg' %}" />
+</head>
+
+<body>
+    <div class="header" id="tongquan">
+        <div class="row" style="width: 100%;">
+            <div class="col-md-6 p-4 pl-5">
+                <img width="150px" src="{% static 'hospitalcash/health-oder/images/logo (1).svg' %}" alt="">
+            </div>
+            <div class="col-md-6 p-4 text-right pr-4" style="color: white;">
+                <a href=""><span>Góc ẩm thực </span>&nbsp;&nbsp;</a>
+                <a href=""><i class="fa fa-phone"></i>&nbsp<span>Gọi tư vấn</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="container ">
+
+            <div class="row box-content mx-auto">
+                <div class="nav-fixed">
+                    <nav>
+                        <ul>
+                            <li class=" checkmenu active" >
+                                <a  href="#tongquan">
+                                    <i class="fa fa-list-alt"></i>
+                                    
+                                    <span class="summary_icon product_icons"></span>Tổng quan
+                                </a>
+                            </li>
+                            <li class="checkmenu">
+                                <a href="#tongquan">
+                                    <i class="fa fa-key"></i>
+                                    <span class="all_feature product_icons"></span>Điểm nổi bật
+                                </a>
+                            </li>
+                            <li class="checkmenu">
+                                <a href="#quyenloi">
+                                    <i class="fa fa-calendar-check-o"></i>
+                                    <span class="key_features  product_icons"></span>Quyền lợi
+                                </a>
+                            </li>
+                            <li class="checkmenu">
+                                <a href="#tailieu">
+                                    <i class="fa fa-file-pdf-o"></i>
+                                    <span class="brochures product_icons"></span>Tài liệu
+                                </a>
+                            </li>
+                            <li class="checkmenu">
+                                <a href="#congty">
+                                    <i class="fa fa-umbrella"></i>
+                                    <span class="insurer_icons product_icons"></span>Công ty bảo hiểm
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-8 left">
+                    <div class="row goisanpham">
+                        <div class="col-md-4 p-3">
+                            <img width="70%" class="imgfir" src="{% static 'hospitalcash/health-oder/images/Religare.png' %}" alt="">
+                        </div>
+                        <div class="col-md-8 tengoi">
+                            <p>Gói titan - Bảo hiểm sức khoẻ gia đình VBI</p>
+                        </div>
+                    </div>
+                    <h5>ĐIỂM NỔI BẬT</h5>
+
+                    <div class="row diemnoibat">
+                        <div class="col-md-3 col-sm-6 pb-4">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-2 col-2 pr-1">
+                                    <img src="{% static 'hospitalcash/health-oder/images/1.1treemduoi.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-8 col-sm-10 col-10 text-noibat pr-0">
+                                    <p>+ Trẻ em dưới 18 tuổi được tham gia bảo hiểm độc lập, không phải áp dụng mua kèm bố mẹ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 pb-4">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-2 col-2 pr-1">
+                                    <img src="{% static 'hospitalcash/health-oder/images/khamsk1.2.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-8 col-sm-10 col-10 text-noibat pr-0">
+                                    <p>+ Không yêu cầu khám sức khỏe trước khi đăng ký</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-2 col-2 pr-1 mb-4">
+                                    <img src="{% static 'hospitalcash/health-oder/images/CMDN.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-8 col-sm-10 col-10 text-noibat pr-0">
+                                    <p>+ Bảo lãnh qua CMND/Giấy chứng nhận điện tử</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-2 col-2 pr-1">
+                                    <img src="{% static 'hospitalcash/health-oder/images/1.1treemduoi.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-8 col-sm-10 col-10 text-noibat pr-0">
+                                    <p>+ Bảo lãnh viện phí tại hơn 250 bệnh viện, phòng khám trên toàn quốc</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="mt-2" id="quyenloi">CHỌN THÊM QUYỀN LỢI BỔ SUNG</h5>
+                    <div class="row pl-5 mb-4 quyenloibbosung">                    
+                        <div class="box-checkbox col-md-10 pt-2">
+                           <span class="title-quyenloi">Quyền lợi</span>
+                            <div class="custom-control custom-checkbox col-md-12">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">Điều trị ngoại trú </label>
+                            </div>
+                            <div class="custom-control custom-checkbox col-md-12">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label" for="customCheck2">Nha Khoa</label>
+                            </div>
+                            <div class="custom-control custom-checkbox col-md-12">
+                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                <label class="custom-control-label" for="customCheck3">Thai sản</label>
+                            </div>
+                            <div class="custom-control custom-checkbox col-md-12">
+                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                <label class="custom-control-label" for="customCheck4">Trợ cấp nằm viện cho thai sản</label>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="mt-2"  >QUYỀN LỢI BẢO HIỂM CHÍNH</h5>
+                    <div class="row box-bhc">
+                        <div class="col-md-6 col-sm-6 pb-5">
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/QuyenLoidobenh.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi"> Quyền Lợi Tử Vong Do Tai Nạn</span>
+                                        Chi trả tử vong, thương tật toàn bộ vĩnh viễn do tai nạn đến <span class="price">50 triệu</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 pb-5" >
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/Quyenloittainan.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi"> Quyền Lợi Tử Vong Do Tai Nạn</span>
+                                        Chi trả tử vong, thương tật toàn bộ vĩnh viễn do tai nạn đến <span class="price">50 triệu</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 pb-5">
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/doTaiNan.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi"> Quyền Lợi Tử Vong Do Tai Nạn</span>
+                                        Chi trả tử vong, thương tật toàn bộ vĩnh viễn do tai nạn đến <span class="price">50 triệu</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 pb-5">
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/noitru.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi"> Quyền Lợi Tử Vong Do Tai Nạn</span>
+                                        Chi trả tử vong, thương tật toàn bộ vĩnh viễn do tai nạn đến <span class="price">50 triệu</span> 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <h5 class="mt-2">QUYỀN LỢI ĐIỀU TRỊ NỘI TRÚ</h5>
+                    <div class="row box-bhc box-nt">
+                        <div class="col-md-6 col-sm-6 pb-5">
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/ChiPhinamVien.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi">
+                                        Chi Phí Nằm Viện  </span><br>
+                                        Chi phí nằm viện/ngày (tối đa 60 ngày/năm), tối đa 625,000đ/ngày
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 pb-5">
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/chiphiPhauThuat.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi"> Chi Phí Phẫu Thuật</span><br>
+                                        Chi phí phẫu thuật lên đến 12 triệu 500 nghìn 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 pb-5">
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/phitrartrc.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi"> Chi Phí Điều Trị Trước</span><br>
+                                        Chi phí điều trị trước khi nhập viện (tối đa 30 ngày trước khi nhập viện/năm) tối đa 625,000đ/ngày
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 pb-5">
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/phitrarsau.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi"> Chi Phí Điều Trị Sau</span><br>
+                                        Chi phí điều trị trước khi nhập viện (tối đa 30 ngày trước khi nhập viện/năm) tối đa 625,000đ/ngày
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 pb-5">
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/YtaNha1.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi"> Chi Phí Y Tá Tại Nhà</span><br>
+                                        Chi phí y tá chăm sóc tại nhà ngay sau khi xuất viện (tối đa 15 ngày/năm) tối đa 625,000đ/ngày
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 pb-5">
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/baolanhbenhvien.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi"> Trợ Cấp Nằm Viện</span><br>
+                                        Trợ cấp nằm viện/ngày (tối đa 60 ngày/năm) tối đa 12,500đ/ngày
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 pb-5">
+                            <div class="row bhc">
+                                <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                    <img width="100%" src="{% static 'hospitalcash/health-oder/images/ChiPhiMaitang.svg' %}" alt="">
+                                </div>
+                                <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                    <p class="text-bhc"> <span class="quyenloi">Trợ Cấp Mai Táng Phí</span><br>
+                                        Trợ cấp mai táng phí trong trường hợp tử vong tại bênh viện lên đến 625,000đ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="mt-2">QUYỀN LỢI BẢO HIỂM BỔ SUNG</h5>
+                    <div class="row">
+                        <div class="col-md-12 pl-3">
+                            <h5 class="">Quyền lợi điều trị ngoại trú</h5>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 pb-5">
+                                    <div class="row bhc">
+                                        <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                            <img width="100%" src="{% static 'hospitalcash/health-oder/images/NgoaiTru.svg' %}" alt="">
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-10  pr-0">
+                                            <p class="text-bhc"> <span class="quyenloi">
+                                                Chi Phí Điều Trị Ngoại Trú </span><br>
+                                                Chi trả đến 2 triệu 500, 500,000đ /1 lần khám và tối đa 5 lần/năm
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pl-3">
+                            <h5 class="">Quyền lợi nha khoa</h5>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 pb-5">
+                                    <div class="row bhc">
+                                        <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                            <img width="100%" src="{% static 'hospitalcash/health-oder/images/chiPhiRang.svg' %}" alt="">
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                            <p class="text-bhc"> <span class="quyenloi">
+                                                Chi Phí Chăm Sóc Răng  </span><br>
+                                                Chi trả đến 500,000 và tối đa 5 lần/năm
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pl-3">
+                            <h5 class="">Quyền lợi thai sản</h5>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 pb-5">
+                                    <div class="row bhc">
+                                        <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                            <img width="100%" src="{% static 'hospitalcash/health-oder/images/ChiPhiSinhDe.svg' %}" alt="">
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                            <p class="text-bhc"> <span class="quyenloi">
+                                                Chi Phí Khám, Chăm Sóc, Sinh Đẻ  </span><br>
+                                                Chi trả lên đến 5 triệu đồng
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pl-3">
+                            <h5 class="">Quyền lợi trợ cấp nằm viện do tai nạn</h5>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 pb-5">
+                                    <div class="row bhc">
+                                        <div class="col-md-2 col-sm-2 col-2 pr-1">
+                                            <img width="100%" src="{% static 'hospitalcash/health-oder/images/doTaiNan.svg' %}" alt="">
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-10 pr-0">
+                                            <p class="text-bhc"> <span class="quyenloi">
+                                                Chi Phí Nằm Viện Do Tai Nạn </span><br>
+                                                Chi trả lên đến 5 triệu đồng
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pl-3" id="tailieu">
+                            <h5 class="">Tài liệu / Brochures</h5>
+                            <div class="row">
+                                <div class="col-md-6 pb-5">
+                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 pl-3">
+                            <h5 class="" id="congty">Về công ty bảo hiểm VBI</h5>
+                            <div class="row">
+                                <div class="col-md-12 pb-5">
+                                    <span class="text-chung">
+                                        Tổng công ty cổ phần Bảo hiểm Ngân hàng TMCP Công Thương Việt Nam (Bảo hiểm VietinBank) tiền thân là Công ty TNHH MTV Bảo hiểm Ngân hàng TMCP Công Thương Việt Nam. Trải qua chặng đường 10 
+                                        năm hình thành và phát triển (từ 2008 đến nay) với định hướng là một công ty bảo hiểm vì 
+                                        giá trị nhân văn và mục tiêu dẫn đầu phân khúc bán lẻ trên thị trường bảo hiểm Việt Nam,
+                                         Bảo hiểm VietinBank được nhiều khách hàng tin dùng bởi những cam kết chiến lược: dịch vụ 
+                                         khách hàng tốt, tăng trưởng mạnh, mang lại giá trị tốt đẹp cho cộng đồng. Với hệ thống 
+                                         mạng lưới gồm 33 công ty thành viên và 8000 đại lý phục vụ khách hàng trên toàn quốc, 
+                                         hơn 1000 cán bộ nhân viên có trình độ chuyên môn cao, tiềm lực tài chính vững mạnh, 
+                                         sản phẩm đa dạng và ưu việt, năng lực quản trị - kinh doanh, quản lý rủi ro và giải 
+                                         quyết bồi thường tốt, Bảo hiểm VietinBank tự tin về khả năng tư vấn và đáp ứng mọi 
+                                         yêu cầu bảo hiểm của khách hàng.
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+
+
+                </div>
+                <div class="col-md-4 right">
+                    <div class="box-price">
+                        <div class="title-header">
+                                <span>Tổng Phí Bảo Hiểm Sức Khoẻ</span>
+                        </div>
+                        <div class="pl-3 pt-3 phi">
+                            <p><span> Phí quyền lợi chính: </span> </p>
+                            <p><span>Phí quyền lợi mở rông: </span> </p>
+                            <p><span> Thuế VAT: </span> </p>
+                            <p><span> Tổng phí bảo hiểm: </span> </p>
+                        </div>
+                        <a href="{% url 'comapre_ytnv_prepayment_url' %}">
+                        <button type="button" class="btn btn-danger col-md-12" >Tiếp Tục</button>
+                        </a>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer mt-4">
+<p class="text-chung" style="text-align: center;">
+    | Website online lớn nhất việt nam |<br>
+Các yêu cầu bảo hiểm trên website sẽ được gửi cho các công ty bảo hiểm. <br>
+
+Thông tin bảo hiểm là xác thực và được cung cấp bởi các công ty bảo hiểm hàng đầu. Bản quyền của Bihama
+</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var scrollHeight = $('html').scrollTop();
+                
+                if (scrollHeight > 74 && $(window).width()>1024) {
+                    $(".box-price").css("position", "fixed").css("width", "300px").css("top", "0px")
+                } else {
+                    $(".box-price").css("position", "")
+                }
+            });
+        });
+
+        $(document).ready(function(){
+            $(".checkmenu").click(function(){
+                for (let index = 0; index < $(".checkmenu").length; index++) {
+                  var item_remove =  $(".checkmenu",index )  
+                  item_remove.removeClass("active")
+                }
+               $(this).addClass("active");
+            });
+            });
+    </script>
+</body>
+</htm

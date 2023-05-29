@@ -1,0 +1,1103 @@
+.sheildCircle li,
+p {
+	line-height: 24px;
+	letter-spacing: .6px
+}
+
+.sheildCircle li,
+.sheildList li,
+p {
+	letter-spacing: .6px
+}
+
+.clearfix:after,
+.sheildCircle li:before,
+.sheildList li:before {
+	content: ""
+}
+
+.callToaction a,
+.text-center {
+	text-align: center
+}
+
+* {
+	box-sizing: border-box
+}
+
+#policybazaar {
+	width: 100%
+}
+
+.clearfix:after {
+	display: block;
+	clear: both
+}
+
+.cashless,
+.reimburse {
+	height: 145px;
+	display: inline-block;
+	width: 137px;
+	position: absolute;
+	top: -30px;
+	left: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0
+}
+
+body {
+	font-family: Lato, sans-serif!important;
+	font-weight: 400
+}
+
+h1 {
+	font-size: 32px
+}
+
+h2 {
+	font-size: 24px;
+	margin: 0 0 15px;
+	font-weight: 500
+}
+
+h4 {
+	font-size: 14px
+}
+
+p {
+	font-size: 15px;
+	margin: 0 0 10px
+}
+
+.divCenter {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px
+}
+
+.claim_first .divCenter {
+	padding: 0
+}
+
+.carpage {
+	background: url(./images/vienphi.png) no-repeat
+}
+
+.cashless {
+	background-position: -378px 0
+}
+
+.reimburse {
+	background-position: -376px -165px
+}
+
+.sheildCircle,
+.sheildList {
+	display: block;
+	list-style: none
+}
+
+.sheildList li {
+	list-style: none;
+	margin: 0 0 15px;
+	position: relative;
+	padding-left: 30px
+}
+
+.sheildList li:last-child {
+	margin-bottom: 0
+}
+
+.sheildList li:before {
+	position: absolute;
+	left: 0;
+	color: #495a67;
+	font-size: 78px;
+	top: auto;
+	background-image: url(./images/health.png);
+	background-position: -520px -500px;
+	width: 20px;
+	height: 20px
+}
+
+@media all and (-ms-high-contrast:none) {
+	.sheildList li:before {
+		top: -7px
+	}
+	.sheildCircle li::before {
+		top: 7px
+	}
+}
+
+.sheildCircle li {
+	display: flex;
+	list-style: none;
+	font-size: 13px;
+	margin: 30px 0;
+	position: relative;
+	padding-left: 60px;
+	align-items: center
+}
+
+.sheildCircle li:before {
+	position: absolute;
+	height: 22px;
+	width: 30px;
+	background: url(../images/car-claim-page-images.png) 0 -511px no-repeat;
+	left: 0
+}
+
+.listWithborder {
+	list-style: none;
+	counter-reset: my-counter
+}
+
+.listWithborder li {
+	font-size: 13px;
+	line-height: 22px;
+	border-bottom: 1px dashed #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	padding-left: 15px;
+	color: #000
+}
+
+.listWithborder li::before {
+	content: counter(my-counter, decimal);
+	counter-increment: my-counter;
+	position: absolute;
+	left: 0
+}
+
+.listWithborder li:last-child {
+	margin-bottom: 0;
+	border-bottom: 0;
+	padding-bottom: 0
+}
+
+.claim_hospital{
+	background: url(./images/benhvien.svg) right no-repeat;
+	min-height: 550px;
+	padding: 0 15px;
+	background-size: cover !important;
+	width: 100%;
+	height: 108%
+}
+
+.claim_hospital .formDiv {
+	max-width: 800px;
+	margin: 0 auto
+}
+
+.claim_hospital .formFeild {
+	margin-bottom: 15px
+}
+
+.claim_hospital .formDiv .form-field {
+	float: left;
+	width: 33.33%;
+	padding: 0 10px
+}
+
+.claim_hospital .formDiv .form-field.textarea {
+	width: 66.33%
+}
+
+.claim_hospital .formDiv input[type=text],
+.claim_hospital .formDiv textarea {
+	background: #fff;
+	border: 0;
+	outline: 0;
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-size: 13px;
+	color: #4193b0;
+	box-shadow: 1px 1px 2px #a4d9ed;
+	width: 100%;
+	resize: none;
+	display: block
+}
+
+.claim_hospital .formDiv textarea {
+	overflow: auto
+}
+
+.claim_first {
+	background: url(./images/healthy.svg) center no-repeat;
+	min-height: 700px;
+	padding: 0 15px;
+	background-size: cover;
+	width: 100%;
+	height: 100%
+}
+
+.claim_first .formDiv {
+	max-width: 800px;
+	margin: 0 auto
+}
+
+.claim_first .formFeild {
+	margin-bottom: 15px
+}
+
+.claim_first .formDiv .form-field {
+	float: left;
+	width: 33.33%;
+	padding: 0 10px
+}
+
+.claim_first .formDiv .form-field.textarea {
+	width: 66.33%!important
+}
+
+.claim_first .formDiv input[type=text],
+.claim_first .formDiv textarea {
+	background: #fff;
+	border: 0;
+	outline: 0;
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-size: 13px;
+	color: #4193b0;
+	box-shadow: 1px 1px 2px #a4d9ed;
+	width: 100%;
+	resize: none;
+	display: block
+}
+
+.claim_first .formDiv textarea {
+	overflow: auto
+}
+
+.claim_tainan {
+	background: url(./images/tainan.svg) center no-repeat;
+	min-height: 550px;
+	padding: 0 15px;
+	background-size: cover;
+	width: 100%;
+	height: 108%
+}
+
+.claim_tainan .formDiv {
+	max-width: 800px;
+	margin: 0 auto
+}
+
+.claim_tainan .formFeild {
+	margin-bottom: 15px
+}
+
+.claim_tainan .formDiv .form-field {
+	float: left;
+	width: 33.33%;
+	padding: 0 10px
+}
+
+.claim_tainan .formDiv .form-field.textarea {
+	width: 66.33%
+}
+
+.claim_tainan .formDiv input[type=text],
+.claim_tainan .formDiv textarea {
+	background: #fff;
+	border: 0;
+	outline: 0;
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-size: 13px;
+	color: #4193b0;
+	box-shadow: 1px 1px 2px #a4d9ed;
+	width: 100%;
+	resize: none;
+	display: block
+}
+
+.claim_tainan .formDiv textarea {
+	overflow: auto
+}
+
+.form-contrl::-moz-placeholder {
+	color: #4193b0
+}
+
+.form-contrl::-webkit-input-placeholder {
+	color: #4193b0
+}
+
+.callToaction a {
+	background: #f75f52;
+	border-radius: 10px;
+	border: 0;
+	display: block;
+	color: #fff;
+	cursor: pointer;
+	max-width: 250px;
+	padding: 11px;
+	text-decoration: none;
+	margin: 8px auto;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px
+}
+
+.claim_second .aboutContent {
+	margin: 16px auto 30px
+}
+
+.claim_second .aboutContent h1 {
+	color: #02c6c2;
+	margin-bottom: 14px
+}
+
+.claim_fourth .bottom h2,
+.claim_third,
+.claim_third h2,
+.claim_third h4,
+.claim_third p {
+	color: #fff
+}
+
+.claim_third {
+	background: #0fc3bf;
+	display: table;
+	width: 100%;
+	padding: 20px 0
+}
+
+.claim_third .claimProcess .howtoGet {
+	margin: 50px auto 57px;
+	padding-left: 150px;
+	position: relative
+}
+
+.claim_third .claimProcess .howtoGet h4 {
+	text-transform: uppercase;
+	margin: 0 0 10px
+}
+
+.claim_fourth {
+	padding: 50px 0
+}
+
+.claim_fourth .top {
+	position: relative
+}
+
+.claim_fourth .top .image-right {
+	width: 140px;
+	height: 140px;
+	background-image: url(./images/health.png);
+	background-repeat: no-repeat;
+	background-position: -374px -354px;
+	position: absolute;
+	right: 0
+}
+
+.claim_fourth .top .left {
+	width: 83%
+}
+
+.claim_fourth .top .left p {
+	text-align: justify
+}
+
+.claim_sixth .top .title,
+.claim_sixth .wid-50 .column h2,
+.fail,
+.heading,
+.heading-content,
+.success {
+	text-align: center
+}
+
+.claim_fifth .fileCarInsurance,
+.claim_fourth .cashlessClaim {
+	position: relative
+}
+
+.fileCarInsurance_img {
+	height: 213px;
+	width: 250px;
+	position: absolute;
+	right: 10px;
+	background-position: -110px 0;
+	top: 109px
+}
+
+.cashlessClaim_img {
+	height: 233px;
+	width: 250px;
+	position: absolute;
+	left: 10px;
+	background-position: -110px -252px;
+	top: -53px
+}
+
+.claim_fourth .bottom {
+	position: relative;
+	background: #f98f53;
+	padding: 20px 20px 25px;
+	border-radius: 10px;
+	color: #fff;
+	margin-top: 87px
+}
+
+.claim_fourth .bottom .right {
+	padding-left: 260px
+}
+
+.claim_fifth {
+	padding: 20px 0 30px;
+	background: #fc6;
+	color: #3e3d3d
+}
+
+.claim_fifth .sheildList li {
+	font-size: 13px
+}
+
+.claim_fifth p {
+	color: #3e3d3d
+}
+
+.claim_fifth .sheildList li:before {
+	top: -2px
+}
+
+.claim_fifth .sheildList {
+	padding: 10px 0 0 20px
+}
+
+.claim_sixth .diffDiv {
+	position: absolute;
+	max-width: 1170px;
+	margin: 0 auto;
+	top: 185px
+}
+
+.claim_sixth .diffDiv:after {
+	content: "";
+	clear: both
+}
+
+.claim_sixth .wid-50 {
+	width: 50%;
+	float: left;
+	border-radius: 10px;
+	padding: 0 15px
+}
+
+.claim_sixth .wid-50 .column {
+	background: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	color: #3e3d3d;
+	position: relative;
+	box-shadow: 2px 2px 3px #ccc;
+	min-height: 303px
+}
+
+.emergency-hospitalisation::before,
+.planned-hospitalisation::before {
+	background-image: url(./images/health.png);
+	background-repeat: no-repeat
+}
+
+.claim_sixth .wid-50 .column::before {
+	content: "";
+	display: block;
+	width: 135px;
+	height: 135px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: -88px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1
+}
+
+.planned-hospitalisation::before {
+	background-position: -238px -496px
+}
+
+.emergency-hospitalisation::before {
+	background-position: -360px -496px
+}
+
+.claim_sixth .top {
+	background: #fc6;
+	min-height: 330px;
+	position: relative
+}
+
+.claim_sixth .top .title h2 {
+	display: inline-block;
+	color: #3e3d3d;
+	font-weight: 800;
+	font-size: 15px;
+	background: #fdda94;
+	padding: 17px 20px;
+	margin-top: 10px
+}
+
+.claim_sixth .wid-50 .column h2 {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: 600;
+	position: relative;
+	z-index: 2
+}
+
+.claim_sixth .wid-50 .column p {
+	font-size: 13px;
+	color: #000
+}
+
+.claim_sixth .bottom {
+	padding: 200px 0 50px
+}
+
+.claim_sixth .bottom h2 {
+	margin-top: 20px
+}
+
+.claim_sixth .bottom h2+p {
+	margin-bottom: 15px
+}
+
+.claim_sixth .bottom .sheildList li {
+	font-size: 13px
+}
+
+.claimSumission .claimSumission_row {
+	text-align: center;
+	font-size: 14px
+}
+
+.claimSumission .claimSumission_row div {
+	float: left;
+	width: 33.33%;
+	padding: 0 15px;
+	position: relative;
+	vertical-align: top;
+	margin-bottom: 30px
+}
+
+.claimSumission .claimSumission_row div.discharge,
+.claimSumission .claimSumission_row div.relevent-info {
+	margin-bottom: 0
+}
+
+.claimSumission .claimSumission_row div p {
+	max-width: 305px;
+	margin: 0 auto
+}
+
+.claimSumission .claimSumission_row div:before {
+	width: 80px;
+	height: 80px;
+	background: url(./images/health.png) no-repeat;
+	content: "";
+	top: 10px;
+	display: block;
+	margin: 0 auto
+}
+
+.claim_seventh h2 {
+	margin-bottom: 40px;
+	color: #fff
+}
+
+#footer,
+.note p {
+	margin: 0
+}
+
+.claim_seventh p {
+	color: #fff
+}
+
+.claimSumission .claimSumission_row div.insured:before {
+	background-position: -1px 0
+}
+
+.claimSumission .claimSumission_row div.consultation:before {
+	background-position: 8px -75px
+}
+
+.claimSumission .claimSumission_row div.claim-form:before {
+	background-position: 7px -157px
+}
+
+.claimSumission .claimSumission_row div.copy:before {
+	background-position: 8px -238px
+}
+
+.claimSumission .claimSumission_row div.theft:before {
+	background-position: 6px -330px
+}
+
+.claimSumission .claimSumission_row div.invoice:before {
+	background-position: 10px -416px
+}
+
+.claimSumission .claimSumission_row div.discharge:before {
+	background-position: 3px -503px
+}
+
+.claimSumission .claimSumission_row div.relevent-info:before {
+	background-position: -145px -508px
+}
+
+.claim_seventh {
+	color: #fff;
+	padding: 20px 0 30px;
+	background: #a4b43b
+}
+
+.note {
+	background: #fff;
+	padding: 40px 0
+}
+
+.note p {
+	font-size: 13px;
+	color: #000
+}
+
+.claim_first .formDiv input[type=text].error {
+	border: 1px solid red
+}
+
+.textarea .error {
+	border: 1px solid red!important
+}
+
+.success {
+	padding-bottom: 17px;
+	color: #228b22
+}
+
+.fail {
+	padding: 10px 0;
+	color: red
+}
+
+.heading {
+	font-size: 26px;
+	color: #5f675a;
+	letter-spacing: .5px;
+	font-weight: 700;
+	padding-top: 25px
+}
+
+.heading-content {
+	padding: 10px 0;
+	line-height: 21px;
+	font-size: 13px;
+	color: #90948d;
+	max-width: 840px;
+	margin: 0 auto
+}
+.health_claim_faq {
+	    margin: 85px 0px 0px 0px;
+}
+.health_claim_faq  .faq ul.bullet-list li {
+	width: 50%;
+	float: left
+}
+
+.health_claim_faq  .faq ul.bullet-list {
+	margin: 0 auto
+}
+
+.health_claim_faq  .faq ul.bullet-list li:before {
+	background: #02c6c2;
+}
+
+.health_claim_faq  .faq {
+	background: #f1f1f1;
+	padding: 0 30px 30px;
+	margin-top: 45px
+}
+
+.health_claim_faq  .faq .faq-title .text {
+	background: #02c6c2;
+	text-align: center;
+	padding: 14px 50px;
+	display: inline-block;
+	color: #fff;
+	font-size: 22px;
+	text-transform: uppercase;
+	position: relative;
+	bottom: 24px
+}
+
+.health_claim_faq  .faq .dt h3,
+.health_claim_faq  .faq .faq-title .text h2 {
+	font-size: inherit;
+	color: inherit!important;
+	font-weight: inherit;
+	font-family: inherit!important;
+	line-height: inherit;
+	margin: 0;
+	text-transform: capitalize;
+}
+
+.health_claim_faq  .faq .accordion {
+	padding-top: 10px
+}
+
+.health_claim_faq  .faq .column {
+	background: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	box-shadow: 0 0 2px #c8c8c8;
+	clear: both
+}
+
+.health_claim_faq  .faq .dt {
+	font-weight: 600;
+	color: #2b2a2a;
+	font-size: 15px;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	align-items: center
+}
+
+.health_claim_faq  .faq .dd {
+	font-size: 13px;
+	color: #535353;
+	margin: 0;
+	line-height: 25px;
+	padding-top: 6px;
+	display: none
+}
+
+.health_claim_faq .accordion .column .dt::before {
+	content: "\002B";
+	flex: 0 0 26px;
+	height: 26px;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	background: #02c6c2;
+	text-align: center;
+	font-size: 18px;
+	line-height: 26px;
+	margin-right: 10px
+}
+
+.health_claim_faq .accordion .column .dt.active::before {
+    content: "\2212"!important;
+}
+
+
+.health_claim_faq .viewAll {
+	border-top: 1px solid #d9dee0;
+	padding: 0 0 0 10px
+}
+
+.health_claim_faq .ratingValue {
+	clear: both
+}
+
+.health_claim_faq ul.productRatingList a:hover {
+	background-position: left -18px
+}
+ .health_claim_faq table {
+    border-collapse: collapse;
+    width: 65%;
+    margin: 25px auto;
+	     border-color: #dadada !important;
+}
+.health_claim_faq table tbody {
+	border: 1px solid #dadada !important;
+}
+ .health_claim_faq .health_faq_peragraph {
+	text-align: center;
+    color: rgb(43, 42, 42);
+    font-weight: 600;
+	 margin: 25px 0px 0px 0px;
+
+}
+.health_claim_faq th, .health_claim_faq td {
+  padding: 8px;
+	border: 1px solid #dadada !important;
+}
+.health_claim_faq th{
+	background-color: #36c2a9;
+	color: #fff;
+}
+.health_claim_faq tr:nth-child(odd) {background-color: #f9f9f9;}
+@media(max-width:1024px) {
+	.claim_sixth .wid-50 .column {
+		min-height: 330px
+	}
+}
+
+@media(max-width:1000px) {
+	.claim_sixth .wid-50 .column {
+		min-height: 370px
+	}
+	.claim_sixth .bottom {
+		padding: 255px 0 50px
+	}
+	.claim_fourth .top .left {
+		width: 100%;
+		padding-right: 160px
+	}
+	.health_claim_faq table  {
+		width: 100%;
+	}
+}
+
+@media(max-width:768px) {
+	.claimSumission .claimSumission_row div {
+		width: 50%;
+		min-height: 159px
+	}
+	.claimSumission .claimSumission_row section {
+		display: none
+	}
+	.claimSumission .claimSumission_row::after {
+		content: "";
+		display: block;
+		clear: both
+	}
+	.cashless,
+	.reimburse {
+		top: -11px
+	}
+	.cashlessClaim_img {
+		top: 108px
+	}
+	.claim_sixth .wid-50 {
+		width: 100%;
+		float: none
+	}
+	.claim_sixth .wid-50 .column {
+		min-height: 0
+	}
+	.claim_sixth .wid-50 .planned-hospitalisation {
+		margin-bottom: 125px
+	}
+	.claim_sixth .diffDiv {
+		position: static;
+		margin-top: 100px;
+		padding-bottom: 30px
+	}
+	.callToaction a {
+		font-size: 15px
+	}
+	.claim_seventh,
+	.claim_sixth .bottom {
+		padding: 30px 0
+	}
+	.claim_fourth .bottom {
+		margin-top: 47px
+	}
+}
+
+@media(max-width:627px) {
+	.claim_fourth .top .left,
+	.claim_sixth .settlement_Process_Cashless_Claims,
+	.claim_sixth .settlement_Process_Reimbursements {
+		width: 100%;
+		display: block
+	}
+	.claim_fourth .top .left {
+		padding-right: 0
+	}
+	.claim_sixth .settlement_Process_Cashless_Claims {
+		margin-bottom: 20px
+	}
+	.claim_first .formDiv .form-field,
+	.claim_first .formDiv .form-field.textarea {
+		float: none;
+		width: 100%!important;
+		padding: 0 15px;
+		margin-bottom: 12px
+	}
+	.claim_first .formDiv .form-field:last-child {
+		margin-bottom: 0
+	}
+	.claim_third .claimProcess .howtoGet {
+		margin: 0;
+		text-align: center;
+		padding: 20px 0
+	}
+	.claim_third .claimProcess .howtoGet:last-child {
+		padding-bottom: 0
+	}
+	.claim_fourth .bottom {
+		margin-top: 20px
+	}
+	.cashless,
+	.cashlessClaim_img,
+	.claim_fourth .top .image-right,
+	.reimburse {
+		position: static;
+		margin: 0 auto 20px;
+		display: block
+	}
+	.note {
+		padding: 20px 0
+	}
+	.claim_fourth .bottom .right,
+	.claim_fourth .sheildList {
+		float: none;
+		padding-left: 0
+	}
+	.claim_fifth .sheildList {
+		padding-right: 0;
+		float: none
+	}
+	.claim_fifth,
+	.claim_fourth,
+	.claim_third {
+		padding: 30px 0
+	}
+
+	.claim_fifth {
+		display: block
+	}
+}
+
+@media(max-width:480px) {
+	.claim_first {
+		background-image: none;
+		background-color: #bcedfe
+	}
+	h2 {
+		margin: 0 0 15px
+	}
+	p {
+		font-size: 13px;
+		line-height: 20px;
+		margin: 10px 0 5px;
+		letter-spacing: .6px
+	}
+	.sheildCircle li:before {
+		top: 5px
+	}
+	.callToaction a {
+		font-size: 13px;
+		max-width: 206px
+	}
+	#footer .legalInformation p {
+		text-align: center
+	}
+	.claimSumission .claimSumission_row div {
+		width: 100%;
+		margin-bottom: 20px;
+		min-height: 0
+	}
+	.claimSumission .claimSumission_row div.discharge {
+		margin-bottom: 20px
+	}
+	.claimSumission .claimSumission_row div:last-child {
+		margin-bottom: 0
+	}
+	.claim_seventh h2 {
+		margin-bottom: 30px
+	}
+	.claim_seventh {
+		padding-bottom: 40px
+	}
+	.pageDivCenter_footer {
+		width: 100%
+	}
+	.heading {
+		font-size: 18px
+	}
+	.cashless,
+	.cashlessClaim_img,
+	.claim_fourth .top .image-right,
+	.reimburse {
+		background-size: 400px auto;
+		margin: 0 auto 10px
+	}
+	.claim_fourth .top .image-right {
+		width: 100px;
+		height: 100px;
+		background-position: -244px -232px
+	}
+	.cashless,
+	.reimburse {
+		height: 100px;
+		width: 122px
+	}
+	.cashless {
+		background-position: -238px 0
+	}
+	.reimburse {
+		background-position: -235px -110px
+	}
+	.cashlessClaim_img,
+	.fileCarInsurance_img {
+		height: 160px;
+		width: 157px
+	}
+	.cashlessClaim_img {
+		background-position: -73px -164px
+	}
+	.fileCarInsurance_img {
+		background-position: -73px 9px
+	}
+	.sheildList li {
+		display: block;
+		font-size: 13px
+	}
+	.sheildList li:before {
+		transform: scale(.7);
+		-webkit-transform: scale(.7);
+		-moz-transform: scale(.7)
+	}
+	h2 {
+		font-size: 18px!important
+	}
+	.claim_sixth .top .title h2 {
+		font-size: 15px!important;
+		padding: 6px 10px
+	}
+	.claim_sixth .wid-50 .column h2 {
+		font-size: 13px!important
+	}
+	h1 {
+		font-size: 22px
+	}
+	.claim_sixth .settlement_Process_Cashless_Claims h2,
+	.claim_sixth .settlement_Process_Reimbursements h2 {
+		font-size: 16px!important;
+		padding: 10px 0
+	}
+	.claim_fifth,
+	.claim_fourth,
+	.claim_third {
+		padding: 20px 0
+	}
+	.sheildList li {
+		padding-left: 25px
+	}
+	h4 {
+		font-size: 12px
+	}
+}
+
+.abouttext {
+	text-align: justify
+}

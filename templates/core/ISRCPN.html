@@ -1,0 +1,758 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title_core %} Công ty bảo hiểm {% endblock %}
+{% block css_blocl %}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+	integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+<style>
+	.news-image img {
+		width: 100%;
+	}
+
+	.card-body img {
+		width: 100%;
+	}
+
+	.banner {
+		position: relative;
+		width: 100%;
+		height: 20rem;
+		padding: 0 5%;
+		overflow: hidden;
+		backface-visibility: hidden;
+	}
+
+	/* Default image container */
+	.banner .background {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		transform: translate3d(0, 0, 0) scale(1.25);
+		background: black url(https://images.unsplash.com/photo-1531971085967-431db1ec65a2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=212d5ac2d6b763d2f2168d4f0a85b36c&auto=format&fit=crop&w=2250&q=80) no-repeat center center;
+		background-size: cover;
+	}
+
+	/* Loaded image container */
+	.loaded .banner .background {
+		transform: scale(1);
+		transition: 6.5s transform;
+	}
+
+	/* Other stuff */
+	.banner h1 {
+		color: #EEE;
+		margin: 0;
+		line-height: 20rem;
+		text-transform: uppercase;
+		text-shadow: 0 0 .3rem black;
+	}
+
+	.news {
+		background: #40a1a4;
+		color: #fff;
+		border-radius: 5px;
+		border-top-right-radius: 50px;
+		margin-top: 10px;
+
+	}
+
+	.news h3 {
+		text-align: center;
+		padding: 1%;
+		font-size: 22px;
+	}
+
+	.tt_new ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	.tt_new ul li {
+		list-style: none;
+		float: left;
+		margin-bottom: 10px;
+		border-bottom: 1px solid #dfdfdf;
+		padding-bottom: 5px;
+	}
+
+	.tt_new ul li .img img {
+		width: 100%;
+		border-bottom: 5px;
+		height: 80px;
+		border-radius: 5px;
+	}
+
+	.tt_new ul li .img {
+		width: 30%;
+		float: left;
+		margin-right: 5px;
+	}
+
+	.tt_new ul li .text_tt {
+		width: 68%;
+		float: left;
+	}
+
+	.tt_new ul li .text_tt h5 {
+		font-size: 13px;
+		font-weight: 600;
+		color: #58595b;
+		line-height: 1.4;
+	}
+
+	.tt_new ul li .text_tt p {
+		font-size: 13px;
+		color: #333;
+		text-align: justify;
+	}
+
+	.bow {
+		padding: 15px !important;
+	}
+
+	.list-group-item.active {
+		background-color: #40a1a4;
+		border-color: #40a1a4;
+	}
+</style>
+<style>
+	.single-blog-img {
+		overflow: hidden;
+	}
+
+	.single-blog-img a img {
+		width: 100%;
+		-webkit-transition: .3s;
+		-moz-transition: .3s;
+		-ms-transition: .3s;
+		-o-transition: .3s;
+		transition: .3s;
+	}
+
+	.single-blog:hover .single-blog-img a img {
+		-webkit-transform: scale(1.09);
+		-moz-transform: scale(1.09);
+		-ms-transform: scale(1.09);
+		-o-transform: scale(1.09);
+		transform: scale(1.09);
+	}
+
+	.single-blog-img img {
+		width: 100%;
+	}
+
+	.blog-content-box {
+		padding-left: 0px;
+		padding-top: 20px;
+		margin-left: 15px;
+		-webkit-transform: translateY(-30px);
+		-moz-transform: translateY(-30px);
+		-ms-transform: translateY(-30px);
+		-o-transform: translateY(-30px);
+		transform: translateY(-30px);
+		background: #fff;
+	}
+
+	.blog-post-date {
+		display: table;
+		float: left;
+		margin-right: 15px;
+	}
+
+	.blog-post-date span:first-child {
+		color: #f7a03a;
+		display: block;
+		font-size: 35px;
+		font-weight: 700;
+		line-height: 1;
+		margin-top: -11px;
+		margin-bottom: -4px;
+		text-align: center;
+	}
+
+	.btn-warning {
+		background-color: #f69939;
+		border-color: #f9b44a;
+	}
+
+	.blog-post-date span:last-child {
+		font-size: 14px;
+		color: #212121;
+		font-weight: 600;
+	}
+
+	.blog-content h4 {
+		color: #212121;
+	}
+
+	.blog-content h4 a {
+		color: #40a1a4;
+		text-decoration: none;
+		-webkit-transition: .2s;
+		transition: .2s;
+		font-size: 14px;
+		font-weight: 600;
+	}
+
+	.blog-content h4 a:hover {
+		color: #FFCA00;
+	}
+
+	.meta-post {
+		margin: 10px 0 13px;
+	}
+
+	.meta-post span {
+		color: #696969;
+		font-size: 15px;
+		position: relative;
+		padding-right: 23px;
+	}
+
+	.author {
+		margin-bottom: 60px;
+	}
+
+	.meta-post span a {
+		color: #696969;
+		-webkit-transition: .2s;
+		transition: .2s;
+	}
+
+	.meta-post span:after {
+		position: absolute;
+		content: "-";
+		right: 4px;
+	}
+
+	:after,
+	:before {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.meta-post span:last-child {
+		padding-right: 0;
+	}
+	.exerpt {
+		line-height: 22px;
+		color: #696969;
+		font-size: 13px;
+	}
+	.single-blog {
+		padding: 5px;
+		box-shadow: 0 2px 21px rgba(0, 0, 0, .2);
+	}
+
+	.btn-warning {
+		color: #fff;
+	}
+	.btn-warning:hover {
+		color: #fff;
+	}
+
+	.lienquan {
+		padding: 5px;
+		font-size: 22px;
+		background: #40a1a4;
+		border-top-right-radius: 40px;
+		color: #fff;
+	}
+
+	.banner a:hover {
+		color: #40a1a4;
+	}
+
+	.text-muted {
+		color: #f69839 !important;
+	}
+</style>
+<style>
+	.wrapper,.copyright {
+	padding: 20px;
+	text-align: center;
+}
+hr{
+	border-top:2px solid #1C1E26 ;
+	border-bottom:2px solid #38404D;
+}
+.list-unstyled {
+	padding-left: 0;
+	list-style: none;
+}
+.list-inline li {
+	display: inline-block;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+/*---- Genral classes end -------*/
+
+/*Change icons size here*/
+.social-icons .fa {
+	font-size: 1.8em;
+}
+/*Change icons circle size and color here*/
+.social-icons .fa {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.social-icons.icon-circle .fa{ 
+	border-radius: 50%;
+}
+.social-icons.icon-rounded .fa{
+	border-radius:5px;
+}
+.social-icons.icon-flat .fa{
+	border-radius: 0;
+}
+
+.social-icons .fa:hover, .social-icons .fa:active {
+	color: #FFF;
+	-webkit-box-shadow: 1px 1px 3px #333;
+	-moz-box-shadow: 1px 1px 3px #333;
+	box-shadow: 1px 1px 3px #333; 
+}
+.social-icons.icon-zoom .fa:hover, .social-icons.icon-zoom .fa:active { 
+ 	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1); 
+}
+.social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active { 
+	-webkit-transform: scale(1.1) rotate(360deg);
+	-moz-transform: scale(1.1) rotate(360deg);
+	-ms-transform: scale(1.1) rotate(360deg);
+	-o-transform: scale(1.1) rotate(360deg);
+	transform: scale(1.1) rotate(360deg);
+}
+ 
+.social-icons .fa-adn{background-color:#504e54;} 
+.social-icons .fa-apple{background-color:#aeb5c5;} 
+.social-icons .fa-android{background-color:#A5C63B;}  
+.social-icons .fa-bitbucket,.social-icons .fa-bitbucket-square{background-color:#003366;} 
+.social-icons .fa-bitcoin,.social-icons .fa-btc{background-color:#F7931A;} 
+.social-icons .fa-css3{background-color:#1572B7;} 
+.social-icons .fa-dribbble{background-color:#F46899;}  
+.social-icons .fa-dropbox{background-color:#018BD3;}
+.social-icons .fa-facebook,.social-icons .fa-facebook-square{background-color:#3C599F;}  
+.social-icons .fa-flickr{background-color:#FF0084;}
+.social-icons .fa-foursquare{background-color:#0086BE;}
+.social-icons .fa-github,.social-icons .fa-github-alt,.social-icons .fa-github-square{background-color:#070709;} 
+.social-icons .fa-google-plus,.social-icons .fa-google-plus-square{background-color:#CF3D2E;} 
+.social-icons .fa-html5{background-color:#E54D26;}
+.social-icons .fa-instagram{background-color:#A1755C;}
+.social-icons .fa-linkedin,.social-icons .fa-linkedin-square{background-color:#0085AE;} 
+.social-icons .fa-linux{background-color:#FBC002;color:#333;}
+.social-icons .fa-maxcdn{background-color:#F6AE1C;}
+.social-icons .fa-pagelines{background-color:#241E20;color:#3984EA;}
+.social-icons .fa-pinterest,.social-icons .fa-pinterest-square{background-color:#CC2127;} 
+.social-icons .fa-renren{background-color:#025DAC;}
+.social-icons .fa-skype{background-color:#01AEF2;}
+.social-icons .fa-stack-exchange{background-color:#245590;}
+.social-icons .fa-stack-overflow{background-color:#FF7300;}
+.social-icons .fa-trello{background-color:#265A7F;}
+.social-icons .fa-tumblr,.social-icons .fa-tumblr-square{background-color:#314E6C;} 
+.social-icons .fa-twitter,.social-icons .fa-twitter-square{background-color:#32CCFE;} 
+.social-icons .fa-vimeo-square{background-color:#229ACC;}
+.social-icons .fa-vk{background-color:#375474;}
+.social-icons .fa-weibo{background-color:#D72B2B;}
+.social-icons .fa-windows{background-color:#12B6F3;}
+.social-icons .fa-xing,.social-icons .fa-xing-square{background-color:#00555C;} 
+.social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}
+ .wrapper ul li a{
+	 font-size: 16px;
+	 color: #000;
+ }
+ .wrapper ul li a:hover{
+	color: #000;
+ }
+</style>
+<style>
+	.admin-sidenav {
+    width: auto;
+	height: auto;
+	margin-left: 0px; 
+}
+.admin-sidenav a {
+	text-decoration: none; 
+	font-size: 13px;
+}
+.admin-sidenav li {
+	text-align: justify;
+	padding: .5rem;
+	padding-left: 1rem;
+	-webkit-transition: all .2s linear;
+	transition: all .2s linear;
+	background-color: #40a1a4;
+	border: 1px solid #fff; 
+	cursor: pointer;
+}
+.admin-sidenav li a {
+	color: #fff; 
+}
+
+.admin-sidenav li a:active {
+	border-color: #02d3f5; 
+}
+.admin-sidenav li:hover {
+	border-radius: .5rem .5rem .5rem .5rem;
+	border-color: #02d3f5;
+	-webkit-transform: translate(30px, 0px);
+	transform: translate(10px, 0px);
+	background: -webkit-linear-gradient(left, #006a7b, #002340);
+	background: linear-gradient(to right, #006a7b, #002340); 
+}
+
+.admin-sidenav li:active {
+	border-color: #02d3f5; 
+}
+.cpn{
+	background-color: #f69939;
+	color:#fff;
+}
+</style>
+<style>
+	.widget-sidebar {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.title-widget-sidebar {
+    font-size: 14pt;
+    border-bottom: 2px solid #e5ebef;
+    margin-bottom: 15px;
+    padding-bottom: 10px;    
+    margin-top: 0px;
+}
+
+.title-widget-sidebar:after {
+    border-bottom: 2px solid #f1c40f;
+    width: 150px;
+    display: block;
+    position: absolute;
+    content: '';
+    padding-bottom: 10px;
+}
+</style>
+<style>
+	.widget-sidebar {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.title-widget-sidebar {
+    font-size: 14pt;
+    border-bottom: 2px solid #e5ebef;
+    margin-bottom: 15px;
+    padding-bottom: 10px;    
+    margin-top: 0px;
+}
+
+.title-widget-sidebar:after {
+    border-bottom: 2px solid #f1c40f;
+    width: 150px;
+    display: block;
+    position: absolute;
+    content: '';
+    padding-bottom: 10px;
+}
+.recent-post{width: 100%;height: 80px;list-style-type: none;}
+.post-img img {
+    width: 100px;
+    height: 70px;
+    float: left;
+    margin-right: 15px;
+    border: 5px solid #16A085;
+    transition: 0.5s;
+}
+
+.recent-post a {text-decoration: none;color:#34495E;transition: 0.5s;}
+.post-img, .recent-post a:hover{color:#F39C12;}
+.post-img img:hover{border: 5px solid #F39C12;}
+.recent-post h5{
+	font-size: 14px;
+}
+</style>
+
+{% endblock %}
+
+{% block content %}
+
+<header class="banner">
+	<span class="background"></span>
+	<h1 style="font-size: 22px;">
+		<!-- TRANG CHỦ|TIN TỨC|TIN TỨC BẢO HIỂM -->
+		<a href="">Trang chủ</a>|
+		<a href="">CÔNG TY BẢO HIỂM</a>
+	</h1>
+</header>
+<div class="container pt-4">
+	<div class="row">
+		<div class="col-md-9">
+			<div class="row mb-2">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="news-title">
+										<div class="alert alert-warning" role="alert">
+											Các công ty bảo hiểm ở việt nam-Các công ty Cơm Trưa Văn Phòng chung và riêng
+										  </div>
+									</div>
+									<hr>
+									<div class="news-image">
+										<p>Các công ty bảo hiểm ở Ấn Độ - Các công ty Cơm Trưa Văn Phòng và chung
+											Ngành bảo hiểm đã cho thấy sự tăng trưởng to lớn trong những năm gần đây. Trong tương lai cũng vậy, dự kiến ​​sẽ tiến triển ở quy mô cao. Trước đó, chỉ có hai công ty bảo hiểm ở Ấn Độ - Tập đoàn Cơm Trưa Văn Phòng Ấn Độ (LIC) và Tổng công ty bảo hiểm Ấn Độ (GIC). Giờ đây, lĩnh vực này có 24 Công ty Cơm Trưa Văn Phòng và 24 Công ty Bảo hiểm Tổng hợp cung cấp nhiều sản phẩm sáng tạo khác nhau, ghi nhớ các nhu cầu khác nhau của mọi người. Hầu hết các công ty này đã tham gia vào thị trường hợp tác với các công ty quốc tế.</p>
+										<img
+											src="https://image.tinnhanhchungkhoan.vn/w860/Uploaded/2020/lys_dsfeepc/bhxh/1/shutterstock_393500518_tzww.jpg">
+										<p class="text-muted ">Bảo hiểm là việc cần thiết cho mọi gia đình
+										</p>
+									</div>
+									<div class="news-content">
+										<p>Các công ty này đã đưa ra một loạt các chính sách có ưu và nhược điểm riêng. Mỗi nhà đầu tư có nhu cầu riêng, khẩu vị rủi ro, mục tiêu và ngân sách trong tương lai. Theo các yếu tố này, một kế hoạch vô dụng cho người này có thể là tốt nhất cho người khác.</p>
+										<p>Chúng tôi đang cung cấp cho bạn danh sách các công ty Cơm Trưa Văn Phòng & Chung dựa trên phí chính sách, xếp hạng chuyên gia tổng thể, xếp hạng khiếu nại, sức mạnh tài chính, xếp hạng tín dụng và nhiều yếu tố khác. Bạn cũng có thể hiểu các sản phẩm của các công ty này bằng cách xem qua Đánh giá sản phẩm, Bài viết và các chi tiết khác mà chúng tôi đã cung cấp.</p>
+										<!-- <p>Sắp xếp các mục tiêu tài chính theo thứ tự ưu tiên là bước tiếp theo bạn cần
+											thực hiện. Việc sắp xếp sẽ giúp bạn đánh giá mức độ quan trọng của các khoản
+											thu/chi, từ đó có thể sắp xếp thời gian tích luỹ để có được số tiền này..
+										</p>
+										<p>Xác định rõ các mục tiêu tài chính của bản thân và gia đình là bước đầu tiên
+											để lập kế hoạch tài chính cho tương lai tốt đẹp. Bạn cần hiểu rõ bản thân
+											muốn gì trong một năm sắp tới để có kế hoạch phù hợp. Chẳng hạn, bạn muốn có
+											một cuốn sổ tiết kiệm 100 triệu, một chuyến du lịch cho cả gia đình 60
+											triệu,… Khi có mục tiêu, bạn có thể đặt câu hỏi “Làm sao để đạt được mục
+											tiêu đó?” và các câu trả lời sẽ là kế hoạch cho cả năm của bạn..</p> -->
+									</div>
+								</div>
+								<div class="col-md-6"></div>
+								<div class="col-md-6 ">
+									<div class="wrapper">
+										<ul class="social-icons icon-circle icon-rotate list-unstyled list-inline">
+										  <li> <a href="#">Chia sẻ</a></li>  
+										  <li> <a href="#"><i class="fa fa-facebook-square"></i></a></li> 
+										  <li> <a href="#"><i class="fa fa-instagram"></i></a></li> 
+										  <li> <a href="#"><i class="fa fa-twitter-square"></i></a></li>
+										  <li> <a href="#"><i class="fa fa-youtube-square"></i></a></li> 
+										  </ul>
+									</div> 
+								</div>
+								<div class="col-md-12">
+									<h5 class="pb-2">Bình luận</h5>
+									<textarea id="newComment" class = "comment" style="width:100%"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 pt-4 pb-4">
+					<h1 class="lienquan">
+						Công ty bảo hiểm khác
+					</h1>
+				</div>
+				<div class="col-md-4">
+					<div class="single-blog">
+						<div class="single-blog-img">
+							<a href="blog_single.html"><img
+									src="http://demos.codexcoder.com/labartisan/html/heaven-hands-demo/images/home-blog-01.jpg"
+									alt="Blog Image"></a>
+						</div>
+						<div class="blog-content-box">
+							<div class="blog-post-date">
+								<span>12</span>
+								<span>Nov 2016</span>
+							</div>
+							<div class="blog-content">
+								<h4><a href="blog_single.html">Dramaticaly simplify user friendly</a></h4>
+								<div class="exerpt">
+									Namnec tellus odio tincidunt auctor ornare that odio.
+									vitae erat consequat auctor eu in aelit. Class aptent
+									sociosqu ad litora torquent per conubia nostra.
+								</div>
+								<a href="" class="btn btn-warning site-btn">Đọc thêm</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="single-blog">
+						<div class="single-blog-img">
+							<a href="blog_single.html"><img
+									src="http://demos.codexcoder.com/labartisan/html/heaven-hands-demo/images/home-blog-01.jpg"
+									alt="Blog Image"></a>
+						</div>
+						<div class="blog-content-box">
+							<div class="blog-post-date">
+								<span>12</span>
+								<span>Nov 2016</span>
+							</div>
+							<div class="blog-content">
+								<h4><a href="blog_single.html">Dramaticaly simplify user friendly</a></h4>
+								<div class="exerpt">
+									Namnec tellus odio tincidunt auctor ornare that odio.
+									vitae erat consequat auctor eu in aelit. Class aptent
+									sociosqu ad litora torquent per conubia nostra.
+								</div>
+								<a href="" class="btn btn-warning site-btn">Đọc thêm</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="single-blog">
+						<div class="single-blog-img">
+							<a href="blog_single.html"><img
+									src="http://demos.codexcoder.com/labartisan/html/heaven-hands-demo/images/home-blog-01.jpg"
+									alt="Blog Image"></a>
+						</div>
+						<div class="blog-content-box">
+							<div class="blog-post-date">
+								<span>12</span>
+								<span>Nov 2016</span>
+							</div>
+							<div class="blog-content">
+								<h4><a href="blog_single.html">Dramaticaly simplify user friendly</a></h4>
+								<div class="exerpt">
+									Namnec tellus odio tincidunt auctor ornare that odio.
+									vitae erat consequat auctor eu in aelit. Class aptent
+									sociosqu ad litora torquent per conubia nostra.
+								</div>
+								<a href="" class="btn btn-warning site-btn">Đọc thêm</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+
+		</div>
+		<div class="col-md-3">
+			<div class="row mb-2">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card cpn">
+									<div class="card-body">
+										<h5>Các công ty bảo hiểm</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="list-group ">
+							<div id="admin-sidebar" class="">
+								<ul class="sidenav admin-sidenav list-unstyled">
+									<li><a href="#">Công ty Bảo Việt Nhân thọ</a></li>
+									<li><a href="#">Công ty TNHH Cơm Trưa Văn Phòng AIA</a></li>
+									<li><a href="#">Công ty TNHH Cơm Trưa Văn Phòng Chubb</a></li>
+									<li><a href="#">Công ty TNHH Cơm Trưa Văn Phòng Dai-ichi</a></li>
+									<li><a href="#">Côngty TNHH Cơm Trưa Văn Phòng SunLife</a></li>
+									<li><a href="#">Công ty TNHH Cơm Trưa Văn Phòng Mirae </a></li>   
+									<li><a href="#">Công ty Bảo Việt Nhân thọ</a></li>
+									<li><a href="#">Công ty TNHH Cơm Trưa Văn Phòng AIA</a></li>
+									<li><a href="#">Công ty TNHH Cơm Trưa Văn Phòng Chubb</a></li>
+									<li><a href="#">Công ty Bảo Việt Nhân thọ</a></li>
+									<li><a href="#">Công ty TNHH Cơm Trưa Văn Phòng AIA</a></li>
+									<li><a href="#">Công ty TNHH Cơm Trưa Văn Phòng Chubb</a></li>               
+								</ul>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-body">
+							<a href=""><img src="/static/tndsoto/carLap.svg"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row tt_new">
+				<div class="widget-sidebar">
+					<h2 class="title-widget-sidebar">Tin tức về bảo hiểm</h2>
+					  <div class="content-widget-sidebar">
+					   <ul>
+						<li class="recent-post">
+						   <div class="post-img">
+							<img src="https://cafefcdn.com/thumb_w/650/2019/7/4/baoantindung-15622046904961467075461-crop-1562204697073322598638.jpg" class="img-responsive">
+							</div>
+							<a href="#"><h5>tin tức bảo hiểm mới nhất ai cũng muốn xem</h5></a>
+							<p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+						   </li>
+						   <hr>
+						   
+						   <li class="recent-post">
+						   <div class="post-img">
+							<img src="https://cafefcdn.com/thumb_w/650/2019/7/4/baoantindung-15622046904961467075461-crop-1562204697073322598638.jpg" class="img-responsive">
+							</div>
+							<a href="#"><h5>tin tức bảo hiểm mới nhất ai cũng muốn xem</h5></a>
+							<p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+						   </li>
+						   <hr>
+						   
+						   <li class="recent-post">
+						   <div class="post-img">
+							<img src="https://cafefcdn.com/thumb_w/650/2019/7/4/baoantindung-15622046904961467075461-crop-1562204697073322598638.jpg" class="img-responsive">
+							</div>
+							<a href="#"><h5>tin tức bảo hiểm mới nhất ai cũng muốn xem</h5></a>
+							<p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+						   </li>
+						   <hr>
+						   
+						   <li class="recent-post">
+						   <div class="post-img">
+							<img src="https://cafefcdn.com/thumb_w/650/2019/7/4/baoantindung-15622046904961467075461-crop-1562204697073322598638.jpg" class="img-responsive">
+							</div>
+							<a href="#"><h5>tin tức bảo hiểm mới nhất ai cũng muốn xem</h5></a>
+							<p><small><i class="fa fa-calendar" data-original-title="" title=""></i> 30 Juni 2014</small></p>
+						   </li>
+						   
+						   
+					   </ul>
+					  </div>
+					</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<div class="card-body">
+							<a href=""><img src="/static/tndsxemay/xemaylap.svg"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+{% endblock %}
+
+{% block javascript_block %}
+<script>
+	window.onload = function () {
+		document.body.className += ' loaded'
+	};
+</script>
+{% endblock %}

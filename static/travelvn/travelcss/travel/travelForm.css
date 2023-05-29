@@ -1,0 +1,2694 @@
+.no-webp .travel_top .travelBackground {
+    background-image: url(../../images/bu/traveFormbg.jpg)
+}
+
+.no-webp .logosprite::before {
+    background-image: url(../../images/bu/landingpage_partner.png)
+}
+
+.no-webp #travelCountry,
+.no-webp #travelgender {
+    background-image: url(../../images/bu/ddArrow.png)
+}
+
+.no-webp .faq_icon,
+.no-webp .partnerwrapper .jcarousel span {
+    background-image: url(../../templates/policybazaar/images/landingpage_partner.png)
+}
+
+.no-webp ul.productRatingList,
+.no-webp ul.productRatingList a:hover {
+    background-image: url(../../images/bu/new.png)
+}
+
+.no-webp .breadcrumbContainer .breadcrumbinner span.homeIcon {
+    background-image: url(../../images/bu/breadcrumbinnerhomeicon.png)
+}
+
+.no-webp .articleWrapper .topSliderIcon .slick-next,
+.no-webp .articleWrapper .topSliderIcon .slick-next:focus,
+.no-webp .articleWrapper .topSliderIcon .slick-next:hover,
+.no-webp .articleWrapper .topSliderIcon .slick-prev,
+.no-webp .articleWrapper .topSliderIcon .slick-prev:focus,
+.no-webp .articleWrapper .topSliderIcon .slick-prev:hover,
+.no-webp .formInput.alignRight.addBtnDiv .addBtn,
+.no-webp .proceedButton:before,
+.no-webp .topSliderIcon .jcarousel-wrapper.landingpages .jcarousel span:before,
+.no-webp .topSliderIcon .slick-next,
+.no-webp .topSliderIcon .slick-next:focus,
+.no-webp .topSliderIcon .slick-next:hover,
+.no-webp .topSliderIcon .slick-prev,
+.no-webp .topSliderIcon .slick-prev:focus,
+.no-webp .topSliderIcon .slick-prev:hover,
+.no-webp .topSliderIcon .slider div span:before,
+.no-webp .travelFormTab li a.active:before,
+.no-webp .travel_top .ins_icons.family li.familyIcon:before,
+.no-webp .travel_top .travelBackground .rightBox .goback span:before {
+    background-image: url(../../images/bu/travel-new-icon.png)
+}
+
+.webp .travel_top .travelBackground {
+    background-image: url(../../images/webp/travel/traveformbg.webp)
+}
+
+.webp .logosprite::before {
+    background-image: url(../../images/webp/landingpage_partner.webp)
+}
+
+.webp .breadcrumbContainer .breadcrumbinner span.homeIcon {
+    background-image: url(../../images/webp/travel/breadcrumbinnerhomeicon.webp)
+}
+
+.webp #travelCountry,
+.webp #travelgender {
+    background: url(../../images/webp/travel/ddarrow.webp) center center no-repeat
+}
+
+.webp ul.productRatingList,
+.webp ul.productRatingList a:hover {
+    background-image: url(../../images/webp-travel/new.webp)
+}
+
+.webp .faq_icon,
+.webp .partnerwrapper .jcarousel span {
+    background-image: url(../../images/webp/travel/landingpage_partner.webp)
+}
+
+.webp .articleWrapper .topSliderIcon .slick-next,
+.webp .articleWrapper .topSliderIcon .slick-next:focus,
+.webp .articleWrapper .topSliderIcon .slick-next:hover,
+.webp .articleWrapper .topSliderIcon .slick-prev,
+.webp .articleWrapper .topSliderIcon .slick-prev:focus,
+.webp .articleWrapper .topSliderIcon .slick-prev:hover,
+.webp .formInput.alignRight.addBtnDiv .addBtn,
+.webp .proceedButton:before,
+.webp .topSliderIcon .jcarousel-wrapper.landingpages .jcarousel span:before,
+.webp .topSliderIcon .slick-next,
+.webp .topSliderIcon .slick-next:focus,
+.webp .topSliderIcon .slick-next:hover,
+.webp .topSliderIcon .slick-prev,
+.webp .topSliderIcon .slick-prev:focus,
+.webp .topSliderIcon .slick-prev:hover,
+.webp .topSliderIcon .slider div span:before,
+.webp .travelFormTab li a.active:before,
+.webp .travel_top .ins_icons.family li.familyIcon:before,
+.webp .travel_top .travelBackground .rightBox .goback span:before {
+    background-image: url(../../images/webp/travel/travel-new-icon.webp)
+}
+
+.destination-autocomplete,
+.formbox_new1 .formInput {
+    outline: 0;
+    vertical-align: middle;
+    box-sizing: border-box
+}
+
+.breadcrumbContainer .breadcrumb li a,
+.jcarousel-control-next,
+.jcarousel-control-prev,
+.newsub_category .tabbing ul.tab_title li a.active,
+.newsub_category .tabbing ul.tab_title li a:hover,
+.proceedButton:hover,
+.travelFormTab li a:hover,
+.travel_top .otherMembers li a:hover,
+.travel_top .travelBackground .rightBox a.goback:hover {
+    text-decoration: none
+}
+
+* {
+    tab-index: none;
+    -webkit-font-smoothing: antialiased
+}
+
+:focus {
+    outline: 0
+}
+
+.articleWrapper .breadcrumb>li+li:before {
+    content: " ";
+    display: none
+}
+
+.travel_top .travelBackground {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 50px;
+    display: table;
+    width: 100%;
+    margin: 0 auto 30px;
+    max-width: 1170px
+}
+
+.logosprite {
+    position: relative;
+    margin-top: 60px;
+    color: #6dc2f5
+}
+
+.logosprite::before {
+    width: 100px;
+    height: 55px;
+    position: absolute;
+    top: -64px;
+    left: -3px;
+    content: "";
+    right: 0;
+    margin: 0 auto
+}
+
+.logosprite.apolo-health-insurance::before {
+    background-position: 0 -319px
+}
+
+.logosprite.bajaj-allianz-general-insurance::before {
+    background-position: 0 -410px;
+    height: 45px
+}
+
+.logosprite.bharti-axa-general-insurance::before {
+    background-position: 0 -1379px
+}
+
+.logosprite.future-generali-travel-insurance::before {
+    background-position: 0 -1585px
+}
+
+.logosprite.hdfc-ergo-general-insurance:before {
+    background-position: 0 -445px
+}
+
+.logosprite.iffco-tokio-general-insurance:before {
+    background-position: 0 -1540px
+}
+
+.logosprite.reliance-general-insurance:before {
+    background-position: -306px -1501px;
+    height: 47px
+}
+
+.logosprite.religare-health-insurance:before {
+    background-position: 0 -1243px
+}
+
+.logosprite.royal-sundram-general-insurance:before {
+    background-position: 0 -1495px;
+    height: 45px
+}
+
+.logosprite.star-health-general-insurance:before {
+    background-position: 0 -618px
+}
+
+.logosprite.tata-aig-general-insurance:before {
+    background-position: -306px -864px
+}
+
+.logosprite.universal-sompo-general-insurance:before {
+    background-position: -306px -1368px
+}
+
+.logosprite.new-india-assurance-travel-insurance::before {
+    background-position: 0 -1005px;
+    height: 35px;
+    margin-top: 15px
+}
+
+.articleWrapper .travel_top .travelBackground {
+    max-width: 1170px;
+    width: 100%
+}
+
+.articleWrapper .item-contentpage h2 strong {
+    font-size: 21px
+}
+
+.travel_top .travelBackground:after {
+    content: "";
+    clear: both
+}
+
+.travel_top .travelBackground .leftBox {
+    width: 50%;
+    max-width: 800px;
+    float: left;
+    color: #fff
+}
+
+.travel_top .travelBackground .rightBox {
+    width: 50%;
+    max-width: 450px;
+    float: right;
+    background: rgba(1, 55, 110, .5);
+    border-radius: 10px
+}
+
+.travel_top .travelBackground .rightBox .form_wrapper {
+    /* overflow-x: hidden; */
+    min-height: 382px
+}
+
+.travel_top .travelBackground .leftBox .h1 {
+    font-size: 24px;
+    text-align: center
+}
+
+.travel_top .travelBackground .leftBox .subtext {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    display: block
+}
+
+.travel_top .travelBackground .rightBox .form:after {
+    clear: both;
+    content: ""
+}
+
+.cssTabbing {
+    position: relative;
+    top: -23px;
+    width: 340px;
+    margin: 0 auto
+}
+
+.articleWrapper .cssTabbing {
+    display: table
+}
+
+.travelFormTab {
+    display: block;
+    list-style: none;
+    background: #fff;
+    margin-bottom: 0;
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 1px rgba(159, 159, 159, .5)
+}
+
+.articleWrapper .travelFormTab li,
+.travelFormTab li {
+    display: inline-block;
+    width: auto
+}
+
+.travelFormTab li a {
+    display: block;
+    list-style: none;
+    padding: 10px 6px 10px 26px;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: normal
+}
+
+.travelFormTab li a.active {
+    background: #002154;
+    color: #fff;
+    padding: 10px 6px 10px 24px;
+    border-radius: 5px;
+    position: relative
+}
+
+.travelFormTab li:last-child a.active {
+    padding: 10px 6px 10px 21px
+}
+
+.ratingsBlock {
+    display: block;
+    color: #253858;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px 4px;
+    margin-bottom: 20px
+}
+
+#twowheelerStepCJ .rightsection .listing>div.card {
+    padding: 6px 16px
+}
+
+.ratingsBlock .card_heading {
+    margin-bottom: 0;
+    color: #253858;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 0 10px 0;
+    text-align: left
+}
+
+.ratingsBlock .ratingValue {
+    margin-top: 0
+}
+
+.rating_text {
+    color: #253858;
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: 9px;
+    margin-bottom: 10px;
+    width: auto;
+    height: auto;
+    display: block!important
+}
+
+.review_text {
+    color: #253858;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    display: block
+}
+
+.starts_block {
+    display: inline-block;
+    margin-bottom: 7px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig {
+    font-size: x-large;
+    width: 25px;
+    display: inline-block;
+    color: #dfe1e6;
+    margin-right: 3px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig:last-child {
+    margin-right: 0
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig:before {
+    content: '\2605'
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.on {
+    color: #ffab00
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half:after {
+    content: '\2605';
+    color: #ffab00;
+    position: absolute;
+    margin-left: -22px;
+    width: 12.5px;
+    overflow: hidden
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half_1:after {
+    width: 5px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half_2:after {
+    width: 7px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half_3:after {
+    width: 8px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half_4:after {
+    width: 10px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half_5:after {
+    width: 12.5px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half_6:after {
+    width: 13.5px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half_7:after {
+    width: 15px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half_8:after {
+    width: 16px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half_9:after {
+    width: 18px
+}
+
+.rightSection .listing.reviewbox .ratingValue .starts_block span.star_rig.half_10:after {
+    width: 25px
+}
+
+@media screen and (-ms-high-contrast:active),
+(-ms-high-contrast:none) {
+    .travelFormTab li:last-child a.active {
+        padding: 10px 8px 10px 25px
+    }
+}
+
+@supports(-ms-ime-align:auto) {
+    .travelFormTab li:last-child a.active {
+        padding: 10px 8px 10px 25px
+    }
+}
+
+.travelFormTab li a.active:before {
+    content: "";
+    position: absolute;
+    width: 19px;
+    height: 22px;
+    border-radius: 50%;
+    background-position: -188px -15px;
+    background-repeat: no-repeat;
+    left: 2px;
+    top: 8px
+}
+
+.articleWrapper .travelFormTab li a.active:before {
+    top: 8px;
+    left: 4px
+}
+
+.travel_top .insurance_related {
+    display: table;
+    width: 436px;
+    margin: 15px auto
+}
+
+.travel_top .ins_icons.family li {
+    display: inline-block;
+    float: left;
+    background: #fff;
+    color: #333;
+    width: 115px;
+    height: 107px;
+    border-radius: 10px;
+    margin: 15px 15px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, .8);
+    position: relative
+}
+
+.travel_top .ins_icons.family li.familyIcon:before {
+    background-color: #fff;
+    background-repeat: no-repeat;
+    content: "";
+    width: 100px;
+    height: 56px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto
+}
+
+.travel_top .ins_icons.family li.familyIcon.asme:before {
+    background-position: 10px -64px
+}
+
+.travel_top .ins_icons.family li.familyIcon.bdl:before {
+    background-position: -16px -125px
+}
+
+.travel_top .ins_icons.family li.familyIcon.tdc:before {
+    background-position: 4px -192px
+}
+
+.travel_top .ins_icons.family li.familyIcon.pl:before {
+    background-position: 5px -322px
+}
+
+.travel_top .ins_icons.family li.familyIcon.eme:before {
+    background-position: 5px -255px
+}
+
+.travel_top .ins_icons.family li.familyIcon.mf:before {
+    background-position: -16px 4px
+}
+
+.travel_top .ins_icons.family li.familyIcon.si:before {
+    background-position: -120px -195px
+}
+
+.travel_top .ins_icons.family li.familyIcon.bbpl:before {
+    background-position: -122px -57px
+}
+
+.travel_top .ins_icons.family li.familyIcon.cv:before {
+    background-position: -122px -129px
+}
+
+.travel_top .ins_icons.family li span {
+    display: block;
+    width: 96%;
+    margin: 58px auto 0;
+    text-align: center;
+    font-weight: 600;
+    line-height: 14px;
+    font-size: 13px;
+    letter-spacing: 0
+}
+
+.hindi+.travel_top .ins_icons.family li span {
+    line-height: 17px
+}
+
+#travelerCountryError,
+#travelerError {
+    clear: both;
+    font-size: 11px;
+    line-height: 15px;
+    color: #fff;
+    background: rgba(204, 204, 204, .2);
+    border-radius: 4px;
+    padding: 5px;
+    display: none;
+    border: 1px solid rgba(255, 0, 0, .3)
+}
+
+.travel_top .otherMembers {
+    position: absolute;
+    width: 90px;
+    background: #efefef;
+    box-sizing: border-box;
+    left: -25px;
+    display: none;
+    right: 0;
+    margin: 0 auto;
+    top: 41px;
+    z-index: 10;
+    border: 1px solid #ccc;
+    border-radius: 5px
+}
+
+.travel_top .otherMembers li {
+    list-style: none
+}
+
+.travel_top .otherMembers li a {
+    display: block;
+    padding: 5px;
+    color: #333
+}
+
+.travel_top .otherMembers:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #efefef;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    left: -6px;
+    top: -5px
+}
+
+.travel_top .travelBackground .leftBox .hasTag {
+    text-align: center;
+    font-size: 18px;
+    position: relative
+}
+
+.travel_top .travelBackground .rightBox .form {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    top: -15px
+}
+
+.travel_top .travelBackground .rightBox .goback {
+    display: block;
+    margin-top: 10px;
+    text-align: center
+}
+
+.travel_top .travelBackground .rightBox .goback span {
+    color: #fff;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #fff;
+    opacity: .9;
+    font-weight: 300;
+    position: relative;
+    padding-left: 20px
+}
+
+.travel_top .travelBackground .rightBox .goback span:before {
+    content: "";
+    position: absolute;
+    background-position: -154px -20px;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 16px;
+    left: 0;
+    transform: rotate(180deg)
+}
+
+.formbox_new1 {
+    display: table;
+    width: 100%
+}
+
+.formbox_new1 span {
+    display: block;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 400;
+    margin: 5px 0 3px;
+    letter-spacing: 0
+}
+
+.bootstrap-select span.filter-option,
+.bootstrap-select.btn-group .dropdown-menu li a span.text {
+    color: #333!important
+}
+
+#travelCountry option[data=custom] {
+    display: none
+}
+
+.formbox_new1 span.addBtn {
+    margin: 6px 0 5px
+}
+
+.formbox_new1 .formInput {
+    background: #fff;
+    padding: 4px;
+    border-radius: 4px;
+    width: 100%;
+    color: #333;
+    font-size: 12px;
+    min-height: 40px;
+    box-shadow: 1px 1px 1px #000;
+    display: flex
+}
+
+.firstStepForm,
+.secondStepForm {
+    float: left;
+    display: inline-block;
+    width: 100%;
+    width: 340px;
+    margin: 0 55px;
+    position: relative;
+    top: 16px
+}
+
+.secondStepForm .afterTransition {
+    display: none
+}
+
+.travellers input[type=number]::-webkit-inner-spin-button,
+.travellers input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0
+}
+
+.travellers input[type=number] {
+    -moz-appearance: textfield
+}
+
+.secondStepForm {
+    top: 2px
+}
+
+.beforeTransiton {
+    position: relative
+}
+
+.mobilefirst .firstStepForm .beforeTransiton {
+    margin-top: 25%
+}
+
+.beforeTransiton .destiNew {
+    position: absolute;
+    top: -25px
+}
+
+.formbox_new1 .formInput input,
+.formbox_new1 .formInput select {
+    width: 100%;
+    border: 0;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 0 10px;
+    letter-spacing: 0
+}
+
+.formbox_new1 .formInput select {
+    max-width: 100px
+}
+
+.secondStepForm .formbox_new1 .formInput input,
+.secondStepForm .formbox_new1 .formInput sekect {
+    font-size: 11px
+}
+
+.formbox_new1 .formInput.dates {
+    width: 49%;
+    font-weight: 500;
+    letter-spacing: 0
+}
+
+.formbox_new1 .calendar .button {
+    display: none
+}
+
+.formbox_new1 .formInput #travelname {
+    width: 70%
+}
+
+.formbox_new1 .formInput.travellers {
+    min-height: 50px
+}
+
+.formbox_new1 .formInput.alignLeft {
+    float: left;
+    position: relative
+}
+
+.formbox_new1 .formInput.alignRight {
+    float: right;
+    position: relative
+}
+
+.formbox_new1 .formInput .inputLabel {
+    background: #293f5e;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    font-size: 10px;
+    top: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 2px 5px 2px 2px;
+    display: none
+}
+
+.formbox_new1 .formInput .inputLabel:after {
+    content: "x";
+    width: 10px;
+    height: 10px;
+    color: #fff;
+    right: 0;
+    position: absolute;
+    top: 1px
+}
+
+.formInput.travellers {
+    width: 20%;
+    margin: 0 6px 6px 0
+}
+
+.formInput.travellers input {
+    text-align: center;
+    padding: 0;
+    height: 38px;
+    color: #333;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0
+}
+
+.travelMobileTitle {
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0 10px;
+    display: none
+}
+
+.travellerDetails {
+    margin-bottom: 6px
+}
+
+.formInput.travellers input.show {
+    padding: 15px 5px 0
+}
+
+.formInput.travellers input.show+.inputLabel {
+    display: block;
+    cursor: pointer
+}
+
+.formInput.travellers input.hide+.inputLabel {
+    display: none
+}
+
+.formInput.travellers input:focus {
+    padding: 20px 5px 5px
+}
+
+.formInput.travellers input:focus+.inputLabel {
+    display: block
+}
+
+.formInput.alignRight.addBtnDiv {
+    background: 0;
+    box-shadow: none;
+    height: 45px;
+    position: relative;
+    width: 10%;
+    margin-right: 0;
+    cursor: pointer
+}
+
+.formInput.alignRight.addBtnDiv .addBtn {
+    background-position: -233px -12px;
+    display: block;
+    width: 26px;
+    height: 26px
+}
+
+.formbox_new1 .radioLabel {
+    width: 150px;
+    display: block;
+    float: left
+}
+
+.formbox_new1 .radioBox {
+    float: right;
+    width: 170px
+}
+
+.formbox_new1 .radioBox label.container {
+    font-weight: 400
+}
+
+.formbox_new1 .container {
+    display: block;
+    position: relative;
+    padding-left: 23px;
+    margin-bottom: 7px;
+    padding-top: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #fff;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 65px;
+    float: left
+}
+
+.formbox_new1.tripF {
+    display: none
+}
+
+.formbox_new1.tripF .container {
+    width: 42px
+}
+
+.formbox_new1 .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer
+}
+
+.formbox_new1 .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #fff;
+    border-radius: 50%
+}
+
+.formbox_new1 .container input:checked~.checkmark {
+    background-color: none
+}
+
+.formbox_new1 .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 3px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff
+}
+
+.formbox_new1 .container input:checked~.checkmark:after {
+    display: block
+}
+
+.proceedButton {
+    border-radius: 3px;
+    background-color: #f8ab35;
+    box-shadow: 0 0 8px 0 rgba(66, 66, 66, .8);
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 14px;
+    margin: 13px 0 10px;
+    position: relative
+}
+
+.input-group.action,
+.qqc-background>h1,
+.travelproceed.process:before,
+label.icon {
+    display: none
+}
+
+.proceedButton:before,
+.wn-insurance-quote-editor:after {
+    position: absolute;
+    content: ""
+}
+
+.travelproceed {
+    margin: 25px 0 15px
+}
+
+.proceedButton:hover {
+    color: #fff
+}
+
+.process,
+.travelFormTab.process li a {
+    cursor: no-drop
+}
+
+.proceedButton:before {
+    background-position: -15px;
+    width: 14px;
+    height: 16px;
+    right: 20px;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    -moz-transition: all .2s ease-in
+}
+
+.proceedButton:hover:before {
+    right: 30px
+}
+
+#autocompleter-instructions {
+    display: block;
+    margin-bottom: 0;
+    font-size: 11px;
+    font-style: normal;
+    color: #8c8c8c
+}
+
+.full-width.destination {
+    width: 100%
+}
+
+.destination-autocomplete {
+    background: #fff;
+    border: 0;
+    padding: 4px 10px;
+    border-radius: 4px;
+    width: 100%;
+    color: #757575;
+    font-size: 12px;
+    min-height: 40px;
+    box-shadow: 1px 1px 1px #000;
+    display: flex
+}
+
+#wn-insurance-quote-editor #selected-destinations {
+    margin: 17px 0 0;
+    padding: 0
+}
+
+#wn-insurance-quote-editor #selected-destinations>li {
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 6px;
+    border-radius: 3px;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    background-color: #094f90;
+    color: #fff;
+    letter-spacing: 0;
+    width: auto
+}
+
+#wn-insurance-quote-editor #selected-destinations>li>a {
+    margin-left: 4px;
+    color: #eee
+}
+
+#wn-insurance-quote-editor #selected-destinations>li>a:hover {
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none
+}
+
+#wn-insurance-quote-editor .custom-select-open,
+#wn-insurance-quote-editor .get-a-price-panel-toggle {
+    display: none
+}
+
+#wn-insurance-quote-editor .country-of-residence {
+    display: inline-block!important
+}
+
+#wn-insurance-quote-editor .input-group {
+    margin: 0
+}
+
+#wn-insurance-quote-editor .input-group.action {
+    margin-bottom: 0;
+    vertical-align: top
+}
+
+#wn-insurance-quote-editor .input-group.full-width {
+    width: 100%;
+    font-size: 11px
+}
+
+.wn-insurance-quote-editor {
+    list-style: none;
+    margin-top: 1rem;
+    padding-left: 0;
+    background: #fff;
+    border: 2px solid #ccc;
+    -webkit-box-shadow: rgba(0, 0, 0, .2) 0 0 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2)
+}
+
+.wn-insurance-quote-editor:after {
+    top: -10px;
+    left: 10px;
+    z-index: 1010;
+    width: 0;
+    height: 0;
+    margin-bottom: 0;
+    border-bottom: 10px solid #ccc;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent
+}
+
+.wn-insurance-quote-editor>li {
+    color: #000;
+    list-style-type: none;
+    margin-left: 0;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+    line-height: 25px;
+    padding: 0 10px
+}
+
+.addRed,
+.errAdd .err,
+.qqc-container .placeholder,
+.wn-insurance-quote-editor li {
+    font-size: 11px;
+    font-weight: 500
+}
+
+.wn-insurance-quote-editor .selected {
+    background: #094f90;
+    color: #fff;
+    cursor: pointer
+}
+
+.wn-insurance-quote-editor em {
+    font-style: normal
+}
+
+#autocompleter-instructions {
+    padding: 10px;
+    margin-top: 0!important;
+    border: 2px solid #eee;
+    background: #fff;
+    -webkit-box-shadow: rgba(0, 0, 0, .2) 0 0 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    z-index: 1
+}
+
+.qqc-container input[type=text].datepicker-open,
+.qqc-container input[type=text]:focus {
+    -webkit-box-shadow: #094f90 0 0 1px 0;
+    box-shadow: 0 0 1px 0 #094f90;
+    border: 1px solid #ff9c00
+}
+
+.qqc-container .placeholder {
+    color: #8d908d;
+    letter-spacing: 0
+}
+
+.qqc-container.province-shown input[type=text].datepicker-open,
+.qqc-container.province-shown input[type=text]:focus {
+    -webkit-box-shadow: #094f90 0 0 1px 0;
+    box-shadow: 0 0 1px 0 #094f90;
+    border: 1px solid #094f90
+}
+
+#travellerDetails .errAdd,
+.destination.errAdd input,
+.errAdd .formInput,
+.tripF.errAdd .checkmark {
+    border: 1px solid red!important
+}
+
+.errAdd .formInput.addBtnDiv {
+    border: none!important
+}
+
+.addRed,
+.errAdd .err {
+    color: #ff5959;
+    display: block;
+    clear: both;
+    letter-spacing: 0
+}
+
+.secondStepForm .addRed,
+.secondStepForm .errAdd .err {
+    margin-top: 6px
+}
+
+#travelgender,
+.formInput .select30_per,
+.travelCountryCode {
+    background: 0;
+    width: 100px;
+    border: 0
+}
+
+#travelCountry,
+#travelgender {
+    -webkit-appearance: none;
+    padding: 0 25px 0 10px;
+    -moz-appearance: none;
+    background-position: 90% 50%;
+    background-repeat: no-repeat
+}
+
+.travelCountryCode {
+    position: relative
+}
+
+#CCountry {
+    display: block;
+    font-weight: 500;
+    position: absolute;
+    overflow-y: scroll;
+    background: #fff;
+    z-index: 10;
+    top: 36px;
+    padding: 10px;
+    left: -4px
+}
+
+#travelCountry {
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all
+}
+
+.policy_wrapper {
+    width: 100%;
+    margin: 0 auto
+}
+
+.r25 {
+    width: 25%!important;
+    float: right
+}
+
+.partnerwrapper .jcarousel span:hover {
+    opacity: 1
+}
+
+.aegonP {
+    background-position: 0 -749px
+}
+
+.appoloP {
+    background-position: 0 -329px
+}
+
+.appoloPt {
+    background-position: -308px -1189px
+}
+
+.avivaP {
+    background-position: 0 -371px
+}
+
+.bajajP {
+    background-position: 0 -413px
+}
+
+.baxaP {
+    background-position: 0 -1379px
+}
+
+.baxaPt {
+    background-position: -308px -1039px
+}
+
+.cholaP {
+    background-position: 0 -1421px
+}
+
+.cignaP {
+    background-position: 0 -1211px
+}
+
+.edelweissP {
+    background-position: 0 -791px
+}
+
+.excideP {
+    background-position: 0 -833px
+}
+
+.hdfcergoP {
+    background-position: 0 -455px
+}
+
+.hfcstandardP {
+    background-position: 0 -875px
+}
+
+.iciciP {
+    background-position: 0 -1463px
+}
+
+.idbiP {
+    background-position: 0 -917px
+}
+
+.iffcoP {
+    background-position: 0 -1547px
+}
+
+.indiafirstP {
+    background-position: 0 -959px
+}
+
+.kotakP {
+    background-position: 0 -497px
+}
+
+.libertyP {
+    background-position: 0 -1295px
+}
+
+.licP {
+    background-position: 0 -1001px
+}
+
+.ltP {
+    background-position: 0 -1337px
+}
+
+.metlifeP {
+    background-position: 0 -1085px
+}
+
+.maxbupaP {
+    background-position: 0 -539px
+}
+
+.maxlifeP {
+    background-position: 0 -1043px
+}
+
+.relianceP {
+    background-position: 0 -581px
+}
+
+.religareP {
+    background-position: 0 -1253px
+}
+
+.religarePt {
+    background-position: -308px -1091px
+}
+
+.royalP {
+    background-position: 0 -1505px
+}
+
+.saharaP {
+    background-position: 0 -1127px
+}
+
+.sbilifeP {
+    background-position: 0 -1169px
+}
+
+.starhealthP {
+    background-position: 0 -623px
+}
+
+.tataaiaP {
+    background-position: 0 -665px
+}
+
+.tataaigP {
+    background-position: 0 -707px
+}
+
+.nia {
+    background-position: 0 -1631px
+}
+
+.kotakG {
+    background-position: -308px -1288px
+}
+
+.future-genrali {
+    background-position: 0 -1589px
+}
+
+.oriental {
+    background-position: -313px -1420px
+}
+
+.universalSompo {
+    background-position: -306px -1381px
+}
+
+.united {
+    background-position: -308px -1337px
+}
+
+.national {
+    background-position: -306px -1464px
+}
+
+.relianceGeneral {
+    background-position: -306px -1505px
+}
+
+.relianceGeneralt {
+    background-position: -308px -1138px
+}
+
+.digit {
+    background-position: -308px -1243px
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.jcarousel img {
+    display: block;
+    max-width: 100%;
+    height: auto!important;
+    background-color: #fff;
+    width: 125px
+}
+
+.jcarousel-control-next,
+.jcarousel-control-prev {
+    position: absolute;
+    top: 50%;
+    margin-top: -23px;
+    width: 26px;
+    height: 50px;
+    color: #c4c4c4
+}
+
+.jcarousel,
+.jcarousel-control-next span,
+.jcarousel-control-prev span {
+    position: relative
+}
+
+.jcarousel-control-prev {
+    left: 15px
+}
+
+.jcarousel-control-next {
+    right: 15px
+}
+
+.partnerwrapper .jcarousel span {
+    background-repeat: no-repeat;
+    width: 94px;
+    height: 41px;
+    display: inline-block;
+    text-indent: -10000px;
+    background-color: #fff;
+    opacity: .8
+}
+
+.jcarousel-wrapper {
+    margin: 20px auto;
+    position: relative;
+    padding: 0 65px
+}
+
+.jcarousel {
+    overflow: hidden;
+    overflow-x: hidden;
+    width: 100%;
+    height: 94px;
+    padding-top: 16px
+}
+
+.jcarousel-wrapper.landingpages .jcarousel span {
+    text-indent: -2000000px
+}
+
+ul.productRatingList,
+ul.productRatingList a:hover {
+    background-position: left -18px;
+    background-repeat: repeat-x
+}
+
+.showForm.travel_top {
+    margin: 0;
+    transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease
+}
+
+.breadcrumbContainer .breadcrumbinner {
+    color: #838282;
+    font-size: .7em;
+    font-weight: 600;
+    margin: 0;
+    padding: 8px 0;
+    width: 80%;
+    float: left
+}
+
+.breadcrumbContainer .breadcrumbinner .breadcrumb {
+    padding: 0;
+    margin: 0;
+    background: 0;
+    border-radius: 0;
+    list-style: none
+}
+
+.breadcrumbContainer ul.breadcrumb {
+    display: inline-flex
+}
+
+.breadcrumbContainer .breadcrumb li {
+    float: left;
+    margin: 0;
+    padding: 0
+}
+
+.breadcrumb>.active {
+    color: #777
+}
+
+.breadcrumbContainer .breadcrumbinner span.homeIcon {
+    background-color: rgba(0, 0, 0, 0);
+    background-position: no-repeat;
+    float: left;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    width: 18px
+}
+
+.breadcrumbContainer .breadcrumb li a {
+    color: #008dc2;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1px 0 0 2px;
+    padding: 0
+}
+
+/* .breadcrumb li a,
+.breadcrumb li span {
+    float: left
+} */
+
+.breadcrumbContainer .breadcrumb li span.currentLocation {
+    display: block;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 2px 0 0 2px;
+    padding: 0;
+    color: #838282;
+    font-weight: 400
+}
+
+.tabberArticle {
+    font-size: .75em;
+    padding: 8px 0;
+    border-bottom: 1px dashed #b6d4ed;
+    text-align: justify;
+    width: 100%;
+    display: inline-block
+}
+
+.pbfaqQues {
+    cursor: pointer;
+    line-height: 28px;
+    padding: 6px 0 0;
+    min-height: 35px!important;
+    height: auto
+}
+
+.faq_icon {
+    background-position: -220px 0;
+    width: 15px;
+    float: left;
+    margin-right: 15px;
+    height: 16px;
+    background-repeat: no-repeat
+}
+
+.policy_wrapper .newsub_category p {
+    font-size: 14px
+}
+
+.newsub_category .tabbing p {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify
+}
+
+.tab_content .paragraphBu {
+    margin-bottom: 10px
+}
+
+.pbNewsTitle .paragraphBu {
+    margin: 10px 0
+}
+
+.fLeft,
+.slimScrollDiv {
+    float: left
+}
+
+.pbfaqAns {
+    display: none;
+    width: 100%
+}
+
+.tabberArticle .tabAns {
+    text-shadow: none!important;
+    font-size: 14px;
+    font-weight: 700;
+    color: #014667
+}
+
+.lds-ring {
+    display: inline-block;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    right: 12px;
+    top: 9px
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    margin: 0;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(.5, 0, .5, 1) infinite;
+    border-color: #fff transparent transparent
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -.45s
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -.3s
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -.15s
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.travelFormTab li {
+    position: relative
+}
+
+.travelFormTab li .newTooltip {
+    position: absolute;
+    background: #fff;
+    font-size: 11px;
+    padding: 4px;
+    display: none;
+    width: 203px;
+    top: 48px;
+    border-radius: 5px;
+    left: -50%;
+    z-index: 10;
+    color: #333;
+    font-weight: 500;
+    line-height: 16px
+}
+
+.termCond,
+.travelFormTab li:hover .newTooltip {
+    display: block
+}
+
+.travelFormTab li .newTooltip:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #efefef;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    left: -6px;
+    top: -5px
+}
+
+.termCond {
+    width: 300px;
+    clear: both;
+    text-align: center;
+    margin: 0 auto;
+    position: relative
+}
+
+.termCond span a {
+    color: #62caf4
+}
+
+.termCond span {
+    letter-spacing: 0;
+    color: #fff;
+    font-size: 10px
+}
+
+.overflowHide {
+    z-index: 51!important
+}
+
+.daterangepicker.opensright.calarrowrgt:after,
+.daterangepicker.opensright.calarrowrgt:before {
+    right: 30px;
+    left: unset
+}
+
+.topSliderIcon {
+    display: none
+}
+
+.providerandproductContent .provide_text {
+    clear: both;
+    width: 100%
+}
+
+.providerandproductContent .provide_text .Logo {
+    float: left;
+    display: block;
+    max-height: 65px;
+    margin: auto;
+    width: auto
+}
+
+.providerandproductContent .provide_text h1 {
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 0 15px 10px
+}
+
+.center_hd .newsub_category .tabbing h2 {
+    font-size: 18px
+}
+
+.center_hd .newsub_category .tabbing h3 {
+    font-size: 16px
+}
+
+.center_hd .newsub_category .tabbing h4 {
+    font-size: 15px
+}
+
+.tab_content .pbNewsTitle {
+    position: relative;
+    cursor: pointer;
+    font-weight: 600
+}
+
+.tab_content .pbNewsContent,
+.tab_content .pbNewsTitle {
+    padding-left: 45px
+}
+
+.tab_content .pbNewsContent {
+    padding-top: 10px;
+    display: none
+}
+
+.tab_content .pbNewsTitle::before {
+    content: "";
+    background: #fff url(../../images/bu/latest-news.png) center center no-repeat;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
+    display: block;
+    position: absolute;
+    left: 15px
+}
+
+.search_article {
+    border-radius: 4px;
+    border: 1px solid rgba(23, 43, 77, .2);
+    padding: 6px 16px 16px 16px;
+    margin-bottom: 20px
+}
+
+.article_newsLetter.search_article.list_typeA+.clearfix+.greybg {
+    margin-top: 20px
+}
+
+.search_article .titleText {
+    text-transform: capitalize;
+    padding: 20px 0 10px 0!important;
+    margin: 0!important;
+    display: block;
+    float: left;
+    width: 100%;
+    font-size: 18px!important;
+    font-weight: 600
+}
+
+.search_article .titleText span {
+    border: none!important
+}
+
+#searchForm input[type=text] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    color: #172b4d;
+    padding: 0 16px;
+    border-radius: 4px;
+    height: 48px;
+    border: solid 1px rgba(37, 56, 88, .2)
+}
+
+#searchForm button {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    background: #0c4178;
+    color: #fff;
+    padding: 11px 15px;
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+
+#searchForm button span {
+    position: relative;
+    padding: 0 30px;
+    box-sizing: border-box
+}
+
+#searchForm button span::after {
+    content: "\f061";
+    font-family: Fontawesome;
+    color: #fff;
+    right: 10px;
+    font-size: 15px;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.searchError {
+    clear: both;
+    font-size: 12px;
+    font-family: inherit;
+    padding: 0 0 7px 0;
+    color: red;
+    font-weight: 400
+}
+
+.faqsWrapper ul li h3 a,
+.faqsWrapper.hindi ul li h2 a {
+    padding: 10px 40px 10px 10px!important;
+    color: #014667!important;
+    position: relative!important
+}
+
+.faqsWrapper ul li h3 a[flag=down],
+.faqsWrapper ul li h3 a[flag=up],
+.faqsWrapper.hindi ul li h2 a[flag=down],
+.faqsWrapper.hindi ul li h2 a[flag=up] {
+    background: 0 0!important
+}
+
+.faqsWrapper ul li h3 a[flag=down]:after,
+.faqsWrapper ul li h3 a[flag=up]:after,
+.faqsWrapper.hindi ul li h2 a[flag=down]:after,
+.faqsWrapper.hindi ul li h2 a[flag=up]:after {
+    position: absolute;
+    content: "";
+    background: url(../../images/bu/pmimg.png) 99% -1px no-repeat!important;
+    width: 20px;
+    height: 23px;
+    right: 6px;
+    top: 0;
+    bottom: 0;
+    margin: auto
+}
+
+.faqsWrapper ul li h3 a[flag=up]:after {
+    background: url(../../images/bu/pmimg.png) 99% -32px no-repeat!important
+}
+
+.helpfulContent .plan-reviewright {
+    width: 330px!important;
+    text-align: left!important
+}
+
+.helpfulContent .plan-reviewright>a:before {
+    width: 37px;
+    height: 34px;
+    content: '';
+    background: url(../../images/write_review.png) no-repeat;
+    position: absolute;
+    top: 12px;
+    left: 18px
+}
+
+.helpfulContent .plan-reviewright>a.button {
+    width: 100%;
+    display: inline-block;
+    background: #ff9d3b;
+    color: #fff;
+    font-size: 18px;
+    margin: 10px 0;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 300;
+    letter-spacing: 0;
+    padding: 15px 15px 15px 55px;
+    position: relative;
+    text-align: left
+}
+
+.newtravelRight .card.ratingsBlock,
+.ratingsBlock.card {
+    margin: 0 0 20px!important
+}
+
+@media only screen and (max-width:1024px) {
+    .search_article {
+        margin-top: 10px
+    }
+    .search_article .titleText {
+        padding: 5px 0
+    }
+    #searchForm button {
+        background-color: #005387;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none
+    }
+    .travel_top .travelBackground {
+        padding: 0 20px;
+        width: 100%
+    }
+    .travel_top .ins_icons.family li {
+        margin: 14px 15px
+    }
+    .leftSection,
+    .rightSection {
+        width: 100%
+    }
+    .r25 {
+        width: 100%!important;
+        float: left
+    }
+    #hrefwritereview {
+        margin-bottom: 18px
+    }
+    .button.forbu {
+        width: 350px
+    }
+    .rightSection {
+        max-width: 350px
+    }
+    .footable {
+        overflow-x: auto;
+        width: 96%;
+        margin: 0 auto
+    }
+    .newsub_category .tabbing p {
+        line-height: 24px;
+        font-size: 14px
+    }
+    .policy_wrapper .tabbing a {
+        color: #fa774d
+    }
+    .policy_wrapper .tabbing h1,
+    .tab_content h1 {
+        font-size: 25px;
+        line-height: 31px;
+        color: #005387;
+        font-weight: 600;
+        letter-spacing: 0;
+        margin: 10px 0
+    }
+    .icon-div .sprite_content,
+    .icon-div .sprite_content_1 {
+        display: none
+    }
+    .banner {
+        max-width: 450px;
+        margin: 20px 0
+    }
+    .newsub_category .tab_content ul.data_ul {
+        display: block;
+        clear: both
+    }
+    .newsub_category ul.data_ul li,
+    .newsub_category ul.data_ul li span {
+        background: 0
+    }
+    .newsub_category .tabbing {
+        display: block
+    }
+    .faq .pbfaqQues .faq_icon {
+        padding-right: 10px
+    }
+    .icon-div h1,
+    .icon-div h2,
+    .icon-div h3,
+    .icon-div p,
+    .leftSection {
+        padding: 0!important
+    }
+    .faq .pbfaqQues .faq_icon:before {
+        display: inline-block;
+        width: 16px;
+        height: 13px;
+        content: '\0051.';
+        font-size: 16px;
+        font-weight: 900;
+        color: #005387
+    }
+    .plan-reviewleft,
+    .plan-reviewright,
+    .side_article {
+        width: 100%!important
+    }
+    .faq .pbfaqQues p {
+        color: #005387;
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        display: inline
+    }
+    .article_item .data_ul li a {
+        line-height: 21px;
+        color: #1377b5
+    }
+    .data_ul li,
+    .data_ul li a,
+    .data_ul li:before {
+        color: #333;
+        font-size: 15px
+    }
+    .data_ul {
+        padding: 0;
+        margin: 0;
+        overflow: unset
+    }
+    .data_ul li {
+        display: block;
+        margin: 5px 0
+    }
+    .data_ul li a {
+        padding: 5px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px dashed #dadada;
+        line-height: 26px;
+        font-weight: 400
+    }
+    .footable table td,
+    table td {
+        border: 1px solid #ccc;
+        padding: 5px
+    }
+    #aboutPlan div table td {
+        line-height: 17px
+    }
+    #aboutPlan.content_life h1 {
+        margin: 0 0 8px
+    }
+    .data_ul li {
+        padding-left: 13px;
+        position: relative;
+        font-weight: 400;
+        list-style: disc inside
+    }
+    .fLeft.ansData,
+    .tabAns.fLeft,
+    span.tabAns.fLeft {
+        display: inline
+    }
+    .pbfaqQues {
+        margin-top: 15px
+    }
+    ul.metismenu li {
+        padding-left: 0
+    }
+    .data_ul li:before {
+        content: "\2756";
+        width: 14px;
+        height: 19px;
+        position: absolute;
+        left: 3px;
+        top: 4px
+    }
+    .article_item .data_ul li:before {
+        content: " "
+    }
+    #aboutPlan .data_ul li:before {
+        top: 0
+    }
+    .articleWrapper .travel_top .travelBackground .leftBox {
+        width: 48%
+    }
+    .articleWrapper .showForm.travel_top {
+        margin-top: 30px
+    }
+    .newsub_category ul.data_ul li.squareList {
+        padding: 0 0 10px 12px
+    }
+    .newsub_category ul.data_ul li.squareList:before {
+        position: absolute;
+        height: 6px;
+        width: 6px;
+        background: #000;
+        border-radius: 50%;
+        top: 11px
+    }
+    .secondStepForm .afterTransition {
+        display: block!important
+    }
+    .travelright .product-article .bg_org.head.active+.article_item+.viewAll {
+        display: none!important
+    }
+}
+
+@media only screen and (max-width:814px) {
+    .secondStepForm .afterTransition,
+    .travelMobileTitle {
+        display: block
+    }
+    .mobilePadding {
+        padding: 0 10px
+    }
+    .mobilefirst .beforeTransiton {
+        margin-top: 0
+    }
+    .travel_top .travelBackground .rightBox .mobilefirst.form_wrapper {
+        min-height: 100px
+    }
+    .topSliderIcon {
+        background: #053877;
+        display: block;
+        z-index: 50;
+        top: -1px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0 5px 3px #022652
+    }
+    .button.forbu {
+        width: 100%
+    }
+    .button.forbu {
+        width: 100%;
+        display: inline-block;
+        color: #fff;
+        font-size: 15px;
+        margin: 0 0;
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: 500;
+        letter-spacing: 0;
+        padding: 6px 15px 8px 10px;
+        position: relative;
+        background: #185387
+    }
+    .topSliderIcon .jcarousel-control-next span,
+    .topSliderIcon .jcarousel-control-prev span,
+    .travelFormTab li:hover .newTooltip {
+        display: none
+    }
+    .termCond span {
+        position: initial
+    }
+    .travel_top .travelBackground .rightBox .form {
+        top: -40px
+    }
+    .topSliderIcon .jcarousel {
+        position: relative;
+        overflow-x: hidden;
+        width: 80%;
+        height: auto;
+        padding-top: 0;
+        margin: 0 auto
+    }
+    .topSliderIcon .jcarousel-wrapper {
+        margin: 0 auto
+    }
+    .travel_top .travelBackground .leftBox {
+        display: none!important
+    }
+    .travel_top .travelBackground .rightBox {
+        width: 100%;
+        max-width: 100%
+    }
+    .topSliderIcon .jcarousel li {
+        padding: 0 0 0 90px;
+        background: 0;
+        color: #fff;
+        border: 0;
+        margin: 10px 0;
+        font-size: 16px;
+        text-align: center;
+        min-height: 38px;
+        display: flex;
+        line-height: 19px
+    }
+    .topSliderIcon .jcarousel-wrapper.landingpages .jcarousel span {
+        background-position: 0 0!important;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        position: relative
+    }
+    .topSliderIcon .jcarousel-wrapper.landingpages .jcarousel span:before {
+        background-repeat: no-repeat;
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 38px;
+        left: -80px
+    }
+    .topSliderIcon .showing,
+    .topSliderIcon .slick-slide {
+        visibility: visible
+    }
+    .topSliderIcon .slick-prev {
+        left: 20px
+    }
+    .topSliderIcon .slick-next {
+        right: 20px;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg)
+    }
+    .topSliderIcon .slider div {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+        text-align: center
+    }
+    .topSliderIcon .slider div span {
+        width: 255px;
+        padding-left: 70px;
+        display: flex;
+        text-align: left;
+        margin: 0 auto;
+        min-height: 38px;
+        color: #fff;
+        position: relative;
+        align-items: center
+    }
+    .breadcrumbContainer,
+    .travel_top .travelBackground .rightBox .secondStepForm {
+        display: none
+    }
+    .topSliderIcon .slider .slick-track {
+        padding: 7px 16px
+    }
+    .topSliderIcon .slider div span:before {
+        background-position: no-repeat;
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 38px
+    }
+    .topSliderIcon .slick-next,
+    .topSliderIcon .slick-prev {
+        background-position: -88px;
+        background-repeat: no-repeat;
+        margin: 0;
+        top: 29%
+    }
+    .articleWrapper .topSliderIcon .slick-next,
+    .articleWrapper .topSliderIcon .slick-prev {
+        background-position: -238px -72px;
+        background-repeat: no-repeat;
+        margin: 0;
+        top: 10%
+    }
+    .articleWrapper .topSliderIcon .slick-next:before,
+    .articleWrapper .topSliderIcon .slick-prev:before {
+        content: ""
+    }
+    .topSliderIcon .slick-next:focus,
+    .topSliderIcon .slick-next:hover,
+    .topSliderIcon .slick-prev:focus,
+    .topSliderIcon .slick-prev:hover {
+        background-position: -238px -88px!important;
+        background-repeat: no-repeat!important
+    }
+    .articleWrapper .topSliderIcon .slick-next:focus,
+    .articleWrapper .topSliderIcon .slick-next:hover,
+    .articleWrapper .topSliderIcon .slick-prev:focus,
+    .articleWrapper .topSliderIcon .slick-prev:hover {
+        background-position: -238px -72px!important;
+        background-repeat: no-repeat!important
+    }
+    .topSliderIcon .slick-slider {
+        margin-bottom: 0
+    }
+    .topSliderIcon .slider div span.me:before {
+        background-position: -415px -327px;
+        top: -1px;
+        left: -11px
+    }
+    .topSliderIcon .slider div span.bdl:before {
+        background-position: -414px -445px;
+        top: 5px;
+        left: -11px
+    }
+    .topSliderIcon .slider div span.td:before {
+        background-position: -415px -187px;
+        top: 2px;
+        left: -5px
+    }
+    .topSliderIcon .slider div span.pl:before {
+        background-position: -415px -279px;
+        top: 7px;
+        left: 10px
+    }
+    .topSliderIcon .slider div span.eme:before {
+        background-position: -425px -383px;
+        top: 5px;
+        left: -11px
+    }
+    .topSliderIcon .slider div span.mf:before {
+        background-position: -425px -380px;
+        top: 1px;
+        left: -4px
+    }
+    .topSliderIcon .slider div span.si:before {
+        background-position: -405px -132px;
+        top: 1px;
+        left: -4px
+    }
+    .topSliderIcon .slider div span.bb:before {
+        background-position: -405px -17px;
+        top: 1px;
+        left: -4px
+    }
+    .topSliderIcon .slider div span.cv:before {
+        background-position: -401px -80px;
+        top: 1px;
+        left: -4px
+    }
+    .topSliderIcon .slider div span.nmt:before {
+        background-position: -325px -14px;
+        top: 1px;
+        left: -4px;
+        height: 40px
+    }
+    .topSliderIcon .slider div span.ip:before {
+        background-position: -325px -72px;
+        top: 1px;
+        left: -4px
+    }
+    .cssTabbing,
+    .form_wrapper {
+        margin: 10px auto
+    }
+    .cssTabbing {
+        top: 0
+    }
+    .policy_wrapper {
+        width: 100%;
+        margin: 0 auto
+    }
+    .topSliderIcon .jcarousel-wrapper {
+        padding: 0 50px
+    }
+    .r25 {
+        width: 100%!important
+    }
+    .travel_top .travelBackground {
+        padding: 0;
+        top: -1px;
+        background: #03285c;
+        position: relative
+    }
+    .row.policy_wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin: 0
+    }
+    .showForm.travel_top {
+        margin-top: 0
+    }
+    .proceedButton {
+        margin: 20px 0 0
+    }
+    .firstStepForm,
+    .secondStepForm {
+        float: none;
+        position: relative;
+        margin: 35px 0 0
+    }
+    .travel_top .travelBackground .rightBox .form {
+        width: 340px
+    }
+    #hrefwritereview {
+        margin: 0 0 1px
+    }
+    .travel_top .otherMembers {
+        left: -64px
+    }
+    .travel_top .otherMembers:before {
+        left: 64px
+    }
+    .articleWrapper .showForm.travel_top {
+        margin-top: 0
+    }
+    .topSliderIcon.hindi .slick-next,
+    .topSliderIcon.hindi .slick-prev,
+    .travel_bupage.topSliderIcon .slick-next,
+    .travel_bupage.topSliderIcon .slick-prev {
+        height: 17px;
+        width: 10px
+    }
+    .topSliderIcon.hindi+.travel_top .travelFormTab li a {
+        width: 108px;
+        padding: 10px 0;
+        text-align: center
+    }
+    .topSliderIcon.hindi+.travel_top .travelFormTab li a.active:before {
+        content: "";
+        background: 0
+    }
+    .leftSection {
+        width: 100%!important
+    }
+    .r25 {
+        width: 40%!important;
+        max-width: 350px;
+        float: left
+    }
+    .mobilePadding {
+        padding: 0
+    }
+}
+
+@media only screen and (max-width:840px) {
+    .providerandproductContent .provide_text h1 {
+        margin: 10px 0 5px 10px;
+        font-size: 20px
+    }
+    .providerandproductContent .provide_text .Logo {
+        float: none
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .r25 {
+        width: 100%!important;
+        max-width: 100%
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .calendar .button-next,
+    .calendar .button-prev {
+        display: none
+    }
+    .pageDivCenter_footer {
+        width: 95%;
+        margin: 0 auto;
+        display: table
+    }
+}
+
+@media only screen and (max-width:440px) {
+    .articleWrapper .travel_top .travelBackground .rightBox {
+        width: 100%;
+        max-width: 100%
+    }
+    .articleWrapper .body_container,
+    .articleWrapper .pageWrap {
+        padding: 0 0 2% 0;
+        width: 100%
+    }
+    .articleWrapper .travelFormTab li:last-child a.active {
+        padding: 10px 8px 10px 24px
+    }
+    .pbfaqQues p {
+        margin: 0
+    }
+    .pbfaqQues {
+        margin: 0
+    }
+    .travel_top .travelBackground .rightBox {
+        background: 0 0
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .articleWrapper .travel_top .travelBackground .rightBox {
+        width: 341px;
+        max-width: 100%
+    }
+    .articleWrapper .travel_top .travelBackground .rightBox {
+        float: none
+    }
+    .articleWrapper .cssTabbing,
+    .articleWrapper .firstStepForm,
+    .articleWrapper .secondStepForm,
+    .articleWrapper .travel_top .travelBackground .rightBox .form {
+        width: 320px
+    }
+    .articleWrapper .firstStepForm,
+    .articleWrapper .secondStepForm {
+        margin: 35px auto 0
+    }
+    .articleWrapper .travel_top .travelBackground .rightBox {
+        width: 320px;
+        max-width: 100%;
+        margin: 0 auto
+    }
+    .articleWrapper .formInput.alignRight.addBtnDiv {
+        width: 11%
+    }
+    .articleWrapper .travelFormTab li:last-child a.active {
+        padding: 10px 6px 10px 24px
+    }
+    .articleWrapper .termCond {
+        width: 270px
+    }
+    .hindi+.travel_top .travelBackground .rightBox,
+    .travel_bupage+.travel_top .travelBackground .rightBox {
+        width: 100%!important
+    }
+}
+
+@media only screen and (max-width:360px) {
+    .helpfulContent .plan-reviewright {
+        width: auto!important
+    }
+    .termCond {
+        width: 230px
+    }
+    #aboutPlan img {
+        width: 100%
+    }
+    .topSliderIcon .slider div span {
+        width: 235px
+    }
+    .hindi+.travel_top .travelBackground .rightBox,
+    .travel_bupage+.travel_top .travelBackground .rightBox {
+        width: 340px
+    }
+    .hindi+.travel_top .cssTabbing,
+    .hindi+.travel_top .travelBackground .rightBox .form_wrapper,
+    .travel_bupage+.travel_top .cssTabbing,
+    .travel_bupage+.travel_top .travelBackground .rightBox .form_wrapper {
+        width: 320px
+    }
+    .topSliderIcon.hindi+.travel_top .travelFormTab li a {
+        width: 101px
+    }
+    .hindi+.travel_top .firstStepForm,
+    .hindi+.travel_top .secondStepForm,
+    .travel_bupage+.travel_top .firstStepForm,
+    .travel_bupage+.travel_top .secondStepForm {
+        width: 320px
+    }
+    .hindi+.travel_top .formInput.alignRight.addBtnDiv,
+    .travel_bupage+.travel_top .formInput.alignRight.addBtnDiv {
+        width: 11%
+    }
+    .travel_bupage+.travel_top .travelFormTab li a {
+        font-size: 10px
+    }
+    .travel_bupage+.travel_top .travelFormTab li a.active {
+        padding: 10px 6px 10px 24px
+    }
+    .formInput.travellers input {
+        font-size: 10px
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .cssTabbing,
+    .firstStepForm,
+    .secondStepForm,
+    .travel_top .travelBackground .rightBox .form_wrapper {
+        width: 310px
+    }
+    .travelFormTab li a {
+        padding: 0 11px
+    }
+    .formInput.alignRight.addBtnDiv {
+        width: 12%
+    }
+    .formbox_new1 .radioBox {
+        float: right;
+        width: 140px
+    }
+    .articleWrapper .travel_top .travelBackground .rightBox {
+        width: 292px
+    }
+    .articleWrapper .cssTabbing,
+    .articleWrapper .firstStepForm,
+    .articleWrapper .secondStepForm,
+    .articleWrapper .travel_top .travelBackground .rightBox .form {
+        width: 290px
+    }
+    .articleWrapper .cssTabbing,
+    .articleWrapper .firstStepForm,
+    .articleWrapper .secondStepForm,
+    .articleWrapper .travel_top .travelBackground .rightBox .form {
+        width: 280px
+    }
+    .articleWrapper .cssTabbing,
+    .articleWrapper .firstStepForm,
+    .articleWrapper .secondStepForm,
+    .articleWrapper .travel_top .travelBackground .rightBox .form_wrapper {
+        width: 280px
+    }
+    .articleWrapper .formInput.alignRight.addBtnDiv {
+        width: 11%;
+        padding: 4px 0
+    }
+    .articleWrapper .travelFormTab li a {
+        padding: 4px 10px 4px 10px
+    }
+    .articleWrapper .travelFormTab li:last-child a.active {
+        padding: 4px 14px 4px 13px
+    }
+    .articleWrapper .travelFormTab li a.active:before {
+        content: "";
+        position: absolute;
+        width: 19px;
+        height: 22px;
+        border-radius: 50%;
+        background: 0
+    }
+    .articleWrapper .formbox_new1 .radioLabel {
+        width: 100%;
+        display: block;
+        float: none
+    }
+    .articleWrapper .formbox_new1 .radioBox {
+        float: left;
+        width: 100%
+    }
+    .hindi+.travel_top .travelBackground .rightBox,
+    .travel_bupage+.travel_top .travelBackground .rightBox {
+        width: 300px
+    }
+    .hindi+.travel_top .cssTabbing,
+    .hindi+.travel_top .travelBackground .rightBox .form_wrapper,
+    .travel_bupage+.travel_top .cssTabbing,
+    .travel_bupage+.travel_top .travelBackground .rightBox .form_wrapper {
+        width: 290px
+    }
+    .hindi+.travel_top .firstStepForm,
+    .hindi+.travel_top .secondStepForm,
+    .travel_bupage+.travel_top .firstStepForm,
+    .travel_bupage+.travel_top .secondStepForm {
+        width: 290px
+    }
+    .hindi+.travel_top .formInput.alignRight.addBtnDiv,
+    .travel_bupage+.travel_top .formInput.alignRight.addBtnDiv {
+        width: 11.6%
+    }
+    .hindi+.travel_top .travelFormTab li a,
+    .travel_bupage+.travel_top .travelFormTab li a {
+        font-size: 10px
+    }
+    .travel_bupage+.travel_top .travelFormTab li a.active {
+        padding: 10px 6px 10px 24px
+    }
+    .topSliderIcon.hindi+.travel_top .travelFormTab li a {
+        width: 90px
+    }
+    .hindi+.travel_top .travelFormTab li a.active {
+        padding: 10px 0 10px
+    }
+}

@@ -1,0 +1,287 @@
+* {
+	outline: none;
+	box-sizing: border-box;
+}
+
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.disCallSchedule{display: none;}
+.schedule-container {
+	border-radius: 8px;
+	border: solid 1px #e1e1e1;
+	background-color: #ffffff;
+	width: 100%;
+	margin: 20px auto;
+	padding: 18px 30px 18px 20px;
+	display: flex;
+	align-items: center;
+}
+
+.call-head1 {
+font-size: 18px!important;
+font-weight: 600!important;
+color: #253858;
+line-height: 24px!important;
+}
+
+.call-head2 {
+	font-size: 16px;
+	color: #253858;
+	line-height: 24px;
+}
+
+.box-call1 {
+	flex: 1 1 20%;
+}
+
+.box-call2 {
+	flex: 1 1 80%;
+}
+
+.box-call2 {
+    flex: 1 1 80%;
+    overflow-x: hidden;
+    width: 100px;
+}
+.img-call {
+	margin-right: 30px;
+	background: url(../../images/bu/health/call_schedule/schedule_call.svg) no-repeat 0 0;
+	width: 128px;
+    height: 118px;
+}
+
+.date-slot-schedule {
+	width: 100%;
+	border-bottom: 1px solid rgba(37, 56, 88, 0.2);
+	padding-bottom: 10px;
+	margin-top: 10px;
+	height: 38px;
+}
+
+.date-box-call {
+	display: inline-block;
+	margin-right: 60px;
+}
+
+.date-box-call input[type=radio] {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: 1;
+}
+
+.date-box-call input[type=radio]+span {
+	text-transform: uppercase;
+	display: inline-block;
+	font-style: normal;
+	font-size: 14px;
+	color: rgba(37, 56, 88, 0.7);
+	cursor: pointer;
+	line-height: 36px;
+        font-weight: 500;
+}
+
+.date-box-call input[type=radio]:checked+span {
+	color: #0065ff;
+	border-bottom: 2px solid #0065ff;
+}
+
+.time-pick-schedule::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #f4f5f7;
+}
+
+.time-pick-schedule::-webkit-scrollbar-thumb {
+    background: #b5b5b5;
+}
+.wrap-time-pick-schedule{    
+width: 100%;
+    overflow: auto;
+}
+.time-pick-schedule {
+    display: block;
+    margin: 15px 0 0 0;
+    width: 72em;
+    height: 59px;
+}
+.time-box-call {
+	margin-right: 5px;
+	position: relative;
+}
+
+.time-box-call input[type=radio] {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: 1;
+}
+
+.time-box-call input[type=radio]+span {
+	text-transform: uppercase;
+	display: inline-block;
+	font-style: normal;
+	font-size: 14px;
+	color: rgba(37, 56, 88, 0.7);
+	cursor: pointer;
+	width: 95px;
+	text-align: center;
+	border-radius: 4px;
+	border: 1px solid rgba(37, 56, 88, .7);
+	padding: 10px 0;
+}
+
+.time-box-call input[type=radio]:checked+span {
+	/* color: #0065ff;
+	border: 1px solid #0065ff; */
+	
+	background: #0065ff;
+	text-indent: -9999px;
+	position: relative;
+	border: 1px solid #0065ff!important;
+}
+
+.time-box-call input[type=radio]+span:hover{
+	color: #0065ff;
+	border: 1px solid #0065ff;
+}
+
+
+.time-box-call input[type=radio]:checked+span::after {
+	content: '';
+	display: block;
+	width: 6px;
+	height: 14px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+	left: 47px;
+	top: 9px;
+	text-indent: -999999px;
+	position: absolute;
+}
+
+.time-box-call:last-child {
+	margin-right: 0px;
+}
+
+.slot-pick-box {
+	color: #253858;
+	font-size: 14px;
+	margin: 20px 0 0 0;
+}
+
+.slot-pick-box p {
+	font-size: 12px;
+        color: #253858!important;
+}
+
+ul.slot-details {
+	list-style-type: none;
+	margin: 6px 0 0 0;
+}
+
+ul.slot-details li {
+	list-style-type: none;
+	padding: 0 0 0 25px;
+	background: url(/.staic/images/bu/health/call_schedule/call-sprite.svg) no-repeat -4px 0px;
+	width: auto;
+	display: inline-block;
+	margin-right: 65px;
+	line-height: 22px;
+    font-size: 14px;
+}
+.contentStyles ul li::before{display: none}
+ul.slot-details li:last-child {
+	margin-right: 0px;
+}
+.hide-web {
+	display: none;
+}
+.call-box-wrap {
+	width: 100%;
+}
+
+@media only screen and (max-width: 1024px) {
+	.schedule-container {
+		    width: 100%;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    float: left;
+	}
+	.hide-mobile {
+		display: none;
+	}
+	.hide-web {
+		display: block;
+	}
+	.call-box-wrap {
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+	.disCallSchedule + div {
+   	 clear: both;
+		}
+			.time-box-call input[type=radio]:checked+span::after{
+		left: 42px;
+		top: 13px;
+	}
+	.img-call {
+		margin-right: 0px;
+		height: 114px;
+		max-width: 100%;
+	}
+	.date-slot-schedule {
+		display: flex;
+		justify-content:flex-start;
+	}
+	.date-box-call input[type=radio]+span {
+		font-size: 12px;
+		cursor: none;
+	}
+	.date-box-call {
+		margin-right: 0;
+		width: 100px;
+	}
+	.box-call2 {
+		flex: 1;
+		width: 100%;
+	}
+	.call-head2 {
+font-size: 14px!important;
+padding-right: 25px;
+}
+	.time-box-call input[type=radio]+span {
+		font-size: 12px;
+		width: 90px;
+		cursor: none;
+	}
+	.time-pick-schedule {
+		margin: 15px 0 10px 0;
+		overflow: auto;
+		white-space: nowrap;
+		width: 100%;
+	}
+	.time-box-call span.active::after {
+		left: 44px;
+		top: 8px;
+	}
+	.time-pick-schedule::-webkit-scrollbar {
+		width: 0 !important
+	}
+}

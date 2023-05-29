@@ -1,0 +1,1595 @@
+{% extends 'core/base.html' %} {% load static %} {% block title_core %} Nem Nướng Hoa Lệ {% endblock %} {% block css_blocl %}
+
+<!-- style by danh -->
+<style>
+  .why-p {
+    color: #81919a;
+  }
+  .blue {
+    background: #dd7e62;
+  }
+  .green {
+    background: #98cbd6;
+  }
+  .yellow {
+    background: #f5ad5f;
+  }
+  .btnn {
+    width: 165px;
+    height: 104px;
+    margin-right: 5px;
+    margin-left: 5px;
+    border-radius: 8px;
+    padding-top: 8px;
+    color: white;
+    text-align: center;
+  }
+  .downlod {
+    font-size: 30px;
+  }
+  .imag-2 {
+    width: 90%;
+    position: absolute;
+    bottom: -50px;
+  }
+  .why-parent {
+    display: flex;
+    justify-content: center;
+  }
+  .why {
+    height: 570px;
+    text-align: center;
+    padding-top: 100px;
+    width: 80%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    box-shadow: -9px 8px 35px 3px rgb(189, 184, 181);
+  }
+  .hei-4 {
+    background: #f8faff !important;
+    height: 970px;
+  }
+  .phone-img {
+    width: 100%;
+  }
+  .phone1 {
+    padding: 0px 0px 0px 200px;
+  }
+  .phone2 {
+    padding: 120px 100px 0px 100px;
+  }
+  .phone3 {
+    padding: 240px 200px 0px 0px;
+  }
+  .phone-3 {
+    padding-top: 100px;
+    margin: 0;
+  }
+  .install-now {
+    position: absolute;
+    left: 750px;
+    padding-top: 70px;
+    font-size: 32px;
+    right: 150px;
+    color: #40a1a4;
+    font-weight: 900;
+  }
+  .img-3 {
+    width: 20%;
+    margin-bottom: 30px;
+  }
+  .iconn {
+    margin-right: 5px;
+  }
+  .royal-blue {
+    height: 350px;
+    width: 100%;
+    background: linear-gradient(to right, #466eb6 25%, #a4d9db 100%);
+    margin-top: 100px;
+    margin-left: 0px;
+  }
+  .why-con {
+    width: 80%;
+  }
+  .why-con1 {
+    padding: 0px 0px 0px 140px;
+  }
+  .why-con2 {
+    padding: 0px 70px 0px 70px;
+  }
+  .why-con3 {
+    padding: 0px 140px 0px 0px;
+  }
+  .list-4 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 48%;
+    list-style: none;
+    padding-bottom: 40px;
+    margin-right: 4%;
+  }
+  .list-4p {
+    width: 70%;
+    margin-top: 10px;
+    color: #81919a;
+  }
+  .list-parent {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 50px;
+  }
+  .list-par {
+    margin-top: 100px;
+    color: #375a64;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 52px;
+    text-align: center;
+    padding: 0px 120px 0px 40px;
+  }
+  .iconcon {
+    font-size: 40px;
+    margin: 0px 0px 0px 55px;
+    color: #bd6b6b;
+  }
+  .simply {
+    position: relative;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 41px;
+    line-height: 52px;
+    padding: 50px 0px 0px 41px;
+    width: 61%;
+  }
+  .img-hihi {
+    margin-top: 100px;
+    margin-bottom: 80px;
+  }
+  .img-danh {
+    width: 100%;
+    padding-left: 20%;
+  }
+  .taiud {
+    color: #375a64;
+    font-weight: 500;
+    font-size: 41px;
+    line-height: 52px;
+    padding: 50px 170px 0px 20px;
+  }
+  .storeapp-par {
+    margin: 12px 0px 0px 20px;
+    height: 100px;
+  }
+  .span-bihama {
+    color: #ffbe2e;
+    font-weight: 500;
+    font-size: 41px;
+  }
+  .storeapp {
+    width: 30%;
+  }
+  .short-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .imag-1 {
+    margin-top: 60px;
+  }
+  .why-ques {
+    margin-bottom: 90px;
+    color: #375a64;
+  }
+  .ahihi {
+    margin-top: 60px;
+  }
+  @media (min-width: 1450px) and (max-width: 1600px) {
+    .imag-2 {
+      bottom: -90px;
+    }
+    .hei-4 {
+      height: 1110px;
+    }
+    .iconcon {
+      margin: 0px 0px 0px 67px;
+    }
+  }
+  @media (min-width: 1601px) and (max-width: 1700px) {
+    .imag-2 {
+      bottom: -90px;
+      width: 85%;
+    }
+    .hei-4 {
+      height: 1110px;
+    }
+    .install-now {
+      left: 870px;
+      padding-top: 55px;
+      font-size: 39px;
+      right: 180px;
+      color: #40a1a4;
+      font-weight: 900;
+    }
+    .list-parent {
+      margin-top: 40px;
+      margin-left: 50px;
+    }
+    .iconcon {
+      margin: 0px 0px 0px 85px;
+    }
+    .list-par {
+      margin-top: 140px;
+    }
+  }
+  @media (min-width: 1701px) and (max-width: 1800px) {
+    .imag-2 {
+      bottom: -67px;
+      width: 85%;
+    }
+    .royal-blue {
+      height: 450px;
+    }
+    .hei-4 {
+      height: 1140px;
+    }
+    .phone-img {
+      width: 90%;
+    }
+    .install-now {
+      left: 950px;
+      padding-top: 55px;
+      font-size: 39px;
+      right: 180px;
+      color: #40a1a4;
+      font-weight: 900;
+    }
+    .list-parent {
+      margin-top: 40px;
+      margin-left: 50px;
+    }
+    .iconcon {
+      margin: 0px 0px 0px 85px;
+    }
+    .list-par {
+      margin-top: 140px;
+    }
+  }
+  @media (min-width: 1801px) and (max-width: 1900px) {
+    .imag-2 {
+      bottom: -71px;
+      width: 85%;
+    }
+    .royal-blue {
+      height: 470px;
+    }
+    .hei-4 {
+      height: 1220px;
+    }
+    .phone-img {
+      width: 90%;
+    }
+    .install-now {
+      left: 970px;
+      padding-top: 55px;
+      font-size: 39px;
+      right: 220px;
+      color: #40a1a4;
+      font-weight: 900;
+    }
+    .list-parent {
+      margin-top: 40px;
+      margin-left: 50px;
+    }
+    .iconcon {
+      margin: 0px 0px 0px 100px;
+    }
+    .list-par {
+      margin-top: 140px;
+    }
+  }
+  @media (min-width: 1901px) and (max-width: 2200px) {
+    .imag-2 {
+      bottom: -71px;
+      width: 85%;
+    }
+    .royal-blue {
+      height: 470px;
+    }
+    .hei-4 {
+      height: 1290px;
+    }
+    .phone-img {
+      width: 80%;
+    }
+    .install-now {
+      left: 970px;
+      padding-top: 55px;
+      font-size: 39px;
+      right: 220px;
+      color: #40a1a4;
+      font-weight: 900;
+    }
+    .list-parent {
+      margin-top: 40px;
+      margin-left: 50px;
+    }
+    .iconcon {
+      margin: 0px 0px 0px 100px;
+    }
+    .list-par {
+      margin-top: 140px;
+    }
+  }
+  @media (min-width: 2201px) and (max-width: 2400px) {
+    .imag-2 {
+      bottom: -101px;
+      width: 95%;
+    }
+    .royal-blue {
+      height: 610px;
+    }
+    .hei-4 {
+      height: 1290px;
+    }
+    .phone-img {
+      width: 80%;
+    }
+    .install-now {
+      left: 970px;
+      padding-top: 55px;
+      font-size: 39px;
+      right: 220px;
+      color: #40a1a4;
+      font-weight: 900;
+    }
+    .list-parent {
+      margin-top: 40px;
+      margin-left: 50px;
+    }
+    .iconcon {
+      margin: 0px 0px 0px 100px;
+    }
+    .list-par {
+      margin-top: 140px;
+    }
+    .simply {
+      padding: 50px 0px 0px 181px;
+      font-size: 46px;
+      line-height: 72px;
+    }
+    .img-danh {
+      padding-left: 40%;
+    }
+  }
+  @media (min-width: 2401px) and (max-width: 2600px) {
+    .imag-2 {
+      bottom: -101px;
+      width: 95%;
+    }
+    .royal-blue {
+      height: 610px;
+    }
+    .hei-4 {
+      height: 1290px;
+    }
+    .phone-img {
+      width: 80%;
+    }
+    .install-now {
+      left: 1070px;
+      padding-top: 55px;
+      font-size: 39px;
+      right: 220px;
+      color: #40a1a4;
+      font-weight: 900;
+    }
+    .list-parent {
+      margin-top: 40px;
+      margin-left: 50px;
+      margin-right: 250px;
+    }
+    .iconcon {
+      margin: 0px 0px 0px 100px;
+    }
+    .list-par {
+      margin-top: 140px;
+      padding: 0px 360px 0px 40px;
+    }
+    .simply {
+      padding: 50px 0px 0px 181px;
+      font-size: 46px;
+      line-height: 72px;
+    }
+    .img-danh {
+      padding-left: 40%;
+    }
+  }
+  @media (min-width: 1101px) and (max-width: 1200px) {
+    .imag-2 {
+      bottom: -25px;
+    }
+    .simply {
+      width: 71%;
+    }
+    .install-now {
+      left: 570px;
+      font-size: 27px;
+      right: 130px;
+    }
+    .list-par {
+      padding: 0px 70px 0px 40px;
+    }
+    .list-4p {
+      width: 80%;
+    }
+    .list-parent {
+      padding-left: 30px;
+    }
+    .img-hihi {
+      margin-top: 160px;
+    }
+  }
+  @media (min-width: 1001px) and (max-width: 1100px) {
+    .imag-2 {
+      bottom: -0px;
+    }
+    .simply {
+      width: 81%;
+    }
+    .install-now {
+      left: 520px;
+      font-size: 26px;
+      right: 130px;
+    }
+    .list-par {
+      padding: 0px 50px 0px 30px;
+    }
+    .list-4p {
+      width: 90%;
+    }
+    .list-parent {
+      padding-left: 30px;
+    }
+    .img-hihi {
+      margin-top: 160px;
+    }
+    .btnn {
+      width: 136px;
+      height: 99px;
+    }
+    .list-4 {
+      padding-bottom: 20px;
+    }
+    .phone3 {
+      padding: 240px 150px 0px 0px;
+    }
+    .phone2 {
+      padding: 120px 75px 0px 75px;
+    }
+    .phone1 {
+      padding: 0px 0px 0px 150px;
+    }
+    .hei-4 {
+      height: 850px;
+    }
+    .img-danh {
+      padding-left: 10%;
+    }
+  }
+  @media (min-width: 901px) and (max-width: 1000px) {
+    .imag-2 {
+      bottom: 11px;
+    }
+    .simply {
+      width: 91%;
+    }
+    .install-now {
+      left: 440px;
+      font-size: 26px;
+      right: 110px;
+    }
+    .list-par {
+      padding: 0px 30px 0px 5px;
+    }
+    .list-4p {
+      width: 90%;
+    }
+    .list-parent {
+      padding-left: 10px;
+    }
+    .img-hihi {
+      margin-top: 160px;
+    }
+    .btnn {
+      width: 126px;
+      height: 90px;
+    }
+    .list-4 {
+      padding-bottom: 20px;
+    }
+    .phone3 {
+      padding: 240px 150px 0px 0px;
+    }
+    .phone2 {
+      padding: 120px 75px 0px 75px;
+    }
+    .phone1 {
+      padding: 0px 0px 0px 150px;
+    }
+    .hei-4 {
+      height: 780px;
+    }
+    .img-danh {
+      padding-left: 10%;
+    }
+    .taiud {
+      font-size: 37px;
+      padding: 50px 30px 0px 20px;
+    }
+    .downlod {
+      font-size: 28px;
+    }
+    .user-icon {
+      width: 108px;
+    }
+    .why-con2 {
+      padding: 0px 50px 0px 50px;
+    }
+    .why-con1 {
+      padding: 0px 0px 0px 100px;
+    }
+    .why-con3 {
+      padding: 0px 100px 0px 0px;
+    }
+  }
+  @media (min-width: 850px) and (max-width: 900px) {
+    .imag-2 {
+      bottom: -10px;
+    }
+    .simply {
+      width: 91%;
+      font-size: 37px;
+      padding: 20px 0px 0px 41px;
+    }
+    .install-now {
+      left: 440px;
+      font-size: 26px;
+      right: 110px;
+    }
+    .list-par {
+      padding: 0px 50px 0px 30px;
+    }
+    .list-4p {
+      width: 90%;
+    }
+    .list-parent {
+      padding-left: 10px;
+    }
+    .img-hihi {
+      margin-top: 160px;
+    }
+    .btnn {
+      width: 109px;
+      height: 88px;
+    }
+    .list-4 {
+      padding-bottom: 20px;
+    }
+    .phone3 {
+      padding: 240px 150px 0px 0px;
+    }
+    .phone2 {
+      padding: 120px 75px 0px 75px;
+    }
+    .phone1 {
+      padding: 0px 0px 0px 150px;
+    }
+    .hei-4 {
+      height: 780px;
+    }
+    .img-danh {
+      padding-left: 10%;
+    }
+    .taiud {
+      font-size: 34px;
+      padding: 50px 30px 0px 20px;
+    }
+    .downlod {
+      font-size: 25px;
+    }
+    .user-icon {
+      width: 96px;
+      font-size: 14px;
+      position: absolute;
+      left: 150px;
+    }
+    .down-icon {
+      width: 84px;
+      font-size: 14px;
+    }
+    .danhgia-icon {
+      width: 84px;
+      font-size: 14px;
+    }
+    .why-con2 {
+      padding: 0px 50px 0px 50px;
+    }
+    .why-con1 {
+      padding: 0px 0px 0px 100px;
+    }
+    .why-con3 {
+      padding: 0px 100px 0px 0px;
+    }
+    .royal-blue {
+      height: 250px;
+    }
+  }
+  @media (min-width: 801px) and (max-width: 849px) {
+    .imag-2 {
+      bottom: -10px;
+    }
+    .simply {
+      width: 91%;
+      font-size: 34px;
+      padding: 20px 0px 0px 41px;
+    }
+    .install-now {
+      left: 400px;
+      font-size: 26px;
+      right: 50px;
+    }
+    .list-par {
+      padding: 0px 50px 0px 30px;
+    }
+    .list-4p {
+      width: 90%;
+      margin-left: 50px;
+    }
+    .list-parent {
+      padding-left: 10px;
+      display: initial;
+    }
+    .img-hihi {
+      margin-top: 160px;
+    }
+    .btnn {
+      width: 109px;
+      height: 88px;
+    }
+    .list-4 {
+      padding-bottom: 20px;
+      width: 90%;
+    }
+    .phone3 {
+      padding: 240px 150px 0px 0px;
+    }
+    .phone2 {
+      padding: 120px 75px 0px 75px;
+    }
+    .phone1 {
+      padding: 0px 0px 0px 150px;
+    }
+    .hei-4 {
+      height: 660px;
+    }
+    .img-danh {
+      padding-left: 10%;
+    }
+    .taiud {
+      font-size: 34px;
+      padding: 50px 30px 0px 20px;
+    }
+    .downlod {
+      font-size: 25px;
+    }
+    .user-icon {
+      width: 96px;
+      font-size: 14px;
+      position: absolute;
+      left: 150px;
+    }
+    .down-icon {
+      width: 84px;
+      font-size: 14px;
+    }
+    .danhgia-icon {
+      width: 84px;
+      font-size: 14px;
+    }
+    .why-con2 {
+      padding: 0px 50px 0px 50px;
+    }
+    .why-con1 {
+      padding: 0px 0px 0px 100px;
+    }
+    .why-con3 {
+      padding: 0px 100px 0px 0px;
+    }
+    .royal-blue {
+      height: 250px;
+    }
+    .iconcon {
+      position: absolute;
+      padding-top: 20px;
+      margin: 0px 0px 0px 6px;
+      font-size: 25px;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 800px) {
+    .imag-2 {
+      bottom: -10px;
+    }
+    .simply {
+      width: 91%;
+      font-size: 27px;
+      padding: 0px 0px 0px 41px;
+    }
+    .install-now {
+      left: 400px;
+      font-size: 24px;
+      right: 50px;
+    }
+    .list-par {
+      padding: 0px 10px 0px 0px;
+      font-size: 30px;
+      margin-top: 50px;
+    }
+    .list-4p {
+      width: 90%;
+      margin-left: 50px;
+    }
+    .list-parent {
+      padding-left: 10px;
+      display: initial;
+    }
+    .img-hihi {
+      margin-top: 160px;
+    }
+    .btnn {
+      width: 100px;
+      height: 80px;
+    }
+    .list-4 {
+      padding-bottom: 20px;
+      width: 90%;
+    }
+    .phone3 {
+      padding: 240px 120px 0px 0px;
+    }
+    .phone2 {
+      padding: 120px 60px 0px 60px;
+    }
+    .phone1 {
+      padding: 0px 0px 0px 120px;
+    }
+    .hei-4 {
+      height: 660px;
+    }
+    .img-danh {
+      padding-left: 10%;
+    }
+    .taiud {
+      font-size: 33px;
+      padding: 0px 30px 0px 20px;
+    }
+    .downlod {
+      font-size: 25px;
+    }
+    .user-icon {
+      width: 96px;
+      font-size: 13px;
+      position: absolute;
+      left: 144px;
+    }
+    .down-icon {
+      width: 94px;
+      font-size: 13px;
+    }
+    .danhgia-icon {
+      width: 94px;
+      font-size: 13px;
+    }
+    .why-con2 {
+      padding: 0px 35px 0px 35px;
+    }
+    .why-con1 {
+      padding: 0px 0px 0px 70px;
+    }
+    .why-con3 {
+      padding: 0px 70px 0px 0px;
+    }
+    .royal-blue {
+      height: 250px;
+    }
+    .iconcon {
+      position: absolute;
+      padding-top: 20px;
+      margin: 0px 0px 0px 6px;
+      font-size: 25px;
+    }
+    .storeapp-par {
+      height: 50px;
+    }
+    .why {
+      padding-top: 70px;
+      height: 520px;
+    }
+  }
+  @media (min-width: 701px) and (max-width: 767px) {
+    .imag-2 {
+      bottom: 66px;
+    }
+    .simply {
+      width: 91%;
+      font-size: 32px;
+      padding: 0px 0px 0px 41px;
+    }
+    .install-now {
+      left: 40px;
+      font-size: 24px;
+      right: 0px;
+      text-align: center;
+    }
+    .list-par {
+      padding: 0px 10px 0px 0px;
+      font-size: 30px;
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+    .list-4p {
+      width: 90%;
+    }
+    .list-parent {
+      padding-left: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .img-hihi {
+      margin-top: 0px;
+    }
+    .btnn {
+      width: 30%;
+      height: 100px;
+      margin-top: 30px;
+    }
+    .list-4 {
+      padding-bottom: 20px;
+      width: 38%;
+      text-align: center;
+    }
+    .phone3 {
+      padding: 30px 240px 0px 240px;
+    }
+    .phone2 {
+      padding: 40px 110px 0px 20px;
+    }
+    .phone1 {
+      padding: 40px 20px 0px 110px;
+    }
+    .hei-4 {
+      height: 1420px;
+    }
+    .img-danh {
+      padding-left: 0%;
+      margin-top: 120px;
+    }
+    .taiud {
+      text-align: center;
+      font-size: 57px;
+      font-weight: 800;
+      padding: 0px 80px 0px 40px;
+      line-height: 70px;
+      position: absolute;
+      top: -760px;
+    }
+    .span-bihama {
+      color: #ffbe2e;
+      font-weight: 800;
+      font-size: 55px;
+    }
+    .downlod {
+      font-size: 30px;
+    }
+    .user-icon {
+      width: 115px;
+      font-size: 17px;
+      position: absolute;
+      left: 291px;
+    }
+    .down-icon {
+      width: 160px;
+      font-size: 17px;
+    }
+    .danhgia-icon {
+      width: 160px;
+      font-size: 17px;
+    }
+    .why-con2 {
+      padding: 0px 70px 0px 0px;
+    }
+    .why-con1 {
+      padding: 0px 0px 0px 70px;
+    }
+    .why-con3 {
+      padding: 0px 180px 0px 180px;
+    }
+    .royal-blue {
+      height: 750px;
+      margin-top: 190px;
+    }
+    .iconcon {
+      margin-right: 20px;
+      margin-left: 0px;
+    }
+    .storeapp-par {
+      margin: 40px 0px 25px 20px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+    }
+    .why {
+      padding-top: 70px;
+      height: 600px;
+    }
+    .storeapp {
+      width: 30%;
+      margin-right: 40px;
+    }
+    .imag-1 {
+      margin-top: 250px;
+    }
+    .why-con {
+      width: 100%;
+    }
+    .why-ques {
+      margin-bottom: 50px;
+      color: #375a64;
+    }
+  }
+  @media (min-width: 601px) and (max-width: 700px) {
+    .imag-2 {
+      bottom: 66px;
+    }
+    .simply {
+      width: 91%;
+      font-size: 32px;
+      padding: 0px 0px 0px 41px;
+    }
+    .install-now {
+      left: 40px;
+      font-size: 24px;
+      right: 0px;
+      text-align: center;
+    }
+    .list-par {
+      padding: 0px 10px 0px 0px;
+      font-size: 30px;
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+    .list-4p {
+      width: 90%;
+    }
+    .list-parent {
+      padding-left: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .img-hihi {
+      margin-top: 0px;
+    }
+    .btnn {
+      width: 30%;
+      height: 100px;
+      margin-top: 30px;
+    }
+    .list-4 {
+      padding-bottom: 20px;
+      width: 38%;
+      text-align: center;
+    }
+    .phone3 {
+      padding: 30px 240px 0px 240px;
+    }
+    .phone2 {
+      padding: 40px 110px 0px 20px;
+    }
+    .phone1 {
+      padding: 40px 20px 0px 110px;
+    }
+    .hei-4 {
+      height: 1420px;
+    }
+    .img-danh {
+      padding-left: 0%;
+      margin-top: 120px;
+    }
+    .taiud {
+      text-align: center;
+      font-size: 57px;
+      font-weight: 800;
+      padding: 0px 80px 0px 40px;
+      line-height: 70px;
+      position: absolute;
+      top: -760px;
+    }
+    .span-bihama {
+      color: #ffbe2e;
+      font-weight: 800;
+      font-size: 55px;
+    }
+    .downlod {
+      font-size: 30px;
+    }
+    .user-icon {
+      width: 115px;
+      font-size: 17px;
+      position: absolute;
+      left: 291px;
+    }
+    .down-icon {
+      width: 160px;
+      font-size: 17px;
+    }
+    .danhgia-icon {
+      width: 160px;
+      font-size: 17px;
+    }
+    .why-con2 {
+      padding: 0px 70px 0px 0px;
+    }
+    .why-con1 {
+      padding: 0px 0px 0px 70px;
+    }
+    .why-con3 {
+      padding: 0px 180px 0px 180px;
+    }
+    .royal-blue {
+      height: 750px;
+      margin-top: 190px;
+    }
+    .iconcon {
+      margin-right: 20px;
+      margin-left: 0px;
+    }
+    .storeapp-par {
+      margin: 40px 0px 25px 20px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+    }
+    .why {
+      padding-top: 70px;
+      height: 600px;
+    }
+    .storeapp {
+      width: 30%;
+      margin-right: 40px;
+    }
+    .imag-1 {
+      margin-top: 250px;
+    }
+    .why-con {
+      width: 100%;
+    }
+    .why-ques {
+      margin-bottom: 50px;
+      color: #375a64;
+    }
+  }
+  @media (min-width: 280px) and (max-width: 300px) {
+    .imag-2 {
+      bottom: 58px;
+    }
+    .simply {
+      width: 91%;
+      font-size: 25px;
+      padding: 0px 0px 0px 41px;
+    }
+    .install-now {
+      left: 0px;
+      font-size: 19px;
+      right: 0px;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .list-par {
+      padding: 0px 10px 0px 0px;
+      font-size: 30px;
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+    .list-4p {
+      width: 90%;
+    }
+    .list-parent {
+      padding-left: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .img-hihi {
+      margin-top: 0px;
+    }
+    .btnn {
+      width: 33%;
+      height: 80px;
+      margin-top: 20px;
+    }
+    .list-4 {
+      padding-bottom: 20px;
+      width: 38%;
+      text-align: center;
+    }
+    .phone3 {
+      padding: 40px 90px 0px 90px;
+    }
+    .phone2 {
+      padding: 40px 90px 0px 90px;
+    }
+    .phone1 {
+      padding: 40px 90px 0px 90px;
+    }
+    .hei-4 {
+      height: 1180px;
+    }
+    .img-danh {
+      padding-left: 0%;
+      margin-top: 50px;
+    }
+    .taiud {
+      text-align: center;
+      font-size: 33px;
+      font-weight: 800;
+      padding: 0px 30px 0px 30px;
+      line-height: 50px;
+      position: absolute;
+      top: -470px;
+      left: 0px;
+    }
+    .span-bihama {
+      color: #ffbe2e;
+      font-weight: 800;
+      font-size: 33px;
+    }
+    .downlod {
+      font-size: 25px;
+    }
+    .user-icon {
+      margin-top: 3px;
+      width: 76px;
+      font-size: 11px;
+      left: 131px;
+    }
+    .down-icon {
+      width: 72px;
+      font-size: 13px;
+    }
+    .danhgia-icon {
+      width: 72px;
+      font-size: 13px;
+    }
+    .why-con2 {
+      padding: 0px 30px 0px 30px;
+    }
+    .why-con1 {
+      padding: 0px 30px 0px 30px;
+    }
+    .why-con3 {
+      padding: 0px 30px 0px 30px;
+    }
+    .royal-blue {
+      height: 530px;
+      margin-top: 60px;
+    }
+    .iconcon {
+      margin-right: 20px;
+      margin-left: 0px;
+    }
+    .storeapp-par {
+      margin: 0px 0px 25px 0px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .why {
+      padding-top: 50px;
+      height: 770px;
+    }
+    .storeapp {
+      width: 30%;
+      margin-right: 0px;
+    }
+    .imag-1 {
+      margin-top: 210px;
+    }
+    .why-con {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .why-ques {
+      margin-bottom: 0px;
+      color: #375a64;
+    }
+    .sa1 {
+      margin-right: 20px;
+    }
+    .ahihi {
+      margin-top: 30px;
+    }
+  }
+  @media (min-width: 300px) and (max-width: 400px) {
+    .imag-2 {
+      bottom: 24px;
+      width: 100%;
+      left: 0;
+    }
+    .simply {
+      width: 91%;
+      font-size: 25px;
+      padding: 0px 0px 0px 41px;
+    }
+    .install-now {
+      left: 0px;
+      font-size: 22px;
+      right: 0px;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .list-par {
+      padding: 0px 10px 0px 0px;
+      font-size: 30px;
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+    .list-4p {
+      width: 90%;
+    }
+    .list-parent {
+      padding-left: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .img-hihi {
+      margin-top: 0px;
+    }
+    .btnn {
+      width: 33%;
+      height: 80px;
+      margin-top: 20px;
+    }
+    .list-4 {
+      padding-bottom: 20px;
+      width: 38%;
+      text-align: center;
+    }
+    .phone3 {
+      padding: 40px 90px 0px 90px;
+    }
+    .phone2 {
+      padding: 40px 90px 0px 90px;
+    }
+    .phone1 {
+      padding: 40px 90px 0px 90px;
+    }
+    .hei-4 {
+      height: 1690px;
+    }
+    .img-danh {
+      padding-left: 0%;
+      margin-top: 50px;
+    }
+    .taiud {
+      text-align: center;
+      font-size: 33px;
+      font-weight: 800;
+      padding: 0px 30px 0px 30px;
+      line-height: 50px;
+      position: absolute;
+      top: -500px;
+      left: 0px;
+    }
+    .span-bihama {
+      color: #ffbe2e;
+      font-weight: 800;
+      font-size: 33px;
+    }
+    .downlod {
+      font-size: 25px;
+    }
+    .user-icon {
+      margin-top: 3px;
+      width: 101px;
+      font-size: 11px;
+      left: 131px;
+    }
+    .down-icon {
+      width: 92px;
+      font-size: 13px;
+    }
+    .danhgia-icon {
+      width: 92px;
+      font-size: 13px;
+    }
+    .why-con2 {
+      padding: 0px 30px 0px 30px;
+    }
+    .why-con1 {
+      padding: 0px 30px 0px 30px;
+    }
+    .why-con3 {
+      padding: 0px 30px 0px 30px;
+    }
+    .royal-blue {
+      height: 530px;
+      margin-top: 60px;
+    }
+    .iconcon {
+      margin-right: 20px;
+      margin-left: 0px;
+    }
+    .storeapp-par {
+      margin: 0px 0px 25px 0px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .why {
+      padding-top: 50px;
+      height: 770px;
+    }
+    .storeapp {
+      width: 30%;
+      margin-right: 0px;
+    }
+    .imag-1 {
+      margin-top: 210px;
+    }
+    .why-con {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .why-ques {
+      margin-bottom: 0px;
+      color: #375a64;
+    }
+    .sa1 {
+      margin-right: 20px;
+    }
+    .ahihi {
+      margin-top: 30px;
+    }
+  }
+  @media (min-width: 401px) and (max-width: 500px) {
+    .imag-2 {
+      bottom: 23px;
+      left: 0;
+    }
+    .simply {
+      width: 91%;
+      font-size: 30px;
+      padding: 0px 0px 0px 41px;
+    }
+    .install-now {
+      left: 0px;
+      font-size: 24px;
+      right: 0px;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .list-par {
+      padding: 0px 10px 0px 0px;
+      font-size: 30px;
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+    .list-4p {
+      width: 90%;
+    }
+    .list-parent {
+      padding-left: 10px;
+      display: flex;
+      justify-content: center;
+    }
+    .img-hihi {
+      margin-top: 0px;
+    }
+    .btnn {
+      width: 30%;
+      height: 80px;
+      margin-top: 20px;
+    }
+    .list-4 {
+      padding-bottom: 20px;
+      width: 38%;
+      text-align: center;
+    }
+    .phone3 {
+      padding: 40px 90px 0px 90px;
+    }
+    .phone2 {
+      padding: 40px 90px 0px 90px;
+    }
+    .phone1 {
+      padding: 40px 90px 0px 90px;
+    }
+    .hei-4 {
+      height: 2120px;
+    }
+    .img-danh {
+      padding-left: 0%;
+      margin-top: 50px;
+    }
+    .taiud {
+      text-align: center;
+      font-size: 33px;
+      font-weight: 800;
+      padding: 0px 30px 0px 30px;
+      line-height: 70px;
+      position: absolute;
+      top: -570px;
+      left: 0px;
+    }
+    .span-bihama {
+      color: #ffbe2e;
+      font-weight: 800;
+      font-size: 33px;
+    }
+    .downlod {
+      font-size: 25px;
+    }
+    .user-icon {
+      width: 109px;
+      font-size: 13px;
+      left: 155px;
+    }
+    .down-icon {
+      width: 101px;
+      font-size: 13px;
+    }
+    .danhgia-icon {
+      width: 101px;
+      font-size: 13px;
+    }
+    .why-con2 {
+      padding: 0px 30px 0px 30px;
+    }
+    .why-con1 {
+      padding: 0px 30px 0px 30px;
+    }
+    .why-con3 {
+      padding: 0px 30px 0px 30px;
+    }
+    .royal-blue {
+      height: 530px;
+      margin-top: 60px;
+    }
+    .iconcon {
+      margin-right: 20px;
+      margin-left: 0px;
+    }
+    .storeapp-par {
+      margin: 0px 0px 25px 0px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+    }
+    .why {
+      padding-top: 50px;
+      height: 770px;
+    }
+    .storeapp {
+      width: 30%;
+      margin-right: 0px;
+    }
+    .imag-1 {
+      margin-top: 210px;
+    }
+    .why-con {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .why-ques {
+      margin-bottom: 0px;
+      color: #375a64;
+    }
+    .sa1 {
+      margin-right: 20px;
+    }
+    .ahihi {
+      margin-top: 30px;
+    }
+  }
+  @media (min-width: 301px) and (max-width: 330px) {
+    .hei-4 {
+      height: 1370px;
+    }
+  }
+  @media (min-width: 1000px) and (max-width: 1600px) {
+    .simply {
+      padding: 0px 0px 0px 91px;
+      width: 81%;
+    }
+  }
+</style>
+
+<style>
+  @media screen and (max-width: 1024px) {
+    .hihi {
+      width: 88px;
+      height: 35px;
+      margin-top: 0px;
+    }
+  }
+</style>
+{% endblock %} {% block content %}
+<div class="container">
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-md-6 col-xs-12 migright pb-4 imag-1">
+        <img src="{% static 'about/images/getapp1.svg' %}" />
+      </div>
+      <div class="col-md-6 col-xs-12 text_right ahihi">
+        <p class="taiud">
+          MUA ONLINE NEM NƯỚNG HOA LỆ<span class="span-bihama"></span>
+        </p>
+        <div class="storeapp-par">
+          <img
+            class="storeapp sa1"
+            src="{% static 'about/images/playstore.png' %}"
+            alt="ảnh"
+          />
+          <img
+            class="storeapp sa2"
+            src="{% static 'about/images/appstore.png' %}"
+            alt="ảnh2"
+          />
+        </div>
+        <div class="btns short-btn">
+          <div class="btnn btn1 blue">
+            <p class="downlod">5M+</p>
+            <p class="down-icon">
+              <i class="fas fa-download iconn"></i>Lượt xem
+            </p>
+          </div>
+          <div class="btnn btn1 green">
+            <p class="downlod">830K</p>
+            <p class="user-icon">
+              <i class="fas fa-user-check iconn"></i>Lượt mua
+            </p>
+          </div>
+          <div class="btnn btn1 yellow">
+            <p class="downlod">5.0</p>
+            <p class="danhgia-icon">
+              <i class="far fa-star iconn"></i>Đánh giá
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-xs-12">
+  <div class="row royal-blue">
+    <div class="col-md-6 col-xs-12 pt-4 text_right">
+      <p class="simply">
+        Đơn giản, dễ chế biến & có thể ăn kèm với nhiều món
+      </p>
+    </div>
+   
+
+  <br style="color: black;" />
+
+
+
+{% endblock %} {% block javascript_block %}
+<script>
+  $(".storeapp").click(function () {
+    swal(
+      "Cảm ơn bạn đã quan tâm đến Bihama",
+      "Ứng dụng của chúng tôi sắp ra mắt",
+      "success"
+    );
+  });
+</script>
+{% endblock %}

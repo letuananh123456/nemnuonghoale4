@@ -1,0 +1,2 @@
+
+function addError(r,t){return r.addClass("error"),!1}function clearError(r){r.removeClass("error")}function onlyNumber(r){return/^[0-9]*$/.test(r)}function onlycharacter(r){return/^[a-zA-Z\s]+$/.test(r)}function validmobile(r){return/^[6789]\d{9}$/.test(r)}function validemail(r){return/^(?=[^@]{2,}@)([\w\.-]*[a-zA-Z0-9_]@(?=.{2,}\.[^.]*$)[\w\.-]*[a-zA-Z0-9]{2,4}\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z])$/.test(r)}function alphanumeric(r){return/^[a-zA-Z0-9\s]+$/.test(r)}

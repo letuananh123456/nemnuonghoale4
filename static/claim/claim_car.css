@@ -1,0 +1,613 @@
+.callToaction a,
+.claimSumission .claimSumission_row,
+.heading,
+.heading-content,
+.success,
+.text-center {
+    text-align: center
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family:'SF-UI-Display-Thin'!important
+}
+
+#policybazaar {
+    width: 100%
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+.cashless,
+.reimburse {
+    height: 145px;
+    display: inline-block;
+    width: 137px;
+    position: absolute;
+    left: 60px;
+    top: -30px
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0
+}
+
+h1 {
+    font-size: 32px
+}
+
+h2 {
+    font-size: 24px;
+    margin: 20px 0 10px
+}
+
+h4 {
+    font-size: 14px
+}
+
+p.claim_information {
+    font-size: 13px;
+    line-height: 24px;
+    margin: 10px 0 5px;
+    letter-spacing: .6px;
+    padding: 0 3%
+}
+
+.divCenter {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px
+}
+
+.claim_first .divCenter {
+    padding: 0
+}
+
+h2+p {
+    margin-bottom: 40px
+}
+
+.sheildCircle li,
+.sheildList li {
+    margin: 30px 0;
+    letter-spacing: .6px;
+    padding-left: 60px;
+    list-style: none;
+    font-size: 13px
+}
+
+.carpage {
+    background: url(../claim/images/iconcar.png) no-repeat
+}
+
+.cashless {
+    background-position: -378px 0
+}
+
+.reimburse {
+    background-position: -376px -165px
+}
+
+.sheildCircle li:before,
+.sheildList li:before {
+    left: 0;
+    content: ""
+}
+
+.sheildList {
+    display: block;
+    list-style: none
+}
+
+.sheildList li {
+    display: flex;
+    line-height: 17px;
+    position: relative;
+    align-items: center
+}
+
+.sheildList li:before {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: url(../claim/images/iconcar.png) 0 -553px no-repeat
+}
+
+.sheildCircle {
+    display: block;
+    list-style: none
+}
+
+.sheildCircle li {
+    display: flex;
+    line-height: 24px;
+    position: relative;
+    align-items: center
+}
+
+.sheildCircle li:before {
+    position: absolute;
+    height: 22px;
+    width: 30px;
+    background: url(../claim/images/iconcar.png) 0 -511px no-repeat
+}
+
+.listWithborder {
+    display: block;
+    list-style: none;
+    padding: 20px 40px
+}
+
+.listWithborder li {
+    display: flex;
+    list-style: none;
+    font-size: 13px;
+    line-height: 22px;
+    color: #656a6b;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px
+}
+
+.listWithborder li:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0
+}
+
+.claim_first {
+    background: url(../claim/images/car11.svg)  no-repeat;
+    min-height: 550px;
+    padding: 0 15px;
+    background-size: cover;
+    min-height: 950px;
+}
+
+.claim_first .formDiv {
+    max-width: 850px;
+    margin: 0 auto;
+    background: #c8ebf5;
+    border-radius: 5px;
+    padding: 20px 0
+}
+
+.claim_first .formDiv .form-field {
+    float: left;
+    width: 33.33%;
+    padding: 0 15px
+}
+
+.claim_first .formDiv input[type=text] {
+    background: #fff;
+    border: 0;
+    outline: 0;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    color: #666;
+    box-shadow: 1px 1px 2px #a79d9d;
+    width: 100%;
+    display: block
+}
+
+.callToaction a {
+    background: #fa774d;
+    border-radius: 5px;
+    border: 0;
+    display: block;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    max-width: 250px;
+    padding: 12px;
+    text-decoration: none;
+    margin: 10px auto
+}
+
+.claim_second .aboutContent {
+    margin: 40px auto
+}
+
+.claim_second .aboutContent h1 {
+    color: #f27336
+}
+@media screen and (width:1426px) {
+    .claim_first{
+        min-height: 572px;
+    }
+}
+
+.claim_third {
+    background: #40a1a4;
+    display: table;
+    width: 100%;
+    color: #fff;
+    padding: 70px 0
+}
+
+.claim_third .claimProcess .howtoGet {
+    margin: 80px auto 0;
+    padding-left: 220px;
+    position: relative
+}
+
+.claim_third .claimProcess .howtoGet h4 {
+    text-transform: uppercase;
+    margin: 0
+}
+
+.cashlessClaim h2+p,
+.claim_seventh h2,
+.fileCarInsurance h2+p {
+    margin-bottom: 20px
+}
+
+.claim_fourth {
+    padding: 50px 0
+}
+
+.claim_fifth .fileCarInsurance,
+.claim_fourth .cashlessClaim {
+    position: relative
+}
+
+.fileCarInsurance_img {
+    height: 213px;
+    width: 250px;
+    position: absolute;
+    right: 10px;
+    background-position: -110px 0;
+    top: 109px
+}
+
+.cashlessClaim_img {
+    height: 233px;
+    width: 250px;
+    position: absolute;
+    left: 10px;
+    background-position: -110px -252px;
+    top: 69px
+}
+
+.claim_fourth .sheildList {
+    float: right;
+    padding-left: 260px
+}
+
+.claim_fifth {
+    padding: 50px 0;
+    display: table;
+    width: 100%;
+    background: #40a1a4;
+    color: #ffffff;
+}
+
+.claim_fifth .sheildList {
+    padding-right: 260px;
+    float: left
+}
+
+.claim_sixth {
+    padding: 50px 0;
+    display: table;
+    width: 100%
+}
+
+.claim_sixth .diffDiv {
+    max-width: 1080px;
+    margin: 0 auto
+}
+
+.claim_sixth .diffDiv:after {
+    content: "";
+    clear: both
+}
+
+.claim_sixth .settlement_Process_Cashless_Claims,
+.claim_sixth .settlement_Process_Reimbursements {
+    width: 48%;
+    float: left;
+    border: 1px solid #f6bb43;
+    border-radius: 10px
+}
+
+.claim_sixth .settlement_Process_Cashless_Claims h2,
+.claim_sixth .settlement_Process_Reimbursements h2 {
+    background: #f27336;
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px 0;
+    letter-spacing: 0
+}
+
+.claim_sixth .settlement_Process_Reimbursements {
+    float: right
+}
+
+.claimSumission .claimSumission_row {
+    font-size: 14px
+}
+
+.claimSumission .claimSumission_row div {
+    float: left;
+    width: 33.33%;
+    min-height: 150px;
+    padding: 90px 15px 0;
+    position: relative;
+    vertical-align: top
+}
+
+.claimSumission .claimSumission_row div p {
+    max-width: 284px;
+    margin: 0 auto
+}
+
+.claimSumission .claimSumission_row div:before {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: url(../claim/images/iconcar.png) no-repeat;
+    content: "";
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 0 auto
+}
+
+.claim_seventh h2 {
+    margin-bottom: 40px
+}
+
+.claimSumission .claimSumission_row div.insured:before {
+    background-position: 5px 0
+}
+
+.claimSumission .claimSumission_row div.key:before {
+    background-position: 15px -157px
+}
+
+.claimSumission .claimSumission_row div.license:before {
+    background-position: 1px -75px
+}
+
+.claimSumission .claimSumission_row div.copy:before {
+    background-position: 2px -241px
+}
+
+.claimSumission .claimSumission_row div.theft:before {
+    background-position: -1px -330px
+}
+
+.claimSumission .claimSumission_row div.rc:before {
+    background-position: 5px -419px
+}
+
+.claim_seventh {
+    color: #fff;
+    padding: 40px 0;
+    display: table;
+    width: 100%;
+    background: #40a1a4;
+}
+
+#footer {
+    margin: 0
+}
+
+.claim_first .formDiv input[type=text].error {
+    border: 1px solid red
+}
+
+.success {
+    padding: 10px 0;
+    color: #228b22
+}
+
+.heading {
+    font-size: 26px;
+    color: #5f675a;
+    letter-spacing: .5px;
+    font-weight: 700;
+    padding-top: 25px
+}
+
+.heading-content {
+    padding: 10px 0;
+    line-height: 21px;
+    font-size: 13px;
+    color: #90948d;
+    max-width: 835px;
+    margin: 0 auto
+}
+
+@media(max-width:768px) {
+    .claimSumission .claimSumission_row div {
+        width: 50%
+    }
+    .cashless,
+    .reimburse {
+        top: -11px
+    }
+    .cashlessClaim_img {
+        top: 108px
+    }
+}
+
+@media(max-width:627px) {
+    .claim_sixth .settlement_Process_Cashless_Claims,
+    .claim_sixth .settlement_Process_Reimbursements {
+        width: 100%;
+        display: block
+    }
+    .claim_sixth .settlement_Process_Cashless_Claims {
+        margin-bottom: 20px
+    }
+    .claim_first .formDiv .form-field {
+        float: none;
+        width: 100%;
+        padding: 0 15px;
+        margin-bottom: 12px
+    }
+    .claim_first .formDiv .form-field:last-child {
+        margin-bottom: 0
+    }
+    .claim_third .claimProcess .howtoGet {
+        margin: 0;
+        padding-left: 0;
+        text-align: center;
+        padding-bottom: 20px
+    }
+    .claim_third .claimProcess .howtoGet:last-child {
+        padding-bottom: 0
+    }
+    .cashless,
+    .cashlessClaim_img,
+    .fileCarInsurance_img,
+    .reimburse {
+        position: static;
+        margin: 0 auto 20px;
+        display: block
+    }
+    .claim_fourth .sheildList {
+        float: none;
+        padding-left: 0
+    }
+    .claim_fifth .sheildList {
+        padding-right: 0;
+        float: none
+    }
+    .claim_fifth,
+    .claim_fourth,
+    .claim_third {
+        padding: 40px 0
+    }
+    .claim_fifth {
+        display: block
+    }
+    .sheildCircle li {
+        padding-left: 43px
+    }
+    h2+p {
+        margin-bottom: 20px
+    }
+}
+
+@media(max-width:480px) {
+    h2 {
+        margin: 0 0 15px
+    }
+    h4 {
+        font-size: 14px
+    }
+    .claim_first p.claim_information {
+        font-size: 13px;
+        margin: 10px 0 5px;
+        letter-spacing: .6px;
+        text-align: center;
+        line-height: 18px;
+        padding: 10px
+    }
+    .sheildCircle li:before {
+        top: 5px
+    }
+    .callToaction a {
+        font-size: 13px;
+        max-width: 206px
+    }
+    .claimSumission .claimSumission_row div,
+    .pageDivCenter_footer {
+        width: 100%
+    }
+    .heading {
+        font-size: 18px
+    }
+    .cashless,
+    .cashlessClaim_img,
+    .fileCarInsurance_img,
+    .reimburse {
+        background-size: 400px auto;
+        margin: 0 auto 10px
+    }
+    .cashless,
+    .reimburse {
+        height: 100px;
+        width: 122px
+    }
+    .cashless {
+        background-position: -238px 0
+    }
+    .reimburse {
+        background-position: -235px -110px
+    }
+    .cashlessClaim_img,
+    .fileCarInsurance_img {
+        height: 160px;
+        width: 157px
+    }
+    .cashlessClaim_img {
+        background-position: -73px -164px
+    }
+    .fileCarInsurance_img {
+        background-position: -73px 9px
+    }
+    .sheildCircle li,
+    .sheildList li {
+        display: block
+    }
+    .sheildCircle li:before,
+    .sheildList li:before {
+        transform: scale(.7);
+        -webkit-transform: scale(.7);
+        -moz-transform: scale(.7)
+    }
+    .sheildList li:before {
+        top: -8px
+    }
+    h2 {
+        font-size: 18px!important
+    }
+    h1 {
+        font-size: 22px
+    }
+    .claim_sixth .settlement_Process_Cashless_Claims h2,
+    .claim_sixth .settlement_Process_Reimbursements h2 {
+        font-size: 16px!important;
+        padding: 10px 0
+    }
+    .sheildList li {
+        padding-left: 50px
+    }
+}
+
+.claim_seventh h2,
+.claim_seventh p,
+.claim_third h2,
+.claim_third h4,
+.claim_third p {
+    color: #fff
+}
+
+.claim_fourth h2,
+.claim_fourth p,
+.claim_second p,
+.claim_sixth h2,
+.claim_sixth p {
+    color: #000
+}

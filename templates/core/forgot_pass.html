@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Quên mật khẩu-Sàn Thương Mại Điện Tử Bảo Hiểm Bihama</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="apple-mobile-web-app-capable" content="yes"> 
+	<meta name="keywords" content="Quên mật khẩu tài khoản cùng Bihama ">	
+	<meta name="author" content="bihama.com, bihama.vn">		
+	<meta name="robots" content="noodp,index,follow">
+	<meta name="description" content="Quên mật khẩu tài khoản cùng Bihama">	
+	<meta name="copyright" content="bihama.com, bihama.vn">	
+	<meta name="dc.language" content="vi-VN">
+	<meta name="revisit-after" content="1 days">
+	<meta http-equiv=”content-language” content=”vi” />
+	<meta name="geo.position" content="21.028511, 105.804817">
+	<meta name="geo.placename" content="Ha Noi">
+	<meta name="geo.region" content="VN-HN">
+    <meta name="google-site-verification" content="M-82NzLGKYCPkGvSLN_-Mxk1l8zQonq8YgqMZ6BVc4w" />
+	<!-- Facebook Meta Tags -->
+	<meta property="og:site_name" content="Quên mật khẩu tài khoản cùng Bihama  "> 
+	<meta property="og:type" content="website">		
+	<meta property="og:title" content="Quên mật khẩu tài khoản cùng Bihama ">		
+	<meta property="og:url" content="bihama.vn/dang-ky">		
+	<meta property="og:description" content="Quên mật khẩu tài khoản cùng Bihama ">		
+	<meta property="og:image" content="{% static 'core/images/logo-01.svg' %}">		
+	<meta property="og:locale" content="vi-VN">		
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content="400" />
+	<meta property="og:image:height" content="300" />
+	<meta property="og:image:alt" content="og image alt" />
+	<!-- Google / Search Engine Tags -->
+	<meta itemprop="name" content="Quên mật khẩu tài khoản cùng Bihama ">		
+	<meta itemprop="description" content="Quên mật khẩu tài khoản cùng Bihama ">		
+	<meta itemprop="image" content="{% static 'core/images/logo-01.svg' %}">		
+	<!-- Twitter Meta Tags -->
+	<meta name="twitter:card" content="Forgot password with Bihama">
+	<meta name="twitter:title" content="Forgot password with Biham">
+	<meta name="twitter:description" content="Forgot password with Biham">
+	<meta name="twitter:image" content="{% static 'core/images/logo-01.svg' %}">
+	<link rel="icon" type="image/x-icon" href="{% static 'core/images/icon2.svg' %}" />
+	<link rel="stylesheet" href="{% static 'core/bootstrap/dist/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'core/Font-Awesome/css/all.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/register/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/register/main.css' %}">
+</head>
+
+<body>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-55 p-r-55">
+				<form action="" method="POST" class="login100-form validate-form" id="valid_form_quenmk">
+					{% csrf_token %}
+					<span class="login100-form-title ">
+						<a href="/"><img src="{% static 'core/images/lgBi18.svg' %}" width="100%" alt=""
+								style="padding: 0px 5px 15px 5px;"></a>
+					</span>
+                    <p>Nhập số điện thoại để lấy lại mật khẩu :</p>
+                    <br>
+					<div class="wrap-input100 validate-input" id="ipphone" style="margin-bottom: 10px;"
+						data-validate="Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" minlength="10" maxlength="10" name="phone_number"
+							placeholder="Hãy nhập số điện thoại" id="phone">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+						<span class="icon"><i class="fa fa-user" aria-hidden="true" style="color: #38addb;"></i></span>
+                    </div>
+                    <div class="messs">
+						<p style="color: red; margin-top: 5%; text-align: center;">{% if message %}{{ message }}{% endif %}</p>
+					</div>
+					<div class="container-login100-form-btn m-t-20">
+						<button type="submit" class="login100-form-btn ckeckfom" style="background-color: #F7981D;">
+							Lấy lại mật khẩu
+						</button>
+						<a href="{% url 'login_url' %}" class="login100-form-btn" style="background-color: #40a1a4;">
+							Quay lại đăng nhập
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="text-center info">
+			<span class="txt1">
+				© 2019 Bản quyền thuộc về Công ty Cổ Phần FinPlus
+			</span>
+
+			<p>
+				<a href="">Liên hệ</a> | <a href="">Hỗ trợ bồi
+					thường</a> | <a href="">Tầng 16 Đơn nguyên giữa, nhà C1 Thành Công, Phường Thành Công, Quận Ba Đình, Thành phố Hà Nội</a>
+			</p>
+		</div>
+		<div class="img-footer">
+			<img src="{% static 'core/images/icon/tay1.svg' %}" alt="" width="100%">
+		</div>
+	</div>
+
+	<script src="{% static 'core/js/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/bootstrap/dist/js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static 'core/js/jquery.validate.min.js' %}"></script>
+    <script>
+		$(function () {
+			$("#valid_form_quenmk").validate({
+				rules: {
+					phone_number: {
+						required: true,
+						number: true,
+						maxlength:10,
+						minlength:10,
+					},
+				},
+				messages: {
+					phone_number: {
+						required: "Vui lòng nhập số điện thoại",
+						number: "Vui lòng nhập đúng định dạng số điện thoại ",
+						maxlength:"Số điện thoại gồm 10 số",
+						minlength:"Số điện thoại gồm 10 số"
+					},
+				}
+			});
+		})
+	</script>
+</body>
+
+</html>

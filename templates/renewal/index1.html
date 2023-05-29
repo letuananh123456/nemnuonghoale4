@@ -1,0 +1,391 @@
+{% extends 'core/base.html' %} {% load static %}
+{% block title_core %}Nem Nướng Hoa Lệ{% endblock %}
+{% block css_blocl %}
+<style>
+    h2 {
+        padding-top: 15px;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .title-video-main-h5 {
+        margin-top: 4%;
+        color: #1CA0A4;
+    }
+
+    .title-video-diff .title-diff-h6 {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: #40a1a4;
+        font-size: 15px;
+    }
+
+    .title-video-diff .title-diff-p1 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        color: gray;
+        font-size: 14px;
+    }
+
+    .title-video-diff .title-diff-p {
+        color: rgb(175, 175, 175);
+
+    }
+
+    .content-video {
+        margin-top: 2%;
+    }
+
+    .video-diff {
+        padding-top: 10px;
+    }
+
+    .img-video-learning {
+        width: 100%;
+        height: 90%;
+    }
+
+    .collapsible {
+        background-color: white;
+        color: gray;
+        cursor: pointer;
+        padding: 18px 0px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .active {
+        color: black;
+    }
+
+    .collapsible:hover {
+        color: black;
+    }
+
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+    #inf {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        float: right;
+        list-style: none;
+        width: 60%;
+        padding: 10px 0px;
+        font-size: 15px;
+
+    }
+
+    #info-cal {
+        width: 40%;
+        list-style: none;
+        float: left;
+        padding: 10px 0px;
+        font-size: 15px;
+        color: gray;
+
+    }
+
+    #inf li {
+        padding: 0px 10px;
+    }
+
+    #inf .share {
+        color: gray;
+        font-size: 25px;
+    }
+
+    #inf li:nth-child(2) i {
+        color: #0e508a;
+    }
+
+    #inf li:nth-child(3) i {
+        color: #002aff;
+    }
+
+    #inf li:nth-child(4) i {
+        color: #c73838;
+    }
+
+    #inf li:nth-child(5) i {
+        color: #e63ea0;
+    }
+
+    #inf li:nth-child(2) i:hover {
+        color: #043c70;
+    }
+
+    #inf li:nth-child(3) i:hover {
+        color: #0d249b;
+    }
+
+    #inf li:nth-child(4) i:hover {
+        color: #a01f1f;
+
+    }
+
+    #inf li:nth-child(5) i:hover {
+        color: #c21f7e;
+    }
+
+    .question-insurance {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 18px 0px;
+        border-bottom: 1px dashed #b6d4ed;
+        font-size: 16px;
+    }
+
+    .answer {
+        border-bottom: 1px dashed #b6d4ed;
+        padding: 10px;
+
+    }
+
+    .question {
+        padding-top: 4%;
+        border-top: 1px dashed #b6d4ed;
+    }
+
+    .title-video-main-p {
+        font-size: 15px;
+        margin-top: 15px;
+        line-height: 25px;
+    }
+
+    .title-diff-p {
+        font-size: 13px;
+    }
+
+    .content-main {
+        border-top: 1px dashed #b6d4ed;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    @media screen and (max-width: 450px) {
+        #info-cal {
+            width: 100%;
+        }
+
+        #inf {
+            width: 100%;
+            float: left;
+        }
+
+        .img-video-learning {
+            height: 250px;
+        }
+
+        .title-video-diff {
+            margin-top: 4%;
+        }
+    }
+
+    @media only screen and (max-width:768px) {
+        .imginsua img {
+            margin-top: 0 !important;
+        }
+    }
+
+    .page-link {
+        color: #1ca0a4;
+    }
+
+    .page-item.active .page-link {
+        color: white;
+        background-color: #1ca0a4;
+        border-color: #1ca0a4;
+    }
+
+    .page-link.disabled,
+    .page-item.active {
+        cursor: not-allowed;
+    }
+
+    @media (max-width: 767px) {
+        .title-video-diff {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div id="policybazaar">
+        <div class="breadcrumbinner newsub_category_term">
+            <div class="breadcrumbinner">
+                <ul class="breadcrumb" style="background-color: initial">
+                    <li class="active"><span title="Bạn ở đây: " class="divider icon-location hasTooltip"></span></li>
+                    <span class="homeIcon"></span>
+                    <li>
+                        <a class="pathway" href="{% url 'index_page' %}" title="Insurance">Trang chủ</a>
+                        <span class="divider"><img alt="" src="{% static 'kienthuc/images/arrow.png' %}"></span>
+                    </li>
+                    <li>
+                        <span class="currentLocation">Kiến thức</span>
+                        <span class="divider"><img alt="" src="{% static 'kienthuc/images/arrow.png' %}"></span>
+                        <span class="currentLocation">{{nameca}}</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row content-video">
+        <div class="col-md-7">
+
+            <iframe width="100%" height="400px" class="" src="{{ p1.link_video }}" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <div>
+                <h5 class="title-video-main-h5"><b> {{ p1.title }}</b></h5>
+                <p class="title-video-main-p">{{ p1.sub_title }}</p>
+
+
+                <ul id="info-cal">
+                    <li><i class="fas fa-calendar-alt"></i> {{ p1.created_time }} &nbsp; <i class="fas fa-user"></i>
+                        admin</li>
+                </ul>
+                <ul id="inf">
+
+                    <li><i class="fas fa-share"></i> Chia sẻ</li>
+                    <li>
+                        <a href="https://www.facebook.com/BaohiemBihama/?modal=admin_todo_tour" title="Facebook"><i
+                                class="fab fa-facebook-square share"></i></a>
+                    </li>
+                    <li> <a href="#" title="Messenger"><i class="fab fa-facebook-messenger share"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram share"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Pinterest"> <i class="fab fa-pinterest-square share"></i></a>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                <div class="content-main">
+                    <div class="collapsible active">Bấm vào để xem phụ đề</div>
+                    <div class="content">
+                        <p class="title-video-main-p">{{ p1.content|safe  }}</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h6 class="header-video-diff"><b style="color:#f27336 ;">Các video kiến thức tiếp theo</b></h6>
+
+            {% for item in list_item %}
+            <a href="{% url 'kien_thuc_url' item.category.slug item.slug %}">
+                <div class="row video-diff">
+                    <div class="col-xl-6" style="display: flex; justify-content: center; align-items: center;">
+                        <img src="{{ item.images }}">
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="title-video-diff">
+                            <h6 class="title-diff-h6"><b> {{item.sub_title}}</b></h6>
+                            <p class="title-diff-p1">{{ item.title }}</p>
+                            <p class="title-diff-p"><i class="fas fa-calendar-alt"></i> {{ item.created_time }} &nbsp;
+                                <i class="fas fa-user"></i> {{item.user}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </a>
+            {% endfor %}
+            <div class="text-center" style="margin-top: 5%;">
+                {% if list_item.has_other_pages %}
+                <ul class="pagination">
+                    {% if list_item.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ list_item.previous_page_number }}" style="height: 38px;">
+                            <i class="fas fa-chevron-left"
+                                style="color: #1ca0a4;height: 20px;display: flex;align-items: center;"></i>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="disabled page-link"><span><i class="fas fa-chevron-left"
+                                style="color: #1ca0a4;height: 20px;display: flex;align-items: center;"></i></span></li>
+                    {% endif %}
+
+                    {% for it in list_item.paginator.page_range %}
+                    {% if list_item.number == it %}
+                    <li class="page-item active"><span class="page-link">{{it}}</span></li>
+                    {% else %}
+                    <li class="page-item "><a class="page-link" href="?page={{it}}">{{it}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if list_item.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ list_item.next_page_number }}" style="height: 38px;">
+                            <i class="fas fa-chevron-right"
+                                style="color: #1ca0a4;height: 20px;display: flex;align-items: center;"></i>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="disabled page-link"><span><i class="fas fa-chevron-right"
+                                style="color: #1ca0a4;height: 20px;display: flex;align-items: center;"></i></span></li>
+                    {% endif %}
+
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript_block %}
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+
+    var coll = document.getElementsByClassName("question-insurance");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        });
+    }
+</script>
+{% endblock %}

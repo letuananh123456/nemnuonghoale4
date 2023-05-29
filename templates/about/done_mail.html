@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title_core %}Sàn Thương Mại Điện Tử Bảo Hiểm Bihama{% endblock %}
+
+{% block css_blocl %}
+<style>
+    .img_mail {
+        width: 100%;
+        height: 70%;
+    }
+    .img_mail img {
+        width: 100%;
+        height: 100%;
+ }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="img_mail">
+    {% if img_dk is 0 %}
+    <img src="{% static 'core/mailDK.svg' %}" alt="mail-dangky">
+    {% elif  img_dk is 1 %}
+    <img he src="{% static 'core/mailTC.svg' %}" alt="mail-tc">
+    {% else %}
+    <img src="{% static 'core/mailTB.svg' %}" alt="mail-tb">
+    {% endif %}
+</div>
+
+{% endblock %}

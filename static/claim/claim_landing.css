@@ -1,0 +1,1078 @@
+.rowStreched {
+    width: auto!important;
+    margin: 0 -2.6%
+}
+
+.claim_first select::-ms-expand {
+    display: none
+}
+
+.claim_first select {
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none
+}
+
+@media(max-width:1024px) {
+    .claim_first .leftForm,
+    .claim_first .righticon {
+        width: 70%;
+        float: unset;
+        display: block;
+        padding: 3% 5% 0;
+        margin: 0 auto
+    }
+    .claim_first {
+        background: 0;
+        min-height: auto
+    }
+    .claim_first .righticon {
+        height: 230px;
+        background: 0
+    }
+    .claim_first .righticon h2 {
+        margin: 0;
+        text-align: center
+    }
+    .insuranceProduct {
+        width: 305px;
+        margin: 0 auto
+    }
+}
+
+@media(max-width:480px) {
+    .callToaction a span.loader {
+        right: 2px
+    }
+    .rowStreched {
+        padding: 0 15px
+    }
+    .claim_first .leftForm,
+    .claim_first .righticon {
+        width: 100%;
+        padding: 3% 0 0
+    }
+    h2 {
+        margin: 0 0 15px
+    }
+    h4 {
+        font-size: 14px
+    }
+    p {
+        font-size: 13px;
+        line-height: 20px;
+        margin: 10px 0 5px;
+        letter-spacing: .6px
+    }
+    .sheildCircle li:before {
+        top: 5px
+    }
+    .callToaction a {
+        font-size: 13px;
+        max-width: 206px
+    }
+    #footer .legalInformation p {
+        text-align: center
+    }
+    .claimSumission .claimSumission_row div {
+        width: 100%;
+        margin-bottom: 20px;
+        min-height: 0
+    }
+    .claimSumission .claimSumission_row div.discharge {
+        margin-bottom: 20px
+    }
+    .claimSumission .claimSumission_row div:last-child {
+        margin-bottom: 0
+    }
+    .claim_seventh h2 {
+        margin-bottom: 30px
+    }
+    .claim_seventh {
+        padding-bottom: 40px
+    }
+    .pageDivCenter_footer {
+        width: 100%
+    }
+    .heading {
+        font-size: 18px
+    }
+    .cashless,
+    .cashlessClaim_img,
+    .claim_fourth .top .image-right,
+    .reimburse {
+        background-size: 400px auto;
+        margin: 0 auto 10px
+    }
+    .claim_fourth .top .image-right {
+        width: 100px;
+        height: 100px;
+        background-position: -244px -232px
+    }
+    .cashless,
+    .reimburse {
+        height: 100px;
+        width: 122px
+    }
+    .cashless {
+        background-position: -238px 0
+    }
+    .reimburse {
+        background-position: -235px -110px
+    }
+    .cashlessClaim_img,
+    .fileCarInsurance_img {
+        height: 160px;
+        width: 157px
+    }
+    .cashlessClaim_img {
+        background-position: -73px -164px
+    }
+    .fileCarInsurance_img {
+        background-position: -73px 9px
+    }
+    .sheildList li {
+        display: block;
+        font-size: 13px
+    }
+    .sheildList li:before {
+        transform: scale(.7);
+        -webkit-transform: scale(.7);
+        -moz-transform: scale(.7)
+    }
+    h2 {
+        font-size: 18px!important
+    }
+    .claim_sixth .top .title h2 {
+        font-size: 15px!important;
+        padding: 6px 10px
+    }
+    .claim_sixth .wid-50 .column h2 {
+        font-size: 13px!important
+    }
+    h1 {
+        font-size: 22px
+    }
+    .claim_sixth .settlement_Process_Cashless_Claims h2,
+    .claim_sixth .settlement_Process_Reimbursements h2 {
+        font-size: 16px!important;
+        padding: 10px 0
+    }
+    .claim_fifth,
+    .claim_fourth,
+    .claim_third {
+        padding: 20px 0
+    }
+    .sheildList li {
+        padding-left: 25px
+    }
+}
+
+* {
+    box-sizing: border-box
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-weight: 400
+}
+
+h1 {
+    font-size: 32px
+}
+
+h2 {
+    font-size: 24px;
+    margin: 0 0 15px;
+    font-weight: 500
+}
+
+h4 {
+    font-size: 14px
+}
+
+.claim_first .formDiv .form-field label.checkboxText,
+.loader {
+    font-size: 10px
+}
+
+@-webkit-keyframes sonarEffect {
+    0% {
+        opacity: .3
+    }
+    40% {
+        opacity: .5;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px #e9526a, 0 0 0 10px rgba(255, 255, 255, .5)
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px #e9526a, 0 0 0 10px rgba(255, 255, 255, .5);
+        -webkit-transform: scale(1.5);
+        opacity: 0
+    }
+}
+
+@-moz-keyframes sonarEffect {
+    0% {
+        opacity: .3
+    }
+    40% {
+        opacity: .5;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px #e9526a, 0 0 0 10px rgba(255, 255, 255, .5)
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px #e9526a 0 0 0 10px rgba(255, 255, 255, .5);
+        -moz-transform: scale(1.5);
+        opacity: 0
+    }
+}
+
+@keyframes sonarEffect {
+    0% {
+        opacity: .3
+    }
+    40% {
+        opacity: .5;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px #e9526a, 0 0 0 10px rgba(255, 255, 255, .5)
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, .1), 0 0 10px 10px #e9526a, 0 0 0 10px rgba(255, 255, 255, .5);
+        transform: scale(1.5);
+        opacity: 0
+    }
+}
+
+.loader {
+    margin: 10px auto;
+    text-indent: -9999em;
+    border-top: 4px solid rgba(255, 255, 255, .2);
+    border-right: 4px solid rgba(255, 255, 255, .2);
+    border-bottom: 4px solid rgba(255, 255, 255, .2);
+    border-left: 4px solid #fff;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: load8 1.1s infinite linear;
+    animation: load8 1.1s infinite linear
+}
+
+.loader,
+.loader:after {
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    top: -3px;
+    position: absolute;
+    right: 28px
+}
+
+.listWithborder li,
+sup {
+    position: relative;
+    font-size: 13px
+}
+
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0)
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+input,
+textarea {
+    color: #333
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #ccc!important
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    font-size: 12px;
+    color: #ccc!important
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    font-size: 12px;
+    color: #ccc!important
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    font-size: 12px;
+    color: #ccc!important
+}
+
+sup {
+    color: red;
+    top: 4px
+}
+
+.text-center {
+    text-align: center
+}
+
+.listWithborder {
+    list-style: none;
+    counter-reset: my-counter
+}
+
+.listWithborder li {
+    line-height: 22px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    color: #000
+}
+
+.listWithborder li::before {
+    content: counter(my-counter, decimal);
+    counter-increment: my-counter;
+    position: absolute;
+    left: 0
+}
+
+.listWithborder li:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+    padding-bottom: 0
+}
+
+.claim_first {
+    /* background: url(./images/claim.svg) 0 235px no-repeat; */
+    min-height: 570px;
+    padding: 0 15px;
+    background-size: contain;
+    width: 100%;
+    /* height: 100% */
+}
+
+
+.claim_first .righticon {
+    width: 90%;
+    /* background: url(./images/claim.svg) 0 200px no-repeat; */
+    /* min-height: 900px; */
+    margin: 0 auto;
+}
+
+.insuranceProduct {
+    /* margin-left:100px */
+    text-align: center;
+}
+
+.claim_first .righticon h2 {
+    margin-top: 40px;
+    color: #ec741d;
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.claim_first .righticon .circleTab {
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 20px 10px;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 80px;
+    font-weight: 300;
+    text-decoration: none;
+    color: #fff;
+    background: #fff;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform ease-out .1s, background .2s;
+    -moz-transition: -moz-transform ease-out .1s, background .2s;
+    transition: transform ease-out .1s, background .2s
+}
+
+.claim_first .righticon .circleTab.v3car:before,
+.claim_first .righticon .circleTab.v3health:before,
+.claim_first .righticon .circleTab.v3Term:before,
+.claim_first .righticon .circleTab.v3tuky:before,
+.claim_first .righticon .circleTab.v3dautu:before,
+.claim_first .righticon .circleTab.v3tichluy:before ,
+.claim_first .righticon .circleTab.v3giaoduc:before ,
+.claim_first .righticon .circleTab.v3huutri:before ,
+.claim_first .righticon .circleTab.v3canhan:before ,
+.claim_first .righticon .circleTab.v3doanhnghiep:before ,
+.claim_first .righticon .circleTab.v3tncanhan:before ,
+.claim_first .righticon .circleTab.v3yte:before ,
+.claim_first .righticon .circleTab.v3hiemngheo:before ,
+.claim_first .righticon .circleTab.v3ungthu:before ,
+.claim_first .righticon .circleTab.v3batbuoc:before ,
+.claim_first .righticon .circleTab.v3vcxe:before ,
+.claim_first .righticon .circleTab.v3tunguyen:before ,
+.claim_first .righticon .circleTab.v3dansu:before ,
+.claim_first .righticon .circleTab.v3vietnam:before ,
+.claim_first .righticon .circleTab.v3quocte:before ,
+.claim_first .righticon .circleTab.v3chuyenbay:before ,
+.claim_first .righticon .circleTab.v3dienthoai:before ,
+.claim_first .righticon .circleTab.v3tunhan:before 
+{
+    content: "";
+    opacity: 1;
+    font-size: 32px;
+    top: 25px;
+    width: 50px;
+    bottom: 0;
+    margin: 0 auto;
+    vertical-align: middle;
+    height: 50px;
+    right: 0;
+    text-align: center;
+    left: 0
+}
+
+
+
+.claim_first .righticon .circleTab:after {
+    font-family: FontAwesome;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transform: scale(.87);
+    -moz-transform: scale(.87);
+    -ms-transform: scale(.87);
+    transform: scale(.87)
+}
+
+.claim_first .righticon .circleTab:hover {
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+    color: #fff
+}
+
+.claim_first .righticon .circleTab:hover:after {
+    -webkit-animation: sonarEffect 1s ease-out 10ms;
+    -moz-animation: sonarEffect 1s ease-out 10ms;
+    animation: sonarEffect 1s ease-out 10ms
+}
+
+.claim_first .righticon .circleTab.v3Term {
+    background: #283d52
+}
+.claim_first .righticon .circleTab.v3tuky:before {
+    background: url(../images/icon/icon-color_1.svg) no-repeat;
+    position: absolute
+}
+
+.claim_first .righticon .circleTab.v3dautu:before {
+    background: url(../images/icon/icon-color_2.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3tichluy:before {
+    background: url(../images/icon/icon-color_3.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3giaoduc:before {
+    background: url(../images/icon/icon-color_4.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3huutri:before {
+    background: url(../images/icon/icon-color_5.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3canhan:before {
+    background: url(../images/icon/icon-color_6.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3doanhnghiep:before {
+    background: url(../images/icon/icon-color_7.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3tncanhan:before {
+    background: url(../images/icon/icon-color_8.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3yte:before {
+    background: url(../images/icon/icon-color_9.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3hiemngheo:before {
+    background: url(../images/icon/icon-color_10.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3ungthu:before {
+    background: url(../images/icon/icon-color_11.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3batbuoc:before {
+    background: url(../images/icon/icon-color_12.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3vcxe:before {
+    background: url(../images/icon/icon-color_13.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3tunguyen:before {
+    background: url(../images/icon/icon-color_14.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3dansu:before {
+    background: url(../images/icon/icon-color_15.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3vietnam:before {
+    background: url(../images/icon/icon-color_16.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3quocte:before {
+    background: url(../images/icon/icon-color_17.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3chuyenbay:before {
+    background: url(../images/icon/icon-color_18.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3dienthoai:before {
+    background: url(../images/icon/icon-color_19.svg)  no-repeat;
+    position: absolute
+}
+.claim_first .righticon .circleTab.v3tunhan:before {
+    background: url(../images/icon/icon-color_20.svg)  no-repeat;
+    position: absolute
+}
+
+
+.claim_first .righticon .circleTab.v3car {
+    background: #505c8b
+}
+
+.claim_first .righticon .circleTab.v3health {
+    background: #42ceb2
+}
+.claim_first .righticon .circleTab.v3tuky {
+    background: #283d52
+}
+.claim_first .righticon .circleTab.v3dautu {
+    background: #9eaff0
+}
+
+.claim_first .righticon .circleTab.v3tichluy {
+    background: #1290da
+}
+.claim_first .righticon .circleTab.v3giaoduc {
+    background: #8663e6
+}
+.claim_first .righticon .circleTab.v3huutri {
+    background: #c3ca64
+}
+.claim_first .righticon .circleTab.v3canhan {
+    background: #e7ae7f
+}
+.claim_first .righticon .circleTab.v3doanhnghiep {
+    background: #b314e4
+}
+.claim_first .righticon .circleTab.v3tncanhan {
+    background: #9ee78f
+}
+.claim_first .righticon .circleTab.v3yte {
+    background: #08a1cf
+}
+.claim_first .righticon .circleTab.v3hiemngheo {
+    background: #b8ec73
+}
+.claim_first .righticon .circleTab.v3ungthu {
+    background: #e7a4c0
+}
+.claim_first .righticon .circleTab.v3batbuoc {
+    background: #516979
+}
+.claim_first .righticon .circleTab.v3vcxe {
+    background: #0ea0f5
+}
+.claim_first .righticon .circleTab.v3tunguyen {
+    background: #1d65eb
+}
+.claim_first .righticon .circleTab.v3dansu {
+    background: #eea467
+}
+.claim_first .righticon .circleTab.v3vietnam {
+    background: #74d3f0
+}
+.claim_first .righticon .circleTab.v3quocte {
+    background: #e2a67e
+}
+.claim_first .righticon .circleTab.v3chuyenbay {
+    background: #8ba1e7
+}
+.claim_first .righticon .circleTab.v3dienthoai {
+    background: #e4bd3d
+}
+.claim_first .righticon .circleTab.v3tunhan {
+    background: #5c5e61
+}
+#footer {
+    margin: 0
+}
+
+.claim_first .leftForm .formDiv {
+    background: rgb(142, 206, 209);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-radius: 10px;
+}
+
+.claim_first .formFeild {
+    margin-bottom: 15px
+}
+
+.claim_first .success {
+    color: #01b118;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 51px 0 0;
+    position: relative;
+    line-height: 33px;
+    margin-top: 20%
+}
+
+.claim_first .formDiv .form-field label.checkboxText span {
+    position: relative;
+    top: -3px
+}
+
+.claim_first .success:before {
+    content: "\f058";
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 0;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 45px;
+    left: 0;
+    right: 0;
+    margin: 0 auto
+}
+
+.callToaction,
+.callToaction a {
+    position: relative
+}
+
+.claim_first .formDiv .text {
+    padding: 5px 15px
+}
+/* #mobile::placeholder{
+    color: #000;
+} */
+.claim_first .formDiv .textTitle {
+
+    color: #4a4949;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 0;
+    padding: 5px 15px
+}
+
+.claim_first .formDiv .text p {
+    font-size: 13px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0
+}
+
+.claim_first .formDiv .formTitle {
+    background: #f27336;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 8px 0;
+    width: auto;
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-size: 19px;
+    font-weight: 500;
+    box-shadow: 0 3px 2px 0 rgba(0,0,0,.52);
+}
+
+.claim_first .formDiv .form-field {
+    float: left;
+    width: 100%;
+    padding: 0 10px
+}
+
+.claim_first .formDiv .form-field.textarea {
+    width: 66.33%!important
+}
+
+.claim_first .formDiv .form-field label {
+    font-size: 13px;
+    padding: 8px 1px 3px;
+    display: block
+}
+
+.claim_first .formDiv input[type=text],
+.claim_first .formDiv textarea,
+.claim_first select {
+    background: #fff;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: #333;
+    box-shadow: 1px 1px 2px #a4d9ed;
+    width: 100%!important;
+    resize: none;
+    display: block
+}
+
+.claim_first select {
+    background: url(../images/bu/arrow-down.png) 97% 46% no-repeat
+}
+
+.claim_first .formDiv textarea {
+    overflow: auto
+}
+
+.formFeild select {
+    width: 100%;
+    border: 0;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px #a4d9ed;
+    background-color: #fff
+}
+
+.claim_first .formDiv .form-field label.currentNo_label {
+    width: 160px;
+    float: right;
+    text-align: right;
+    font-size: 11px;
+    display: none;
+    align-items: center;
+    letter-spacing: .3px
+}
+
+.callToaction a {
+    background: #ec741d;
+    border-radius: 10px;
+    border: 0;
+    display: block;
+    box-shadow: 0 3px 2px 0 rgba(0, 0, 0, .52);
+    cursor: pointer;
+    max-width: 275px;
+    text-align: center;
+    padding: 11px;
+    text-decoration: none;
+    margin: 8px auto 14px;
+    font-size: 17px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 24px
+}
+
+.callToaction a span.loader {
+    display: none;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 4px;
+    right: 10px
+}
+
+.callToaction .layer {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 52px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: none
+}
+
+@media(max-width:1920px) {
+    .claim_first {
+        /* background: url(./images/claim.svg) 0 142px no-repeat; */
+        min-height: 650px;
+        background-size: 100%
+    }
+}
+
+@media(max-width:1600px) {
+    .claim_first {
+        /* background: url(./images/claim.svg) 0 207px no-repeat; */
+        min-height: 570px;
+        background-size: 100%
+    }
+}
+
+@media(max-width:1400px) {
+    .claim_first {
+        /* background: url(./images/claim.svg) 0 207px no-repeat; */
+        min-height: 570px;
+        background-size: 100%
+    }
+}
+
+@media(max-width:1366px) {
+    .claim_first {
+        /* background: url(./images/claim.svg) 0 230px no-repeat; */
+        min-height: 570px;
+        background-size: 100%
+    }
+}
+
+@media(max-width:1024px) {
+    .claim_first .leftForm,
+    .claim_first .righticon {
+        width: 70%;
+        float: unset;
+        display: block;
+        padding: 3% 5% 0;
+        margin: 0 auto
+    }
+    .claim_first {
+        background: 0;
+        min-height: auto
+    }
+    .claim_first .righticon {
+        height: auto;
+        background: 0;
+    }
+    .claim_first .righticon h2 {
+        margin: 0;
+        text-align: center
+    }
+    .insuranceProduct {
+        width: 90%;
+        margin: 0 auto
+    }
+    .claim_first.rowStreched {
+        margin: 0
+    }
+}
+
+@media(max-width:768px) {
+    .claim_first .leftForm,
+    .claim_first .righticon {
+        width: 80%
+    }
+}
+
+@media(max-width:667px) {
+    .claim_first .leftForm,
+    .claim_first .righticon {
+        width: 90%
+    }
+}
+
+@media(max-width:480px) {
+    .callToaction a span.loader {
+        right: 2px
+    }
+    .rowStreched {
+        padding: 0 15px
+    }
+    .claim_first .leftForm,
+    .claim_first .righticon {
+        width: 100%;
+        padding: 3% 0 0
+    }
+    h2 {
+        margin: 0 0 15px
+    }
+    p {
+        font-size: 13px;
+        line-height: 20px;
+        margin: 10px 0 5px;
+        letter-spacing: .6px
+    }
+    .sheildCircle li:before {
+        top: 5px
+    }
+    .callToaction a {
+        font-size: 13px;
+        max-width: 206px
+    }
+    #footer .legalInformation p {
+        text-align: center
+    }
+    .claimSumission .claimSumission_row div {
+        width: 100%;
+        margin-bottom: 20px;
+        min-height: 0
+    }
+    .claimSumission .claimSumission_row div.discharge {
+        margin-bottom: 20px
+    }
+    .claimSumission .claimSumission_row div:last-child {
+        margin-bottom: 0
+    }
+    .claim_seventh h2 {
+        margin-bottom: 30px
+    }
+    .claim_seventh {
+        padding-bottom: 40px
+    }
+    .pageDivCenter_footer {
+        width: 100%
+    }
+    .heading {
+        font-size: 18px
+    }
+    .cashless,
+    .cashlessClaim_img,
+    .claim_fourth .top .image-right,
+    .reimburse {
+        background-size: 400px auto;
+        margin: 0 auto 10px
+    }
+    .claim_fourth .top .image-right {
+        width: 100px;
+        height: 100px;
+        background-position: -244px -232px
+    }
+    .cashless,
+    .reimburse {
+        height: 100px;
+        width: 122px
+    }
+    .cashless {
+        background-position: -238px 0
+    }
+    .reimburse {
+        background-position: -235px -110px
+    }
+    .cashlessClaim_img,
+    .fileCarInsurance_img {
+        height: 160px;
+        width: 157px
+    }
+    .cashlessClaim_img {
+        background-position: -73px -164px
+    }
+    .fileCarInsurance_img {
+        background-position: -73px 9px
+    }
+    .sheildList li {
+        display: block;
+        font-size: 13px
+    }
+    .sheildList li:before {
+        transform: scale(.7);
+        -webkit-transform: scale(.7);
+        -moz-transform: scale(.7)
+    }
+    h2 {
+        font-size: 18px!important
+    }
+    .claim_sixth .top .title h2 {
+        font-size: 15px!important;
+        padding: 6px 10px
+    }
+    .claim_sixth .wid-50 .column h2 {
+        font-size: 13px!important
+    }
+    h1 {
+        font-size: 22px
+    }
+    .footer .h2 {
+        font-size: 22px!important;
+        line-height: 10px
+    }
+    .claim_sixth .settlement_Process_Cashless_Claims h2,
+    .claim_sixth .settlement_Process_Reimbursements h2 {
+        font-size: 16px!important;
+        padding: 10px 0
+    }
+    .claim_fifth,
+    .claim_fourth,
+    .claim_third {
+        padding: 20px 0
+    }
+    .sheildList li {
+        padding-left: 25px
+    }
+    h4 {
+        font-size: 12px
+    }
+}
+
+@media(max-width:360px) {
+    .insuranceProduct {
+        width: 285px
+    }
+    .claim_first .righticon .circleTab {
+        width: 120px;
+        height: 120px;
+        margin: 19px 4px 0px;
+    }
+}
+
+.abouttext {
+    text-align: justify
+}
+
+.claim_first .formDiv input[type=text].error,
+.claim_first .formDiv select.error {
+    border: 1px solid red
+}
+
+textarea.error {
+    border: 1px solid red!important
+}

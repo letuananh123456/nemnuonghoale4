@@ -1,0 +1,538 @@
+{% extends 'core/base.html' %} {% load static %}
+{% block title_core %} Câu chuyện thịt sạch {% endblock %}
+{% block css_blocl %}
+<style type="text/css">
+    .pb-header {
+        position: relative;
+    }
+
+    .pbproductDetail h1.pbAbtProduct {
+
+        border-top-right-radius: 10px;
+        border-top: 20px solid #40a1a4;
+    }
+
+    .content_chinhsach {
+        background: linear-gradient(#000000ad, #00000094), url(/static/about/images/ch.jpeg) no-repeat fixed center #eeecf9;
+    }
+
+    .chinhach {
+
+        text-align: center;
+
+        color: #fff;
+        font-size: 22px;
+        margin: auto;
+        border-radius: 7px;
+        color: #f9cc1c;
+    }
+
+    .content_tiepthi ul li {
+        line-height: 30px;
+        color: #fff;
+    }
+
+    .content_tiepthi ul {
+        padding: 2% 5% 5% 5%;
+    }
+
+    .linkkk {
+        color: #57cae6;
+    }
+
+    .linkkk:hover {
+        color: #57cae6;
+    }
+
+    .investor {
+        padding: 5% 0;
+    }
+
+    .banner-section {
+        background-image: url("https://static.pexels.com/photos/373912/pexels-photo-373912.jpeg");
+        background-size: cover;
+        height: 380px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        background-position: 0;
+    }
+
+    .jumbotron {
+
+        background-image: url(/static/about/images/bnCs-01.svg);
+        background-repeat: no-repeat;
+        height: 350px;
+    }
+
+    .jumbotron h1 {
+        color: #e0dfdc;
+        letter-spacing: .1em;
+        text-shadow:
+            0 -1px 0 #fff,
+            0 1px 0 #2e2e2e,
+            0 2px 0 #2c2c2c,
+            0 3px 0 #2a2a2a,
+            0 4px 0 #282828,
+            0 5px 0 #262626,
+            0 6px 0 #242424,
+            0 7px 0 #222,
+            0 8px 0 #202020,
+            0 9px 0 #1e1e1e,
+            0 10px 0 #1c1c1c,
+            0 11px 0 #1a1a1a,
+            0 12px 0 #181818,
+            0 13px 0 #161616,
+            0 14px 0 #141414,
+            0 15px 0 #121212,
+            0 22px 30px rgba(0, 0, 0, 0.9);
+    }
+
+    .jumbotron i {
+        color: #40a1a4;
+    }
+
+    .jumbotron p {
+        color: #40a1a4;
+        font-size: 20px;
+    }
+
+    .jumbotron a {
+        color: #40a1a4;
+
+    }
+
+    .jumbotron a:hover {
+        color: #40a1a4;
+        text-decoration: none;
+    }
+
+    .migright img {
+        width: 90%;
+    }
+
+    .chinhach1 {
+        width: 50%;
+        padding: 7px;
+        text-align: center;
+        border-radius: 7px;
+        color: #f9cc1c;
+        font-size: 25px;
+        margin: auto;
+    }
+
+    .text_right {
+        line-height: 40px;
+        text-align: justify;
+    }
+
+    .migright_right img {
+        width: 90%;
+        float: right;
+    }
+
+    @media screen and (max-width: 768px) {
+        .chinhach1 {
+            width: 100% !important;
+        }
+
+        .text_right {
+            line-height: 20px;
+            font-size: 14px;
+        }
+    }
+
+
+    @media screen and (max-width:767px) {
+        .migright img {
+            width: 100%;
+        }
+
+        .migright_right img {
+            width: 100% !important;
+        }
+
+        .nnn {
+            display: none;
+        }
+
+        .jumbotron {
+            display: none !important;
+            height: 280px;
+        }
+
+        .btn {
+            width: 40% !important;
+            margin-bottom: 20px !important;
+            font-size: 12px;
+        }
+
+        .hihi{
+            width: 86% !important;
+        }
+
+        .chinhach1 {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        .migright img {
+            width: 100%;
+        }
+
+        .migright_right img {
+            width: 100%;
+            float: left;
+        }
+
+        .nnn {
+            display: none;
+        }
+
+        .chinhach1 span {
+            font-size: 19px;
+        }
+    }
+</style>
+
+<!-- responsive -->
+<style>
+    @media (min-width: 2001px) and (max-width: 2200px) {
+        .jumbotron {
+            height: 493px !important;
+        }
+
+        .chinhach1 {
+            margin-top: 30px;
+            width: 60%;
+            font-size: 25px;
+        }
+
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+            max-width: 1600px !important;
+            font-size: 20px;
+        }
+
+        .tt {
+            font-size: 21px;
+        }
+    }
+
+    @media (min-width: 1901px) and (max-width: 2000px) {
+        .jumbotron {
+            height: 448px !important;
+        }
+
+        .chinhach1 {
+            margin-top: 30px;
+            width: 60%;
+            font-size: 25px;
+        }
+
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+            max-width: 1450px !important;
+            font-size: 19px;
+        }
+
+        .tt {
+            font-size: 22px;
+        }
+    }
+
+    @media (min-width: 1801px) and (max-width: 1900px) {
+        .jumbotron {
+            height: 425px !important;
+        }
+
+        .chinhach1 {
+            margin-top: 29px;
+            width: 60%;
+            font-size: 24px;
+        }
+
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+            max-width: 1400px !important;
+            font-size: 19px;
+        }
+
+        .tt {
+            font-size: 21px;
+        }
+    }
+
+    @media (min-width: 1601px) and (max-width: 1800px) {
+        .jumbotron {
+            height: 405px !important;
+        }
+
+        .chinhach1 {
+            margin-top: 29px;
+            width: 60%;
+            font-size: 24px;
+        }
+
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+            max-width: 1369px;
+            font-size: 19px;
+        }
+
+        .tt {
+            font-size: 21px;
+        }
+    }
+
+    @media (min-width: 1501px) and (max-width: 1600px) {
+        .jumbotron {
+            height: 358px !important;
+        }
+
+        .chinhach1 {
+            margin-top: 29px;
+            width: 60%;
+            font-size: 24px;
+        }
+
+        .container,
+        .container-lg,
+        .container-md,
+        .container-sm,
+        .container-xl {
+            max-width: 1300px !important;
+            font-size: 18px;
+        }
+
+        .tt {
+            font-size: 21px;
+        }
+    }
+
+    @media (min-width: 1400px) and (max-width: 1500px) {
+        .jumbotron {
+            height: 340px !important;
+        }
+    }
+
+    @media (min-width: 1300px) and (max-width: 1440px) {
+        .jumbotron {
+            height: 325px !important;
+        }
+    }
+
+    @media (min-width: 2201px) and (max-width: 2560px) {
+        .jumbotron {
+            height: 575px !important;
+        }
+    }
+
+    @media (max-width:1400px) {
+        .jumbotron {
+            height: 375px !important;
+        }
+    }
+
+    @media (max-width:1024px) {
+        .jumbotron {
+            height: 250px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .jumbotron {
+            height: 190px !important;
+        }
+
+        .file-upload-btn {
+            font-size: 12px !important;
+        }
+
+        .image-upload-wrap,
+        .image-upload-wrap1 {
+            height: 180px !important;
+        }
+
+        .right_side {
+            padding: 40px 0px;
+        }
+    }
+</style>
+
+<!-- respon by danh -->
+<style>
+    @media (min-width: 321px) and (max-width: 425px){
+        .moreInsurance .allInsurance{
+            padding-left: 30px !important;
+        }
+        .moreInsurance .allInsurance .icons{
+            left: -5px;
+        }
+        .logoo{
+            width: 25px;
+        }
+    }
+    @media screen and (max-width: 769px){
+        .getapp h1{
+            font-size: 25px;
+        }
+    } 
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="post-content-section">
+    <div class="jumbotron text-center">
+        <!-- <h1>Chính sách</h1> -->
+        <!-- <p><i class="fas fa-home"></i>
+            | 
+        </p> -->
+
+    </div>
+
+    </div>
+</section>
+
+<div id="bihama">
+    <!-- <div class="container">
+        <div class="breadcrumbinner cmspages" style="padding: 0 !important;
+    
+    max-width: 100%;
+    display: block;
+    float: inherit;">
+            <div class="breadcrumbinner" style="padding: 0 !important;
+       
+        max-width: 100%;
+        display: block;
+        float: inherit;
+        display: flex;
+        align: center 
+        color: #43a1a2;">
+                <ul class="breadcrumb" style="list-style:none;background:0;padding: 10px 0;margin-bottom: 0;display: flex;
+            align-items: center ;color: #43a1a2;">
+                    <li class="active"><span title="You are here: " class="divider icon-location hasTooltip"></span>
+                    </li><span class="homeIcon"></span>
+                    <a style="color:#43a1a2;" href=" /" title="Insurance">Home</a>&nbsp<i
+                        class="fas fa-angle-right"></i><a>
+                        <li>&nbsp<span class="currentLocation"> Chính sách hoa hồng tiếp thị liên kết</span></li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="container pt-4 content_chinhsach">
+        <div class="col-xs-12">
+            <div class="col-xs-12 chinhach">
+                Chính sách hoa hồng tiếp thị liên kết của bihama
+            </div>
+            <div class="col-xs-12 content_tiepthi">
+                <ul>
+                    <li>
+                        Tiếp thị liên kết là hình thức cộng tác 4.0 với publisher( CTV) là đại lý bảo hiểm hoặc cá nhân
+                        muốn trở thành đại lý bảo hiểm. Bihama sẽ cung cấp cho bạn những khóa học miễn phí từ cơ bản đến
+                        nâng cao và hỗ trợ 1 phần chi phí để cá nhân có thể trở thành 1 đại lý bảo hiểm chuyên nghiệp.
+                    </li>
+                    <li>
+                        Hiểu một cách đơn giản, tiếp thị liên kết là giới thiệu sản phẩm, dịch vụ để nhận được hoa hồng
+                        tiếp thị. Giúp tạo ra được nguồn thu nhập thụ động cho người tham gia từ việc marketing theo
+                        công nghệ cho công ty.
+                    </li>
+                    <li>
+                        Khách hàng đã tham gia 1 sản phẩm bảo hiểm trên sàn thương mại điện tử <a class="linkkk"
+                            title="bihama.com" href="https://www.bihama.com/">bihama.com</a> khách hàng có thể đăng ký
+                        làm publisher ( Cộng tác viên ) của Bihama và được chi trả hoa hồng rõ ràng, minh bạch, theo mô
+                        hình tiếp thị liên kết đi đôi với chính sách cam kết trả thưởng hoa hồng của Bihama và công ty
+                        bảo hiểm.
+                    </li>
+                    <li>
+                        Với chúng tôi, thay vì các chi phí cho marketing, chúng tôi chi trả hoa hồng trực tiếp cho các
+                        publisher khi các bạn giúp chúng tôi tiếp thị và quảng bá sản phẩm.
+                    </li>
+                    <li>
+                        Các publisher sẽ được cấp link giới thiệu khi Tin tứcvà khi sản phẩm bảo hiểm của chúng tôi
+                        được bạn tiếp thị, quảng bá, khách hàng mua sản phẩm dưới link giới thiệu của bạn, ngay lập tức
+                        hoa hồng sẽ được chi trả cho về cho bạn thông qua phần mềm <a class="linkkk"
+                            href="http://portal.bihama.com" title="portal.bihama.com">portal.bihama.com</a>
+                    </li>
+                    <li>
+                        Phần mềm <a href="http://portal.bihama.com" title="portal.bihama.com"
+                            class="linkkk">portal.bihama.com</a> giúp chúng tôi chi trả hoa hồng cho các publisher. Các
+                        publisher sẽ được cấp tài khoản để đăng nhập vào hệ thống để xác minh lý lịch cá nhân và nhận
+                        hoa hồng của mình.
+                    </li>
+                    <li>
+                        Bihama còn cung cấp cho publisher bản đồ hệ thống đội nhóm kinh doanh để các publisher có thể dễ
+                        dàng giúp đỡ, trao dồi kỹ năng bán hàng và kiến thức về bảo hiểm.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+    <div class="container ">
+        <div class="col-xs-12">
+            <div class="col-xs-12 chinhach1 pb-4">
+                <span style="color: red;font-weight: 600;">MUA NEM TỪ 100 CÁI ĐƯỢC CHIẾT KHẤU LÊN TỚI 15%. GỌI CHO  CHÚNG  TÔI  ĐỂ  BIẾT  THÊM  CHI  TIẾT</span>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-12 migright pb-4">
+                    <img src="{% static 'about/images/imagaCS-01.svg' %}">
+                </div>
+                <div class="col-md-6 col-xs-12 text_right">
+                    <p>Thịt để làm nem nướng là thịt lợn sạch được chế biến cẩn thận theo quy trình đảm bảo vệ sinh thực phẩm và mang đến cho
+                        khách hàng trải nghiệm trở về với thịt lợn nuôi ngày xưa chứ không phải thịt lợn công nghiệp. Nem nướng Hoa Lệ sử dụng 
+                        thịt lợn nuôi tự nhiên để chất lượng thịt ngon và độ tươi của thịt được bảo quản với mong muốn mang đến món ăn ngon cho thực khách
+                        và giữ gìn nét văn hoá truyền thống về làm nem nướng của Việt Nam.
+                        <a style="color: #fff;" class="btn btn-warning" target="_blank"
+                            href="{% static 'core/ViewerJS/index.html#../../img/chinhsach.pdf' %}">Đặt mua</a>
+                    </p>
+                </div>
+                <div class="col-md-6 col-xs-12 pt-4 text_right">
+                    <p> <b class="tt">Quy trình làm nem nướng Hoa Lệ</b><br>
+                        Bước 1: Chọn thịt lợn tự nhiên<br>
+                        Bước 2: Ướp gia vị lên men tự nhiên từ ngô và gạo<br>
+                        Bước 3: Trộn cùng các gia vị cơ bản<br>
+                        Bước 4: Để thịt lên men tự nhiên<br>
+                        Bước 5: Bảo quản cẩn thận 
+                    </p>
+                </div>
+                <div class="col-md-6 col-xs-12 pt-4 migright_right">
+                    <img src="{% static 'about/images/imagaCS-12.svg' %}">
+                </div>
+                <div class="col-md-6 col-xs-12 pt-4 migright nnn">
+                    <img src="{% static 'about/images/imagaCS-13.svg' %}">
+                </div>
+                <div class="col-md-6 col-xs-12 pt-4 text_right ">
+                    <p>
+                    <h5><b class="tt"> Những điểm khác biệt:<br></b> </h5>
+                    1. Cẩn thận chi tiết trong chọn nguyên liệu cho món ăn.<br>
+                    2. Dùng những nguyên liệu đơn giản từ thiên nhiên.
+                    </p>
+                </div>
+             
+              
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block javascript_block %}
+
+{% endblock %}

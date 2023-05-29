@@ -1,0 +1,612 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title_core %}Sàn Thương Mại Điện Tử Bảo Hiểm Bihama{% endblock %}
+
+{% block css_blocl %}
+<link rel="stylesheet" href="{% static 'about/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'about/assets/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'about/assets/owl.theme.default.min.css' %}">
+
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .bihama-ban-hang-cung-bihama {
+        color: #444;
+        background-color: #fff;
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .list-inline>li {
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .list-inline>li>a {
+        color: #444;
+    }
+
+    .list-inline>li>a:hover {
+        color: #40a1a4;
+    }
+
+    .top-bar {
+        background-color: transparent;
+        border-bottom: 1px solid #ebebeb;
+        color: #444;
+        font-size: 11px;
+    }
+
+    .tabhihama {
+        margin: auto;
+        text-align: center;
+    }
+
+    .tabhihama a {
+        color: #444;
+        text-decoration: none;
+    }
+
+    .tabhihama a:hover {
+        color: #40a1a4;
+    }
+
+    .btn:hover {
+        color: #fff;
+    }
+
+    .dangki h3 {
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        color: #40a1a4;
+        margin-bottom: 48px;
+    }
+
+    .dangki .step div {
+        height: 137px;
+    }
+
+    .dangki .step .title-step {
+        font-weight: 500;
+        color: #f04a33;
+        margin: 100px 0 8px;
+    }
+
+    .dangki .step {
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.33;
+    }
+
+    .dangki .step .content-step {
+        font-weight: 300;
+        color: #787878;
+    }
+
+    footer {
+        background-color: #242424;
+        padding: 35px 0;
+        color: #fff;
+    }
+
+    @media (min-width: 768px) {
+        footer .f-logo {
+            padding-right: 20px;
+            border-right: 1px solid #fff;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+
+    .footer-title img {
+        width: 100px;
+        height: 50px;
+    }
+
+    footer .media {
+        margin-top: 15px;
+    }
+
+    footer img {
+        max-width: 100%;
+    }
+
+    @media (min-width: 768px) {
+        footer .info-text {
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+    }
+
+    footer .info-text {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    @media (min-width: 768px) {
+        footer .info-text>li {
+            margin-bottom: 5px;
+        }
+    }
+
+    footer .info-text>li>a {
+        color: #fff;
+    }
+
+    footer .media {
+        margin-top: 15px;
+    }
+</style>
+<style>
+    .btn-yellow {
+        background-color: #f69939;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #ffffff;
+        padding: 10px 40px 10px 40px;
+        border-radius: 30px;
+        margin-top: 32px !important;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .btn-yellow {
+            margin-top: 24px !important;
+            font-size: 14px;
+            margin-bottom: 32px !important;
+        }
+    }
+
+    @media (max-width: 375px) {
+        .btn-yellow {
+            font-size: 12px;
+        }
+    }
+
+    .hoptac {
+        background: linear-gradient(90deg, rgb(64, 161, 164) 10%, rgb(64, 161, 164) 48%, rgb(68, 166, 169) 90%);
+    }
+
+    .hoptac h3 {
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        color: blanchedalmond;
+        padding: 3%;
+    }
+
+    .trungtam {
+        background-image: url(https://salt.tikicdn.com/desktop/cms/ban-hang-cung-tiki/trang-chu/img/background-info.jpg);
+
+    }
+
+    .trungtam h3 {
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 32px;
+        color: #fff;
+        padding-top: 3%;
+    }
+
+    .trungtam p {
+        color: #fff;
+        font-size: 14px;
+    }
+
+    .hoptac .reason {
+        text-align: center;
+        font-size: 24px;
+        line-height: 1.33;
+    }
+
+    .hoptac .reason .title-reason {
+        margin: 20px 0 8px;
+        font-size: 37px;
+        font-weight: 500;
+        line-height: 1.2;
+        text-align: center;
+        color: #fff;
+        text-shadow: white 0.04em 0.04em 0;
+    }
+
+    .investor {
+        padding: 4% 0;
+    }
+
+    .hoptac .reason .title-reason img {
+        max-width: 100%;
+    }
+
+    .hoptac .reason .content-reason {
+        font-weight: 200;
+        color: #fff;
+    }
+
+    .section-brands .title {
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 36px;
+    }
+</style>
+<style>
+    @media (max-width: 768px) {
+        .btn-yellow {
+            margin-top: 24px !important;
+            font-size: 14px;
+            margin-bottom: 32px !important;
+        }
+
+        .dangki .step div {
+            height: 85px;
+        }
+
+        .hoptac .reason .title-reason {
+            font-size: 27px;
+        }
+
+        .hoptac .reason .content-reason {
+            font-size: 18px;
+        }
+
+        .section-brands .title {
+            font-size: 31px;
+        }
+    }
+
+    @media (max-width:425px) {
+        .dangki .step div {
+            height: 160px !important;
+        }
+
+        .dangki .step img {
+            width: 80% !important;
+        }
+
+        .section-brands .title {
+            font-size: 29px;
+        }
+
+        .owl-carousel .item {
+            height: auto !important;
+        }
+    }
+
+    @media (max-width: 375px) {
+        .btn-yellow {
+            font-size: 12px;
+        }
+
+        .dangki .step div {
+            height: 100px !important;
+        }
+
+        .section-brands .title {
+            font-size: 25px;
+        }
+
+        .section-brands .title {
+            margin-bottom: 0;
+        }
+
+        .hoptac h3 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 375px) {
+        .hoptac .reason .title-reason {
+            font-size: 15px;
+        }
+
+        .hoptac .reason .content-reason {
+            font-size: 14px;
+        }
+    }
+</style>
+<style>
+    .form-todo {
+        padding: 18px 45px 0;
+    }
+
+    .form-todo .todo {
+        font-size: 24px;
+        line-height: 1.33;
+        border-radius: 8px;
+        background-color: #fff;
+        -webkit-box-shadow: 5px 10px 30px 0 rgba(1, 127, 255, .12);
+        box-shadow: 5px 10px 30px 0 rgba(1, 127, 255, .12);
+        padding: 32px;
+    }
+
+    .form-todo .todo .title-todo {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    .form-todo .todo .content-todo {
+        font-weight: 300;
+        margin: 25px 0 32px;
+    }
+
+    .form-todo .todo .btn-todo {
+        border-radius: 4px;
+        border: 1px solid #017fff;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1.45;
+        text-align: center;
+        color: #017fff;
+        padding: 8px 20px;
+        text-decoration: none;
+    }
+
+    .form-todo .todo-guide {
+        font-size: 24px;
+        line-height: 1.33;
+        border-radius: 8px;
+        background-color: #017fff;
+        -webkit-box-shadow: 5px 10px 30px 0 rgba(1, 127, 255, .12);
+        box-shadow: 5px 10px 30px 0 rgba(1, 127, 255, .12);
+        color: #fff;
+        padding: 32px;
+    }
+
+    .form-todo .todo-guide .btn-todo {
+        border-radius: 4px;
+        border: 1px solid #017fff;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1.45;
+        text-align: center;
+        color: #242424;
+        padding: 8px 20px;
+        background-color: #fff;
+    }
+
+
+
+    .owl-carousel .item {
+        height: auto;
+    }
+
+    .jumbotron {
+        background-color: #fff !important;
+    }
+</style>
+<!-- style by danh -->
+<style>
+    @media screen and (max-width: 500px) {
+        .dangki h3 {
+            font-size: 30px;
+        }
+    }
+
+    @media (min-width: 426px) and (max-width: 500px) {
+        .dangki .step .title-step {
+            margin: 220px 0 8px;
+        }
+
+        .dangki .step .content-step {
+            margin-bottom: 50px;
+        }
+    }
+
+    @media (min-width: 501px) and (max-width: 575px) {
+        .dangki .step .title-step {
+            margin: 270px 0 8px;
+        }
+
+        .dangki .step .content-step {
+            margin-bottom: 50px;
+        }
+    }
+
+    @media screen and (max-width:375px) {
+        .bannersellbihama {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .lech {
+            padding-right: 0;
+        }
+
+        .dangkingay {
+            padding-right: 0;
+        }
+    }
+    .owl-nav{
+        display: none !important;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bihama-ban-hang-cung-bihama">
+    <div class="bannersellbihama">
+        <img src="{% static 'about/images/chinhsachbihama.svg' %}" width="100%">
+    </div>
+    <div class="dangki pb-4">
+
+        <div class="container text-center pt-4">
+            <h3 class="pt-4">Tin tứcCâu chuyện thịt sạch</h3>
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <div class="step">
+                        <div>
+                            <img src="{% static 'about/images/iconchinhS-01.svg' %}">
+                        </div>
+                        <p class="title-step">Bước 1:</p>
+                        <p class="content-step">Điền form đăng ký</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="step">
+                        <div>
+                            <img src="{% static 'about/images/iconchinhS-02.svg' %}">
+                        </div>
+                        <p class="title-step">Bước 2:</p>
+                        <p class="content-step">Chờ xét duyệt và ký hợp đồng</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="step">
+                        <div>
+                            <img src="{% static 'about/images/iconchinhS-03.svg' %}">
+                        </div>
+                        <p class="title-step">Bước 3:</p>
+                        <p class="content-step">Hoàn tất thông tin</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div style="text-align: center" class="cold-md-12 col-sm-12">
+                    <div class="buttons">
+                        <a href="{% url 'dang-ky-ban-hang-cung-bihama-url' %}" class="btn btn-yellow">ĐĂNG KÝ
+                            NGAY </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="hoptac">
+        <div class="container">
+            <div class="row">
+                <h3>Tại sao nên hợp tác với Bihama</h3>
+                <div class="row lech">
+                    <div class="col-md-4 col-sm-4 col-6">
+                        <div class="reason">
+                            <p class="title-reason">Hơn 10</p>
+                            <p class="content-reason">Công ty Bảo Hiểm uy tín</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-6">
+                        <div class="reason">
+                            <p class="title-reason">Ví điện tử </p>
+                            <p style="" class="content-reason">Trả thưởng nhanh chóng</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-6">
+                        <div class="reason">
+                            <p class="title-reason">Thông báo</p>
+                            <p class="content-reason">Thông minh</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4 col-6">
+                        <div class="reason">
+                            <p class="title-reason">Góc ẩm thực </p>
+                            <p class="content-reason">Đến hết hợp đồng</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-6">
+                        <div class="reason">
+                            <p class="title-reason">Hệ thống Portal</p>
+                            <p class="content-reason">Hiện đại</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-6">
+                        <div class="reason">
+                            <p class="title-reason">Thanh toán tiện dụng</p>
+                            <p class="content-reason">QR CODE</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pt-3 pb-3 dangkingay">
+                    <div style="text-align: center" class="cold-md-12 col-sm-12">
+                        <div class="buttons">
+                            <a href="{% url 'dang-ky-ban-hang-cung-bihama-url' %}" class="btn btn-yellow">Tin tứcNGAY
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section section-brands" style="padding-top: 2%;">
+        <div class="container">
+            <h2 class="title pt-4">Nhiều công ty bảo hiểm uy tín đã tin tưởng và lựa chọn hợp tác cùng bihama</h2>
+            <div class="container">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/logo154x67-14.png' %}"
+                            alt="" />
+                    </div>
+                    <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/logoopes.png' %}" alt="" />
+
+                    </div>
+                    <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/shope.png' %}"
+                            alt="" />
+                    </div>
+                    <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/vbi.png' %}" alt="" />
+                    </div>
+                    <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/logo154x67-14.png' %}"
+                            alt="" />
+                    </div>
+                    <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/shope.png' %}"
+                            alt="" />
+                    </div>
+                    <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/logo154x67-35.png' %}"
+                            alt="" />
+                    </div>
+                </div>
+                <!-- <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/logoopes.png' %}" alt="" />
+                    </div>
+                    <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/logo154x67-21.png' %}" alt="" />
+                    </div>
+                    <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/vbi.png' %}" alt="" />
+                    </div>
+                    <div class="item">
+                        <img width="100%" height="" src="{% static 'core/images/logocty2/logo154x67-21.png' %}" alt="" />
+                    </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript_block %}
+<script src="{% static 'about/owl.carousel.min.js' %}" type="text/javascript"></script>
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 6
+            }
+        }
+    })
+</script>
+{% endblock %}

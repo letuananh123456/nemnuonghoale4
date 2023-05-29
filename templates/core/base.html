@@ -1,0 +1,2865 @@
+{% load i18n %} {% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="referrer" content="origin-when-crossorigin" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#2e74e9" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="copyright" content="bihama.com,bihama.vn">
+    <meta name="dc.language" content="vi-VN">
+    <meta name="revisit-after" content="1 days">
+    <meta http-equiv=”content-language” content=”vi” />
+    <meta name="geo.position" content="21.028511, 105.804817">
+    <meta name="geo.placename" content="Ha Noi">
+    <meta name="geo.region" content="VN-HN">
+    <meta name="google-site-verification" content="M-82NzLGKYCPkGvSLN_-Mxk1l8zQonq8YgqMZ6BVc4w" /> {% block seo_gg %} {% endblock %}
+    <title>{% block title_core %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/bootstrap/dist/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/Font-Awesome/css/all.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/flatpickr.min.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'core/css/home/home_style.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/home/animate.css' %}" />
+    <link href="{% static 'core/css/topnav.css' %}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/menu.css' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/icon2.svg' %}" />
+    <style>
+        @media (min-width: 1151px) and (max-width: 1400px) {
+            .modal-lg,
+            .modal-xl {
+                max-width: 1000px;
+            }
+            .text-modal {
+                text-transform: uppercase;
+                font-size: 16px;
+                line-height: 30px;
+                color: #f27336;
+            }
+            .modal-content {
+                padding: 10px;
+                border-radius: 10px;
+                min-width: 1000px !important;
+            }
+        }
+        
+        @media (min-width: 651px) and (max-width: 1024px) {
+            .modal-lg,
+            .modal-xl {
+                max-width: 700px !important;
+            }
+            .text-modal {
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 30px;
+            }
+            .modal-content {
+                padding: 10px;
+                border-radius: 10px;
+                min-width: 450px !important;
+            }
+        }
+        
+        @media (min-width: 321px) and (max-width: 650px) {
+            .modal-content {
+                padding: 10px;
+                border-radius: 10px;
+                min-width: 200px !important;
+            }
+            .text-modal {
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 30px;
+            }
+        }
+        
+        @media (max-width: 320px) {
+            .modal-content {
+                padding: 10px;
+                border-radius: 10px;
+                min-width: 150px !important;
+            }
+            .text-modal {
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 30px;
+            }
+        }
+        
+        .modal {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+        
+        .modal-backdrop {
+            background-color: rgba(0, 0, 0, 0.01) !important;
+        }
+        
+        .img-modal-robot {
+            width: 30px;
+            margin-right: 20px;
+        }
+        
+        .btn-outline-secondary:hover {
+            color: red !important;
+            background: white !important;
+        }
+        
+        .mySlides {
+            display: none;
+        }
+        /* Slideshow container */
+        
+        .slideshow-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            max-width: 1000px;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Caption text */
+        
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            font-weight: bold;
+            color: #40a1a4;
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #797775;
+            font-size: 12px;
+            top: 0;
+        }
+        /* The dots/bullets/indicators */
+        
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        
+        .active1,
+        .dot:hover {
+            background-color: #717171;
+        }
+        /* Fading animation */
+        
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        /* On smaller screens, decrease text size */
+        
+        @media only screen and (max-width: 300px) {
+            .prev,
+            .next,
+            .text {
+                font-size: 11px;
+            }
+        }
+        
+        .input-text {
+            border: 1px solid rgb(64, 161, 164);
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        
+        input:focus {
+            outline: none;
+        }
+        
+        .text-content {
+            margin-bottom: 4%;
+        }
+        
+        .input-checkbox1,
+        .input-checkbox0 {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .label-bold {
+            font-weight: bold;
+        }
+        
+        .onoff {
+            display: -moz-inline-stack;
+            display: inline-block;
+            vertical-align: middle;
+            *vertical-align: auto;
+            zoom: 1;
+            *display: inline;
+            position: relative;
+            cursor: pointer;
+            width: 55px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        .onoff label {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 130%;
+            height: 100%;
+            cursor: pointer;
+            background: #cd3c3c;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #fff;
+            transition: background 0.3s, text-indent 0.3s;
+            -moz-transition: background 0.3s, text-indent 0.3s;
+            -o-transition: background 0.3s, text-indent 0.3s;
+            transition: background 0.3s, text-indent 0.3s;
+            text-indent: 27px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
+            -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4) inset;
+        }
+        
+        .onoff label:after {
+            content: "Không";
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            font-size: 12px;
+            color: #ffffff;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.35);
+            z-index: 1;
+        }
+        
+        .onoff label:before {
+            content: "";
+            width: 15px;
+            height: 24px;
+            border-radius: 3px;
+            background: #fff;
+            position: absolute;
+            z-index: 2;
+            top: 3px;
+            left: 3px;
+            display: block;
+            transition: left 0.3s;
+            -moz-transition: left 0.3s;
+            -o-transition: left 0.3s;
+            transition: left 0.3s;
+            -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+            -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+        }
+        
+        .onoff input:checked+label {
+            background: #378b2c;
+            text-indent: 8px;
+        }
+        
+        .onoff input:checked+label:after {
+            content: "Có";
+            color: #091707;
+        }
+        
+        .onoff input:checked+label:before {
+            left: 52px;
+        }
+        
+        .input-text-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .toggle3 {
+            background: #eee;
+            height: 30px;
+            width: 30px;
+            float: left;
+            margin-left: 30px;
+            border: 1px solid #999;
+            -webkit-appearance: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        
+        .toggle3:after {
+            content: "✓";
+            color: #999;
+            display: block;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        .toggle3:checked {
+            background: #09f;
+        }
+        
+        .toggle3:checked:after {
+            color: #fff;
+        }
+        
+        .checktoggle {
+            margin-bottom: 10px;
+        }
+    </style>
+    <style>
+        select.classic {
+            background-image: linear-gradient(45deg, transparent 50%, blue 50%), linear-gradient(135deg, blue 50%, transparent 50%), linear-gradient(to right, #1ca0a4, #1ca0a4);
+            background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), 100% 0;
+            background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+            background-repeat: no-repeat;
+            /* styling */
+            background-color: white;
+            border-radius: 4px;
+            display: inline-block;
+            font: inherit;
+            line-height: 1.5em;
+            padding: 0.5em 3.5em 0.5em 1em;
+            /* reset */
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        
+        select.classic:focus {
+            background-image: linear-gradient(45deg, white 50%, transparent 50%), linear-gradient(135deg, transparent 50%, white 50%), linear-gradient(to right, gray, gray);
+            background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, 100% 0;
+            background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+            background-repeat: no-repeat;
+            border-color: grey;
+            outline: 0;
+        }
+    </style>
+    <style>
+        @media only screen and (min-width: 1200px) {
+            /* .row {
+                margin-right: -15px;
+                margin-left: -15px;
+                width: 1200px;
+            } */
+        }
+        
+        .investorLogo {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .desktopHeader .container {
+            max-width: 1200px;
+        }
+        
+        select:focus {
+            outline: none !important;
+        }
+        
+        .btn:focus {
+            box-shadow: none;
+        }
+    </style>
+    <style>
+        .modal-dialog {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #name::placeholder {
+            font-size: 13px;
+        }
+        
+        * {
+            font-family: "Roboto", sans-serif;
+        }
+        
+        .preload-container {
+            width: 100%;
+            height: 100%;
+            background: white;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 99999999999;
+            display: block;
+            padding-right: 17px;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        
+        .policywarp nav .subheader ul.smallheader_nav {
+            max-width: 870px;
+        }
+        
+        .getapp ul li {
+            list-style: none;
+            float: left;
+            padding-right: 2%;
+        }
+        
+        .getapp {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        .getapp h1 {
+            font-size: 25px;
+            width: 70%;
+            padding-bottom: 10px;
+            margin: 0 auto;
+            line-height: 1.25;
+            padding-top: 2px;
+            color: #fff;
+        }
+        
+        .getapp p {
+            width: 70%;
+            margin: 0 auto;
+            line-height: 1.5;
+            padding-bottom: 10px;
+            color: #fff !important;
+        }
+        
+        .getapp img {
+            width: 60%;
+            padding: 1%;
+            background-color: #fff;
+            border-radius: 2px;
+        }
+        
+        .lef_img img {
+            float: right;
+        }
+        
+        .rig_img img {
+            float: left;
+        }
+        
+        .group-companies {
+            background: rgba(236, 242, 252, 1);
+        }
+        
+        .group-companies .f-container {
+            max-width: 1170px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .group-companies .l-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .group-companies .l-row>a {
+            margin: 20px 0;
+            flex: 0 4 20%;
+        }
+        
+        .group-companies h6 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+        
+        .group-companies .hesinhthai {
+            text-align: center;
+            font-size: 30px !important;
+            color: #1ca0a4 !important;
+        }
+        
+        .group-companies>div {
+            padding: 28px 0;
+        }
+        
+        @media screen and (max-width: 767px) {
+            .group-companies .f-container {
+                padding: 0 16px;
+            }
+            .group-companies .l-row>a,
+            .our-investors .l-row>a {
+                flex: 0 2 50%;
+            }
+        }
+        
+        @media screen and (max-width:425px) {
+            .getapp h1 {
+                font-size: 20px !important;
+            }
+            .moreInsurance .allInsurance {
+                padding-left: 32px !important;
+            }
+            .getapp {
+                padding-bottom: 10px !important;
+            }
+            .imgqrcode img {
+                width: 130px !important;
+                height: 130px !important;
+            }
+            .mainText {
+                padding-bottom: 10px !important;
+                padding-top: 20px;
+            }
+        }
+    </style>
+    <style>
+        @media screen and (max-width: 350px) {
+            select.ahihihi {
+                padding: 0.5em 2.7em 0.5em 0.5em;
+                font-size: 14px;
+            }
+        }
+        
+        @media screen and (max-width: 411px) {
+            .myidea {
+                line-height: 30px !important;
+            }
+        }
+    </style>
+    <style>
+        section.hst {
+            padding-top: 4rem;
+            padding-bottom: 5rem;
+            background-color: #f1f4f8;
+        }
+        
+        section.hst .wrap {
+            display: flex;
+            background: white;
+            padding: 10px;
+            border-radius: 0.5rem;
+            box-shadow: 7px 7px 30px -5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            transition: all 1s;
+        }
+        
+        section.hst .ico-wrap {
+            margin: auto;
+        }
+        
+        section.hst .mbr-iconfont {
+            font-size: 4.5rem !important;
+            color: #313131;
+            margin: 1rem;
+            padding-right: 1rem;
+        }
+        
+        section.hst .vcenter {
+            margin: auto;
+        }
+        
+        section.hst .mbr-section-title3 {
+            text-align: left;
+        }
+        
+        section.hst h2 {
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        section.hst .display-5 {
+            font-size: 1.4rem;
+        }
+        
+        section.hst .mbr-bold {
+            font-weight: 700;
+            color: orange;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        section.hst p {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            line-height: 25px;
+            font-size: 18px;
+        }
+        
+        .mainText p {
+            font-size: 18px;
+        }
+        
+        section.hst .display-6 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1re
+        }
+        
+        .hesinhthai {
+            font-size: 30px !important;
+            color: #6d6fdf !important;
+            margin-bottom: 0;
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .hesinhthaicon {
+            width: 20% !important;
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+        }
+        
+        .hesinhthaicon:hover {
+            transform: scale(1.1);
+            transition: all 0.4s;
+        }
+        
+        .hesinhthai-title {
+            text-align: center
+        }
+        
+        .hesinhthai-content img {
+            width: 120px;
+            height: 25px;
+        }
+        
+        .hesinhthai-content a:hover {
+            text-decoration: none;
+        }
+        
+        .hesinhthai-content {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        @media (min-width: 1151px) and (max-width: 1400px) {
+            .modal-lg,
+            .modal-xl {
+                max-width: 1000px;
+            }
+            .text-modal {
+                text-transform: uppercase;
+                font-size: 16px;
+                line-height: 30px;
+                color: #f27336;
+            }
+            .modal-content {
+                padding: 10px;
+                border-radius: 10px;
+                min-width: 1000px !important;
+            }
+        }
+        
+        @media (min-width:769px) and (max-width:992px) {
+            .hesinhthaicon {
+                width: 25% !important;
+            }
+        }
+        
+        @media (min-width: 651px) and (max-width: 1024px) {
+            .modal-lg,
+            .modal-xl {
+                max-width: 700px !important;
+            }
+            .text-modal {
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 30px;
+            }
+            .modal-content {
+                padding: 10px;
+                border-radius: 10px;
+                min-width: 450px !important;
+            }
+        }
+        
+        @media (max-width:768px) {
+            .hesinhthaicon {
+                width: 50% !important;
+                float: left;
+            }
+            .hesinhthai-content {
+                display: block;
+            }
+        }
+        
+        @media (min-width: 321px) and (max-width: 650px) {
+            .modal-content {
+                padding: 10px;
+                border-radius: 10px;
+                min-width: 200px !important;
+            }
+            .text-modal {
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            .hesinhthai {
+                font-size: 25px !important
+            }
+        }
+        
+        @media (max-width: 425px) {
+            .hesinhthai-content {
+                display: contents !important;
+                justify-content: center;
+            }
+            .hesinhthai-content h2 {
+                font-size: 12px !important;
+            }
+        }
+        
+        @media (max-width:441px) {
+            .caclogo {
+                height: 300px !important;
+            }
+            .hesinhthaicon {
+                width: 50% !important;
+            }
+        }
+        
+        @media (max-width:425px) {
+            .caclogo {
+                height: 300px !important;
+            }
+            section.hst {
+                padding-top: 5px !important
+            }
+        }
+        
+        @media (max-width: 320px) {
+            .modal-content {
+                padding: 10px;
+                border-radius: 10px;
+                min-width: 150px !important;
+            }
+            .text-modal {
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 30px;
+            }
+            .hesinhthaicon {
+                width: 100% !important;
+            }
+        }
+    </style>
+    {% block css_blocl %} {% endblock %}
+</head>
+
+<body class="preloading">
+    {% include "core/loading.html" %}
+
+    <div class="policywarp">
+        <div class="overlaybox"><i class="fab fa-500px"></i></div>
+        <nav itemscope="" itemtype="http://schema.org/SiteNavigationElement" class="">
+            <div class="container mob">
+                <div class="row justify-content-end">
+                    <div class="col-3">
+                        <section>
+                            <div class="policybazaarlogo">
+                                <a style="height: 55px;" href="/" class="pbLogo" title="bihama logo"></a>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-9">
+                        <div class="subheader">
+                            <ul class="smallheader_nav">
+                                <li style=" display: flex;justify-content: center; align-items: center;">
+                                    <img src="{% static 'core/images/appicon.svg' %}" alt="" style="position: absolute; width: 7%; left: 15px;">
+                                    <a href="{% url 'tai-ung-dung-bihama' %}" class="download">Mua trên grabfood</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'chinh-sach-url' %}" class="download">Câu chuyện thịt sạch</a>
+                                </li>
+
+                                <li>
+                                    <a href="{% url 'about-url' %}">Về Chúng Tôi </a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'claim-support-url' %}">Góc ẩm thực </a>
+                                </li>
+                                <!-- <li>
+                                <a href="">renewal</a>
+                            </li> -->
+                                {% if user.is_authenticated %}
+                                <li>
+                                    <a> <i class="fas fa-user mr-2"></i><strong>{{ user.username }}</strong></a>
+                                    <ul class="dropdown-menu min">
+                                        <li>
+                                            <a itemprop="url" href="{% url 'user-setting' %}">
+                                                <div class="icon"></div>
+                                                Tài khoản của bạn
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a itemprop="url" href="{% url 'logout_url' %}">
+                                                <div class="icon"></div>
+                                                Đăng xuất
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                {% else %}
+                                <li>
+                                    <a href="{% url 'register_url' %}">Tin Tức</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'contact-url' %}">Liên Hệ</a>
+                                </li>
+                                {% endif %}
+
+                                <li>
+                                    <a href="{% url 'deal-km' %}" style="padding-right: 0px;"><img width="35px" height="25px" src="{% static 'core/images/hot.gif' %}" alt="khuyến mại bihama" /> <strong style="color: red;">Khuyến mại
+                                        </strong></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="mobileHeader">
+                <div class="humberIcon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <div class="policybazaarlogo">
+                    <a href="/" class="pbLogo" title="bihama logo"></a>
+                </div>
+                <a href="" class="myaccount" rel="nofollow">Robot</a>
+                <div class="policynav">
+                    <!--html code-->
+
+                    <ul class="nav" id="metismenu">
+                        <a href="#" class="closenav" style="font-size: 0px;">navclose</a>
+                        <li class="drawer">
+                            <div class="policybazaarlogo">
+                                <a href="/" style="font-size: 0px;">logo</a>
+                            </div>
+                        </li>
+                        <li class="">
+                            <a class="list_item">Súp</a>
+
+                            <ul class="dropdown_mobile1" id="dm1">
+                                <li>
+                                    <a itemprop="url" href="{% url 'termlife:life-product' %}">
+                                        <div class="icon"></div>
+                                        Miso
+                                    </a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a class="list_item">Salad</a>
+
+                            <ul class="dropdown-menu min">
+                                <li>
+                                    <a itemprop="url" href="{% url 'personalhealth' %}">
+                                        <div class="icon"></div>
+                                        Salad rong biển
+                                    </a>
+                                </li>
+                                <li class="">
+                                    <a itemprop="url" href="{% url 'coming_soon_url' %}"><span
+                                            itemprop="name">Salad nộm sứa</span></a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'coming_soon_url'%}"><span
+                                            itemprop="name">Salad cá ngừ</span></a>
+                                </li>
+                              
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="list_item">Món nóng </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsoto:thong-tin-o-to' %}"><span
+                                            itemprop="name">Canh sườn bò + cơm trắng</span></a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="list_item">Cơm cuộn</a>
+                            <ul class="dropdown-menu min">
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Bơ</a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Ruốc cá ngừ</a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Thịt ba chỉ chiên giòn</a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Nem nướng thịt lợn</a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Nem nướng thịt bò</a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Thập cẩm</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li></li>
+
+                        <li>
+                            <a class="list_item">Gỏi cuốn</a>
+                            <ul class="dropdown-menu min">
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}">Nem nướng thịt lợn</a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'coming_soon_url' %}"><span
+                                            itemprop="name">Nem nướng thịt bò</span></a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'coming_soon_url' %}" style="border: 0 !important;"><span itemprop="name">Tôm thịt</span></a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'coming_soon_url' %}" style="border: 0 !important;"><span itemprop="name">Thịt ba chỉ hấp</span></a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'coming_soon_url' %}" style="border: 0 !important;"><span itemprop="name">Rau củ</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="list_item">Video</a>
+                            <ul class="dropdown-menu min">
+                                <li>
+                                    <a itemprop="url" href="https://www.youtube.com/@NemNuongHoaLe">Hướng dẫn bảo quản nem</a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="https://www.youtube.com/@NemNuongHoaLe"><span
+                                            itemprop="name">Hướng dẫn chế biến nem</span></a>
+                                </li>
+
+                               
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a class="list_item">Kiến Thức</a>
+                            <ul class="dropdown-menu min">
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}"><span
+                                            itemprop="name">Thịt Lợn Sạch</span></a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}"><span
+                                            itemprop="name">Lên Men Tự Nhiên</span></a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}"><span
+                                            itemprop="name">Hương Vị Vùng Miền</span></a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li>
+                            <a data-toggle="modal" data-target="#modal_robot" href="" class="single"><span
+                                    itemprop="name">Thông Báo </span></a>
+
+                        </li>
+                        {% else %}
+                        <li>
+                            <a data-toggle="modal" data-target="#modal_norobot" href="" class="single"><span
+                                    itemprop="name">Thông Báo </span></a>
+
+                        </li>
+                        {% endif %}
+
+                        <li>
+                            <a href="{% url 'claim-support-url' %}" class="single" rel="nofollow"><span
+                                    itemprop="name">Góc ẩm thực </span></a>
+                        </li>
+                        <!-- <li><a href="" class="single"><span
+                                        itemprop="name">Liên hệ</span></a></li> -->
+                        <li>
+                            <!-- <a href="btel:096" class="single tollFreeNo">
+                                                <?xml version="1.0" encoding="UTF-8"?>
+                                                <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+                                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                        <g id="Group-15">
+                                                            <circle id="Oval-2" fill="#F3F7FB" cx="12" cy="12" r="12"></circle>
+                                                            <g id="Phone" opacity="0.699999988"
+                                                                transform="translate(12.000000, 12.000000) rotate(9.000000) translate(-12.000000, -12.000000) translate(6.000000, 6.000000)"
+                                                                fill="#000000" fill-rule="nonzero">
+                                                                <path
+                                                                    d="M10.1017592,7.15322581 C9.83983981,6.88172043 9.52391638,6.73655914 9.18909155,6.73655914 C8.85696692,6.73655914 8.53834329,6.87903226 8.26562307,7.15053763 L7.41235979,7.99731183 C7.34215458,7.95967742 7.27194938,7.92473118 7.20444437,7.88978495 C7.10723716,7.84139785 7.01543035,7.79569892 6.93712455,7.74731183 C6.13786527,7.24193548 5.41151141,6.58333333 4.71485975,5.7311828 C4.37733472,5.30645161 4.1505179,4.94892473 3.98580568,4.58602151 C4.2072221,4.3844086 4.41243732,4.17473118 4.61225214,3.97311828 C4.68785774,3.89784946 4.76346335,3.81989247 4.83906896,3.74462366 C5.40611101,3.18010753 5.40611101,2.44892473 4.83906896,1.8844086 L4.10191429,1.15053763 C4.01820808,1.0672043 3.93180168,0.981182796 3.85079567,0.89516129 C3.68878365,0.728494624 3.51867104,0.556451613 3.34315802,0.39516129 C3.0812386,0.137096774 2.76801537,0 2.43859094,0 C2.10916651,0 1.79054288,0.137096774 1.52052286,0.39516129 C1.51782266,0.397849462 1.51782266,0.397849462 1.51512246,0.400537634 L0.597054377,1.32258065 C0.251428746,1.66666667 0.0543141285,2.08602151 0.0111109246,2.57258065 C-0.0536938812,3.35752688 0.17852334,4.08870968 0.356736556,4.5672043 C0.794168995,5.74193548 1.44761745,6.83064516 2.42238974,7.99731183 C3.60507745,9.40322581 5.02808297,10.5134409 6.65360352,11.2956989 C7.27464958,11.5887097 8.10361105,11.9354839 9.02977973,11.9946237 C9.08648394,11.9973118 9.14588834,12 9.19989235,12 C9.8236386,12 10.3474775,11.7768817 10.7579079,11.3333333 C10.7606081,11.327957 10.7660085,11.3252688 10.7687087,11.3198925 C10.9091191,11.1505376 11.0711311,10.9973118 11.2412437,10.8333333 C11.3573523,10.7231183 11.4761612,10.6075269 11.5922698,10.4865591 C11.8595896,10.2096774 12,9.88709677 12,9.55645161 C12,9.22311828 11.8568894,8.90322581 11.5841692,8.6344086 L10.1017592,7.15322581 Z M11.0684309,9.98387097 C11.0657307,9.98387097 11.0657307,9.98655914 11.0684309,9.98387097 C10.9631231,10.0967742 10.8551151,10.1989247 10.7390065,10.311828 C10.5634935,10.4784946 10.3852803,10.6532258 10.2178678,10.8494624 C9.94514762,11.1397849 9.62382379,11.2768817 9.20259255,11.2768817 C9.16208955,11.2768817 9.11888634,11.2768817 9.07838334,11.2741935 C8.27642387,11.2231183 7.5311686,10.9112903 6.97222715,10.6451613 C5.44391381,9.90860215 4.10191429,8.86290323 2.98673159,7.53763441 C2.06596331,6.4327957 1.45031765,5.41129032 1.04258742,4.31451613 C0.791468795,3.64516129 0.699661986,3.12365591 0.74016499,2.63172043 C0.767166992,2.3172043 0.888676003,2.05645161 1.11279262,1.83333333 L2.03356091,0.916666667 C2.16587072,0.793010753 2.30628113,0.725806452 2.44399134,0.725806452 C2.61410396,0.725806452 2.75181417,0.827956989 2.83822058,0.913978495 C2.84092078,0.916666667 2.84362098,0.919354839 2.84632118,0.922043011 C3.01103339,1.07526882 3.16764501,1.23387097 3.33235722,1.40322581 C3.41606343,1.48924731 3.50246984,1.57526882 3.58887625,1.66397849 L4.32603091,2.39784946 C4.61225214,2.6827957 4.61225214,2.94623656 4.32603091,3.2311828 C4.2477251,3.30913978 4.1721195,3.38709677 4.09381369,3.46236559 C3.86699687,3.69354839 3.65098085,3.90860215 3.41606343,4.11827957 C3.41066303,4.12365591 3.40526263,4.12634409 3.40256243,4.13172043 C3.17034521,4.36290323 3.21354841,4.58870968 3.26215202,4.74193548 C3.26485222,4.75 3.26755242,4.75806452 3.27025262,4.76612903 C3.46196683,5.22849462 3.73198686,5.66397849 4.1424173,6.1827957 L4.1451175,6.18548387 C4.89037276,7.09946237 5.67613103,7.81182796 6.54289531,8.35752688 C6.65360352,8.42741935 6.76701193,8.48387097 6.87501994,8.53763441 C6.97222715,8.58602151 7.06403396,8.63172043 7.14233976,8.68010753 C7.15314057,8.68548387 7.16394137,8.69354839 7.17474217,8.69892473 C7.26654898,8.74462366 7.35295538,8.76612903 7.44206199,8.76612903 C7.66617861,8.76612903 7.80658902,8.62634409 7.85249243,8.58064516 L8.77596091,7.66129032 C8.86776772,7.56989247 9.01357853,7.45967742 9.18369115,7.45967742 C9.35110356,7.45967742 9.48881377,7.56451613 9.57251998,7.65591398 C9.57522018,7.65860215 9.57522018,7.65860215 9.57792038,7.66129032 L11.0657307,9.14247312 C11.3438513,9.41666667 11.3438513,9.69892473 11.0684309,9.98387097 Z"
+                                                                    id="Shape"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                0968596725
+                                            </a> -->
+                            <!-- <a href="{% url 'chinh-sach-url' %}" class="single"><span itemprop="name"></span></a> -->
+                            <a href="{% url 'chinh-sach-url' %}" class="single" rel="nofollow"><span itemprop="name"<>Câu Chuyện Thịt Sạch</span></a>
+                        </li>
+                        <li>
+                            <a href="{% url 'about-url' %}" class="single"><span itemprop="name">Về chúng tôi</span></a>
+                        </li>
+                        <li>
+                            <a href="{% url 'tai-ung-dung-bihama' %}" class="single"><span itemprop="name">Mua Trên Grapfood</span></a>
+                        </li>
+
+                        {% if user.is_authenticated %}
+                        <li>
+                            <a class="list_item"><i class="fas fa-user mr-2"></i><strong>{{ user.username }}</strong></a>
+                            <ul class="dropdown_mobile1" id="dm4">
+                                <li>
+                                    <a itemprop="url" href="{% url 'user-setting-mb-url' %}"><span
+                                                    itemprop="name">Tài khoản của tôi</span></a>
+                                </li>
+                                <li>
+                                    <a itemprop="url" href="{% url 'logout_url' %}"><span
+                                                    itemprop="name">Đăng xuất</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        {% else %}
+                        <li style="display: flex;">
+                            <a href="{% url 'register_url' %}" class="single">
+                                <button type="button" class="btn hihi" style="font-size: 12px; background-color: #f27336; font-weight: 600; color: #fff;">Tin Tức</button>
+                            </a>
+                            <a href=" {% url 'contact-url' %}" class="single">
+                                <button type="button" class="btn hihi" style="font-size: 12px; background-color: #f27336; font-weight: 600; color: #fff;">Liên Hệ</button>
+                            </a>
+                        </li>
+                        {% endif %}
+
+
+                        <li>
+                            <a href="{% url 'deal-km' %}" style="padding-right: 0px;"><img width="35px" height="25px" src="{% static 'core/images/hot.gif' %}" alt="khuyến mại bihama" /> <strong style="color: red;">Khuyến mại </strong></a>
+                        </li>
+                    </ul>
+
+                    <!--html code-->
+                </div>
+            </section>
+            <!--html desktop code-->
+
+            <section class="desktopHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="policynav">
+                                <ul class="nav">
+                                    <li>
+                                        <a itemprop="url" href="">
+                                            <div class="icon"></div>
+                                            Súp
+                                        </a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'termlife:life-product' %}">
+                                                    <div class="icon"></div>
+                                                    Miso
+                                                </a>
+                                            </li>
+                                            
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a itemprop="url" href="" href="">
+                                            <div class="icon"></div>
+                                            Salad
+                                        </a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'personalhealth' %}">
+                                                    <div class="icon"></div>
+                                                    Salad rong biển
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}"><span
+                                                        itemprop="name">Salad nộm sứa</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url'%}"><span
+                                                        itemprop="name">Salad cá ngừ</span></a>
+                                            </li>
+                                          
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a itemprop="url" href="">
+                                            <div class="icon"></div>
+                                            Món nóng
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsoto:thong-tin-o-to' %}"><span
+                                                        itemprop="name">Canh sườn bò + cơm trắng</span></a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a itemprop="url" href="">Cơm cuộn</a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Bơ</a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Ruốc cá ngừ</a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Thịt ba chỉ chiên giòn</a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Nem nướng thịt lợn</a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Nem nướng thịt bò</a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">Thập cẩm</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a itemprop="url" href="">Gỏi cuốn</a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}">Nem nướng thịt lợn</a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}"><span
+                                                        itemprop="name">Nem nướng thịt bò</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}" style="border: 0 !important;"><span itemprop="name">Tôm thịt</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}" style="border: 0 !important;"><span itemprop="name">Thịt ba chỉ hấp</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}" style="border: 0 !important;"><span itemprop="name">Rau củ</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a itemprop="url" href=""> Video </a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="https://www.youtube.com/@NemNuongHoaLe">Hướng dẫn bảo quản nem</a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="https://www.youtube.com/@NemNuongHoaLe"><span
+                                                        itemprop="name">Hướng dẫn chế biến nem</span></a>
+                                            </li>
+
+                                           
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a itemprop="url" href="">
+                                            <div class="icon"></div>
+                                            Kiến Thức
+                                        </a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}"><span
+                                                        itemprop="name">Thịt Lợn Sạch</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}"><span
+                                                        itemprop="name">Lên Men Tự Nhiên</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}"><span
+                                                        itemprop="name">Hương Vị Vùng Miền</span></a>
+                                            </li>
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li></li>
+                                    {% if user.is_authenticated %}
+                                    <li>
+                                        <a data-toggle="modal" data-target="#modal_robot" href="" class="my_account" rel="nofollow">Thông Báo </a>
+                                    </li>
+                                    {% else %}
+                                    <li>
+                                        <a data-toggle="modal" data-target="#modal_norobot" href="" class="my_account" rel="nofollow">Thông Báo </a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="desktopHeader_iconView">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="policynav">
+                                <ul class="nav">
+                                    <li>
+                                        <a itemprop="url" href="">
+                                            <div class="icon"></div>
+                                            Súp
+                                        </a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'termlife:life-product' %}">
+                                                    <span itemprop="name">Súp Miso</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a itemprop="url" href="" href="">
+                                            <div class="icon"></div>
+                                            Salad
+                                        </a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'personalhealth' %}">
+                                                    <span itemprop="name">Salad rong biển</span>
+                                                </a>
+                                            </li>
+                                            <li class="">
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}"><span
+                                                        itemprop="name">Salad nộm sứa</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}"><span
+                                                        itemprop="name">Salad cá ngừ</span></a>
+                                            </li>
+                                         
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a itemprop="url" href="">
+                                            <div class="icon"></div>
+                                            Món nóng
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsoto:thong-tin-o-to' %}"><span
+                                                        itemprop="name">Canh sườn bò + cơm trắng</span></a>
+                                            </li>
+                                           
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a itemprop="url" href="">Cơm cuộn</a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">
+                                                    <span itemprop="name"> Bơ</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">
+                                                    <span itemprop="name"> Ruốc cá ngừ</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">
+                                                    <span itemprop="name"> Thịt ba chỉ chiên giòn</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">
+                                                    <span itemprop="name"> Nem nướng thịt lợn</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">
+                                                    <span itemprop="name"> Nem nướng thịt bò</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'tndsxemay:thong-tin-xe-may' %}" style="border: 0 !important;">
+                                                    <span itemprop="name"> Thập cẩm</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a itemprop="url" href="">Gỏi cuốn</a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}">
+                                                    <span itemprop="name"> Nem nướng thịt lợn</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}"><span
+                                                        itemprop="name">Nem nướng thịt bò</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}" style="border: 0 !important;"><span itemprop="name">Tôm thịt</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}" style="border: 0 !important;"><span itemprop="name">Thịt ba chỉ hấp</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'coming_soon_url' %}" style="border: 0 !important;"><span itemprop="name">Rau củ</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a itemprop="url" href="">Video</a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="https://www.youtube.com/@NemNuongHoaLe">Hướng dẫn bảo quản nem</a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="https://www.youtube.com/@NemNuongHoaLe"><span
+                                                        itemprop="name">Hướng dẫn chế biến nem</span></a>
+                                            </li>
+
+                                           
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a itemprop="url" href="javascript:void(0);">Kiến Thức</a>
+                                        <ul class="dropdown-menu min">
+                                            <li>
+                                                <a itemprop="url" href="{% url 'kien_thuc_url' 'loai1' 'bihama-bao-hiem-khong-chi-bao-ve-ma-con-co-the-gia-tang-tai-san' %}"><span
+                                                        itemprop="name">Thịt Lợn Sạch</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'kien_thuc_url' 'loai2' 'bihama-cach-de-dang-ky-va-dang-nhap-tai-khoan-tren-bihamavn' %}"><span
+                                                        itemprop="name">Lên men tự nhiên</span></a>
+                                            </li>
+                                            <li>
+                                                <a itemprop="url" href="{% url 'kien_thuc_url' 'loai3' 'bihama-cach-de-tro-thanh-cong-tac-vien-cua-bihamavn' %}"><span
+                                                        itemprop="name">Hương vị vùng miền</span></a>
+                                            </li>
+                                        
+                                        </ul>
+                                    </li>
+                                    {% if user.is_authenticated %}
+                                    <li>
+                                        <a data-toggle="modal" data-target="#modal_robot" href="" class="my_account" rel="nofollow">Thông Báo </a>
+                                    </li>
+                                    {% else %}
+                                    <li>
+                                        <a data-toggle="modal" data-target="#modal_norobot" href="" class="my_account" rel="nofollow">Thông Báo </a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--html End desktop code-->
+        </nav>
+    </div>
+    <div class="modal fade" id="modal_robot">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header text-center">
+                    <img class="img-modal-robot" src="{% static 'core/images/icon/robot19.svg' %}" alt="Thông Báo , Robot của bihama, Robot bihama" />
+                    <h4 class="text-modal">
+                        <b>Chỉ một vài câu hỏi tôi sẽ chọn cho bạn một vài sản phẩm phù hợp nhé !!!</b>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="slideshow-container">
+                        <div class="mySlides">
+                            <div class="numbertext">1 / 4</div>
+                            <div class="text-content row pb-2">
+                                <div class="col-md-4 text">
+                                    <label for="">Họ và tên: </label>
+                                </div>
+                                <div class="col-md-8 input-text-center" style="border: 1px solid rgb(64, 161, 164); border-radius: 5px;">
+                                    <div class="input-group mb-1">
+                                        <div class="input-group-prepend">
+                                            <select class="btn dropdown-toggle" id="basicSex" style="font-size: 14px; border: 0px !important;">
+                                                Sex
+                                                <option value="">Chọn...</option>
+                                                <option value="1" class="">
+                                                    Ông
+                                                </option>
+                                                <option value="2" class="">
+                                                    Bà
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <input type="text" id="name" class="form-control" aria-label="Text input with dropdown button" style="border: 0px !important; height: 30px; color: #7e8185;" placeholder="Vui lòng nhập họ và tên ..." />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-content row">
+                                <div class="col-md-4 text">
+                                    <label for="">Tuổi của bạn: </label>
+                                </div>
+                                <div class="col-md-8" style="padding-left: 0 !important; padding-right: 0 !important;">
+                                    <select class="date_input classic" name="" id="basicDate">
+                                        <option value="" class="">Chọn </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p id="thongbao" style="color: red !important;" class="mx-auto"></p>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">2 / 4</div>
+                            <div class="text-content row">
+                                <div class="col-md-12">
+                                    <label class="label-bold" for="">1. Bạn có tham gia bảo hiểm xã hội không ? </label>
+                                </div>
+                                <div class="col-md-12">
+                                    <select class="classic calas" name="" id="basicXahoi">
+                                        <option value="">Chọn</option>
+                                        <option value="1">Có</option>
+                                        <option value="2">Không</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-content row">
+                                <div class="col-md-12">
+                                    <label class="label-bold" for="">2. Bạn có tham gia bảo hiểm y tế không ? </label>
+                                </div>
+                                <div class="col-md-12">
+                                    <select class="classic calas" name="" id="basicYte">
+                                        <option value="">Chọn</option>
+                                        <option value="1">Có</option>
+                                        <option value="2">Không</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p class="mx-auto thongbao5" style="color: red !important;"></p>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">3 / 4</div>
+                            <div class="text-content row">
+                                <div class="col-md-12">
+                                    <label class="label-bold" for="">1. Thu nhập hàng năm của bạn trong khoảng nào ?
+                                    </label>
+                                </div>
+                                <div class="col-md-12">
+                                    <select class="classic calas1 ahihihi" name="" id="basicSalary">
+                                        <option value="">Chọn</option>
+                                        <option value="1">Dưới 50 triệu</option>
+                                        <option value="2">Từ 50 đến 100 triệu</option>
+                                        <option value="3">Từ 100 đến 200 triệu</option>
+                                        <option value="4">Từ 200 đến 300 triệu </option>
+                                        <option value="5">Từ 300 đến 400 triệu</option>
+                                        <option value="6">Từ 400 đến 500 triệu</option>
+                                        <option value="7">Từ 500 triệu đến 1 tỷ </option>
+                                        <option value="8">Từ 1 tỷ đến 2 tỷ</option>
+                                        <option value="9">Từ 2 tỷ đến 5 tỷ </option>
+                                        <option value="10">Trên 5 tỷ </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-content row">
+                                <div class="col-md-12">
+                                    <label class="label-bold" for="">2. Bạn tham gia bảo hiểm với mục đích là gì ?
+                                    </label>
+                                </div>
+                                <div class="col-md-12">
+                                    <select class="classic calas1 ahihihi" name="" id="basicPurpose">
+                                        <option value="">Chọn</option>
+                                        <option value="1">Bảo vệ và tiết kiệm cho con </option>
+                                        <option value="2">Bảo vệ và tiết kiệm dưỡng già</option>
+                                        <option value="3">Bảo vệ và đầu tư </option>
+                                        <option value="4">Bảo vệ và tích luỹ </option>
+                                        <option value="5">Bảo vệ tài sản khi bạn mất</option>
+                                        <option value="6">Bảo vệ chống lại bệnh hiểm nghèo</option>
+                                        <option value="7">Bảo vệ chống lại bệnh ung thư </option>
+                                        <option value="8">Bảo vệ sức khoẻ hàng năm </option>
+                                        <option value="9">Bảo vệ tai nạn cá nhân</option>
+                                        <option value="10">Bảo vệ trợ cấp nằm viện</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <p class="mx-auto thongbao2" style="color: red !important;"></p>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="numbertext">4 / 4</div>
+                            <div class="text-content row">
+                                <div class="col-md-12">
+                                    <label class="label-bold" for="">1. Tình trạng hôn nhân , gia đình của bạn ?
+                                    </label>
+                                </div>
+                                <div class="col-md-12">
+                                    <select class="classic checkm4 ahihihi" name="" id="baseRelation">
+                                        <option value="">Chọn</option>
+                                        <option value="1">Độc thân</option>
+                                        <option value="2">Đính hôn</option>
+                                        <option value="3">Có gia đình chưa có con</option>
+                                        <option value="4">Có gia đình có 1 con</option>
+                                        <option value="5">Có gia đình có 2 con</option>
+                                        <option value="6">Có gia đình có nhiều hơn 2 con</option>
+                                        <option value="7">Ly hôn</option>
+                                        <option value="8">Ly hôn nuôi 1 con</option>
+                                        <option value="9">Ly hôn nuôi 2 con</option>
+                                        <option value="10">Ly hôn nuôi nhiều hơn 2 con</option>
+                                        <option value="11">Goá vợ/chồng</option>
+                                        <option value="12">Goá vợ/chồng nuôi 1 con</option>
+                                        <option value="13">Goá vợ/chồng nuôi 2 con</option>
+                                        <option value="14">Goá vợ/chồng nuôi nhiều hơn 2 con</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-content row">
+                                <div class="col-md-12">
+                                    <label class="label-bold" for="">2. Bạn đang là ? </label>
+                                </div>
+                                <div class="col-md-12 checktoggle">
+                                    <select class="classic calas ahihihi" name="" id="baseIsBoss">
+                                        <option value="">Chọn</option>
+                                        <option value="1">Nhân viên</option>
+                                        <option value="2">Ông chủ</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p class="mx-auto thongbao4" style="color: red !important;"></p>
+                        </div>
+
+                        <div class="mySlides col-md-12">
+                            <!-- On rows -->
+                            <h2 class="text-center myidea" style="font-size: 16px; line-height: 50px; text-transform: uppercase; font-weight: bold;">
+                                Theo ý kiến của chúng tôi ông bà nên
+                            </h2>
+                            <table class="table">
+                                <tr>
+                                    <td><label for="" style="font-size: 12px; line-height: 25px; text-transform: uppercase; font-weight: bold;">Bạn
+                                            Nên Tham Gia Bảo hiểm với phí đóng: </label></td>
+                                    <td><span class="pr-3">Từ</span><b class="pr-3 text-danger homeRobotMoney1"></b><span class="pr-3">đến</span><b class="text-danger homeRobotMoney2"></b>&nbsp; triệu</td>
+                                </tr>
+                                <tr class="table-success">
+                                    <td><label for="" style="font-size: 12px; line-height: 25px; text-transform: uppercase; font-weight: bold;">Thời
+                                            Hạn </label></td>
+                                    <td>
+                                        <span class="pr-3">Từ</span><b class="pr-3 text-danger homeRobotYearBH1"></b><span class="text-danger" style="font-weight: bold;"> năm</span><span class="pr-3">&nbsp; đến</span>
+                                        <b class="text-danger homeRobotYearBH2"></b>&nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="" style="font-size: 12px; line-height: 25px; text-transform: uppercase; font-weight: bold;">Loại
+                                            Sản Phẩm Bạn Nên Tham Gia Là </label></td>
+                                    <td>
+                                        <span class="pr-3">Sản Phẩm </span><a id="link-products" href=""><b
+                                                class="pr-3 text-danger homeRobotProductBH1"></b></a><span class="pr-3">Kèm Theo</span>
+                                        <a id="BHkemtheo"><b class="text-danger homeRobotProductBH2"></b></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <div style="text-align: center;"></div>
+                    <button type="button" class="btn btn-danger btn-none" id="btn1" onclick="plusSlides(-1)">Trở
+                        lại</button>
+                    <button type="button" class="btn btn-danger btn-none" id="btn2" onclick="plusSlides(1)">Tiếp
+                        tục</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal_norobot">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header text-center">
+                    <img class="img-modal-robot" src="{% static 'core/images/icon/robot19.svg' %}" alt="Thông Báo , Robot của bihama, Robot bihama" />
+                    <h4 class="text-modal">
+                        <b>Nem Hoa Lệ Xin Kính Chào Quý Khách Hàng !!!</b>
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <h5>Bạn vui lòng gọi điện hoặc để lại số điện thoại cho chúng tôi để nhận được phục vụ tốt nhất nhé</h5>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger " data-dismiss="modal" id="btn_norobot">Đóng
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block content %} {% endblock %}
+
+    <section class="investor">
+        <div class="ptable">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="investor_title">
+                            <div class="mainText">
+                                <h1>ĐỐI TÁC CỦA CHÚNG TÔI</h1>
+                                <p>Các đối tác online</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center" style="margin: 0;">
+                        <div class="col-12 col-xl-10 col-lg-10 col-md-10 col-sm-12 investorLogo">
+                            <!-- <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-01.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-02.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-03.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-04.png' %}" alt="" /></div> -->
+
+                            <!-- <div class="logo" title="Cathay"><img width="90%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-05.png' %}" alt="logo Cathay" />
+                            </div> -->
+                            <!-- 
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-06.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-07.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-08.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-09.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-10.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-11.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-12.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-13.png' %}" alt="" /></div> -->
+
+                            <div class="logo" title="VietinBank"><img width="90%" height="100%" src="{% static 'core/images/logocty2/vbi.png' %}" alt="Logo Vietinbank" /></div>
+
+                            <!-- <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-15.png' %}" alt="" /></div> -->
+                            <!-- 
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-16.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-17.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-18.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-19.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-20.png' %}" alt="" /></div> -->
+
+                            <div class="logo" title="PVI"><img width="90%" height="100%" src="{% static 'core/images/logocty2/logo154x67-21.png' %}" alt="Logo PVI" /></div>
+
+                            <!-- <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-22.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-23.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-24.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{%  static 'core/images/logocty2/logo154x67-25.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-26.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-27.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-28.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-29.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-30.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-31.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-32.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-33.png' %}" alt="" /></div>
+
+                            <div class="logo"><img width="100%" height="100%"
+                                    src="{% static 'core/images/logocty2/logo154x67-34.png' %}" alt="" /></div>-->
+
+                            <div class="logo"><img width="100%" height="100%" src="{% static 'core/images/logocty2/logo154x67-35.png' %}" alt="" /></div>
+
+                            <div class="logo" title="Fubon Life"><img width="90%" height="100%" src="{% static 'core/images/logocty2/logo154x67-14.png' %}" alt="Logo của công ty bảo hiểm Fubon" /></div>
+
+                            <div class="logo" title="Opes"><img width="90%" height="100%" src="{% static 'core/images/logocty2/logoopes.png' %}" alt="Logo Opes" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hst">
+        <div class="container">
+            <div class="row mbr-justify-content-center">
+                <div class="hesinhthai-title">
+                    <div class="mainText">
+                        <h1>GỌI ĐIỆN, NHẮN TIN ĐẶT HÀNG, ĐẶT CHỖ TRƯỚC CHO CHÚNG TÔI</h1>
+                        <p>Do nguồn thực phẩm sạch hạn chế quý khách hàng vui lòng đặt hàng và đặt chỗ trước! </p>
+                    </div>
+                </div>
+                <div class="hesinhthai-content">
+                    <div class="col-lg-3 col-sm-6 col-6 hesinhthaicon mbr-col-md-10">
+                        <div class="wrap">
+                            <div class="text-wrap vcenter">
+                                <img src="/static/core/images/lgTC-02.svg">
+                                <a href="">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Súp
+                                    </h2>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-6 hesinhthaicon mbr-col-md-10">
+                        <div class="wrap">
+                            <div class="text-wrap vcenter">
+                                <img src="/static/core/images/lgBH.svg">
+                                <a href="">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Salad
+                                    </h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-6 hesinhthaicon mbr-col-md-10">
+                        <div class="wrap">
+                            <div class="text-wrap vcenter">
+                                <img src="/static/core/images/lgBS-02.svg">
+                                <a href="">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Cơm cuộn
+                                    </h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 col-6 hesinhthaicon mbr-col-md-10">
+                        <div class="wrap">
+                            <div class="text-wrap vcenter">
+                                <img src="/static/core/images/logoportal.svg">
+                                <a href="">
+                                    <h2 class="mbr-fonts-style mbr-bold mbr-section-title3 display-5">Gỏi cuốn
+                                    </h2>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="moreInsurance">
+        <div class="ptable">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="h2">Các Sản Phẩm Chính</div>
+                        <ul class="allInsurance">
+                            <span class="icons">
+                                <!--?xml version="1.0" encoding="UTF-8"?-->
+                                <svg class="logoo" width="29px" height="34px" viewBox="0 0 29 34" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Home_Screen_(Gradient_1)"
+                                            transform="translate(-153.000000, -2203.000000)" fill-rule="nonzero">
+                                            <g id="security-on" transform="translate(154.000000, 2204.000000)">
+                                                <path
+                                                    d="M1.5,20 C1.70712191,20.4898445 2.73810873,23.1159148 2.99394382,23.5899309 C4.86369077,27.0542338 8.10036423,30.0550979 13.6682737,31.9973333 C19.3324358,30.0217023 22.5842746,26.9506727 24.4388054,23.4106521 C24.656884,22.9943729 25.8189148,20.2081176 26,19.779954 C21.9632741,21.3865091 19.9060406,22.7980526 13.75,22.75 C7.37249499,22.7002187 7.19925654,21.8068411 1.5,20 Z"
+                                                    id="Path" fill-opacity="0.3" fill="#FFFFFF"></path>
+                                                <path
+                                                    d="M25.5780468,4.54594643 L14.3816057,0.272245201 C13.9222751,0.0969179243 13.4144574,0.0969244169 12.9551314,0.272263439 L1.75963021,4.54592782 C1.02749291,4.82540737 0.52603741,5.50672995 0.476833674,6.28885068 C-0.389392185,20.0579922 4.00775448,28.6274864 13.6682737,31.9973333 C23.3294978,28.6275474 27.7270387,20.0580609 26.8608963,6.28887396 L26.8608738,6.28887538 C26.8116742,5.50674239 26.3102024,4.82541152 25.5780468,4.54594643 Z"
+                                                    id="Path" stroke="#FFFFFF"></path>
+                                                <polygon id="Path" fill="#FFFFFF"
+                                                    points="12.6632259 19.779954 8.98 16.0466207 10.2535534 14.9835402 12.6632259 17.4089195 17.2432483 12.8 18.52 13.9132874">
+                                                </polygon>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <li class="title">Cơm cuộn</li>
+                            <li><a href="{% url 'termlife:life-product' %}">Bơ</a></li>
+                            <li><a href="{% url 'termlife:life-product' %}">Ruốc cá ngừ</a></li>
+                            <li><a href="{% url 'termlife:life-product' %}">Thịt ba chỉ chiên giòn</a></li>
+                            <li><a href="{% url 'termlife:life-product' %}">Nem nướng thịt lợn</a></li>
+                            <li><a href="{% url 'termlife:life-product' %}">Nem nướng thịt bò</a></li>
+                            <li><a href="{% url 'termlife:life-product' %}">Thập cẩm</a></li>
+                          
+
+                        </ul>
+
+                        <ul class="allInsurance">
+                            <span class="icons">
+                                <!--?xml version="1.0" encoding="UTF-8"?-->
+                                <svg class="logoo" width="31px" height="33px" viewBox="0 0 31 33" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Home_Screen_(Gradient_1)"
+                                            transform="translate(-444.000000, -2204.000000)">
+                                            <g id="Group-3" transform="translate(444.000000, 2204.000000)">
+                                                <g id="Artboard-2-copy-4" transform="translate(0.191145, 0.245325)">
+                                                    <path d="M15.9147664,0.890500966 L15.9147664,2.99116991" id="Shape"
+                                                        stroke="#FFFFFF" stroke-width="0.998959417"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M15.9147664,14.9619282 L15.9147664,25.0596105" id="Shape"
+                                                        stroke="#FFFFFF" stroke-width="0.998959417"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M20.7889742,16.577018 C21.2935981,15.4353501 23.1744689,14.5562658 25.3764639,14.5562658 C27.9913331,14.5562658 30.1245158,15.6979337 30.1245158,17.182102 C30.1240399,12.2342019 27.534702,7.64378023 23.2910725,5.06765944 C19.047443,2.49153865 13.7622907,2.30170364 9.34318738,4.56667162"
+                                                        id="Shape" stroke="#FFFFFF" stroke-width="0.998959417"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M1.35207627,16.577018 C1.85670014,15.4353501 3.73757092,14.5562658 5.93956598,14.5562658 C8.55443512,14.5562658 10.6876178,15.6979337 10.6876178,17.182102 C10.6873129,14.0107947 9.62349264,10.9863411 7.74223039,8.54498381"
+                                                        id="Shape" stroke="#FFFFFF" stroke-width="0.998959417"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        transform="translate(6.019847, 12.863543) scale(-1, 1) translate(-6.019847, -12.863543) ">
+                                                    </path>
+                                                    <path
+                                                        d="M15.8951978,2.99116991 C13.1713086,2.99116991 10.9311006,8.73670286 10.6510746,16.0952236 C10.6488532,16.2271142 10.7318408,16.3475329 10.8620396,16.4013429 C10.9922384,16.455153 11.1445804,16.431994 11.249312,16.3424698 C12.5474336,15.341212 14.2075212,14.8321645 15.8951978,14.9178602 C17.5896331,14.8452306 19.2505182,15.3713587 20.5410836,16.3895644 C20.6458152,16.4790885 20.7981572,16.5022475 20.928356,16.4484375 C21.0585548,16.3946275 21.1415424,16.2742088 21.1393209,16.1423181 C20.8653282,8.89625975 18.7147094,3.23952006 16.0705712,2.99913035 C16.0123478,2.99383701 15.953885,2.99116991 15.8951978,2.99116991 Z"
+                                                        id="Shape" fill="#FFFFFF" fill-rule="nonzero" opacity="0.3">
+                                                    </path>
+                                                    <path
+                                                        d="M15.8951978,2.99116991 C13.1713086,2.99116991 10.9311006,8.73670286 10.6510746,16.0952236 C10.6488532,16.2271142 10.7318408,16.3475329 10.8620396,16.4013429 C10.9922384,16.455153 11.1445804,16.431994 11.249312,16.3424698 C12.5474336,15.341212 14.2075212,14.8321645 15.8951978,14.9178602 C17.5896331,14.8452306 19.2505182,15.3713587 20.5410836,16.3895644 C20.6458152,16.4790885 20.7981572,16.5022475 20.928356,16.4484375 C21.0585548,16.3946275 21.1415424,16.2742088 21.1393209,16.1423181 C20.8653282,8.89625975 18.7147094,3.23952006 16.0705712,2.99913035 C16.0123478,2.99383701 15.953885,2.99116991 15.8951978,2.99116991 Z"
+                                                        id="Shape" stroke="#FFFFFF" stroke-width="0.998959417"
+                                                        fill-rule="nonzero"></path>
+                                                    <path
+                                                        d="M14.8596438,28.2220306 C14.8596438,29.9622818 16.2768272,31.373034 18.0250117,31.373034 C19.7731961,31.373034 21.1903796,29.9622818 21.1903796,28.2220306 C21.1903796,27.6419469 20.7179851,27.1716961 20.1352569,27.1716961 C19.5525288,27.1716961 19.0801343,27.6419469 19.0801343,28.2220306 C19.0801343,28.8021143 18.6077398,29.2723651 18.0250117,29.2723651 C17.4422835,29.2723651 16.969889,28.8021143 16.969889,28.2220306 L16.969889,25.1166939 L14.8596438,25.1166939 L14.8596438,28.2220306 Z"
+                                                        id="Shape" fill-opacity="0.3" fill="#FFFFFF"
+                                                        fill-rule="nonzero"></path>
+                                                    <path
+                                                        d="M14.8596438,28.2220306 C14.8596438,29.9622818 16.2768272,31.373034 18.0250117,31.373034 C19.7731961,31.373034 21.1903796,29.9622818 21.1903796,28.2220306 C21.1903796,27.6419469 20.7179851,27.1716961 20.1352569,27.1716961 C19.5525288,27.1716961 19.0801343,27.6419469 19.0801343,28.2220306 C19.0801343,28.8021143 18.6077398,29.2723651 18.0250117,29.2723651 C17.4422835,29.2723651 16.969889,28.8021143 16.969889,28.2220306 L16.969889,25.1166939 L14.8596438,25.1166939 L14.8596438,28.2220306 Z"
+                                                        id="Shape" stroke="#FFFFFF" stroke-width="1.03225806"
+                                                        fill-rule="nonzero"></path>
+                                                    <path
+                                                        d="M9.34318738,4.56667162 C9.76788194,5.97388112 9.27494818,7.49594998 8.10456516,8.39125911 C7.06908127,9.13887341 5.68743349,9.20607428 4.5836668,8.56250929"
+                                                        id="Shape" stroke="#FFFFFF" stroke-width="0.998959417"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M5.77641413,7.18109113 C6.95639114,7.17480963 7.90961372,6.2208112 7.90959684,5.04617214 C7.90959684,3.51633715 5.77641413,1.13025123 5.77641413,1.13025123 C5.77641413,1.13025123 3.64323141,3.51633715 3.64323141,5.04617214 C3.64321454,6.2208112 4.59643712,7.17480963 5.77641413,7.18109113 L5.77641413,7.18109113 Z"
+                                                        id="Shape-2" fill="#FFFFFF" fill-rule="nonzero" opacity="0.3">
+                                                    </path>
+                                                    <path
+                                                        d="M2.96657668,2.48883603 C2.96657668,1.55266835 1.65914211,0.102750111 1.65914211,0.102750111 C1.65914211,0.102750111 0.363176269,1.55266835 0.363176269,2.48883603 C0.316734931,2.98081843 0.554184652,3.45654509 0.976121807,3.71686246 C1.39805896,3.97717983 1.93169399,3.97717983 2.35363114,3.71686246 C2.7755683,3.45654509 3.01301802,2.98081843 2.96657668,2.48883603 L2.96657668,2.48883603 Z"
+                                                        id="Shape-3" fill="#FFFFFF" fill-rule="nonzero" opacity="0.3">
+                                                    </path>
+                                                    <path
+                                                        d="M5.77641413,7.18109113 C6.95639114,7.17480963 7.90961372,6.2208112 7.90959684,5.04617214 C7.90959684,3.51633715 5.77641413,1.13025123 5.77641413,1.13025123 C5.77641413,1.13025123 3.64323141,3.51633715 3.64323141,5.04617214 C3.64321454,6.2208112 4.59643712,7.17480963 5.77641413,7.18109113 L5.77641413,7.18109113 Z"
+                                                        id="Shape-2" stroke="#FFFFFF" stroke-width="0.998959417"
+                                                        fill-rule="nonzero"></path>
+                                                    <path
+                                                        d="M2.96657668,2.48883603 C2.96657668,1.55266835 1.65914211,0.102750111 1.65914211,0.102750111 C1.65914211,0.102750111 0.363176269,1.55266835 0.363176269,2.48883603 C0.316734931,2.98081843 0.554184652,3.45654509 0.976121807,3.71686246 C1.39805896,3.97717983 1.93169399,3.97717983 2.35363114,3.71686246 C2.7755683,3.45654509 3.01301802,2.98081843 2.96657668,2.48883603 L2.96657668,2.48883603 Z"
+                                                        id="Shape-3" stroke="#FFFFFF" stroke-width="0.998959417"
+                                                        fill-rule="nonzero"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <li class="title">Gỏi cuốn</li>
+                            <li><a href="{% url 'personalhealth' %}">Nem nướng thịt lợn</a></li>
+                            <li><a href="{% url 'coming_soon_url' %}">Nem nướng thịt bò</a></li>
+                            <li><a href="{% url 'coming_soon_url' %}">Tôm thịt</a></li>
+                            <li><a href="{% url 'coming_soon_url' %}">Thịt ba chỉ hấp</a></li>
+                            <li><a href="{% url 'coming_soon_url' %}">Thập cẩm</a></li>
+                            <li><a href="{% url 'coming_soon_url' %}">Rau củ</a></li>
+                           
+                        </ul>
+
+                        <ul class="allInsurance">
+                            <span class="icons">
+                                <!--?xml version="1.0" encoding="UTF-8"?-->
+                                <svg class="logoo" width="30px" height="34px" viewBox="0 0 30 34" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Home_Screen_(Gradient_1)"
+                                            transform="translate(-735.000000, -2203.000000)">
+                                            <g id="Artboard-2" transform="translate(736.000000, 2204.000000)">
+                                                <path
+                                                    d="M19.6809754,31.3227087 C19.1254101,31.3171033 18.5740116,31.2995864 18.0281688,31.1825737 C17.8812227,31.1480869 17.72783,31.1536488 17.5837166,31.1986892 C15.171869,31.9743363 12.757938,31.9694316 10.3453959,31.1986892 C10.0141401,31.0928873 9.7030236,31.2204101 9.38982369,31.2596479 C5.34808654,31.7725419 1.77232974,29.5920417 0.489668486,25.576474 C-0.158313397,23.5478561 -0.139136181,21.5954419 0.405351856,19.7074589 C0.649226231,18.8618375 4.88243598,25.9806622 13.9609016,25.5868308 C23.0393673,25.1929993 27.5401402,19.1842171 27.8255619,21.1664263 C28.3394597,24.7300587 26.8026273,28.9845566 23.0393673,30.643054 C21.9821135,31.1130146 20.8360771,31.3449437 19.6809754,31.3227087 Z"
+                                                    id="Path" fill="#FFFFFF" opacity="0.3"></path>
+                                                <path
+                                                    d="M19.6809754,31.3227087 C19.1254101,31.3171033 18.5740116,31.2995864 18.0281688,31.1825737 C17.8812227,31.1480869 17.72783,31.1536488 17.5837166,31.1986892 C15.171869,31.9743363 12.757938,31.9694316 10.3453959,31.1986892 C10.0141401,31.0928873 9.7030236,31.2204101 9.38982369,31.2596479 C5.34808654,31.7725419 1.77232974,29.5920417 0.489668486,25.576474 C-0.44854232,22.6392449 0.011882376,19.8617697 1.44037951,17.2083139 C3.06332448,14.195412 5.45364394,11.8831849 8.16619124,9.87855405 C8.37452821,9.7265076 8.45439071,9.64382796 8.29744353,9.37476881 C7.86271373,8.62855007 8.0134108,7.66231941 8.64467181,7.03591607 C8.81203584,6.86985612 8.78356312,6.81029876 8.62453257,6.67997323 C7.95090971,6.13905223 7.35089925,5.52736306 6.92033618,4.76572947 C6.48074518,3.98727968 6.35713192,3.18010222 6.71616596,2.33088427 C7.14603456,1.3149057 7.88424188,0.934439239 8.93842693,1.20980447 C9.39399043,1.32681717 9.84469274,1.46695215 10.2933117,1.60988982 C10.759292,1.75843289 11.1551323,1.65052896 11.4988882,1.312103 C11.6648634,1.14954643 11.8287551,0.984187155 11.9961191,0.821630584 C13.1364168,-0.2721229 14.7739454,-0.274224924 15.921882,0.817426535 C16.1066075,0.993996604 16.2864717,1.1754714 16.4718916,1.35204147 C16.7927306,1.65753571 17.1600981,1.72830388 17.5906611,1.62250197 C18.1705324,1.48236699 18.7177641,1.22521931 19.3177746,1.14954643 C20.046954,1.05705734 20.6150194,1.29879018 21.0011373,1.92519352 C21.5483691,2.81084656 21.5490635,3.72102323 21.0705829,4.63890732 C20.6490478,5.44958815 20.0288981,6.08930431 19.3344416,6.65615029 C19.1608274,6.79628526 19.1108265,6.86635275 19.3018021,7.06043969 C19.9251138,7.67722683 20.0540953,8.64214146 19.615002,9.40349648 C19.4761107,9.63962391 19.5400007,9.72230355 19.727504,9.85823448 C22.0018492,11.5160312 24.0289679,13.428173 25.6227457,15.7761345 C26.7338761,17.4143124 27.5401402,19.1842171 27.8255619,21.1664263 C28.3394597,24.7300587 26.8026273,28.9845566 23.0393673,30.643054 C21.9821135,31.1130146 20.8360771,31.3449437 19.6809754,31.3227087 Z"
+                                                    id="Path" stroke="#FFFFFF"></path>
+                                                <path
+                                                    d="M20.1034166,8.96737765 C20.1215737,9.18078757 20.0567267,9.39419748 19.9987968,9.60264438 C19.8950417,9.97487097 19.7273042,9.87312904 19.4203619,9.66964516 C18.3551425,8.9549701 17.2784501,8.49079679 16.1215804,8.3294986 C14.7303438,8.14028503 13.3285788,8.14028503 11.9373422,8.3294986 C10.7657738,8.48831528 9.52644526,8.94628481 8.44479799,9.66964516 C8.18541015,9.84459166 8.08079039,9.99968608 7.96579512,9.66964516 C7.6968964,8.89541384 7.87933251,7.95864358 8.44479799,7.39534066 C9.01026347,6.83203774 9.66219156,6.56155308 10.3236305,6.4027364 C12.9546878,5.75382137 15.5831512,5.71908022 18.196916,6.59877574 C18.6307776,6.73607573 19.0447378,6.98040923 19.4203619,7.32089534 C19.8569981,7.72538158 20.0939057,8.29364751 20.1034166,8.96737765 Z"
+                                                    id="Path" fill-opacity="0.3" fill="#FFFFFF"></path>
+                                                <path
+                                                    d="M20.1034166,8.96737765 C20.1215737,9.18078757 20.0567267,9.39419748 19.9987968,9.60264438 C19.8950417,9.97487097 19.7273042,9.87312904 19.4203619,9.66964516 C18.3551425,8.9549701 17.2784501,8.49079679 16.1215804,8.3294986 C14.7303438,8.14028503 13.3285788,8.14028503 11.9373422,8.3294986 C10.7657738,8.48831528 9.52644526,8.94628481 8.44479799,9.66964516 C8.18541015,9.84459166 8.08079039,9.99968608 7.96579512,9.66964516 C7.6968964,8.89541384 7.87933251,7.95864358 8.44479799,7.39534066 C9.01026347,6.83203774 9.66219156,6.56155308 10.3236305,6.4027364 C12.9546878,5.75382137 15.5831512,5.71908022 18.196916,6.59877574 C18.6307776,6.73607573 19.0447378,6.98040923 19.4203619,7.32089534 C19.8569981,7.72538158 20.0939057,8.29364751 20.1034166,8.96737765 Z"
+                                                    id="Path" stroke="#FFFFFF"></path>
+                                                <path
+                                                    d="M10.5737595,17.6065844 C10.4023109,17.6065844 10.2572391,17.7514403 10.2572391,17.9226337 C10.2572391,18.0938272 10.4023109,18.2386831 10.5737595,18.2386831 L12.1299847,18.2386831 L14.9522916,18.2386831 C14.7940314,19.1341564 14.0159188,19.81893 13.0795459,19.81893 L12.9212857,19.81893 L10.8639031,19.81893 C10.7320197,19.81893 10.6133245,19.8979424 10.5737595,20.0164609 C10.5210061,20.1349794 10.5473828,20.2666667 10.6397012,20.3588477 L15.0841751,24.7967078 C15.1501168,24.8625514 15.2292469,24.8888889 15.308377,24.8888889 C15.3875071,24.8888889 15.4666372,24.8625514 15.532579,24.7967078 C15.6512741,24.6781893 15.6512741,24.4674897 15.532579,24.3489712 L14.8599731,23.6773663 L11.6288274,20.4641975 L13.0795459,20.4641975 L13.2378061,20.4641975 C14.4643226,20.3851852 15.4534489,19.4502058 15.5985207,18.2518519 L17.1811227,18.2518519 C17.3525712,18.2518519 17.4976431,18.1069959 17.4976431,17.9358025 C17.4976431,17.7646091 17.3525712,17.6197531 17.1811227,17.6197531 L15.5985207,17.6197531 C15.5193906,16.9876543 15.2160586,16.4345679 14.7544663,16.0395062 L17.1811227,16.0395062 C17.3525712,16.0395062 17.4976431,15.8946502 17.4976431,15.7234568 C17.4976431,15.5522634 17.3525712,15.4074074 17.1811227,15.4074074 L13.0927343,15.4074074 L10.8639031,15.4074074 L10.5737595,15.4074074 C10.4023109,15.4074074 10.2572391,15.5522634 10.2572391,15.7234568 C10.2572391,15.8946502 10.4023109,16.0395062 10.5737595,16.0395062 L10.8639031,16.0395062 L11.0221633,16.0395062 L13.0927343,16.0395062 C14.0291071,16.0395062 14.8204081,16.7242798 14.9654799,17.6197531 L11.8134643,17.6197531 L10.5737595,17.6197531 L10.5737595,17.6065844 Z"
+                                                    id="Shape" stroke="#FFFFFF" stroke-width="0.5" fill="#FFFFFF"
+                                                    fill-rule="nonzero"></path>
+                                                <path
+                                                    d="M7.24040404,28.4444444 C8.77455107,30.539159 10.9335718,31.5865162 13.7174663,31.5865162 C16.5013608,31.5865162 18.766344,30.539159 20.5124158,28.4444444"
+                                                    id="Path-2" stroke="#FFFFFF" stroke-linecap="round"
+                                                    fill-rule="nonzero"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <li class="title">Món nóng</li>
+                            <li><a href="{% url 'coming_soon_url' %}">Canh sườn bò + cơm trắng</a></li>
+                            
+                        </ul>
+
+                        <ul class="allInsurance">
+                            <span class="icons">
+                                <!--?xml version="1.0" encoding="UTF-8"?-->
+                                <svg class="logoo" width="29px" height="34px" viewBox="0 0 29 34" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Home_Screen_(Gradient_1)"
+                                            transform="translate(-1028.000000, -2203.000000)">
+                                            <g id="Other-Insurance" transform="translate(1029.000000, 2204.000000)">
+                                                <path
+                                                    d="M1.5,20 C1.70712191,20.4898445 2.73810873,23.1159148 2.99394382,23.5899309 C4.86369077,27.0542338 8.10036423,30.0550979 13.6682737,31.9973333 C19.3324358,30.0217023 22.5842746,26.9506727 24.4388054,23.4106521 C24.656884,22.9943729 25.8189148,20.2081176 26,19.779954 C21.9632741,21.3865091 19.9060406,22.7980526 13.75,22.75 C7.37249499,22.7002187 7.19925654,21.8068411 1.5,20 Z"
+                                                    id="Path" fill="#FFFFFF" fill-rule="nonzero" opacity="0.3"></path>
+                                                <path
+                                                    d="M25.5780468,4.54594643 L14.3816057,0.272245201 C13.9222751,0.0969179243 13.4144574,0.0969244169 12.9551314,0.272263439 L1.75963021,4.54592782 C1.02749291,4.82540737 0.52603741,5.50672995 0.476833674,6.28885068 C-0.389392185,20.0579922 4.00775448,28.6274864 13.6682737,31.9973333 C23.3294978,28.6275474 27.7270387,20.0580609 26.8608963,6.28887396 L26.8608738,6.28887538 C26.8116742,5.50674239 26.3102024,4.82541152 25.5780468,4.54594643 Z"
+                                                    id="Path" stroke="#FFFFFF" fill-rule="nonzero"></path>
+                                                <path d="M13.875,13.25 L13.875,19.4986667" id="Line-4" stroke="#FFFFFF"
+                                                    stroke-width="1.5" stroke-linecap="square"></path>
+                                                <path d="M13.875,13.25 L13.875,19.4986667" id="Line-4" stroke="#FFFFFF"
+                                                    stroke-width="1.5" stroke-linecap="square"
+                                                    transform="translate(14.000000, 16.250000) rotate(-90.000000) translate(-14.000000, -16.250000) ">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <li class="title">Nước chấm ăn kèm</li>
+                            <li><a href="{% url 'coming_soon_url' %}"></a></li>
+                            <li><a href="{% url 'coming_soon_url' %}">Nước chấm mắm chua ngọt</a></li>
+                            <li><a href="{% url 'coming_soon_url' %}">Nước chấm đậu hũ non thịt băm</a></li>
+                            <li><a href="{% url 'renewal:renewal_index1' %}">Nước chấm xì dầu tỏi ớt</a></li>
+                            <li><a href="{% url 'homeinsurance:homeinsurance' %}">Nước chấm mù tạt tỏi ớt</a></li>
+                            <li><a href="{% url 'coming_soon_url' %}">Nước chấm tương ớt mayonnaise</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footerLink">
+        <div class="ptable">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                        <ul>
+                            <li><a href="{% url 'about-url' %}">Về chúng tôi</a></li>
+                            <li><a href="{% url 'articles1-url' %}">Câu chuyện thịt sạch</a></li>
+                            <li><a href="{% url 'articles1-url' %}">Góc ẩm thực</a></li>
+                            <li><a href="{% url 'policy-url' %}">Tin tức</a></li>
+                            <li><a href="{% url 'contact-url' %}">Liên hệ</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                        <ul class="socialMedia">
+                            <li>
+                                <a href="" target="_blank" class="facebook">
+                                    <!--?xml version="1.0" encoding="UTF-8"?-->
+                                    <svg width="10px" height="22px" viewBox="0 0 10 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Home_Screen_(India)"
+                                                transform="translate(-1108.000000, -5111.000000)" fill="#FFFFFF"
+                                                fill-rule="nonzero">
+                                                <g id="Group-48" transform="translate(1098.000000, 5107.000000)">
+                                                    <g id="Shape-4">
+                                                        <path
+                                                            d="M19.8464176,8.25606593 L17.5015385,8.25606593 C17.0370989,8.25606593 16.5683736,8.73606593 16.5683736,9.09316484 L16.5683736,11.4841978 L19.8418022,11.4841978 C19.71,13.3176264 19.4394066,14.9941978 19.4394066,14.9941978 L16.5516264,14.9941978 L16.5516264,25.3846154 L12.2483736,25.3846154 L12.2483736,14.9930769 L10.1535824,14.9930769 L10.1535824,11.4966593 L12.2483736,11.4966593 L12.2483736,8.63802198 C12.2483736,8.1152967 12.1424835,4.61545055 16.6575165,4.61545055 L19.8464835,4.61545055 L19.8464835,8.25606593 L19.8464176,8.25606593 Z"
+                                                            id="Facebook"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="twitter">
+                                    <!--?xml version="1.0" encoding="UTF-8"?-->
+                                    <svg width="21px" height="18px" viewBox="0 0 21 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Home_Screen_(India)"
+                                                transform="translate(-1142.000000, -5113.000000)" fill="#FFFFFF"
+                                                fill-rule="nonzero">
+                                                <g id="Group-48" transform="translate(1098.000000, 5107.000000)">
+                                                    <g id="Twitter" transform="translate(43.250000, 6.000000)">
+                                                        <path
+                                                            d="M19.2583077,4.76432967 C19.2664176,4.94716484 19.2705714,5.13098901 19.2705714,5.31553846 C19.2705714,10.9465055 14.9847253,17.4392308 7.14707692,17.4392308 C4.74074725,17.4392308 2.50096703,16.7339341 0.615318681,15.5247033 C0.948681319,15.5643297 1.28778022,15.5845055 1.63182418,15.5845055 C3.62817582,15.5845055 5.46542857,14.9033407 6.92382418,13.7602418 C5.05920879,13.726022 3.48549451,12.494044 2.94318681,10.8011209 C3.20349451,10.851033 3.47046154,10.8778022 3.74501099,10.8778022 C4.13362637,10.8778022 4.51010989,10.8254505 4.86767033,10.7282637 C2.91846154,10.3366813 1.44958242,8.61461538 1.44958242,6.55015385 C1.44958242,6.53215385 1.44958242,6.51428571 1.44997802,6.49648352 C2.0243956,6.8156044 2.68136264,7.00734066 3.37993407,7.02949451 C2.23650549,6.26538462 1.48446154,4.96107692 1.48446154,3.4829011 C1.48446154,2.70191209 1.69459341,1.97004396 2.06145055,1.34057143 C4.16296703,3.91865934 7.30274725,5.61494505 10.8440659,5.79283516 C10.7713407,5.48083516 10.7334945,5.15558242 10.7334945,4.82169231 C10.7334945,2.46863736 12.6414945,0.560835165 14.9945495,0.560835165 C16.2201978,0.560835165 17.3276264,1.07821978 18.1048571,1.90628571 C19.0753407,1.71540659 19.9873407,1.36061538 20.8106593,0.872373626 C20.4925934,1.86745055 19.816967,2.70230769 18.9371429,3.22978022 C19.7991648,3.12672527 20.6203077,2.8976044 21.3844835,2.5587033 C20.8133626,3.41314286 20.090989,4.16367033 19.2583077,4.76432967 Z"
+                                                            id="Shape"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" target="_blank" class="linkedin">
+                                    <!--?xml version="1.0" encoding="UTF-8"?-->
+                                    <svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Home_Screen_(India)"
+                                                transform="translate(-1220.000000, -5112.000000)" fill="#FFFFFF">
+                                                <g id="Group-48" transform="translate(1098.000000, 5107.000000)">
+                                                    <g id="Linkdin" transform="translate(121.750000, 5.000000)">
+                                                        <path
+                                                            d="M12.2887404,8.52279876 L12.2887404,8.43967376 C12.2717404,8.46754876 12.2482404,8.49542376 12.2334904,8.52279876 L12.2887404,8.52279876 Z"
+                                                            id="Path"></path>
+                                                        <path
+                                                            d="M5.33112088,19.9232088 L0.880175824,19.9232088 L0.880175824,6.53226374 L5.33112088,6.53226374 L5.33112088,19.9232088 Z M3.10564835,4.70457143 L3.07624176,4.70457143 C1.58316484,4.70457143 0.615384615,3.67593407 0.615384615,2.39021978 C0.615384615,1.07628571 1.61145055,0.0767912088 3.13479121,0.0767912088 C4.65846154,0.0767912088 5.59479121,1.07628571 5.62393407,2.39021978 C5.62393407,3.67593407 4.65846154,4.70457143 3.10564835,4.70457143 Z M21.3846154,19.9232747 L16.9324835,19.9232088 L16.9324835,12.759011 C16.9324835,10.9596044 16.2892308,9.73131868 14.6778681,9.73131868 C13.4472747,9.73131868 12.716,10.5583297 12.3938462,11.3594286 C12.2767473,11.6455824 12.2461538,12.0433626 12.2461538,12.4446374 L12.2461538,19.9232747 L7.79316484,19.9232747 C7.79316484,19.9232747 7.85283516,7.78857143 7.79316484,6.53232967 L12.2461538,6.53232967 L12.2461538,8.42984615 C12.8377802,7.51949451 13.8935824,6.21795604 16.2586374,6.21795604 C19.1885495,6.21795604 21.3846154,8.13136264 21.3846154,12.2441978 L21.3846154,19.9232747 Z"
+                                                            id="Shape" fill-rule="nonzero"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@NemNuongHoaLe" target="_blank" class="youtube">
+                                    <!--?xml version="1.0" encoding="UTF-8"?-->
+                                    <svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Home_Screen_(India)"
+                                                transform="translate(-1259.000000, -5114.000000)" fill="#FFFFFF"
+                                                fill-rule="nonzero">
+                                                <g id="Group-48" transform="translate(1098.000000, 5107.000000)">
+                                                    <g id="youtube" transform="translate(161.000000, 7.000000)">
+                                                        <path
+                                                            d="M8.32010989,11.2241099 C10.5267253,10.0798242 12.7138242,8.9450989 14.9226154,7.80002198 C12.7074286,6.6441978 10.5205934,5.50413187 8.32010989,4.35582418 L8.32010989,11.2241099 Z M21.0215165,12.9095165 C20.7669451,14.0139121 19.8635165,14.8293846 18.776,14.9508352 C16.2016703,15.2378462 13.5952308,15.2397582 10.9989451,15.2378462 C8.40371429,15.2397582 5.79727473,15.2378462 3.22215385,14.9508352 C2.13437363,14.8294505 1.23101099,14.0139121 0.977758242,12.9095165 C0.615384615,11.3371868 0.615384615,9.61940659 0.615384615,7.99993407 C0.615384615,6.38046154 0.61967033,4.66347253 0.981714286,3.09114286 C1.23496703,1.98569231 2.13865934,1.17127473 3.22505495,1.04989011 C5.80043956,0.762087912 8.408,0.760967033 11.0032308,0.762087912 C13.5981978,0.761032967 16.2049011,0.762087912 18.780022,1.04989011 C19.8678022,1.17127473 20.7711648,1.98569231 21.0255385,3.09114286 C21.3878462,4.66347253 21.3846154,6.38046154 21.3846154,7.99993407 C21.3846154,9.61940659 21.3835604,11.3371868 21.0215165,12.9095165 Z"
+                                                            id="Shape"></path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footerLegal">
+        <div class="ptable">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="footer_title">
+                            <div class="h2 f600">Phương Thức Thanh Toán Online</div>
+                            <div class="col-12 paymentOption">
+                                <div class="logo visa">12</div>
+                                <div class="logo american">9</div>
+                                <div class="logo netbanking">10</div>
+                                <div class="logo rupay">11</div>
+                                <div class="logo master">12</div>
+                                <div class="logo paytm">12</div>
+                            </div>
+                            <div style="display:flex;justify-content: center;
+                            justify-items: center;" class="imgqrcode">
+                                <img src="{% static 'core/qr_fb.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="getapp">
+                            <div>
+                                <img style="width: 20%; padding: 0;" src="{% static 'core/images/banquyen.svg' %}" alt="">
+                            </div>
+                            <ul class="get-app" style="justify-content: center;
+                        justify-items: center;">
+                                <h1> Nem nướng Hoa Lệ</h1>
+                                <p>Tận hưởng những phút giây ngon miệng với nem nướng</p>
+
+                            </ul>
+                            <div class="row pt-3">
+                                <div class="col-6 lef_img">
+                                    <img src="{% static 'core/images/icon/appStore.png' %}" alt="ggPlay">
+
+                                </div>
+                                <div class="col-6 rig_img">
+                                    <img src="{% static 'core/images/icon/ggPlay.png' %}" alt="appStore">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="info">Nem Nướng Hoa Lệ|
+                            <a href=""></a>nemnuonghoale@gmail.com</a> | <a href="">khuyến mại</a> | <a href="">508 Trần Khát Chân, Phố Huế, Hai Bà Trưng, Hà Nội</a></p>
+                        <p class="info">Gọi để đặt chỗ hoặc đặt hàng theo một trong hai số điện thoại sau:</p>
+                        <p class="info">0968 596 725</p>
+                        <p class="info">032 590 1111</p>
+                        <p class="info mt15">Hộ kinh doanh và Chứng nhận vệ sinh an toàn thực phẩm</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="moreMenu" class="overlay">
+        <div class="popup">
+            <div class="container moreInsurance">
+                <a class="close" href="">&times;</a>
+
+                <div class="row seocontent contentHide">
+                    <div class="content_template">
+                        <div class="h3 text-center">Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ</div>
+                        <p>
+                            Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ
+                        </p>
+                        <p>Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ</p>
+                        <p><strong class="title">What's more?</strong></p>
+                        <p>
+                            Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ
+                        </p>
+                        <p>
+                            Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ
+                        </p>
+                        <p>Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ</p>
+                        <p>
+                            Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ
+                        </p>
+                        <p>
+                            Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ</a>,
+                            
+                        </p>
+                        <p>
+                            Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ
+                        </p>
+                        <p>Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ</p>
+                        <p><strong class="title">Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ</strong></p>
+                        <p>
+                            Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ
+                        </p>
+                        <p><strong class="title">Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ</strong></p>
+                        <ul class="ulbox">
+                            <li>
+                                Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ
+                            </li>
+                            <li>
+                                Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ
+                            </li>
+                            <li>
+                                Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ
+                            </li>
+                            <li>Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ</li>
+                        </ul>
+                        <p>
+                            Nem Nướng Hoa Lệ, Gỏi Cuốn, Cơm Cuộn, Nem Nướngg, Hoa Lệ, Súp Miso, Canh Sườn Bò, Cơm Cuộn Bơ, Cơm cuộn Ruốc Cá Ngừ, Cơm Cuộn Thập Cẩm, Gỏi Cuốn , Gỏi Cuốn Nem Thịt Lợn, Gỏi Cuốn Nem Thịt Bò, Gỏi Cuốn Rau Củ
+                        </p>
+                    </div>
+                </div>
+                <div class="row moreproductlink contentHide">
+                    <div class="col-12">
+                        <div class="h2">More Products</div>
+                        <ul class="allInsurance">
+                            <span class="icons">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="29px" height="34px" viewBox="0 0 29 34" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="India" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Home_2" transform="translate(-184.000000, -246.000000)"
+                                            fill-rule="nonzero">
+                                            <g id="security-on" transform="translate(185.000000, 247.000000)">
+                                                <path
+                                                    d="M1.75,20.75 C1.95712191,21.2398445 2.73810873,23.1159148 2.99394382,23.5899309 C4.86369077,27.0542338 8.10036423,30.0550979 13.6682737,31.9973333 C19.3324358,30.0217023 22.5842746,26.9506727 24.4388054,23.4106521 C24.656884,22.9943729 25.8189148,20.2081176 26,19.779954 C21.9632741,21.3865091 19.9060406,22.7980526 13.75,22.75 C7.37249499,22.7002187 7.44925654,22.5568411 1.75,20.75 Z"
+                                                    id="Path" fill="#DEEBFF"></path>
+                                                <path
+                                                    d="M25.5780468,4.54594643 L14.3816057,0.272245201 C13.9222751,0.0969179243 13.4144574,0.0969244169 12.9551314,0.272263439 L1.75963021,4.54592782 C1.02749291,4.82540737 0.52603741,5.50672995 0.476833674,6.28885068 C-0.389392185,20.0579922 4.00775448,28.6274864 13.6682737,31.9973333 C23.3294978,28.6275474 27.7270387,20.0580609 26.8608963,6.28887396 L26.8608738,6.28887538 C26.8116742,5.50674239 26.3102024,4.82541152 25.5780468,4.54594643 Z"
+                                                    id="Path" stroke="#2684FF"></path>
+                                                <polygon id="Path" fill="#2684FF"
+                                                    points="12.6632259 19.779954 8.98 16.0466207 10.2535534 14.9835402 12.6632259 17.4089195 17.2432483 12.8 18.52 13.9132874">
+                                                </polygon>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <li class="title">General Insurance</li>
+                            <li><a onclick="getClickv3(1, 'Car_Click_Popup', '', '', 'https://ci.policybazaar.com/#/', 'home_v5')" href="javascript:void(0);">Car Insurance</a></li>
+                            <li><a onclick="getClickv3(1, 'Health_Click_Popup', '', '', 'https://health.policybazaar.com/', 'home_v5')" href="javascript:void(0);">Health Insurance</a></li>
+                            <li><a onclick="getClickv3(1, 'Travel_Click_Popup', '', '', 'https://travel.policybazaar.com', 'home_v5')" href="javascript:void(0);">Travel Insurance</a></li>
+                            <li><a onclick="getClickv3(1, 'TwoWheeler_Click_Popup', '', '', 'https://twowheeler.policybazaar.com/', 'home_v5')" href="javascript:void(0);">Two-Wheeler Insurance</a></li>
+                            <li><a onclick="getClickv3(1, 'CarTP_Click_Popup', '', '', 'https://ci.policybazaar.com/#/', 'home_v5')" href="javascript:void(0);">Third Party Car Insurance</a></li>
+                        </ul>
+
+                        <ul class="allInsurance">
+                            <span class="icons">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="31px" height="33px" viewBox="0 0 31 33" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="India" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Home_2" transform="translate(-499.000000, -247.000000)">
+                                            <g id="Group-3" transform="translate(499.000000, 247.000000)">
+                                                <g id="Artboard-2-copy-4" transform="translate(0.191145, 0.245325)">
+                                                    <path d="M15.9147664,0.890500966 L15.9147664,2.99116991" id="Shape"
+                                                        stroke="#2684FF" stroke-width="0.998959417"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path d="M15.9147664,14.5562658 L15.9147664,25.0596105" id="Shape"
+                                                        stroke="#2684FF" stroke-width="0.998959417"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M20.7889742,16.577018 C21.2935981,15.4353501 23.1744689,14.5562658 25.3764639,14.5562658 C27.9913331,14.5562658 30.1245158,15.6979337 30.1245158,17.182102 C30.1240399,12.2342019 27.534702,7.64378023 23.2910725,5.06765944 C19.047443,2.49153865 13.7622907,2.30170364 9.34318738,4.56667162"
+                                                        id="Shape" stroke="#2684FF" stroke-width="0.998959417"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M1.35207627,16.577018 C1.85670014,15.4353501 3.73757092,14.5562658 5.93956598,14.5562658 C8.55443512,14.5562658 10.6876178,15.6979337 10.6876178,17.182102 C10.6873129,14.0107947 9.62349264,10.9863411 7.74223039,8.54498381"
+                                                        id="Shape" stroke="#2684FF" stroke-width="0.998959417"
+                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                        transform="translate(6.019847, 12.863543) scale(-1, 1) translate(-6.019847, -12.863543) ">
+                                                    </path>
+                                                    <path
+                                                        d="M15.8951978,2.99116991 C13.1713086,2.99116991 10.9311006,8.73670286 10.6510746,16.0952236 C10.6488532,16.2271142 10.7318408,16.3475329 10.8620396,16.4013429 C10.9922384,16.455153 11.1445804,16.431994 11.249312,16.3424698 C12.5474336,15.341212 14.2075212,14.8321645 15.8951978,14.9178602 C17.5896331,14.8452306 19.2505182,15.3713587 20.5410836,16.3895644 C20.6458152,16.4790885 20.7981572,16.5022475 20.928356,16.4484375 C21.0585548,16.3946275 21.1415424,16.2742088 21.1393209,16.1423181 C20.8653282,8.89625975 18.7147094,3.23952006 16.0705712,2.99913035 C16.0123478,2.99383701 15.953885,2.99116991 15.8951978,2.99116991 Z"
+                                                        id="Shape" fill="#DEEBFF" fill-rule="nonzero"></path>
+                                                    <path
+                                                        d="M15.8951978,2.99116991 C13.1713086,2.99116991 10.9311006,8.73670286 10.6510746,16.0952236 C10.6488532,16.2271142 10.7318408,16.3475329 10.8620396,16.4013429 C10.9922384,16.455153 11.1445804,16.431994 11.249312,16.3424698 C12.5474336,15.341212 14.2075212,14.8321645 15.8951978,14.9178602 C17.5896331,14.8452306 19.2505182,15.3713587 20.5410836,16.3895644 C20.6458152,16.4790885 20.7981572,16.5022475 20.928356,16.4484375 C21.0585548,16.3946275 21.1415424,16.2742088 21.1393209,16.1423181 C20.8653282,8.89625975 18.7147094,3.23952006 16.0705712,2.99913035 C16.0123478,2.99383701 15.953885,2.99116991 15.8951978,2.99116991 Z"
+                                                        id="Shape" stroke="#2684FF" stroke-width="0.998959417"
+                                                        fill-rule="nonzero"></path>
+                                                    <path
+                                                        d="M14.8596438,28.2220306 C14.8596438,29.9622818 16.2768272,31.373034 18.0250117,31.373034 C19.7731961,31.373034 21.1903796,29.9622818 21.1903796,28.2220306 C21.1903796,27.6419469 20.7179851,27.1716961 20.1352569,27.1716961 C19.5525288,27.1716961 19.0801343,27.6419469 19.0801343,28.2220306 C19.0801343,28.8021143 18.6077398,29.2723651 18.0250117,29.2723651 C17.4422835,29.2723651 16.969889,28.8021143 16.969889,28.2220306 L16.969889,25.1166939 L14.8596438,25.1166939 L14.8596438,28.2220306 Z"
+                                                        id="Shape" stroke="#2684FF" stroke-width="1.03225806"
+                                                        fill="#DEEBFF" fill-rule="nonzero"></path>
+                                                    <path
+                                                        d="M9.34318738,4.56667162 C9.76788194,5.97388112 9.27494818,7.49594998 8.10456516,8.39125911 C7.06908127,9.13887341 5.68743349,9.20607428 4.5836668,8.56250929"
+                                                        id="Shape" stroke="#2684FF" stroke-width="0.998959417"
+                                                        stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <path
+                                                        d="M5.77641413,7.18109113 C6.95639114,7.17480963 7.90961372,6.2208112 7.90959684,5.04617214 C7.90959684,3.51633715 5.77641413,1.13025123 5.77641413,1.13025123 C5.77641413,1.13025123 3.64323141,3.51633715 3.64323141,5.04617214 C3.64321454,6.2208112 4.59643712,7.17480963 5.77641413,7.18109113 L5.77641413,7.18109113 Z"
+                                                        id="Shape-2" stroke="#2684FF" stroke-width="0.998959417"
+                                                        fill="#DEEBFF" fill-rule="nonzero"></path>
+                                                    <path
+                                                        d="M2.96657668,2.48883603 C2.96657668,1.55266835 1.65914211,0.102750111 1.65914211,0.102750111 C1.65914211,0.102750111 0.363176269,1.55266835 0.363176269,2.48883603 C0.316734931,2.98081843 0.554184652,3.45654509 0.976121807,3.71686246 C1.39805896,3.97717983 1.93169399,3.97717983 2.35363114,3.71686246 C2.7755683,3.45654509 3.01301802,2.98081843 2.96657668,2.48883603 L2.96657668,2.48883603 Z"
+                                                        id="Shape-3" stroke="#2684FF" stroke-width="0.998959417"
+                                                        fill="#DEEBFF" fill-rule="nonzero"></path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <li class="title">Bảo hiểm nhân thọ</li>
+                            <li><a onclick="getClickv3(1, 'Term_Click_Popup', 7, 'Home-Term-Life', 'https://termlife.policybazaar.com/prequotes', 'home_v5');" href="javascript:void(0);">Term Insurance</a></li>
+                            <li>
+                                <a onclick="getClickv3(1, 'SpousePlan_Click_Popup', 7, 'spouse_plan', 'https://termlife.policybazaar.com/prequotes?isSpouseJourney=true&utm_term=spouse_plan', 'home_v5');" href="javascript:void(0);">
+                                    Spouse Term Plan
+                                </a>
+                            </li>
+                            <li>
+                                <a onclick="getClickv3(1, 'ReturnOfPremium_Click_Popup', 7, 'trop_plan', 'https://termlife.policybazaar.com/?offerid=151&utm_term=trop_plan', 'home_v5');" href="javascript:void(0);">Return of Premium</a>
+                            </li>
+                        </ul>
+
+                        <ul class="allInsurance">
+                            <span class="icons">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                                <svg width="30px" height="34px" viewBox="0 0 30 34" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g id="India" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Home_2" transform="translate(-771.000000, -246.000000)">
+                                            <g id="Artboard-2" transform="translate(772.000000, 247.000000)">
+                                                <path
+                                                    d="M19.6809754,31.3227087 C19.1254101,31.3171033 18.5740116,31.2995864 18.0281688,31.1825737 C17.8812227,31.1480869 17.72783,31.1536488 17.5837166,31.1986892 C15.171869,31.9743363 12.757938,31.9694316 10.3453959,31.1986892 C10.0141401,31.0928873 9.7030236,31.2204101 9.38982369,31.2596479 C5.34808654,31.7725419 1.77232974,29.5920417 0.489668486,25.576474 C-0.158313397,23.5478561 -0.139136181,21.5954419 0.405351856,19.7074589 C0.649226231,18.8618375 4.88243598,25.9806622 13.9609016,25.5868308 C23.0393673,25.1929993 27.5401402,19.1842171 27.8255619,21.1664263 C28.3394597,24.7300587 26.8026273,28.9845566 23.0393673,30.643054 C21.9821135,31.1130146 20.8360771,31.3449437 19.6809754,31.3227087 Z"
+                                                    id="Path" fill="#DEEBFF"></path>
+                                                <path
+                                                    d="M19.6809754,31.3227087 C19.1254101,31.3171033 18.5740116,31.2995864 18.0281688,31.1825737 C17.8812227,31.1480869 17.72783,31.1536488 17.5837166,31.1986892 C15.171869,31.9743363 12.757938,31.9694316 10.3453959,31.1986892 C10.0141401,31.0928873 9.7030236,31.2204101 9.38982369,31.2596479 C5.34808654,31.7725419 1.77232974,29.5920417 0.489668486,25.576474 C-0.44854232,22.6392449 0.011882376,19.8617697 1.44037951,17.2083139 C3.06332448,14.195412 5.45364394,11.8831849 8.16619124,9.87855405 C8.37452821,9.7265076 8.45439071,9.64382796 8.29744353,9.37476881 C7.86271373,8.62855007 8.0134108,7.66231941 8.64467181,7.03591607 C8.81203584,6.86985612 8.78356312,6.81029876 8.62453257,6.67997323 C7.95090971,6.13905223 7.35089925,5.52736306 6.92033618,4.76572947 C6.48074518,3.98727968 6.35713192,3.18010222 6.71616596,2.33088427 C7.14603456,1.3149057 7.88424188,0.934439239 8.93842693,1.20980447 C9.39399043,1.32681717 9.84469274,1.46695215 10.2933117,1.60988982 C10.759292,1.75843289 11.1551323,1.65052896 11.4988882,1.312103 C11.6648634,1.14954643 11.8287551,0.984187155 11.9961191,0.821630584 C13.1364168,-0.2721229 14.7739454,-0.274224924 15.921882,0.817426535 C16.1066075,0.993996604 16.2864717,1.1754714 16.4718916,1.35204147 C16.7927306,1.65753571 17.1600981,1.72830388 17.5906611,1.62250197 C18.1705324,1.48236699 18.7177641,1.22521931 19.3177746,1.14954643 C20.046954,1.05705734 20.6150194,1.29879018 21.0011373,1.92519352 C21.5483691,2.81084656 21.5490635,3.72102323 21.0705829,4.63890732 C20.6490478,5.44958815 20.0288981,6.08930431 19.3344416,6.65615029 C19.1608274,6.79628526 19.1108265,6.86635275 19.3018021,7.06043969 C19.9251138,7.67722683 20.0540953,8.64214146 19.615002,9.40349648 C19.4761107,9.63962391 19.5400007,9.72230355 19.727504,9.85823448 C22.0018492,11.5160312 24.0289679,13.428173 25.6227457,15.7761345 C26.7338761,17.4143124 27.5401402,19.1842171 27.8255619,21.1664263 C28.3394597,24.7300587 26.8026273,28.9845566 23.0393673,30.643054 C21.9821135,31.1130146 20.8360771,31.3449437 19.6809754,31.3227087 Z"
+                                                    id="Path" stroke="#2684FF"></path>
+                                                <path
+                                                    d="M20.1034166,8.96737765 C20.1215737,9.18078757 20.0567267,9.39419748 19.9987968,9.60264438 C19.8950417,9.97487097 19.7273042,9.87312904 19.4203619,9.66964516 C18.3551425,8.9549701 17.2784501,8.49079679 16.1215804,8.3294986 C14.7303438,8.14028503 13.3285788,8.14028503 11.9373422,8.3294986 C10.7657738,8.48831528 9.52644526,8.94628481 8.44479799,9.66964516 C8.18541015,9.84459166 8.08079039,9.99968608 7.96579512,9.66964516 C7.6968964,8.89541384 7.87933251,7.95864358 8.44479799,7.39534066 C9.01026347,6.83203774 9.66219156,6.56155308 10.3236305,6.4027364 C12.9546878,5.75382137 15.5831512,5.71908022 18.196916,6.59877574 C18.6307776,6.73607573 19.0447378,6.98040923 19.4203619,7.32089534 C19.8569981,7.72538158 20.0939057,8.29364751 20.1034166,8.96737765 Z"
+                                                    id="Path" stroke="#157BFB" fill="#DEEBFF"></path>
+                                                <path
+                                                    d="M10.5737595,17.6065844 C10.4023109,17.6065844 10.2572391,17.7514403 10.2572391,17.9226337 C10.2572391,18.0938272 10.4023109,18.2386831 10.5737595,18.2386831 L12.1299847,18.2386831 L14.9522916,18.2386831 C14.7940314,19.1341564 14.0159188,19.81893 13.0795459,19.81893 L12.9212857,19.81893 L10.8639031,19.81893 C10.7320197,19.81893 10.6133245,19.8979424 10.5737595,20.0164609 C10.5210061,20.1349794 10.5473828,20.2666667 10.6397012,20.3588477 L15.0841751,24.7967078 C15.1501168,24.8625514 15.2292469,24.8888889 15.308377,24.8888889 C15.3875071,24.8888889 15.4666372,24.8625514 15.532579,24.7967078 C15.6512741,24.6781893 15.6512741,24.4674897 15.532579,24.3489712 L14.8599731,23.6773663 L11.6288274,20.4641975 L13.0795459,20.4641975 L13.2378061,20.4641975 C14.4643226,20.3851852 15.4534489,19.4502058 15.5985207,18.2518519 L17.1811227,18.2518519 C17.3525712,18.2518519 17.4976431,18.1069959 17.4976431,17.9358025 C17.4976431,17.7646091 17.3525712,17.6197531 17.1811227,17.6197531 L15.5985207,17.6197531 C15.5193906,16.9876543 15.2160586,16.4345679 14.7544663,16.0395062 L17.1811227,16.0395062 C17.3525712,16.0395062 17.4976431,15.8946502 17.4976431,15.7234568 C17.4976431,15.5522634 17.3525712,15.4074074 17.1811227,15.4074074 L13.0927343,15.4074074 L10.8639031,15.4074074 L10.5737595,15.4074074 C10.4023109,15.4074074 10.2572391,15.5522634 10.2572391,15.7234568 C10.2572391,15.8946502 10.4023109,16.0395062 10.5737595,16.0395062 L10.8639031,16.0395062 L11.0221633,16.0395062 L13.0927343,16.0395062 C14.0291071,16.0395062 14.8204081,16.7242798 14.9654799,17.6197531 L11.8134643,17.6197531 L10.5737595,17.6197531 L10.5737595,17.6065844 Z"
+                                                    id="Shape" stroke="#2684FF" stroke-width="0.5" fill="#157BFB"
+                                                    fill-rule="nonzero"></path>
+                                                <path
+                                                    d="M7.24040404,28.4444444 C8.77455107,30.539159 10.9335718,31.5865162 13.7174663,31.5865162 C16.5013608,31.5865162 18.766344,30.539159 20.5124158,28.4444444"
+                                                    id="Path-2" stroke="#2684FF" stroke-linecap="round"
+                                                    fill-rule="nonzero"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </span>
+                            <li class="title">Đầu tư</li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Investment Plans
+                                </a>
+                            </li>
+                            <li><a href="javascript:void(0);">Child Plans</a></li>
+                            <li><a href="javascript:void(0);">Pension Plans</a></li>
+                            <li><a href="javascript:void(0);">ULIPs</a></li>
+                            <li><a href="javascript:void(0);">Money Back Policy</a></li>
+                            <li><a href="javascript:void(0);">Endowment Policy</a></li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Guaranteed Return Plans
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    Tax Saving Plans
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul class="allInsurance">
+                            <span class="icons">
+                                <?xml version="1.0" encoding="UTF-8"?>
+                            </span>
+                            <li class="title">Bảo hiểm khác</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Load Facebook chat phone ring -->
+    {% include "core/phone_fbchat.html" %}
+
+    <!-- lib js -->
+    <script src="{% static 'core/js/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/bootstrap/dist/js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/CSSRulePlugin.js' %}"></script>
+    <script src="{% static 'core/js/flatpickr.js' %}"></script>
+    <script src="{% static 'core/js/slick.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'core/js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'core/js/sweetalert.min.js' %}"></script>
+    <script src="{% static 'core/js/loadingjs.js' %}"></script>
+    <script type="text/javascript">
+        var addClass = function(currentItem) {
+            currentItem.classList.add("active");
+            currentItem.parentElement.children[1].classList.add("slidedown");
+        };
+        var removeClass = function() {
+            for (var i = 0; i < submenuopen.length; i++) {
+                submenuopen[i].classList.remove("active");
+                submenuopen[i].parentElement.children[1].classList.remove("slidedown");
+            }
+            addClass(this);
+        };
+
+        function openNav() {
+            var mobNav = document.getElementById("mobNav");
+            mobNav.style.width = "250px";
+            //document.body.style.backgroundColor = "rgba(0,0,0,0.6)";
+        }
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            var mobNav = document.getElementById("mobNav");
+            mobNav.style.width = "0px";
+            document.body.style.backgroundColor = "white";
+        }
+        var submenuopen = document.getElementsByClassName("submenu");
+        for (var i = 0; i < submenuopen.length; i++) {
+            submenuopen[i].addEventListener("click", removeClass, false);
+        }
+        var fixed = document.getElementById("mobNav");
+        if (fixed) {
+            try {
+                fixed.addEventListener(
+                    "touchmove",
+                    function(e) {
+                        e.preventDefault();
+                        e.preventDefault();
+                    },
+                    false
+                );
+            } catch (e) {}
+        }
+    </script>
+    <script src="{% static 'core/js/pb-home-v1.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/js/base.js' %}"></script>
+    <script type="text/javascript">
+        var wWidth = $(window).width();
+        $(window).scroll(function(event) {
+            var scroll = $(window).scrollTop();
+            var topOffset = $(".landingSlide").offset();
+
+            if (wWidth > 860 && is_iPhone_or_iPod().isture == undefined) {
+                if (scroll > "70") {
+                    madeEasyShowHide(1);
+                } else if (scroll <= "300") {
+                    madeEasyShowHide(2);
+                    $(".insuranceMadeEasy").removeClass("remove");
+                }
+                if ($(".testimonials ").isInViewport()) {
+                    $(".testimonials").addClass("animated fadeInUp");
+                }
+                if ($(".ourpartner ").isInViewport()) {
+                    $(".ourpartner").addClass("animated fadeInUp");
+                }
+                if ($(".groupCompanie ").isInViewport()) {
+                    $(".groupCompanie").addClass("animated fadeInUp");
+                }
+                if ($(".mobileApp ").isInViewport()) {
+                    $(".mobileApp").addClass("animated fadeInUp");
+                }
+            } else {
+                if (is_iPhone_or_iPod().isture == 1) {
+                    if ($(".testimonials ").isInViewport()) {
+                        $(".testimonials").addClass("animated");
+                    }
+                    if ($(".ourpartner ").isInViewport()) {
+                        $(".ourpartner").addClass("animated");
+                    }
+                    if ($(".groupCompanie ").isInViewport()) {
+                        $(".groupCompanie").addClass("animated");
+                    }
+                    if ($(".mobileApp ").isInViewport()) {
+                        $(".mobileApp").addClass("animated");
+                    }
+                }
+            }
+        });
+        $(document).ready(function() {
+            madeEasyShowHide(0);
+            $(".moreProducts,.knowmoreSeo").click(function() {
+                if ($(this).text() == "More") {
+                    if ($(this).hasClass("np")) {
+                        $(this).hide();
+                        $(".restInsurance_icon .restInsurance_icon_band .sub-links").css("display", "inline-block");
+                    } else {
+                        $("body").addClass("stopScroll");
+                        $("#moreMenu").addClass("open");
+                        $(".row.seocontent.contentHide").hide();
+                        $(".row.moreproductlink.contentHide").show();
+                    }
+                } else {
+                    $("body").addClass("stopScroll");
+                    $("#moreMenu").addClass("open");
+                    $(".row.seocontent.contentHide").show();
+                    $(".row.moreproductlink.contentHide").hide();
+                }
+            });
+            $(".close").click(function() {
+                $("#moreMenu").removeClass("open");
+                $("body").removeClass("stopScroll");
+            });
+            $(".close_panel").click(function() {
+                $(".overflowHide").hide(200);
+                $("body").css({
+                    overflow: "auto",
+                    position: "static",
+                    height: "auto",
+                });
+                $("#menu_v3").removeAttr("style");
+
+                $(".sidebar").css({
+                    left: -275,
+                });
+                $("#humb_bg_menu").removeClass("active");
+            });
+
+            try {
+                //Stricky Menu
+                $(window).scroll(function() {
+                    var scrolltop = $(this).scrollTop();
+                    if (scrolltop < 500) $("nav").removeClass("fixedh");
+                    else $("nav").addClass("fixedh");
+                });
+            } catch (e) {}
+        });
+        madeEasyShowHide = function(state) {
+            if (state == 0) {
+                //popin defautl
+                setTimeout(function() {
+                    $(".insuranceMadeEasy").addClass("animated fadeInUp");
+                }, 1000);
+            } else if (state == 1) {
+                //popout on page scroll
+                setTimeout(function() {
+                    $(".landingSlide").removeClass("ft");
+                    $(".insuranceMadeEasy").addClass("animated fadeOutUp").removeClass("fadeInUp");
+                    $(".madeEasy").addClass("animated fadeInUp");
+                    setTimeout(function() {
+                        $(".insuranceMadeEasy").addClass("remove");
+                    }, 1000);
+                });
+            } else {
+                //popin on page scroll
+                $(".landingSlide").addClass("ft");
+                $(".insuranceMadeEasy").removeClass("animated fadeOutUp").addClass("animated fadeInUp");
+                $(".madeEasy").removeClass("animated fadeInUp");
+            }
+        };
+        $.fn.isInViewport = function() {
+            return null;
+        };
+
+        function ipadType() {
+            var windowWidth = $(window).width();
+            var windowHeight = $(window).height();
+            if (windowHeight == 768 && windowWidth == 1024) {
+                return "ipad";
+            } else if (windowHeight == 1024 && windowWidth == 768) {
+                return "ipad";
+            } else if (windowHeight == 1024 && windowWidth == 1366) {
+                return "ipad_pro";
+            } else if (windowHeight == 1366 && windowWidth == 1024) {
+                return "ipad_pro";
+            }
+        }
+
+        function is_iPhone_or_iPod() {
+            var is_pad = navigator.userAgent.match(/iPad/i) != null;
+            var obj = {
+                deviceType: ipadType(),
+                isture: 1,
+            };
+            if (is_pad) {
+                return obj;
+            } else {
+                return false;
+            }
+        }
+    </script>
+    <script>
+        for (let index = 18; index <= 65; index++) {
+            $("#basicDate").append("<option value='" + index + "'>" + index + "</option>");
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        $("#btn1").css("display", "none");
+
+        function plusSlides(n) {
+            if (slideIndex == 1) {
+                if ($("#name").val() && $(".date_input").val() && $("#basicSex").val()) {
+                    showSlides((slideIndex += n));
+                    $("#thongbao").html("");
+                } else {
+                    $("#thongbao").html("Bạn cần điền đầy đủ thông tin");
+                }
+                $("#btn1").css("display", "block");
+            } else if (slideIndex == 2) {
+                if ($(".calas").val() && $("#basicYte").val()) {
+                    $(".thongbao5").html("");
+                    showSlides((slideIndex += n));
+                } else {
+                    $(".thongbao5").html("Bạn cần điền đầy đủ thông tin");
+                }
+                $("#btn1").css("display", "block");
+            } else if (slideIndex == 3) {
+                if ($(".calas1").val() && $("#basicPurpose").val()) {
+                    $(".thongbao2").html("");
+                    showSlides((slideIndex += n));
+                } else if (n < 0) {
+                    showSlides((slideIndex = slideIndex - 1));
+                } else {
+                    $(".thongbao2").html("Bạn cần điền đầy đủ thông tin");
+                }
+                $("#btn1").css("display", "block");
+            } else if (slideIndex == 4) {
+                $("#btn1").css("display", "block");
+                if ($(".checkm4").val() && $("#baseIsBoss").val()) {
+                    $(".thongbao4").html("");
+                    showSlides((slideIndex += n));
+                } else if (n < 0) {
+                    showSlides((slideIndex = slideIndex - 1));
+                } else {
+                    $(".thongbao4").html("Bạn cần điền đầy đủ thông tin");
+                }
+                $("#btn1").css("display", "block");
+            }
+            if (slideIndex == 1) {
+                $("#btn1").css("display", "none");
+            }
+        }
+
+        function currentSlide(n) {
+            showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+
+            if (n == slides.length) {
+                $(".modal-footer").css("display", "none");
+
+                $(".text-modal").html("Thông Tin Của Bạn Sau Khi Yêu Cầu Chúng Tôi Là").css("font-weight", "bold");
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            if (n == slides.length - 1) {
+                $("#btn2").html("Kết Thúc");
+            }
+            slides[slideIndex - 1].style.display = "block";
+
+            if (n == slides.length) {
+                onSubmitRobotHome();
+            }
+        }
+        let onSubmitRobotHome = () => {
+            $(document).ready(function() {
+                default_name = $("#name").val();
+                default_sex = parseInt($("#basicSex").val());
+                default_birthday = parseInt($("#basicDate").val());
+                default_xahoi = parseInt($("#basicXahoi").val());
+                default_yte = parseInt($("#basicYte").val());
+                default_luong = parseInt($("#basicSalary").val());
+                default_mucdich = parseInt($("#basicPurpose").val());
+                default_quanhe = parseInt($("#baseRelation").val());
+                default_isboss = parseInt($("#baseIsBoss").val());
+
+                var mydata = JSON.stringify({
+                    robot_home_name: default_name,
+                    robot_home_sex: default_sex,
+                    robot_home_birthday: default_birthday,
+                    robot_home_xahoi: default_xahoi,
+                    robot_home_yte: default_yte,
+                    robot_home_luong: default_luong,
+                    robot_home_mucdich: default_mucdich,
+                    robot_home_quanhe: default_quanhe,
+                    robot_home_isboss: default_isboss,
+                });
+                // termlife/update-view/
+                $.ajax({
+                        type: "POST",
+                        url: "{% url 'robot:api_home_robot' %}",
+                        data: mydata,
+                        contentType: "application/json",
+                        dataType: "json",
+                    })
+                    .done(function(data, statusText, xhr) {
+                        var status = xhr.status;
+
+                        $(".homeRobotMoney1").text(data["kqHomeRobotMoneyBH"]["ketqua1"]);
+                        $(".homeRobotMoney2").text(data["kqHomeRobotMoneyBH"]["ketqua2"]);
+
+                        $(".homeRobotYearBH1").text(data["kqHomeRobotYearBH"]["ketqua1"]);
+                        $(".homeRobotYearBH2").text(`${data["kqHomeRobotYearBH"]["ketqua2"]} năm`);
+
+                        let spchinh, spphu, link, linkkemtheo, trondoi;
+
+                        switch (data["kqHomeRobotProductBH"]["ketqua1"]) {
+                            case "TUKY":
+                                spchinh = "Tử kỳ";
+                                link = `{% url 'termlife:life-product' %}`;
+                                break;
+                            case "DAUTU":
+                                spchinh = "Đầu tư";
+                                link = `{% url 'investment:investment' %}`;
+
+                                break;
+                            case "TICHLUY":
+                                spchinh = "Tích lũy";
+                                link = `{% url 'coming_soon_url' %}`;
+
+                                break;
+                            case "GIAODUC":
+                                spchinh = "Giáo dục";
+                                link = `{% url 'coming_soon_url' %}`;
+
+                                break;
+                            case "HUUTRI":
+                                spchinh = "Hưu trí";
+                                link = `{% url 'coming_soon_url' %}`;
+
+                                break;
+
+                            default:
+                                break;
+                        }
+                        switch (data["kqHomeRobotProductBH"]["ketqua2"]) {
+                            case "BAOHIEMSUCKHOECANHAN":
+                                spphu = "Bảo hiểm sức khỏe cá nhân";
+                                linkkemtheo = `{% url 'personalhealth' %}`;
+
+                                break;
+                            case "BAOHIEMTAINANCANHAN":
+                                spphu = "Bảo hiểm tai nạn cá nhân";
+                                linkkemtheo = `{% url 'coming_soon_url' %}`;
+
+                                break;
+                            case "BAOHIEMTROCAPYTE":
+                                spphu = "Baỏ hiệm trợ cấp y tế";
+                                linkkemtheo = `{% url 'coming_soon_url' %}`;
+
+                                break;
+                            case "BAOHIEMBENHHIEMNGHEO":
+                                spphu = "Bảo hiểm hiểm nghèo";
+                                linkkemtheo = `{% url 'coming_soon_url' %}`;
+
+                                break;
+                            case "BAOHIEMUNGTHU":
+                                spphu = "Bảo hiểm ung thư";
+                                linkkemtheo = `{% url 'coming_soon_url' %}`;
+
+                                break;
+
+                            default:
+                                break;
+                        }
+                        switch (data["kqHomeRobotYearBH"]["ketqua2"]) {
+                            case "trondoi":
+                                trondoi = "trọn đời";
+                                $(".homeRobotYearBH2").text(trondoi);
+                                break;
+                            default:
+                                break;
+                        }
+                        $("#link-products").attr("href", link);
+                        $("#BHkemtheo").attr("href", linkkemtheo);
+
+                        $(".homeRobotProductBH1").text(spchinh);
+                        $(".homeRobotProductBH2").text(spphu);
+
+                        // if($(".homeRobotFc2").text(data['kqHomeRobot1']['ketqua2']))
+                    })
+                    .fail(function(xhr, textStatus, errorThrown) {
+                        alert("Lỗi kết nối mạng");
+                    });
+            });
+        };
+    </script>
+    <script type="text/javascript">
+        dataLayer = [{
+            userType: "guest",
+            userId: "",
+            leadId: "",
+            enquiryId: "",
+            customerId: "",
+            leadType: "",
+            pageLanguage: "en",
+            bookingId: "",
+            totalMembers: "",
+            pageType: "prequote page",
+            pageName: "/home",
+            lobSection1: "",
+            lobSection2: "",
+            lobSection3: "",
+            prevPage: "/home",
+            flowName: "seo",
+        }, ];
+    </script>
+    {% block javascript_block %} {% endblock %}
+</body>
+
+</html>

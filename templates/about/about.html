@@ -1,0 +1,1228 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title_core %} Nem Nướng Hoa Lệ {% endblock %}
+{% block css_blocl %}
+<link rel="stylesheet" href="{% static 'about/css/style.css' %}">
+<style>
+    .mission_value_vision {
+        padding-top: 5%;
+    }
+
+    .color-img {
+        filter: grayscale(0%) !important;
+        opacity: 1 !important;
+        transform: scale(1) !important;
+    }
+
+    .contai-margin {
+        margin: 0 50px;
+    }
+
+    .investor_image .image img {
+        width: 160px;
+        height: 130px;
+    }
+
+    .mvv_item p {
+        margin-top: 5% !important;
+    }
+
+    .about_page .about_company_detail h1 {
+        color: #40a1a4;
+        font-weight: 500;
+    }
+
+    .about_company .company_zig_zag .zig_zag_head {
+        color: #40a1a4;
+        font-weight: 500;
+    }
+
+    .about_page .about_company_detail {
+        margin: 20px 40px;
+        text-align: justify;
+    }
+
+    .linkkk {
+        color: #57cae6;
+    }
+
+    .linkkk:hover {
+        color: #57cae6;
+    }
+
+    .about_company .company_zig_zag .item_right {
+        text-align: center;
+    }
+
+    .about_company .company_zig_zag .padding_right {
+        padding-right: 0;
+        text-align: justify;
+    }
+
+    .about_company .company_zig_zag .item_left {
+        text-align: center;
+    }
+
+    .about_company .company_zig_zag .zig_zag_left {
+        flex: 0 0 45%;
+        max-width: 45%;
+        float: left;
+        padding-right: 5%;
+    }
+
+
+
+    .migright_right img {
+        width: 90%;
+
+    }
+
+    .migright img {
+        width: 90%;
+    }
+
+    .text_right h4 {
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+        color: #40a1a4;
+        margin: 5px 0px;
+        padding-bottom: 10px;
+    }
+
+    .text_right {
+        line-height: 40px;
+    }
+
+    .text_right p {
+        color: #808080;
+        text-align: justify;
+    }
+
+    .about_company .mission_value_vision .mvv_item .mvv_head {
+        color: #40a1a4;
+    }
+
+    .about_page .about_company_detail h1,
+    .about_page .about_team_detail h5,
+    .about_page .about_investor .investor_wrap h5 {
+        color: #40a1a4;
+    }
+
+    .about_page .about_team_detail .others_members .contentBox .tooltip_info h5 {
+        text-align: center;
+        color: #40a1a4;
+    }
+
+    .about_page .about_team_detail .others_members .contentBox .tooltip_info p {
+        text-align: center;
+        padding: 0;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+
+    .contentBox .tooltip_info {
+        text-align: center;
+    }
+@media screen and (max-width: 1023px) {
+    .boxx{
+        width: 80% !important;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .boxx{
+        width: 60% !important;
+    }
+}
+    @media screen and (max-width:768px) {
+        .text_right h4 {
+            font-size: 19px;
+        }
+
+        .text_right p {
+            line-height: 24px;
+            font-size: 14px;
+        }
+
+        .migright img {
+            width: 100%;
+        }
+
+        .about_page .about_company_detail {
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width:767px) {
+        .mm {
+            display: none;
+        }
+        .ahihi{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .contai-margin {
+            margin: 0 10px !important;
+        }
+
+        .about_page .tabs_menu ul li a {
+            font-size: 12px;
+        }
+    }
+    @media screen and (max-width:425px){
+        .boxx{
+            width:95% !important;
+        }
+        .about_page .about_team_detail p{
+            font-size: 14px !important;
+        }
+    }
+    @media screen and (max-width:375px){
+        .boxx{
+            padding: 8px !important;
+        }
+        .about_page .about_team_detail p{
+            font-size: 12px !important;
+        }
+        .about_page .about_team_detail .fonder_name h6, .about_page .about_team_detail .fonder_name p{
+            font-size: 14px !important;
+        }
+    }
+</style>
+
+<!-- responsive by danh -->
+<style>
+    .about_page .about_award_detail h5 {
+        color: #40a1a4 !important;
+    }
+
+    @media (min-width: 3401px) and (max-width: 4000px) {
+        .about_page .tabs_images {
+            min-height: 690px !important;
+        }
+
+        .about_page .tabs_images .tabs_item_images {
+            width: 100% !important;
+            top: 56% !important;
+        }
+
+        .about_page .about_company_detail {
+            margin: 20px 30px;
+        }
+
+        .about_page .about_company_detail p,
+        .about_page .about_investor .investor_wrap p {
+            line-height: 34px;
+        }
+    }
+
+    @media (min-width: 2901px) and (max-width: 3400px) {
+        .about_page .tabs_images {
+            min-height: 580px !important;
+        }
+
+        .about_page .tabs_images .tabs_item_images {
+            width: 100% !important;
+            top: 56% !important;
+        }
+
+        .about_page .about_company_detail {
+            margin: 20px 30px;
+        }
+
+        .about_page .about_company_detail p,
+        .about_page .about_investor .investor_wrap p {
+            line-height: 34px;
+        }
+    }
+
+    @media (min-width: 2401px) and (max-width: 2900px) {
+        .about_page .tabs_images {
+            min-height: 520px !important;
+        }
+
+        .about_page .tabs_images .tabs_item_images {
+            width: 100% !important;
+            top: 56% !important;
+        }
+
+        .about_page .about_company_detail {
+            margin: 20px 30px;
+        }
+
+        .about_page .about_company_detail p,
+        .about_page .about_investor .investor_wrap p {
+            line-height: 34px;
+        }
+    }
+
+    @media (min-width: 2301px) and (max-width: 2400px) {
+        .about_page .tabs_images {
+            min-height: 430px !important;
+        }
+
+        .about_page .tabs_images .tabs_item_images {
+            width: 100% !important;
+            top: 60% !important;
+        }
+
+        .about_page .about_company_detail {
+            margin: 20px 30px;
+        }
+
+        .about_page .about_company_detail p,
+        .about_page .about_investor .investor_wrap p {
+            line-height: 34px;
+        }
+    }
+
+    @media (min-width: 1901px) and (max-width: 2300px) {
+        .about_page .tabs_images {
+            min-height: 400px !important;
+        }
+
+        .about_page .tabs_images .tabs_item_images {
+            width: 100% !important;
+            top: 55% !important;
+        }
+
+        .about_page .about_company_detail {
+            margin: 20px 30px;
+        }
+
+        .about_page .about_company_detail p,
+        .about_page .about_investor .investor_wrap p {
+            line-height: 34px;
+        }
+    }
+
+    @media (min-width: 1601px) and (max-width: 1900px) {
+        .about_page .tabs_images {
+            min-height: 340px !important;
+        }
+
+        .about_page .tabs_images .tabs_item_images {
+            width: 100% !important;
+            top: 55% !important;
+        }
+
+        .about_page .about_company_detail {
+            margin: 20px 40px;
+        }
+
+        .about_page .about_company_detail p,
+        .about_page .about_investor .investor_wrap p {
+            line-height: 34px;
+        }
+    }
+
+    @media (min-width: 1401px) and (max-width: 1600px) {
+        .about_page .tabs_images {
+            min-height: 310px !important;
+        }
+
+        .about_page .tabs_images .tabs_item_images {
+            width: 100% !important;
+            top: 55% !important;
+        }
+
+        .about_page .about_company_detail {
+            margin: 20px 40px;
+        }
+
+        .about_page .about_company_detail p,
+        .about_page .about_investor .investor_wrap p {
+            line-height: 34px;
+        }
+    }
+
+    @media (min-width: 1301px) and (max-width: 1400px) {
+
+        .about_page .about_company_detail p,
+        .about_page .about_investor .investor_wrap p {
+            line-height: 34px;
+        }
+    }
+</style>
+<!-- end danh -->
+<style>
+    .article--active {
+        transform: translateY(0);
+    }
+
+    .article__list {
+        display: flex;
+    }
+
+    .article__item {
+        flex: 1;
+        position: relative;
+        transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+        list-style: none;
+    }
+
+    .article__item:hover {
+        opacity: 0.75;
+    }
+
+    .article__thumb {
+        display: block;
+        height: 50px;
+        /* background: #dc143c; */
+        transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .article__thumb:before {
+        content: attr(data-letter);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 70px;
+        text-transform: uppercase;
+        opacity: 0.15;
+    }
+
+    .article__label {
+        position: absolute;
+        top: 50%;
+        left: 49%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        /* letter-spacing: 2px; */
+        color: #514242;
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .boxx {
+        width: 60%;
+    }
+
+
+    @media (max-width: 850px) {
+        .article__label {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .article__label {
+            display: none;
+        }
+
+        .article__thumb {
+            height: 90px;
+        }
+
+        .article__thumb:before {
+            font-size: 32px;
+            opacity: 0.7;
+        }
+    }
+
+    .burger {
+        position: absolute;
+        right: 0;
+        top: 100%;
+        width: 60px;
+        height: 60px;
+        background: #1a1a1a;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger__patty {
+        position: relative;
+        width: 60%;
+        height: 2px;
+        background: #fff;
+        transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .burger__patty:before,
+    .burger__patty:after {
+        will-change: transform;
+        content: "";
+        position: absolute;
+        left: 0;
+        background: #fff;
+        height: 2px;
+        width: 100%;
+        transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .burger__patty:before {
+        top: -10px;
+    }
+
+    .burger__patty:after {
+        top: 10px;
+    }
+
+    .burger--close .burger__patty {
+        transform: rotate(45deg);
+    }
+
+    .burger--close .burger__patty:before {
+        transform: rotate(-90deg) translate(-9px, 0);
+    }
+
+    .burger--close .burger__patty:after {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    .page {
+        height: 60vh;
+        will-change: transform;
+        perspective: 400px;
+        overflow: hidden;
+        transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .section {
+        will-change: transform;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 60vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: #fff;
+        transform: translateX(100%);
+        transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .section--hidden {
+        transform: translateX(-100%);
+    }
+
+    .section--active {
+        transform: translateX(0) rotateY(0);
+        z-index: 2;
+    }
+
+    .section:before {
+        content: attr(data-letter);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 75vh;
+        text-transform: uppercase;
+        opacity: 0.15;
+        z-index: -1;
+    }
+
+    .section__wrapper {
+        width: 100%;
+        /* max-width: 800px;
+        padding: 0 8vw; */
+    }
+
+    .section__title {
+        margin: 0 0 25px 0;
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    .section p {
+        margin: 0 0 25px 0;
+        font-family: 'Georgia';
+        font-size: 20px;
+    }
+
+    .section p:last-child {
+        margin-bottom: 0;
+    }
+
+    .color1 {
+        background: #1abc9c;
+    }
+
+    .color2 {
+        background: #e74c3c;
+    }
+
+    .color3 {
+        background: #3498db;
+    }
+
+    .color4 {
+        background: #f4d03f;
+    }
+
+    .color5 {
+        background: #9b59b6;
+    }
+
+    .color6 {
+        background: #bdc3c7;
+    }
+
+    .logo1 {
+        position: fixed;
+        top: 195px;
+        right: 7px;
+        z-index: 2;
+    }
+
+    @media (max-width: 720px) {
+        .logo1 {
+            top: 160px;
+        }
+    }
+
+    .section__wrapper img {
+        width: 100%;
+    }
+</style>
+<style>
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+    #team {
+        background: #eee !important;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #108d6f;
+        border-color: #108d6f;
+        box-shadow: none;
+        outline: none;
+    }
+
+    .btn-primary {
+        color: #fff;
+        background-color: #007b5e;
+        border-color: #007b5e;
+    }
+
+
+    section .section-title {
+        text-align: center;
+        color: #007b5e;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    #team .card {
+        border: none;
+        background: #ffffff;
+    }
+
+    .image-flip:hover .backside,
+    .image-flip.hover .backside {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        border-radius: .25rem;
+    }
+
+    .image-flip:hover .frontside,
+    .image-flip.hover .frontside {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
+
+    .mainflip {
+        -webkit-transition: 1s;
+        -webkit-transform-style: preserve-3d;
+        -ms-transition: 1s;
+        -moz-transition: 1s;
+        -moz-transform: perspective(1000px);
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        transition: 1s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .frontside {
+        position: relative;
+        -webkit-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+
+    .backside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white;
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+        box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    }
+
+    .frontside,
+    .backside {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: 1s;
+        -webkit-transform-style: preserve-3d;
+        -moz-transition: 1s;
+        -moz-transform-style: preserve-3d;
+        -o-transition: 1s;
+        -o-transform-style: preserve-3d;
+        -ms-transition: 1s;
+        -ms-transform-style: preserve-3d;
+        transition: 1s;
+        transform-style: preserve-3d;
+    }
+
+    .frontside .card,
+    .backside .card {
+        min-height: 312px;
+    }
+
+    .backside .card a {
+        font-size: 18px;
+        color: #40a1a4 !important;
+    }
+
+    .frontside .card .card-title,
+    .backside .card .card-title {
+        color: #40a1a4 !important;
+    }
+
+    .frontside .card .card-body img {
+        width: 120px;
+        height: 120px;
+        /* border-radius: 50%; */
+    }
+
+    .boxx {
+        box-shadow: 0 3px 24px 0 rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        border-radius: 10px;
+        background-color: #fefeed;
+    }
+    .btn-primary {
+        color: #fff !important;
+        background-color: #40a1a4;
+    }
+
+    .nav-link {
+        padding: 2;
+    }
+</style>
+<style>
+    @media screen and (max-width: 980px){
+        .about_page .about_company_detail h1, .about_page .about_team_detail h5, .about_page .about_investor .investor_wrap h5{
+            font-size: 18px;
+        }
+        .about_page .about_award_detail h5{
+            font-size: 18px;
+        }
+    }
+    @media screen and (max-width: 400px){
+        .page{
+            height: 90px !important;
+        }
+    }
+    @media (min-width: 401px) and (max-width: 500px){
+        .page{
+            height: 120px !important;
+        }
+    }
+    @media (min-width: 501px) and (max-width: 600px){
+        .page{
+            height: 150px !important;
+        }
+    }
+    @media (min-width: 601px) and (max-width: 768px){
+        .page{
+            height: 180px !important;
+        }
+        .article__label{
+            font-size: 12px !important;
+        }
+    }
+    @media (min-width: 769px) and (max-width: 1024px){
+        .article__label{
+            font-size: 14px !important;
+        }
+    }
+    @media (min-width: 1201px) and (max-width: 2000px){
+        .page{
+            height: 58vh !important;
+        }
+    }
+    @media screen and (max-width: 1024px){
+        .section{
+            height: auto !important;
+        }
+        .pt-4{
+            padding-top: 0px !important;
+        }
+        .boxx{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .article__thumb{
+            height: 50px;
+        }
+        .article__label{
+            display: initial;
+            text-align: center;
+            font-size: 9px;
+        }
+        .migright_right img{
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 1101px) and (max-width: 1200px){
+        .section{
+            height: auto !important;
+        }
+        .pt-4{
+            padding-top: 0px !important;
+        }
+        .boxx{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .article__thumb{
+            height: 50px;
+        }
+        .article__label{
+            display: initial;
+            text-align: center;
+        }
+        .migright_right img{
+            width: 100%;
+        }
+    }
+    @media (min-width: 1201px) and (max-width: 2000px){
+        .section{
+            height: auto !important;
+        }
+        .pt-4{
+            padding-top: 0px !important;
+        }
+        .boxx{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+</style>
+<style>
+    .section{
+        height: 48vh;
+    }
+    .page{
+        height: 48vh;
+    }
+    @media screen and (min-width: 768px){
+        .lala{
+            display: none;
+        }
+    }
+    @media screen and (max-width: 768px){
+        .others_members{
+            display: none;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page pt-4">
+    <section class="section section--active pt-4 " data-letter="">
+        <article class="section__wrapper pt-4">
+            <img
+                src="{% static 'about/images/aboutus4-01.svg' %}">
+
+        </article>
+    </section>
+    <section class="section pt-4 " data-letter="">
+        <article class="section__wrapper pt-4">
+            <img
+                src="{% static 'about/images/aboutus4-02.svg' %}">
+        </article>
+    </section>
+    <section class="section pt-4 " data-letter="">
+        <article class="section__wrapper pt-4">
+            <img
+                src="{% static 'about/images/aboutus4-03.svg' %}">
+        </article>
+    </section>
+    <section class="section pt-4 " data-letter="">
+        <article class="section__wrapper pt-4">
+            <img
+                src="{% static 'about/images/aboutus4-04.svg' %}">
+        </article>
+    </section>
+
+</div>
+<div class="container pt-4" style="display: flex;
+justify-content: center;">
+    <div class="boxx">
+        <article class="article article--active">
+            <ul class="article__list nav nav-pills">
+                <li class="article__item first1" id="first">
+                    <a class="article__link nav-link active" data-toggle="pill" href="#about_company">
+                        <div class="article__thumb "></div>
+                        <p class="article__label">Nem Hoa Lệ</p>
+                    </a>
+                </li>
+                <li class="article__item second1" id="second">
+                    <a class="article__link nav-link" class="nav-link" data-toggle="pill" href="#about_investor">
+                        <div class="article__thumb "></div>
+                        <p class="article__label">Nem Hoa Lệ</p>
+                    </a>
+                </li>
+                <li class="article__item third1" id="third">
+                    <a class="article__link nav-link" class="nav-link" data-toggle="pill" href="#about_team">
+                        <div class="article__thumb "></div>
+                        <p class="article__label">Nem Hoa Lệ</p>
+                    </a>
+                </li>
+                <li class="article__item four1" id="four">
+                    <a class="article__link nav-link" class="nav-link" data-toggle="pill" href="#about_award">
+                        <div class="article__thumb "></div>
+                        <p class="article__label">Nem Hoa Lệ</p>
+                    </a>
+                </li>
+            </ul>
+            <!-- <a href="http://ettrics.com/code/horizontal-tab-menu/" class="logo1" target="_blank">
+        <img class="logo1" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45226/ettrics-logo.svg" alt="" />
+    </a> -->
+        </article>
+    </div>
+
+</div>
+
+<main role="main" class="page-container contai-margin ">
+    <div class="container_main">
+        <section class="about_page">
+            <!-- <div class="img_tabs_border tabs_images">
+             
+                <ul class="nav nav-pills tabs_item_images clearfix">
+                    <li class="first tab_img">
+                        <img class="clo" src="{% static 'about/images/dautun.gif' %}" alt="">
+                    </li>
+                    <li class="second tab_img">
+                        <img class="clo" src="{% static 'about/images/doitac.gif' %}" alt="">
+                    </li>
+                    <li class="third tab_img">
+                        <img class="clo" src="{% static 'about/images/team.gif' %}" alt="">
+                    </li>
+                    <li class="four tab_img">
+                        <img class="clo" src="{% static 'about/images/giaithuong2.gif' %}" alt="">
+                    </li>
+                </ul>
+            </div> -->
+            <!--Tabs Images Section end-->
+            <!--Tabs menu Section start-->
+            <!-- <div class="container">
+                <div class="tabs_menu">
+                    <ul class="nav nav-pills clearfix">
+                        <li class=" nav-item first1" id="first">
+                            <a class="nav-link active" data-toggle="pill" href="#about_company">Về bihama</a>
+                        </li>
+                        <li class="nav-item second1" id="second">
+                            <a class="nav-link" data-toggle="pill" href="#about_investor">Các đối tác</a>
+                        </li>
+                        <li class="nav-item third1" id="third">
+                            <a class="nav-link" data-toggle="pill" href="#about_team">Đội ngũ</a>
+                        </li>
+                        <li class="nav-item four1" id="four">
+                            <a class="nav-link" data-toggle="pill" href="#about_award">Giải thưởng</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+            <!--Tabs menu Section end-->
+            <div class="tab-content">
+                <!--Company Tab Section End-->
+                <div class="about_company tab-pane first active" id="about_company">
+                    <!--Tabs details Section start-->
+                    <div class="container">
+                        <div class="about_company_detail">
+                            <h1> Sứ mệnh của chúng tôi </h1>
+                            <p>
+                                Nem nướng Hoa Lệ -  mong muốn duy trì và phát triển một món ăn truyền thống của Việt Nam. Món ăn mang lại hương vị xưa có thể đem đến cho thực khách sức khoẻ và dinh dưỡng, cải 
+                            thiện bữa ăn với nem nướng hoa lệ. Nem nướng Hoa Lệ cam kết mang đến cho khách hàng những sản phẩm tốt nhất </p>
+                        </div>
+                    </div>
+
+                    <div class="container" style="padding-top: 5%;">
+                        <div class="row">
+
+                            <div class="col-md-6 col-xs-12 pt-4 migright">
+                                <img src="{% static 'about/images/15-15.svg' %}">
+                            </div>
+                            <div class="col-md-6 col-xs-12 pt-4 migright_right mm">
+                                <img src="{% static 'about/images/company4.png' %}">
+                            </div>
+                         
+     
+                    <!--Tabs details Section End-->
+                </div>
+                <!--Company Tab Section End-->
+
+                <!--Investors Tab Section Start-->
+     
+                <!--Award Tab Section End-->
+            </div>
+        </section>
+    </div>
+</main>
+{% endblock %}
+
+{% block javascript_block %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ceo_section .founder').on('mouseover', function () {
+            // $('.contentBox',this).show();
+            $(this).addClass('active');
+            $(this).children('.contentBox').show();
+        });
+        $('.about_team .members_details').on('mouseover', function () {
+            // $('.contentBox',this).show();
+            $(this).addClass('active');
+            $(this).children('.contentBox').show();
+        });
+        $('.about_team .close_it').on('click', function () {
+            $(this).parents('.contentBox').hide();
+            $(this).parents('.founder').removeClass('active');
+            $(this).parents('.members_details').removeClass('active');
+        })
+        $('.about_team .founder').on('mouseleave', function () {
+            // $('.contentBox',this).hide();
+            $(this).removeClass('active');
+            $(this).children('.contentBox').hide();
+        });
+        $('.about_team .members_details').on('mouseleave', function () {
+            // $('.contentBox',this).hide();
+            $(this).removeClass('active');
+            $(this).children('.contentBox').hide();
+        });
+
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //for tooltip
+
+        $('.investor_wrap .box,.tip_content').on('mouseover', function () {
+
+            $(this).children().children('.tooltip_content').show();
+            $(this).children().addClass('active');
+        });
+        $('.close_it').on('click', function () {
+            $(this).parent().hide();
+            $(this).parent().parent().removeClass('active');
+        })
+        $('.investor_wrap .box').on('mouseleave', function () {
+            $(this).children().children('.tooltip_content').hide();
+            $(this).children().removeClass('active');
+        });
+    });
+</script>
+<script>
+    var first = $(".first1")
+    var second = $(".second1")
+    var third = $(".third1")
+    var four = $(".four1")
+    $(".first img").addClass("color-img");
+    first.click(function () {
+        $(".first .clo").addClass("color-img");
+        $(".second .clo").removeClass("color-img");
+        $(".third .clo").removeClass("color-img");
+        $(".four .clo").removeClass("color-img");
+    });
+    second.click(function () {
+        $(".second .clo").addClass("color-img");
+        $(".first .clo").removeClass("color-img");
+        $(".third .clo").removeClass("color-img");
+        $(".four .clo").removeClass("color-img");
+    });
+
+    third.click(function () {
+        $(".third .clo").addClass("color-img");
+        $(".first .clo").removeClass("color-img");
+        $(".second .clo").removeClass("color-img");
+        $(".four .clo").removeClass("color-img");
+    });
+    four.click(function () {
+        $(".four .clo").addClass("color-img");
+        $(".first .clo").removeClass("color-img");
+        $(".second .clo").removeClass("color-img");
+        $(".third .clo").removeClass("color-img");
+    });
+
+</script>
+<script>
+
+    var article = (function () {
+        var
+            article = $('.article'),
+            burger = $('.burger'),
+            page = $('.page'),
+            section = $('.section'),
+            link = article.find('.article__link'),
+            articleH = article.innerHeight(),
+            isOpen = true,
+            hasT = false;
+
+        var togglearticle = function () {
+            article.toggleClass('article--active');
+            burger.toggleClass('burger--close');
+            shiftPage();
+        };
+
+        var shiftPage = function () {
+            if (!isOpen) {
+                page.css({
+                    'transform': 'translateY(' + articleH + 'px)',
+                    '-webkit-transform': 'translateY(' + articleH + 'px)'
+                });
+                isOpen = true;
+            } else {
+                page.css({
+                    'transform': 'none',
+                    '-webkit-transform': 'none'
+                });
+                isOpen = false;
+            }
+        };
+
+        var switchPage = function (e) {
+            var self = $(this);
+            var i = self.parents('.article__item').index();
+            var s = section.eq(i);
+            var a = $('section.section--active');
+            var t = $(e.target);
+
+            if (!hasT) {
+                if (i == a.index()) {
+                    return false;
+                }
+                a
+                    .addClass('section--hidden')
+                    .removeClass('section--active');
+
+                s.addClass('section--active');
+
+                hasT = true;
+
+                a.on('transitionend webkitTransitionend', function () {
+                    $(this).removeClass('section--hidden');
+                    hasT = false;
+                    a.off('transitionend webkitTransitionend');
+                });
+            }
+
+            return false;
+        };
+
+        var keyarticle = function (e) {
+            var a = $('section.section--active');
+            var aNext = a.next();
+            var aPrev = a.prev();
+            var i = a.index();
+
+
+            if (!hasT) {
+                if (e.keyCode === 37) {
+
+                    if (aPrev.length === 0) {
+                        aPrev = section.last();
+                    }
+
+                    hasT = true;
+
+                    aPrev.addClass('section--active');
+                    a
+                        .addClass('section--hidden')
+                        .removeClass('section--active');
+
+                    a.on('transitionend webkitTransitionend', function () {
+                        a.removeClass('section--hidden');
+                        hasT = false;
+                        a.off('transitionend webkitTransitionend');
+                    });
+
+                } else if (e.keyCode === 39) {
+
+                    if (aNext.length === 0) {
+                        aNext = section.eq(0)
+                    }
+
+
+                    aNext.addClass('section--active');
+                    a
+                        .addClass('section--hidden')
+                        .removeClass('section--active');
+
+                    hasT = true;
+
+                    aNext.on('transitionend webkitTransitionend', function () {
+                        a.removeClass('section--hidden');
+                        hasT = false;
+                        aNext.off('transitionend webkitTransitionend');
+                    });
+
+                } else {
+                    return
+                }
+            }
+        };
+
+        var bindActions = function () {
+            burger.on('click', togglearticle);
+            link.on('click', switchPage);
+            $(document).on('ready', function () {
+                page.css({
+                    'transform': 'translateY(' + articleH + 'px)',
+                    '-webkit-transform': 'translateY(' + articleH + 'px)'
+                });
+            });
+            $('body').on('keydown', keyarticle);
+        };
+
+        var init = function () {
+            bindActions();
+        };
+
+        return {
+            init: init
+        };
+
+    }());
+
+    article.init();
+</script>
+
+
+
+
+{% endblock %}

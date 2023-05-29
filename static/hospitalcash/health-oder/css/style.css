@@ -1,0 +1,225 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    background-color: #eeecf9 !important;
+}
+.header{
+    background-color: #005387;
+}
+.header .text-right a{
+    font-size: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.left{
+    background-color: #ffffff;
+}
+.right{
+    position: relative;
+    /* background-color: #ffffff; */
+}
+h5{
+    font-size: 16px;
+    font-weight: 400;
+    color: #828283;
+    padding: 0 0 10px;
+    margin: 0;
+    border: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.nav-fixed{
+    width: 54px;
+    background: #f1f1f1;
+    top: 200px;
+    border: 1px solid #d9dbe7;
+    border-right: 0;
+    transition: all .5s ease-out;
+    margin: -31px 0 0 -54px;
+    position: fixed;
+    font-size: 10px;
+}
+.nav-fixed ul li{
+    list-style: none;
+    text-align: center;
+    height: 70px;
+    padding: 5px;
+}
+.nav-fixed ul li:hover{
+    background-color: #ffffff;
+}
+.nav-fixed ul  .active{
+    background-color:#ffffff ;
+}
+.nav-fixed ul li i{
+    display: block;
+    font-size: 30px;
+}
+.nav-fixed ul li a{
+    color: #8b9397;
+    text-decoration: none;
+}
+nav{
+    position: relative;
+    display: flex;
+    left: 0px;
+}
+.box-content{
+    min-height: 1000px;
+    width: 90% !important;
+}
+.diemnoibat{
+    min-height: 100px;
+    padding: 15px;
+    
+}
+.diemnoibat>.col-md-3{
+    border-bottom: 1px solid #f1f1f1 ;
+}
+.goisanpham{
+    height: 100px;
+}
+.tengoi>p{
+    margin-top: 20px;
+}
+.text-noibat{
+    padding: 0px 5px 0 0;
+    color: #828282;
+    line-height: 14px;
+    font-size: 9px;
+    margin: 0 0 0 0;
+    width: 57px;
+}
+.box-price {
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
+    height: 330px;
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: #fefefe;
+}
+.box-checkbox{
+    position: relative;
+    border: 1px solid #e4e8eb;
+}
+.box-checkbox .title-quyenloi{
+    position: absolute;
+    background: #e8e8e8;
+    padding: 2px 0px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 100px;
+    position: absolute;
+    top: -11px;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0 5px;
+    left: 10px;
+    margin: 0 auto;
+}
+.box-checkbox .custom-checkbox{
+    margin: 5px;
+}
+.box-checkbox label{
+    font-size: 11px;
+    color: #828283;
+}
+.box-bhc{
+    padding: 15px;
+}
+.bhc .text-bhc{
+    padding: 0px 5px 0 0;
+    color: #828282;
+    line-height: 14px;
+    font-size: 9px;
+    margin: 0 0 0 0;
+    width: 181px;
+}
+.bhc .text-bhc .quyenloi{
+    font-weight: bold;
+    font-size: 11px;
+    color: #828283;
+}
+.bhc .text-bhc .price{
+    color: red;
+}
+.right .title-header{
+        height: 48px;
+    background: #00c5a7;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    text-align: center;
+}
+.right .title-header span{
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    color: #ffffff;
+}
+.text-chung{
+    line-height: 22px;
+    color: #828283;
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+@media screen and (max-width: 992px){
+    .box-price{
+        width: 270px;
+    }
+}
+@media screen and (max-width: 768px){
+    .box-price{
+        width: 250px;
+    }
+    .text-right{
+        display: none;
+    }
+    .nav-fixed{
+        display: none;
+    }
+    .container{
+        max-width:750px;
+    }
+    .text-noibat{
+        padding: 0 5px 0px 5px;
+    }
+    /* .diemnoibat p{
+        font-size: 14px;
+        line-height: 20px;
+    } */
+    .quyenloibbosung{
+        padding-left: 5px !important;
+    }
+    /* .diemnoibat img{
+        width: 60%;
+    } */
+    .box-bhc{
+        padding: 0 5px 0 0 !important;
+    }
+    .diemnoibat{
+        padding: 0 5px 0 0 !important;
+    }
+    .imgfir{
+        width:30%;
+    }
+    .right{
+        padding:0px !important;
+
+    }
+    .box-price{
+        width:100%;
+    }
+    .tengoi>p{
+        margin-top: 0px !important;
+    }
+    .tengoi>p{
+        margin-top: 0px !important;
+    }
+}
+

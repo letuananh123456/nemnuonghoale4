@@ -1,0 +1,9 @@
+.email-content2 {    color: #fff;    padding: 16px 0px 0 0px;    text-transform: inherit;    font-size: 12px;    text-align: right;}
+.claim-link {    text-align: center;    color: #ffffff;     text-decoration: none;margin-right: 45px;}
+
+@media all and (min-width:320px) and (max-width:1024px) {
+.top-header-icon {   color: #005387;   font-size: 22px!important;   background: #fff;   border-radius: 3px;    width: 27px;
+    height: 20px;    text-align: center;    margin-top: 5px;    padding: 0 0 0 0;    line-height: 18px;}
+.prequote-header-padding {    padding: 1px 10px 2px;    background: #43ceb3;    color: #fff;    min-width: 320px;    max-width: 100%;}
+.text-header {   font-size: 17px;   padding-top: 7px;    display: inline-block;	font-weight:normal;}
+}

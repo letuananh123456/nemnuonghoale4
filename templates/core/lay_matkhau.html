@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Lấy mật khẩu-Sàn Thương Mại Điện Tử Bảo Hiểm Bihama</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/icon2.svg' %}" />
+    <link rel="stylesheet" href="{% static 'core/bootstrap/dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/Font-Awesome/css/all.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/register/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/register/main.css' %}">
+    <style>
+        .color_red {
+            color: red;
+            text-align: center;
+        }
+
+        .color_green {
+            color: blue;
+            float: right;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-55 p-r-55">
+                <form method="POST" action="" class="login100-form validate-form" id="opt_forgot">
+                    {% csrf_token %}
+                    <span class="login100-form-title ">
+                        <a href="/"><img src="{% static 'core/images/lgBi18.svg' %}" width="100%" alt=""></a>
+                    </span>
+                    <p>Chúng tôi đã gửi mã OTP vào số điện thoại của bạn, vui lòng nhập mã vào đây:</p>
+                    <br>
+                    <div class="wrap-input100 validate-input" style="margin-bottom: 10px;"
+                        data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" name="maotp" placeholder="Mã OTP">
+                        <span class="focus-input100-1"></span>
+                        <span class="focus-input100-2"></span>
+                        <span class="icon"><i class="fa fa-user" aria-hidden="true" style="color: #38addb;"></i></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" style="margin-bottom: 10px;"
+                        data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="password" name="newpassword" id="passnew"
+                            placeholder="Nhập mật khẩu mới" title="Nhập mật khẩu mới">
+                        <span class="focus-input100-1"></span>
+                        <span class="focus-input100-2"></span>
+                        <span class="icon"><i class="fa fa-user" aria-hidden="true" style="color: #38addb;"></i></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" style="margin-bottom: 10px;"
+                        data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="password" name="re_newpassword" placeholder="Nhập lại mật khẩu"
+                            title="Nhập lại mật khẩu">
+                        <span class="focus-input100-1"></span>
+                        <span class="focus-input100-2"></span>
+                        <span class="icon"><i class="fa fa-user" aria-hidden="true" style="color: #38addb;"></i></span>
+                    </div>
+                    <div>
+                        <p class="color_red">{{ message }}</p>
+                    </div>
+                    <div class="container-login100-form-btn m-t-20">
+                        <input type="submit" id="btn_submit_otp" class="login100-form-btn"
+                            style="background-color: #F7981D;" value="Xác thực">
+                        <a href="{% url 'login_url' %}" class="login100-form-btn" style="background-color: #38addb;">
+                            Quay lại đăng nhập
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="text-center info">
+            <span class="txt1">
+                © 2019 Bản quyền thuộc về Công ty Cổ Phần FinPlus
+            </span>
+
+            <p>
+                <a href="">Liên hệ</a> | <a href="">Hỗ trợ bồi
+                    thường</a> | <a href="">Tầng 16 Đơn nguyên giữa, nhà C1 Thành Công, Phường Thành Công, Quận Ba Đình, Thành phố Hà Nội</a>
+            </p>
+        </div>
+        <div class="img-footer">
+            <img src="{% static 'core/images/icon/tay1.svg' %}" alt="" width="100%">
+        </div>
+    </div>
+
+    <script src="{% static 'core/js/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'core/bootstrap/dist/js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script type="text/javascript" src="{% static 'core/js/jquery.validate.min.js' %}"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#form_submit").click(function () {
+                let count = 0;
+                count++;
+                console.log(count)
+                if (count == 3) {
+                    $("#btn_submit_otp").css("display", "none")
+                }
+            });
+        })
+    </script>
+    <script>
+        $(function () {
+            $("#opt_forgot").validate({
+                rules: {
+                    maotp: {
+                        required: true,
+                        number:true
+                    },
+                    newpassword: {
+                        required: true,
+                    },
+                    re_newpassword: {
+                        required: true,
+                        equalTo: "#passnew"
+
+                    },
+                },
+                messages: {
+                    maotp: {
+                        required: "Vui lòng nhập mã otp",
+                        number:"Vui lòng nhập đúng mã đã gửi về máy"
+                    },
+                    newpassword: {
+                        required: "Vui lòng nhập mật khẩu mới",
+                    },
+                    re_newpassword: {
+                        required: "Vui lòng nhập lại mật khẩu",
+						equalTo: "Mật khẩu nhập lại phải trùng khớp"
+                    },
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

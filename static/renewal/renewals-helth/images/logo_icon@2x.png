@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<title>Renewal Policies</title>
+
+<link rel="stylesheet" href="styles/angular-material.css?ver=21">
+<link rel="stylesheet" href="styles/font-awesome.min.css?ver=21">
+<link rel="stylesheet" href="styles/pikaday.css?ver=21" />
+<link rel="stylesheet" href="styles/font-awesome.css?ver=21">
+<link rel="stylesheet" href="styles/renewal-style.css?ver=21">
+<link rel="stylesheet" href="styles/renewal-responsive.css?ver=21">
+
+<script type="text/javascript" src="config/config_live.js?ver=22"></script>
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PW5K"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PW5K');</script>
+<base href="/renewals/">
+</head>
+<body>
+	<!--  <pbheader ng-Pbbaseurl="qa"></pbheader>  -->
+	<!-- <div ng-view  ng-class="quote-bg-1" style="min-height:650px;"></div> -->
+	<div ng-view></div>
+	<!--   <pbfooter ng-Pbbaseurl="qa"></pbfooter> -->
+	<script type="text/javascript" src="scripts/components/pikaday/moment.js?ver=21"></script>
+	<script type="text/javascript" src="scripts/components/pikaday/pikaday.js?ver=21"></script>
+	<script src="scripts/components/requirejs/require.js" data-main="bootstrap.js?ver=21"></script>
+	<script>
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var regexS = "[\\?&]" + name + "=([^&#]*)";
+            var regex = new RegExp(regexS);
+            var results = regex.exec(window.location.href);
+            if (results == null)
+                return "";
+            else
+                return decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        var dateRange = new Date();
+        var monthval = parseInt(dateRange.getMonth()) + 1;
+        var dateval = dateRange.getDate();
+        var Yearval = dateRange.getFullYear();
+        var hr = dateRange.getHours();
+        var mm = dateRange.getMinutes();
+        var ss = dateRange.getSeconds();
+        if (dateval >= 1 && dateval <= 9) {
+            dateval = "0" + dateval;
+        }
+        if (monthval >= 1 && monthval <= 9) {
+            monthval = "0" + monthval;
+        }
+        var Restr = dateval + "/" + monthval + "/" + Yearval + " " + hr + ":" + mm + ":" + ss;
+        var isenquiryid = getParameterByName('enquiryid');
+        //console.log("safjlsajfl", isenquiryid);
+        window.Tracker = "HealthUatTracker";
+        window.UAIDS = 'UA-136507308-1';
+        window.PolicyTenure = "";
+        window.healthCoverType = "";
+        window.MemA = "";
+        window.CityName = "";
+        window.PageName = "";
+        window.annualIncome="";
+        window.bookingId="";
+        window.customerId="";
+
+        window.gaPBVar =
+            {
+                'userType': 'guest',
+                'operatorType': 'User',
+                'userId': '',
+                'leadId': '',
+                'enquiryId': '', //Enquiry
+                'customerId': '', //Check krle
+                'leadType': '', //Blank
+                'pageLanguage': 'English', //Eng
+                'bookingId': '', //Blank after renewal
+                'totalMembers': '',
+                'pageType': 'Renewals', //Renewals
+                'lobSection1': 'Health Insurance',
+                'lobSection2': 'Health Insurance',
+                'lobSection3': 'Renewal', //Renewal
+                'policyTenure': '',
+                'healthCoverType': '',
+                'memA': '',
+                'annualIncome': '',
+                'employmentType': '',
+                'vehicleNo': '',
+                'cityName': '',
+                'policyType': 'renewal',
+                'coverAmount': '',
+                'pageName': '',
+                'prevPage': document.referrer,
+                'flowName': 'Renewal',
+                'category': '',
+                'action': '',
+                'label': '',
+                'DateTime': Restr,
+                'productId': 2
+            };
+
+        window.gtmEventTrigger = function (category, action, label, nonInt) {
+            try {
+                if (this.EnquiryID == undefined) {
+                    this.EnquiryID = atob(getParameterByName('enquiryid'));
+                }
+                
+                if (category != undefined && action != undefined && label != undefined) {
+                    gaPBVar.UAID = UAIDS;                   
+                    gaPBVar.Category = category;
+                    gaPBVar.Action = action;
+                    gaPBVar.Label = label;
+                    gaPBVar.EnquiryID = this.EnquiryID;
+                    gaPBVar.event = 'GA-Custom-Event';
+                    gaPBVar.nonInteraction = (nonInt == true) ? true : false;
+                    gaPBVar.policyTenure = window.PolicyTenure;
+                   
+                    gaPBVar.healthCoverType = window.healthCoverType
+                    gaPBVar.memA = window.memA
+                    gaPBVar.cityName = window.CityName;
+                    gaPBVar.pageName = window.PageName;
+                    gaPBVar.bookingId = window.bookingId;
+                    gaPBVar.customerId = window.customerId;
+                    gaPBVar.totalMembers = window.totalMembers;
+                    gaPBVar.policyTenure = window.policyTenure;
+                    gaPBVar.annualIncome = window.annualIncome;
+                    gaPBVar.coverAmount = window.coverAmount;
+                    gaPBVar.enquiryId = this.EnquiryID;
+                    gaPBVar.leadId = window.leadId
+
+
+
+                    executed: dataLayer.push(gaPBVar);
+
+
+                    executed: dataLayer.push({
+                        //'UAID': 'UA-4743078-19',
+						'UAID': 'UA-4743078-8',
+                        'Tracker': Tracker,
+                        'Category': category,
+                        'Action': action,
+                        'Label': label,
+                        'EnquiryID': this.EnquiryID,
+                        'event': 'GA-Custom-Event',
+                        'nonInteraction': nonInt == true ? true : false
+                    });
+
+                }
+            } catch (e) { }
+        }
+
+       
+    </script>
+
+	<!-- Google Tag Manager -->
+	<!-- <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PW5K" -->
+	<!-- height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
+	<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': -->
+	<!-- new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], -->
+	<!-- j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= -->
+	<!-- '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); -->
+	<!-- })(window,document,'script','dataLayer','GTM-PW5K');</script> -->
+	<!-- End Google Tag Manager -->
+</body>
+</html>
